@@ -168,4 +168,43 @@ body.edit .editbadge{display:block}
 .gclose{position:fixed;top:16px;right:20px;z-index:90;all:unset;cursor:pointer;color:#dceaf8;font-size:22px;width:38px;height:38px;display:grid;place-items:center;border-radius:50%}
 .gclose:hover{background:rgba(255,255,255,.14)}
 
+/* ===== 视觉装饰 v2：城市天际线 + 活力元素（去单调） ===== */
+
+/* 每页底部城市天际线带（淡 navy） + 角落小元素（星星/sparkle） */
+.slide::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='200' viewBox='0 0 1200 200' preserveAspectRatio='none'><g fill='rgb(15,41,66)' fill-opacity='0.07'><rect x='0' y='190' width='1200' height='10'/><rect x='15' y='120' width='72' height='80'/><rect x='95' y='92' width='56' height='108'/><polygon points='123,70 110,92 136,92'/><rect x='158' y='140' width='62' height='60'/><rect x='228' y='74' width='66' height='126'/><rect x='300' y='112' width='52' height='88'/><rect x='360' y='150' width='72' height='50'/><rect x='440' y='96' width='60' height='104'/><rect x='508' y='60' width='54' height='140'/><polygon points='535,34 522,60 548,60'/><rect x='570' y='130' width='66' height='70'/><rect x='645' y='100' width='56' height='100'/><rect x='710' y='146' width='76' height='54'/><rect x='795' y='80' width='60' height='120'/><rect x='862' y='120' width='54' height='80'/><rect x='925' y='52' width='52' height='148'/><polygon points='951,26 938,52 964,52'/><rect x='985' y='128' width='72' height='72'/><rect x='1065' y='100' width='56' height='100'/><rect x='1128' y='140' width='58' height='60'/></g></svg>") center bottom / 100% 16% no-repeat,
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'><path fill='rgb(255,209,74)' d='M24 2 L28 20 L46 24 L28 28 L24 46 L20 28 L2 24 L20 20 Z'/></svg>") 93% 15% / clamp(16px,2vw,30px) auto no-repeat,
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'><path fill='rgb(23,196,232)' fill-opacity='0.55' d='M20 4 L23 17 L36 20 L23 23 L20 36 L17 23 L4 20 L17 17 Z'/></svg>") 6% 74% / clamp(11px,1.4vw,20px) auto no-repeat}
+.slide:nth-of-type(even)::after{background-position:center bottom, 7% 16%, 94% 70%}
+
+/* hero 页：天际线更明显 + 多撒元素（星星/纸飞机） */
+.slide.hero::after{background:
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='200' viewBox='0 0 1200 200' preserveAspectRatio='none'><g fill='rgb(6,32,43)' fill-opacity='0.16'><rect x='0' y='190' width='1200' height='10'/><rect x='15' y='120' width='72' height='80'/><rect x='95' y='92' width='56' height='108'/><polygon points='123,70 110,92 136,92'/><rect x='158' y='140' width='62' height='60'/><rect x='228' y='74' width='66' height='126'/><rect x='300' y='112' width='52' height='88'/><rect x='360' y='150' width='72' height='50'/><rect x='440' y='96' width='60' height='104'/><rect x='508' y='60' width='54' height='140'/><polygon points='535,34 522,60 548,60'/><rect x='570' y='130' width='66' height='70'/><rect x='645' y='100' width='56' height='100'/><rect x='710' y='146' width='76' height='54'/><rect x='795' y='80' width='60' height='120'/><rect x='862' y='120' width='54' height='80'/><rect x='925' y='52' width='52' height='148'/><polygon points='951,26 938,52 964,52'/><rect x='985' y='128' width='72' height='72'/><rect x='1065' y='100' width='56' height='100'/><rect x='1128' y='140' width='58' height='60'/></g></svg>") center bottom / 100% 18% no-repeat,
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'><path fill='rgb(255,225,93)' d='M24 2 L28 20 L46 24 L28 28 L24 46 L20 28 L2 24 L20 20 Z'/></svg>") 90% 18% / clamp(20px,2.6vw,40px) auto no-repeat,
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'><path fill='rgb(255,255,255)' fill-opacity='0.85' d='M24 2 L28 20 L46 24 L28 28 L24 46 L20 28 L2 24 L20 20 Z'/></svg>") 12% 22% / clamp(14px,1.8vw,26px) auto no-repeat,
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='48' viewBox='0 0 64 48'><path fill='rgb(255,255,255)' fill-opacity='0.92' d='M2 24 L62 4 L40 44 L34 30 Z'/></svg>") 82% 68% / clamp(24px,3.2vw,48px) auto no-repeat}
+
+/* 图标 chip（卡片视觉化，替代裸 emoji） */
+.ico{display:inline-flex;width:2.5em;height:2.5em;border-radius:13px;align-items:center;justify-content:center;
+  background:var(--orange-soft);color:var(--orange);border:1px solid rgba(233,99,67,.22);margin-bottom:.55em}
+.ico svg{width:1.35em;height:1.35em;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.ico.cy{background:#E6F8FB;color:#0E86D8;border-color:rgba(14,134,216,.22)}
+.ico.gn{background:#E8F8EE;color:#0E9C66;border-color:rgba(14,156,102,.2)}
+.ico.yl{background:#FFF6DD;color:#B98208;border-color:rgba(185,130,8,.22)}
+
+/* 设计感图位（待填真实照片/logo/平面图） */
+.slot{border:2px dashed rgba(15,41,66,.22);border-radius:18px;
+  background:repeating-linear-gradient(45deg,rgba(15,41,66,.022) 0 11px,transparent 11px 22px),var(--paper);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.45em;text-align:center;padding:1em}
+.slot svg{width:clamp(34px,4.4vw,56px);height:auto;color:var(--brand-c);opacity:.6;stroke:currentColor;stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.slot .st{font-weight:700;color:var(--ink);font-size:clamp(12px,1.5vw,17px)}
+.slot .ss{font-size:clamp(10px,1.15vw,13px);color:var(--muted)}
+.photo-slot{width:82%;height:60%}
+.logobox{height:clamp(48px,7vh,68px);border-radius:12px;background:rgba(15,41,66,.05);border:1px dashed rgba(15,41,66,.2);display:grid;place-items:center;color:var(--muted);font-weight:800;font-size:clamp(11px,1.2vw,14px);letter-spacing:.12em}
+
+/* Floor Plan 摊位示意图 */
+.fpwrap{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.fpwrap svg{width:100%;height:auto;max-height:42vh}
+
 @media(max-width:760px){.g3,.g4{grid-template-columns:1fr 1fr}.top .name,.tip{display:none}.char{opacity:.5}}
