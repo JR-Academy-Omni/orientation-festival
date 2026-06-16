@@ -48,7 +48,7 @@ Brisbane City Hall
 **P10 · 合作伙伴权益（套餐对比表）**
 | 套餐 | 价格 | 礼包 |
 |------|------|------|
-| Silver | $792 | + 800 Student Gift Packs |
+| Silver | $880 | + 800 Student Gift Packs |
 | Gold | $1980 | + 800 Student Gift Packs |
 | Diamond | $2970 | + 800 Student Gift Packs |
 - 权益维度：同行业独家 / 顶部 Banner / 赞助商鸣谢 List + 礼品介绍 / 品牌详细信息（logo+海报+一段话）/ 活动回顾推文 + 笔记内摊位照片曝光 / 活动海报放 logo / 评论区 @官号 + 置顶感谢 / 大学群 & 朋友圈宣传（文字 + 海报带 logo）/ 线下海报张贴 & 传单地推 / 二维码加学生微信 / 工作人员引导分发 / Banner 摆放数量 / 入口处高人流量展位优先选择权 / 其他展位优先选择权 / 主持人口播 & 发言环节 / 活动后数据支持反馈
