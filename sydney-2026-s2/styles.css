@@ -286,4 +286,16 @@ body.edit .editbadge{display:block}
 .benefit-grid span{display:flex;align-items:center;min-height:2.05em;padding:.32em .52em;border-radius:8px;background:#F4FAFE;border:1px solid #D9EAF6;color:var(--ink);font-size:clamp(9px,.9vw,12px);line-height:1.25;font-weight:700}
 .benefit-grid span::before{content:"";width:.45em;height:.45em;border-radius:50%;background:var(--orange);margin-right:.42em;flex:none}
 
+@media print{
+  @page{size:16in 9in;margin:0}
+  html,body{width:1600px;height:auto;margin:0;background:#fff!important;overflow:visible!important}
+  .ui,.hud,.top,.tip,.editbadge,.grid-ov,.gclose,.bar{display:none!important}
+  .deck{position:static!important;display:block!important;width:1600px!important;height:auto!important;overflow:visible!important;background:#fff!important}
+  .deck::before,.deck::after{display:none!important}
+  .frame{position:static!important;width:1600px!important;height:auto!important;aspect-ratio:auto!important;overflow:visible!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:#fff!important}
+  .slide{position:relative!important;inset:auto!important;width:1600px!important;height:900px!important;opacity:1!important;transform:none!important;pointer-events:auto!important;page-break-after:always;break-after:page;transition:none!important}
+  .slide:last-child{page-break-after:auto;break-after:auto}
+  .slide.prep-next,.slide.prep-prev,.slide.active{transform:none!important}
+}
+
 @media(max-width:760px){.g3,.g4{grid-template-columns:1fr 1fr}.top .name,.tip{display:none}.char{opacity:.5}}

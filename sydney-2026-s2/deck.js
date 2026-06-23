@@ -51,6 +51,7 @@ $('.next').addEventListener('click', (e) => { e.stopPropagation(); go(i + 1); })
 $('.grid-btn').addEventListener('click', (e) => { e.stopPropagation(); openOv(); });
 $('.gclose').addEventListener('click', closeOv);
 $('.edit-btn').addEventListener('click', (e) => { e.stopPropagation(); toggleEdit(); });
+$('.print-btn').addEventListener('click', (e) => { e.stopPropagation(); window.print(); });
 $('.fs-btn').addEventListener('click', (e) => {
   e.stopPropagation();
   if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
@@ -81,6 +82,7 @@ document.addEventListener('keydown', (e) => {
     case 'Home': go(0); break; case 'End': go(N - 1); break;
     case 'g': case 'G': openOv(); break;
     case 'e': case 'E': toggleEdit(); break;
+    case 'p': case 'P': window.print(); break;
     case 'f': case 'F':
       if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
       else document.exitFullscreen?.(); break;
