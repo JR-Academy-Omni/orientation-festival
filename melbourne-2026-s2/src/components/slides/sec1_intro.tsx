@@ -29,10 +29,10 @@ export function S02_Overview() {
 export function S03_Intro() {
 	const hl = (t: string) => <b style={{ color: colors.yellow, fontWeight: 800 }}>{t}</b>;
 	return (
-		<Page tag="02 · 活动介绍" title={<>第三届「墨尔本大学<span style={{ color: colors.red }}>新生见面会</span>」</>}
+		<Page tag="02 · 活动介绍" title={<>第 6 届「墨尔本三校<span style={{ color: colors.red }}>新生节</span>」</>}
 			bg={colors.dark} tone="dark" accent={colors.yellow} watermark="03" align="center">
 			<Editorial tone="dark" accent={colors.red} size={31}>
-				墨尔本是澳洲最具活力与多元文化的城市之一，每年吸引大量全球大学新生。本届以{hl('「链接高校与城市资源」')}为核心，聚焦 University of Melbourne、Monash、RMIT 三校学生，预计超千名学生到场。既是新生了解本地生活、教育资源与消费选择的入口，也是品牌树立校园影响力的理想平台——{hl('提升曝光、建立口碑、高效转化')}。
+				墨尔本是澳洲最具活力与多元文化的城市之一，每年吸引大量全球大学新生。本届第 6 届新生节以{hl('「链接高校与城市资源」')}为核心，聚焦 University of Melbourne、Monash、RMIT 三校学生，预计超千名学生到场。既是新生了解本地生活、教育资源与消费选择的入口，也是品牌树立校园影响力的理想平台——{hl('提升曝光、建立口碑、高效转化')}。
 			</Editorial>
 		</Page>
 	);

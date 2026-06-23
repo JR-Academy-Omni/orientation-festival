@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef, type ReactNode } from 'react';
+import { Children, useState, useEffect, useCallback, useRef, type ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { colors, assetPath } from './ui';
 import CameraBubble from './CameraBubble';
@@ -39,7 +39,8 @@ function readPageFromUrl(total: number): number {
 }
 
 export default function SlideEngine({ children }: SlideEngineProps) {
-	const total = children.length;
+	const slides = Children.toArray(children);
+	const total = slides.length;
 	const [current, setCurrent] = useState(() => readPageFromUrl(total));
 	const isAnimating = useRef(false);
 	const touchStart = useRef({ x: 0, y: 0 });
@@ -55,6 +56,9 @@ export default function SlideEngine({ children }: SlideEngineProps) {
 
 	const next = useCallback(() => go(current + 1), [go, current]);
 	const prev = useCallback(() => go(current - 1), [go, current]);
+	const exportPdf = useCallback(() => {
+		window.print();
+	}, []);
 
 	useEffect(() => {
 		const url = new URL(window.location.href);
@@ -76,10 +80,14 @@ export default function SlideEngine({ children }: SlideEngineProps) {
 				if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {});
 				else document.exitFullscreen().catch(() => {});
 			}
+			else if (e.key === 'p' || e.key === 'P') {
+				e.preventDefault();
+				exportPdf();
+			}
 		};
 		window.addEventListener('keydown', handler);
 		return () => window.removeEventListener('keydown', handler);
-	}, [next, prev]);
+	}, [next, prev, exportPdf]);
 
 	useEffect(() => {
 		const onStart = (e: TouchEvent) => { touchStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY }; };
@@ -107,9 +115,72 @@ export default function SlideEngine({ children }: SlideEngineProps) {
 	const pad = (n: number) => String(n).padStart(2, '0');
 
 	return (
-		<div style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden' }}>
+		<div className="deck-root" style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden' }}>
+			<style>{`
+				.print-deck { display: none; }
+				@media print {
+					@page { size: 16in 9in; margin: 0; }
+					html, body, #root {
+						width: 1600px;
+						height: auto;
+						margin: 0;
+						background: #fff !important;
+						overflow: visible !important;
+					}
+					.screen-deck { display: none !important; }
+					.deck-root {
+						width: 1600px !important;
+						height: auto !important;
+						position: static !important;
+						overflow: visible !important;
+					}
+					.print-deck {
+						display: block !important;
+						width: 1600px;
+						background: #fff;
+					}
+					.print-slide {
+						width: 1600px;
+						height: 900px;
+						position: relative;
+						overflow: hidden;
+						page-break-after: always;
+						break-after: page;
+					}
+					.print-slide:last-child {
+						page-break-after: auto;
+						break-after: auto;
+					}
+				}
+			`}</style>
+			<div className="print-deck">
+				{slides.map((child, i) => (
+					<div className="print-slide" key={i}>
+						{child}
+					</div>
+				))}
+			</div>
+			<div className="screen-deck" style={{ width: '100%', height: '100%', position: 'relative', overflow: 'hidden' }}>
 			{/* 演讲者摄像头圆圈（按 C 开关 · 录播露脸用） */}
 			<CameraBubble />
+			<button
+				onClick={exportPdf}
+				title="导出 PDF（P）"
+				style={{
+					position: 'fixed', top: 18, right: 92, zIndex: 1000,
+					border: `3px solid ${colors.black}`,
+					background: colors.yellow,
+					color: colors.black,
+					boxShadow: '4px 4px 0px #000',
+					fontFamily: '"Space Mono", monospace',
+					fontSize: 13,
+					fontWeight: 800,
+					padding: '10px 14px',
+					cursor: 'pointer',
+				}}
+			>
+				PDF
+			</button>
 			<div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: 4, background: 'rgba(255,255,255,0.1)', zIndex: 1000 }}>
 				<motion.div animate={{ width: `${((current + 1) / total) * 100}%` }} transition={{ duration: 0.3 }} style={{ height: '100%', background: colors.indigo }} />
 			</div>
@@ -121,7 +192,7 @@ export default function SlideEngine({ children }: SlideEngineProps) {
 				{pad(current + 1)} / {pad(total)}
 			</div>
 			<div style={{ position: 'fixed', bottom: 24, left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: 8, zIndex: 1000 }}>
-				{children.map((_, i) => (
+				{slides.map((_, i) => (
 					<button key={i} onClick={() => go(i)} style={{
 						width: i === current ? 28 : 10, height: 10, borderRadius: 5, border: 'none',
 						background: i === current ? colors.indigo : 'rgba(255,255,255,0.3)',
@@ -144,18 +215,18 @@ export default function SlideEngine({ children }: SlideEngineProps) {
 					{/* 固定品牌 logo · 跟 slide 一起 scale · 半透明不抢内容 */}
 					<div style={{
 						position: 'absolute', top: 18, right: 22, zIndex: 50,
-						display: 'flex', alignItems: 'center', gap: 8,
-						pointerEvents: 'none', opacity: 0.7,
+						display: 'flex', alignItems: 'center', justifyContent: 'center',
+						pointerEvents: 'none', opacity: 0.9,
+						background: colors.white,
+						border: `2px solid ${colors.black}`,
+						width: 52,
+						height: 52,
 					}}>
 						<img
-							src={assetPath('jr-logo.png')}
+							src={assetPath('jr-box.svg')}
 							alt="JR Academy"
-							style={{ height: 28, width: 'auto', display: 'block' }}
+							style={{ height: 38, width: 'auto', display: 'block' }}
 						/>
-						<span style={{
-							fontFamily: '"Space Mono", monospace', fontSize: 10, fontWeight: 700,
-							color: '#555', letterSpacing: 2,
-						}}>JR ACADEMY</span>
 					</div>
 					<AnimatePresence mode="wait">
 						<motion.div
@@ -166,10 +237,11 @@ export default function SlideEngine({ children }: SlideEngineProps) {
 							transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
 							style={{ width: '100%', height: '100%' }}
 						>
-							{children[current]}
+							{slides[current]}
 						</motion.div>
 					</AnimatePresence>
 				</div>
+			</div>
 			</div>
 		</div>
 	);

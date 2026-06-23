@@ -20,12 +20,16 @@ npm run build    # 产物 dist/，纯静态可托管
 
 ## 结构（改内容看这里）
 
-- `src/App.tsx` — 34 页放映顺序（按 CH 注释分章节）
+- `src/App.tsx` — 33 页放映顺序（按 CH 注释分章节）
 - `src/components/slides/*.tsx` — 每章一个文件，多个 `Snn_*` 组件；封面 `S01_Cover` 与联络 `S34_Contact` 单独成文件
 - `src/components/slides/_PhotoSlide.tsx` — **照片满铺背景**基元（封面/场地/往期回顾/成果展示/联络 5 页用）
 - `src/components/slides/_layout.tsx` — 内容层助手：`Page`（章节 Tag + 大标题 + 内容区）/ `FeatureCard` / `StatCard` / `KvTable` / `CardsGrid`
+- `src/components/slides/sec3_packages.tsx` — 合作套餐、价格对比与抽奖券现场玩法
 - `public/past-events/*.jpg` — 真实往期现场照（满铺背景用，源自品牌归档，与 `sydney-2026-s2` 同批）
-- `public/jr-logo.png` — 右上品牌 logo（引擎渲染）
+- `public/jr-box.svg` — 右上角矢量品牌 mark（引擎渲染，避免完整中文 logo 缩小后发糊）
+- `public/melbourne-sticker.svg` — 封面贴纸图，文字为 `2026 S2 / 墨尔本三校 / UNIMELB · MONASH · RMIT / 三校新生节`
+- `public/xhs-matrix.png` — 课代表系列小红书账号矩阵图，用于 `S24_XhsMatrix`
+- `public/melbourne-floor-plan.png` — 墨尔本新生节展位布局图，用于 `S09_FloorPlan`
 
 ## 设计纪律（照搬 talk-deck）
 

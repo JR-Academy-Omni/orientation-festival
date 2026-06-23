@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import PhotoSlide from './_PhotoSlide';
 import { Page } from './_layout';
-import { colors, fonts, border, shadow } from '../ui';
+import { colors, fonts, border, shadow, assetPath } from '../ui';
 
 export function S08_Venue() {
 	return (
@@ -20,28 +20,43 @@ export function S08_Venue() {
 }
 
 export function S09_FloorPlan() {
-	const seat = (x: number, y: number, c: string) => <rect key={`${x}-${y}`} x={x} y={y} width={46} height={24} rx={2} fill={c} stroke="#000" strokeWidth={2} />;
 	return (
-		<Page tag="07 · Floor Plan" title="场地摊位布局概览" accent={colors.blue}>
-			<div style={{ display: 'grid', gridTemplateColumns: '1fr 1.3fr', gap: 28, alignItems: 'center' }}>
-				<div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-					{['📏 每张桌子尺寸：1.8m × 0.8m', '🪑 每张桌子配 3 把椅子'].map((t) => (
-						<div key={t} style={{ border, background: colors.white, boxShadow: shadow, padding: '18px 22px', fontSize: 20, fontWeight: 600 }}>{t}</div>
+		<Page tag="07 · Floor Plan" title="场地摊位布局概览" accent={colors.blue} align="top">
+			<div style={{ display: 'grid', gridTemplateColumns: '1fr 360px', gap: 22, alignItems: 'stretch', minHeight: 0 }}>
+				<motion.div
+					initial={{ opacity: 0, scale: 0.96 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 0.5 }}
+					style={{ border, background: colors.white, boxShadow: shadow, padding: 12, minHeight: 0 }}
+				>
+					<img
+						src={assetPath('brisbane-floor-plan.png')}
+						alt="布里斯班新生节场地摊位布局图"
+						style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}
+					/>
+				</motion.div>
+				<div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+					{[
+						['桌椅配置', '每张 1.5m 桌，配 2 把椅子'],
+						['Silver 商家区', '左侧 6 个 · 中间 6 个 · 右侧 6 个'],
+						['Gold 赞助商位', '靠近抽奖舞台与主视线区域'],
+						['排队动线', '左侧 / 中间 / 右侧三处排队区'],
+						['礼品摆放', '礼品直接放在桌上，便于互动领取'],
+					].map(([k, v], i) => (
+						<motion.div
+							key={k}
+							initial={{ opacity: 0, x: 24 }}
+							animate={{ opacity: 1, x: 0 }}
+							transition={{ duration: 0.4, delay: 0.1 + i * 0.06 }}
+							style={{ border, background: i === 0 ? colors.yellow : colors.white, boxShadow: shadow, padding: '14px 16px' }}
+						>
+							<div style={{ fontFamily: fonts.heading, fontWeight: 900, fontSize: 18, marginBottom: 4 }}>{k}</div>
+							<div style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.35, color: '#333' }}>{v}</div>
+						</motion.div>
 					))}
-					<div style={{ border, background: colors.red, color: colors.white, boxShadow: shadow, padding: '18px 22px', fontSize: 20, fontWeight: 800 }}>Diamond 合作方可优先选择摊位位置</div>
-				</div>
-				<div style={{ border, background: colors.white, boxShadow: shadow, padding: 18 }}>
-					<svg viewBox="0 0 400 270" style={{ width: '100%', height: 'auto' }} fontFamily="DM Sans, sans-serif">
-						<rect x={8} y={8} width={384} height={254} rx={4} fill="#fff" stroke="#000" strokeWidth={3} />
-						<rect x={118} y={18} width={164} height={26} rx={2} fill={colors.dark} />
-						<text x={200} y={36} textAnchor="middle" fontSize={13} fill="#fff" fontWeight={700}>舞台 / 主持区</text>
-						{[28, 88, 148, 208, 268, 328].map((x) => seat(x, 66, '#fff'))}
-						{[28, 88, 268, 328].map((x) => seat(x, 124, '#fff'))}
-						{[28, 88, 268, 328].map((x) => seat(x, 182, '#fff'))}
-						{seat(150, 150, colors.red)}{seat(206, 150, colors.red)}
-						<text x={200} y={166} textAnchor="middle" fontSize={10} fill="#fff" fontWeight={700}>Diamond 优先</text>
-						<text x={200} y={250} textAnchor="middle" fontSize={12} fill="#000" fontWeight={700}>↑ 入口 Entrance</text>
-					</svg>
+					<div style={{ marginTop: 'auto', border, background: colors.red, color: colors.white, boxShadow: shadow, padding: '15px 18px', fontSize: 18, fontWeight: 900, lineHeight: 1.35 }}>
+						最终摊位位置以现场执行图为准
+					</div>
 				</div>
 			</div>
 		</Page>

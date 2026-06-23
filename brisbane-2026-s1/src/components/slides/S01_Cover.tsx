@@ -4,7 +4,7 @@ import { colors, fonts, border, shadow } from '../ui';
 
 export default function S01_Cover() {
 	const meta = [
-		['DATE', 'Feb. 28th, 2026'],
+		['DATE', 'Date TBC'],
 		['TIME', '10:00 AM - 2:00 PM'],
 		['VENUE', 'Brisbane City Hall · 64 Adelaide St'],
 	] as const;
@@ -18,7 +18,7 @@ export default function S01_Cover() {
 					background: colors.black, color: colors.yellow, border,
 					fontFamily: fonts.mono, fontSize: 16, fontWeight: 700, letterSpacing: 2,
 				}}>
-				2026 S1 · 布里斯班三校新生节 · 商家合作企划
+				2026 S2 · 布里斯班三校新生节 · 商家合作企划
 			</motion.div>
 
 			<h1 style={{ fontFamily: fonts.heading, fontWeight: 900, color: colors.white, fontSize: 112, lineHeight: 1.02, letterSpacing: -2, maxWidth: 880 }}>

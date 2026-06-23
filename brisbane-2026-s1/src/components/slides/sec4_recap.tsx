@@ -23,7 +23,7 @@ export function S13_RecapOverview() {
 		['🛍️', '展示商家资源', '通过展位 + 互动环节向新生介绍各类资源；与多家机构达成合作意向。', colors.red],
 	] as const;
 	return (
-		<Page tag="10 · 活动概述" title="Overview · 我们做了什么" watermark="01" align="center">
+		<Page tag="11 · 活动概述" title="Overview · 我们做了什么" watermark="01" align="center">
 			<CardsGrid cols={2} gap={20}>{items.map(([e, t, d, a], i) => <FeatureCard key={t} i={i} emoji={e} title={t} desc={d} accent={a} />)}</CardsGrid>
 		</Page>
 	);
@@ -33,7 +33,7 @@ export function S14_Data() {
 	const palette = [colors.yellow, colors.red, colors.blue, colors.green, colors.purple, colors.yellow, colors.red, colors.blue];
 	const stats = [['90%', '报名到场率'], ['900+', 'UQ 学生'], ['600+', 'QUT 学生'], ['200+', 'Griffith 学生'], ['18', '参展企业'], ['400+', '赞助商平均获客'], ['5000+', '发放展位礼物'], ['2000+', '发放抽奖券']] as const;
 	return (
-		<Page tag="11 · 活动数据" title="往期活动数据一览" bg={colors.dark} tone="dark" accent={colors.red} watermark="22" align="center">
+		<Page tag="12 · 活动数据" title="往期活动数据一览" bg={colors.dark} tone="dark" accent={colors.red} watermark="22" align="center">
 			<GiantRow cols={4} tone="dark" gap={28}>
 				{stats.map(([n, l], i) => <GiantStat key={l} i={i} n={n} label={l} color={palette[i]} />)}
 			</GiantRow>
@@ -44,7 +44,7 @@ export function S14_Data() {
 export function S15_Data2() {
 	const stats = [['100+', '抽奖奖品数量'], ['$6000+', '抽奖礼品总价值'], ['600次+', '接待咨询']] as const;
 	return (
-		<Page tag="11 · 活动数据（续）" title="还有这些成果">
+		<Page tag="12 · 活动数据（续）" title="还有这些成果">
 			<div style={{ display: 'flex', flexDirection: 'column', gap: 20, flex: 1, minHeight: 0 }}>
 				<div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 20 }}>
 					{stats.map(([n, l], i) => <StatCard key={l} i={i} n={n} label={l} bg={i === 1 ? colors.yellow : colors.white} accent={i === 1 ? colors.black : colors.red} />)}
@@ -58,7 +58,7 @@ export function S15_Data2() {
 export function S16_Sponsors() {
 	const slots = ['BANKING', 'HOUSING', 'EDUCATION', 'LEGAL', 'TRAVEL', 'RETAIL', 'LIFESTYLE'] as const;
 	return (
-		<Page tag="12 · 赞助商" title="赞助商 & 合作伙伴" accent={colors.purple} align="top">
+		<Page tag="13 · 赞助商" title="赞助商 & 合作伙伴" accent={colors.purple} align="top">
 			<div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 18 }}>
 				{slots.map((slot, i) => (
 					<div key={slot} style={{
@@ -91,7 +91,7 @@ export function S17_Highlights() {
 		['🎁', '抽奖 & 展位', '共 9 轮抽奖，100+ 份奖品；18 个参展商展位。', colors.yellow],
 	] as const;
 	return (
-		<Page tag="13 · 活动亮点" title="现场亮点回顾" bg={colors.purple} tone="dark" accent={colors.dark} watermark="!" align="center">
+		<Page tag="14 · 活动亮点" title="现场亮点回顾" bg={colors.purple} tone="dark" accent={colors.dark} watermark="!" align="center">
 			<CardsGrid cols={2} gap={20}>{items.map(([e, t, d, a], i) => <FeatureCard key={t} i={i} emoji={e} title={t} desc={d} accent={a} />)}</CardsGrid>
 		</Page>
 	);
@@ -109,7 +109,7 @@ function Quote({ i, text, who }: { i: number; text: string; who: string }) {
 
 export function S18_FbAttendee() {
 	return (
-		<Page tag="14 · 反馈 · 参与者" title="新生怎么说">
+		<Page tag="15 · 反馈 · 参与者" title="新生怎么说">
 			<div style={{ display: 'grid', gridTemplateColumns: '0.9fr 1.1fr', gap: 22, flex: 1, minHeight: 0 }}>
 				<div style={{ display: 'grid', gridTemplateRows: 'auto 1fr', gap: 16, minHeight: 0 }}>
 					<StatCard i={0} n="98%" label="总体满意度（600 名参与者）" />
@@ -127,7 +127,7 @@ export function S18_FbAttendee() {
 
 export function S19_FbExhibitor() {
 	return (
-		<Page tag="15 · 反馈 · 参展商" title="参展商怎么说" bg={colors.dark} tone="dark" accent={colors.blue} watermark="98" align="center">
+		<Page tag="16 · 反馈 · 参展商" title="参展商怎么说" bg={colors.dark} tone="dark" accent={colors.blue} watermark="98" align="center">
 			<div style={{ display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 22, alignItems: 'center' }}>
 				<StatCard i={0} n="98%" label="参展商总体满意度" accent={colors.blue} />
 				<div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
@@ -141,7 +141,7 @@ export function S19_FbExhibitor() {
 
 export function S20_FbVolunteer() {
 	return (
-		<Page tag="16 · 反馈 · 志愿者" title="志愿者怎么说" bg={colors.green} accent={colors.dark} watermark="♥" align="center">
+		<Page tag="17 · 反馈 · 志愿者" title="志愿者怎么说" bg={colors.green} accent={colors.dark} watermark="♥" align="center">
 			<CardsGrid cols={2} gap={20}>
 				<Quote i={0} text="看到同学们开心参与、领取礼品，我觉得一切辛苦都值得。每次抽奖的欢呼让我感受到活动的成功。" who="Benny" />
 				<Quote i={1} text="帮助新生解答疑问，看到他们安心快乐我也很开心。这次活动让我认识了很多新朋友，也体验到团队合作的力量。" who="Dora" />

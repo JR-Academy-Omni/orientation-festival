@@ -11,14 +11,20 @@
 orientation-festival/
 ├── index.html               ← 落地页：列出各城 deck 入口
 ├── melbourne-2026-s2/        ← 墨尔本三校新生节 2026 S2 · 可播放 deck（已做完）
+│   ├── index.html
+│   └── design.md
+├── brisbane-2026-s1/         ← 布里斯班三校新生节 2026 S2 · 可播放 deck（源码目录沿用旧名）
+│   ├── index.html
+│   └── design.md
+├── sydney-2026-s2/           ← 悉尼四校新生节 2026 S2 · 可播放 deck（已做完）
 │   ├── index.html  styles.css  deck.js
 │   ├── design.md            ← 这套 deck 的唯一视觉真相源
 │   └── assets/character.png
 └── content/                 ← 内容源 / 规范（内部）
     ├── melbourne-2026-s2.md         招商要点精简版
     ├── melbourne-2026-s2-pages.md   38 页逐页文字存档（Canva 原稿提取）
-    ├── brisbane-2026-s1-pages.md    布里斯班场内容（deck 待做）
-    ├── sydney-2026-s1-pages.md      悉尼场内容（deck 待做）
+    ├── brisbane-2026-s1-pages.md    布里斯班场内容源（deck 对外口径已改 2026 S2）
+    ├── sydney-2026-s1-pages.md      悉尼旧场内容源
     ├── design-style.md              配色/视觉量化采样（Canva）
     └── assets/                      brisbane 封面/人物/标题 PNG
 ```
@@ -28,8 +34,8 @@ orientation-festival/
 | 城市 / 届 | 内容源 | 可播放 deck |
 |-----------|--------|-------------|
 | 墨尔本 2026 S2（UniMelb/Monash/RMIT） | ✅ | ✅ `melbourne-2026-s2/` |
-| 布里斯班 2026 S1（UQ/QUT/Griffith） | ✅ | ⏳ 待做 |
-| 悉尼 2026 S1 | ✅ | ⏳ 待做 |
+| 布里斯班 2026 S2（UQ/QUT/Griffith） | ✅ | ✅ 已完成 |
+| 悉尼 2026 S2 | ✅ | ✅ 已完成 |
 
 ## 预览 deck
 

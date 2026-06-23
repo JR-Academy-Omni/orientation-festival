@@ -1,13 +1,13 @@
-# 布里斯班 2026 S1 新生节 Deck 设计说明
+# 布里斯班 2026 S2 新生节 Deck 设计说明
 
 ## 当前实现
 
-`brisbane-2026-s1` 是一套 React + Vite 的网页版招商 deck，入口为 `index.html`，页面由 `src/App.tsx` 组合 34 张 slide。核心视觉沿用 JR Academy 的高对比 Neo-brutalism 结构，但内容、图片和信息层级已按布里斯班三校新生节重做。
+`brisbane-2026-s2` 是一套 React + Vite 的网页版招商 deck，入口为 `index.html`，页面由 `src/App.tsx` 组合 33 张 slide。核心视觉沿用 JR Academy 的高对比 Neo-brutalism 结构，但内容、图片和信息层级已按布里斯班三校新生节重做。
 
 活动主信息：
-- 城市与场次：布里斯班 2026 S1
+- 城市与场次：布里斯班 2026 S2
 - 覆盖高校：UQ / QUT / Griffith
-- 时间：2026 年 2 月 28 日，10:00 AM - 2:00 PM
+- 时间：Date TBC，10:00 AM - 2:00 PM
 - 场地：Ithaca Auditorium, Brisbane City Hall，64 Adelaide St
 - 规模：预计 1000 名学生，300+ 平米室内展区
 - 套餐：Silver $880 / Gold $1980 / Diamond $2970，包含 800 Student Gift Packs
@@ -34,6 +34,7 @@
 - `jr-brochures.jpg`：品牌物料近景
 - `audience-session.jpg`：新生讲座现场
 - `aws-partner-photo.jpg`：成果展示页
+- `brisbane-floor-plan.png`：page 9 场地摊位布局图（每张 1.5m 桌，2 把椅子）
 
 旧复制素材已从 Brisbane deck 的 `public/past-events/` 删除，避免构建产物带入未使用照片。
 
@@ -42,7 +43,7 @@
 - `S01_Cover.tsx`：布里斯班三校新生节封面
 - `sec1_intro.tsx`：活动概览、介绍、目的、吸引新生、商家机会、为什么选匠人
 - `sec2_venue.tsx`：Brisbane City Hall 场地与摊位布局
-- `sec3_packages.tsx`：Silver / Gold / Diamond 合作套餐与价格对比
+- `sec3_packages.tsx`：Silver / Gold / Diamond 合作套餐、价格对比与抽奖券现场玩法
 - `sec4_recap.tsx`：往期数据、赞助商、活动亮点、反馈
 - `sec5_coordinator.tsx`：课代表媒体矩阵与社群资源
 - `sec6_achievements.tsx`：大学合作、品牌活动、企业合作成果

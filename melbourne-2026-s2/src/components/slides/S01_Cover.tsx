@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import PhotoSlide from './_PhotoSlide';
-import { colors, fonts, border, shadow } from '../ui';
+import { colors, fonts, border, shadow, assetPath } from '../ui';
 
 export default function S01_Cover() {
 	const meta = [
@@ -11,6 +11,22 @@ export default function S01_Cover() {
 
 	return (
 		<PhotoSlide img="past-events/venue-queue.jpg">
+			<motion.img
+				src={assetPath('melbourne-sticker.svg')}
+				alt="2026 S2 墨尔本三校 UniMelb Monash RMIT 三校新生节"
+				initial={{ opacity: 0, rotate: -8, scale: 0.86, y: 20 }}
+				animate={{ opacity: 1, rotate: -5, scale: 1, y: 0 }}
+				transition={{ duration: 0.55, delay: 0.28, ease: [0.16, 1, 0.3, 1] }}
+				style={{
+					position: 'absolute',
+					right: 78,
+					top: 154,
+					width: 500,
+					height: 'auto',
+					zIndex: 0,
+					pointerEvents: 'none',
+				}}
+			/>
 			<motion.div
 				initial={{ opacity: 0, y: -16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
 				style={{
@@ -18,10 +34,10 @@ export default function S01_Cover() {
 					background: colors.black, color: colors.yellow, border,
 					fontFamily: fonts.mono, fontSize: 16, fontWeight: 700, letterSpacing: 2,
 				}}>
-				2026 S2 · 商家合作企划
+				2026 S2 · 第 6 届新生节 · 商家合作企划
 			</motion.div>
 
-			<h1 style={{ fontFamily: fonts.heading, fontWeight: 900, color: colors.white, fontSize: 112, lineHeight: 1.02, letterSpacing: -2, maxWidth: 880 }}>
+			<h1 style={{ fontFamily: fonts.heading, fontWeight: 900, color: colors.white, fontSize: 112, lineHeight: 1.02, letterSpacing: -2, maxWidth: 820 }}>
 				<motion.span initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.15 }} style={{ display: 'block' }}>
 					墨尔本三校
 				</motion.span>

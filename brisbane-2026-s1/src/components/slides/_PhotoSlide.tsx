@@ -27,7 +27,7 @@ export default function PhotoSlide({
 				padding: '10px 16px', fontFamily: fonts.mono, fontSize: 14, fontWeight: 800, letterSpacing: 1.2,
 			}}>
 				<span style={{ width: 10, height: 10, background: colors.red, border: `2px solid ${colors.black}` }} />
-				BRISBANE 2026 S1
+				BRISBANE 2026 S2
 			</div>
 			<div style={{
 				position: 'absolute', inset: 0, padding: '0 110px',

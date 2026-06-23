@@ -3,7 +3,7 @@ const $ = (s) => document.querySelector(s);
 const $$ = (s) => Array.from(document.querySelectorAll(s));
 const slides = $$('.slide');
 const N = slides.length;
-const counter = $('.count'), segEl = $('.seg'), barEl = $('.bar'), ovlist = $('.ovlist');
+const counter = $('.count'), segEl = $('.seg'), barEl = $('.bar'), ovlist = $('.ovlist'), ovTitle = $('.grid-ov h2');
 let i = 0;
 
 function chrome() {
@@ -26,6 +26,7 @@ function go(n) {
 }
 
 // 板块总览
+if (ovTitle) ovTitle.textContent = '全部 ' + N + ' 页 · 点击跳转';
 slides.forEach((s, n) => {
   const b = document.createElement('button');
   b.innerHTML = `<span class="pg">${n + 1}</span> ${s.dataset.seg || ''}`;
@@ -51,6 +52,7 @@ $('.next').addEventListener('click', (e) => { e.stopPropagation(); go(i + 1); })
 $('.grid-btn').addEventListener('click', (e) => { e.stopPropagation(); openOv(); });
 $('.gclose').addEventListener('click', closeOv);
 $('.edit-btn').addEventListener('click', (e) => { e.stopPropagation(); toggleEdit(); });
+$('.print-btn').addEventListener('click', (e) => { e.stopPropagation(); window.print(); });
 $('.fs-btn').addEventListener('click', (e) => {
   e.stopPropagation();
   if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
@@ -81,6 +83,7 @@ document.addEventListener('keydown', (e) => {
     case 'Home': go(0); break; case 'End': go(N - 1); break;
     case 'g': case 'G': openOv(); break;
     case 'e': case 'E': toggleEdit(); break;
+    case 'p': case 'P': window.print(); break;
     case 'f': case 'F':
       if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
       else document.exitFullscreen?.(); break;

@@ -29,7 +29,7 @@ export function S02_Overview() {
 export function S03_Intro() {
 	const hl = (t: string) => <b style={{ color: colors.yellow, fontWeight: 800 }}>{t}</b>;
 	return (
-		<Page tag="02 · 活动介绍" title={<>2026 S1「布里斯班三校<span style={{ color: colors.red }}>新生节</span>」</>}
+		<Page tag="02 · 活动介绍" title={<>2026 S2「布里斯班三校<span style={{ color: colors.red }}>新生节</span>」</>}
 			bg={colors.dark} tone="dark" accent={colors.yellow} watermark="03" align="center">
 			<Editorial tone="dark" accent={colors.red} size={31}>
 				布里斯班三校新生节聚焦 UQ、QUT、Griffith 新生，从入学第一周开始把学生、城市生活资源和本地品牌放到同一个现场。活动预计 <b style={{ color: colors.yellow }}>1000 名学生</b>到场，设置室内展位、礼品派发、抽奖互动和面对面咨询。对品牌来说，这是在学生刚抵达城市时建立认知、获取线索、沉淀私域的集中窗口——{hl('曝光、互动、转化在同一场完成')}。

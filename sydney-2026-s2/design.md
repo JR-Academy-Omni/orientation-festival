@@ -1,147 +1,104 @@
-# 2026 S2 悉尼四校新生节 deck · 视觉真相源（design.md）
+# 2026 S2 悉尼四校新生节 deck · 视觉真相源
 
-> 本文件是 `sydney-2026-s2/` 这套 deck 的**唯一视觉真相源**，改样式前必读。
-> **状态**：deck 待建（本 design.md 先行，作为建 deck 时的视觉规格）。
-> **继承**：沿用全系列「活力新生节 · 精致版」双层结构 + Noto Sans SC / Sora 字体 + 三文件播放器（见根 `CLAUDE.md`）。
-> **差异**：本届为**悉尼专属主题**——海港蓝色系 + Opera House / Harbour Bridge 天际线 + AFN「双主办·高净值」气质（保留活力，质感更精致）。
-> 配色根源对照 `jr-academy-brand/`（视觉唯一真相源），不凭记忆编色。
+本文件是 `sydney-2026-s2/` 的视觉真相源。改 `styles.css` 或 deck 结构前先读这里。
 
----
+状态：已建，可直接打开 `index.html` 预览。实现采用三文件静态 deck：`index.html`、`styles.css`、`deck.js`。
 
-## 一、为什么悉尼要单独一套视觉
+## 定位
 
-三城同结构、不同主题色，靠主题色一眼区分城市：
+悉尼场的关键词是：海港都会、四校新生、课代表学生私域、活力中带精致。
 
-| 城市 | 主题色系 | 一句话气质 |
-|------|---------|-----------|
-| 布里斯班 | 橙粉日落 | 阳光、热烈 |
-| 墨尔本 | 翡翠绿青 | 清新、文艺 |
-| **悉尼（本届）** | **海港蓝（深海军蓝 → 湛蓝 → 青）+ 暖金点睛** | **海港都会、活力中带精致** |
+本 deck 需要同时接住两种叙事：
 
-悉尼还有两个**内容侧独特性**要在视觉上接住（详见 PRD `content/sydney-2026-s2-prd.md`）：
+- 学生端：USYD / UNSW / UTS / Macquarie 四校新生，开学季现场活动、礼品、答疑、社交。
+- 商家端：课代表系列的学生私域、线上内容矩阵、大学群和线下活动经验，支持 Premium $6000 旗舰招商档。
 
-1. **四校**（USYD / UNSW / UTS / Macquarie）——四城里唯一四校，封面 / 标题要容纳 4 个校名而不挤。
-2. **AFN 联合主办 + Premium $6000 档**——比布/墨多一个高净值叙事和一个高端套餐档，视觉上要有「双引擎」页 + 一张比 Diamond 更高规格的 Premium 价格卡。
+## 视觉系统
 
----
+页面仍沿用全系列双层结构：
 
-## 二、双层结构（与全系列一致，不改）
+| 类型 | 用途 | 视觉 |
+| --- | --- | --- |
+| 内容页 `.slide` | 活动概览、套餐、数据、表格、反馈 | 冷白纸底、浅海港蓝光晕、细线卡片、柔阴影、橙色数据数字 |
+| Hero 页 `.slide.hero` | 封面、场地、回顾、成果、联络 | 海港蓝渐变或活动插画/真实现场照片、暖金点睛、半调纹理、白色大标题 |
+| 照片页 `.photo-slide` | 现场照片 | 满版真实活动照片，顶部胶囊标题，不放卡片框 |
 
-| 层 | 用在哪 | 视觉 |
-|----|--------|------|
-| **内容页**（默认 `.slide`） | 数据 / 套餐 / 表格 / 反馈等正文 | 浅纸白底 + 极淡半调圆点 + 角落品牌微光；细线卡片 + 柔阴影 + 大号橙色数据数字 |
-| **Hero 页**（`.slide.hero`） | 封面 / AFN / 场地 / 往期回顾 / 赞助商 / 成果 / 联络 | 满版海港蓝渐变 + 较强半调 + 大标题；封面与收尾页放滑板少年插画 |
+## Token
 
-用「浅底干净内容页 ↔ 满版海港蓝 hero」的对比，同时满足招商专业感与新生节活力。
-
----
-
-## 三、字体（与全系列一致）
-
-- 中文 / 大标题：**Noto Sans SC**（`--font-cn`）
-- 拉丁 / 数字 / 正文 Latin：**Sora**（`--font`）
-- `index.html <head>` 引 Google Fonts；离线回退 PingFang SC / 系统字体
-- 大标题 = **实色白字 + 柔和投影**，点睛字用**暖金** `--hero-accent`（悉尼用金，不用墨尔本的柠檬黄）
-- ⚠️ 不用 PingFang 900 黑色八向描边贴纸字（旧版已废）
-
----
-
-## 四、悉尼主题配色 token（直接替换 `styles.css` 顶部「城市主题」一块）
+`styles.css` 顶部 token 为当前实现基准：
 
 ```css
-:root{
-  /* ---------- 城市主题：悉尼 = 海港蓝 ---------- */
-  --brand-a:#0A4D8C;            /* 渐变起点 深海军蓝（Harbour navy） */
-  --brand-b:#106DB8;            /* 渐变 海港蓝 */
-  --brand-c:#1791D6;            /* 渐变 湛蓝 */
-  --brand-d:#19B6E0;            /* 渐变终点 海港青 */
-  --brand-grad:linear-gradient(135deg,var(--brand-a) 0%,var(--brand-b) 38%,var(--brand-c) 70%,var(--brand-d) 100%);
-  --brand-tint:23,145,214;      /* 主品牌色 RGB（浅底光晕） */
-  --brand-tint2:25,182,224;     /* 次品牌色 RGB */
-  --hero-accent:#FFC83D;        /* hero 点睛字：暖金（撞色，呼应阳光/沙滩） */
-
-  /* ---------- 通用（与墨/布同，不随城市变） ---------- */
-  --navy:#0C2A4A;               /* 主深色 / 文字 / 描边（比墨尔本更偏海港深蓝） */
-  --canvas:#EEF5FB;             /* 整体浅底：海港冷白（带蓝调，区别于墨尔本薄荷白） */
-  --paper:#FFFFFF;
-  --edge:#DCE9F4;               /* 细边（冷蓝调） */
-  --orange:#F2683C;             /* 橙：CTA / 数据 / 强调（保留全系列橙，撞蓝更跳） */
-}
+--brand-a:#0A4D8C;
+--brand-b:#106DB8;
+--brand-c:#1791D6;
+--brand-d:#19B6E0;
+--hero-accent:#FFC83D;
+--harbour-gold:#FFC83D;
+--harbour-deep:#062A4A;
+--harbour-cyan:#2FD0E8;
+--navy:#0C2A4A;
+--canvas:#EEF5FB;
+--edge:#DCE9F4;
+--orange:#F2683C;
 ```
 
-> **配色逻辑**：深海军蓝兜底（专业、高净值，接住 AFN 气质）→ 湛蓝/海港青提亮（活力）→ **暖金 + 撞色橙**做点睛（数据数字、CTA、Premium 角标）。冷蓝底 + 暖金/橙主角 = 「海港都会 + 阳光新生」。
-> `--canvas` 与 `--edge` 都比墨尔本偏冷蓝一档，让浅底内容页也有"悉尼感"，不只是 hero 变蓝。
+数据数字继续用 `--orange`，Hero 点睛字和 Premium 角标用 `--harbour-gold`。不要改回橙粉日落主题，那是旧 Sydney 草稿/其他城市风格。
 
-**点睛色补充（用在标题点睛行 / Premium 卡 / 装饰）**
+## Sydney 装饰
 
-```
---harbour-gold:  #FFC83D   /* 暖金：hero 点睛字、Premium 角标、星星 */
---harbour-deep:  #062A4A   /* 近黑海军：天际线剪影 / 深描边 */
---harbour-cyan:  #2FD0E8   /* 亮海港青：标题点睛行（呼应墨尔本的亮青位） */
-```
+内容页和 Hero 页底部使用内联 SVG 的 Opera House + Harbour Bridge 轮廓，写在 `.slide::after` / `.slide.hero::after`。规则：
 
----
+- 只用 CSS data URI，不 hotlink 外部图片。
+- 轮廓颜色来自 `--harbour-deep`，桥灯/星点用暖金。
+- 保持低透明度，不能盖住正文。
+- 不再使用旧版通用城市高楼天际线。
 
-## 五、悉尼专属装饰（内联 SVG，沿用 `.slide::after` data-URI 模式）
+## 关键页型
 
-全系列规矩：**除 Google Fonts 外不引任何外部图片**，装饰全是内联 SVG / CSS。悉尼把通用天际线换成悉尼地标：
+### 封面
 
-| 元素 | 悉尼做法 |
-|------|---------|
-| **底部天际线带**（内容页 `.slide::after`） | 换成 **Sydney Opera House（贝壳屋顶）+ Harbour Bridge（拱桥）** 剪影，用 `--harbour-deep` 填充，窗格/桥灯点缀用 `--harbour-gold`。这是悉尼最强识别元素，务必做。 |
-| **Hero 半调圆点** | 沿用，颜色随海港蓝渐变（`--cream` 高光点不变） |
-| 角落星星 / sparkle | 用 `--harbour-gold` 暖金（替墨尔本柠檬黄） |
-| 纸飞机 / 小物 | 保留，描边用 `--harbour-deep` |
-| 滑板少年插画（仅封面 + 收尾） | 沿用现有 `character.png`；**外套暖橙 + 裤子蓝**的冷暖对比正好压在海港蓝底上，不必换。若要悉尼定制版可让设计同学出新 PNG，非必需。 |
+封面使用 `assets/illustrations/sydney-welcome-students.png` 作为满版 Sydney 新生欢迎插画，叠深海港蓝遮罩。四校校名必须完整出现：
 
-> 天际线 SVG 建议：拱桥用一条抛物线 `<path>` + 两端桥塔矩形；歌剧院用 3–4 片错位贝壳（旋转的 `<path>` 椭圆切片）。整条带高度、定位沿用墨尔本 `.slide::after` 的尺寸，只换 path 形状与填色，**不改布局**。
+`USYD · UNSW · UTS · Macquarie`
 
----
+### 宣传矩阵页
 
-## 六、套餐卡：4 档（含 Premium）的视觉规格
+第 3 页是悉尼专属「课代表系列 · 宣传矩阵」页：
 
-悉尼比墨/布多一档 **Premium $6000**，价格区要能放下 4 张卡：
+- 左侧：课代表系列，强调 14 个自媒体账号、2w+ 私域学生。
+- 右侧：内容分发 + 线下转化，强调 10w+ 线上粉丝、3+ 前期宣传、2000+ 线下人流。
 
-- **Silver / Gold / Diamond**：沿用全系列卡片样式（细线卡 + 柔阴影，数据橙色 tabular-nums）。
-- **Premium（$6000）**：做成**最高规格卡**——`--brand-grad` 海港蓝描边或浅金底 + `--harbour-gold` 金色「旗舰 / 双主办专属」角标，盖过 Diamond 的「热门」角标层级。让 sponsor 一眼看到这是顶配。
-- 4 卡并排若过挤，可 Silver/Gold/Diamond 一行 + Premium 单独成行做"旗舰横条卡"。
+这里不能出现第二主办方、第二联系人或外部财经社区信息。
 
----
+### 合作套餐
 
-## 七、AFN「双引擎」页（悉尼独有页型）
+四档并排：Silver / Gold / Diamond / Premium。
 
-PRD 要求在套餐前单独一页讲「课代表系列（大学生私域）× AFN（高净值华语社区）」。视觉建议：
+Premium 是最高规格卡，样式为暖金描边 + 浅金蓝渐变 + `旗舰 · 优先资源`角标。不要把 Premium 降级成普通“热门”卡。
 
-- Hero 或浅底**对开双栏**：左栏课代表系列（小红书 + 公众号矩阵数据），右栏 AFN（70 万+ 用户 / 20 万+ 粉 / 月均曝光 80 万+）。
-- 中间用 `×` 或交汇光晕连接，强调"双资源叠加"。
-- AFN 一侧可用**更稳重的深海军蓝**（`--brand-a`/`--navy`）传达高净值/财经的可信感；课代表一侧用**亮海港青**传达年轻活力。冷暖/深浅对比即叙事。
+### 现场玩法
 
----
+价格对比后新增「抽奖券驱动现场动线」页：签到基础券、组队奖励、集章打卡、社交任务都收敛到抽奖券，赞助商价值表达为“逛展、扫码、分享、复访”。活动后复盘口径包含报名、签到、扫码、社交任务、中奖记录和商家线索。该页仍是内容页 `.slide`，可使用 `assets/illustrations/lucky-draw.png` 补足现场感，关键强调色用 `--harbour-gold`。
 
-## 八、规则（与全系列一致，必须保持）
+### 插画资产
 
-- 16:9 frame、URL、播放器行为（← → 翻页 / E 编辑 / G 总览 / F 全屏）不变。
-- 标题前用渐变橙竖条 `.h .mk` 作 marker；**不用 emoji ⭐ 当 UI 标记**（卡片正文里的彩色 emoji 可保留做点缀）。
-- 圆角：卡片 16px、frame 20px、胶囊 / 状态点 999px。
-- 数据数字一律橙色 `--orange` + tabular-nums；Premium 用金角标，Diamond 保留「热门」。
-- 表格：深色（海港蓝）表头带 + 斑马纹，不裸表格线。
+生成插画放在 `assets/illustrations/`：
+
+- `sydney-welcome-students.png`：封面欢迎主视觉。
+- `sponsor-booth.png`：商家机会/联络页展位互动视觉。
+- `lucky-draw.png`：抽奖券动线页视觉。
+
+插画不得包含可读品牌名、学校 logo 或不确定合作方 logo。若后续有真实现场图/真实 sponsor logo，优先用真实素材替换对应占位视觉。
+
+### 照片页
+
+真实活动照片用 `.photo-slide` 满版展示。图片来自本目录 `assets/photo-1.jpg`、`assets/photo-2.jpg`。不要保留“替换为真实活动照片”的占位页；没有素材就先删掉。
+
+## 规则
+
 - 每个 `<head>` 保留 `<meta name="robots" content="noindex, nofollow">`。
-- 除 Google Fonts 外不引外部资源；不加 analytics / SEO schema / 不改路由；不 hotlink 网图。
-
----
-
-## 九、风格关键词
-
-海港都会 / 活力中带精致 / 海港蓝 base + 暖金·橙点睛 / Opera House + Harbour Bridge 天际线 / 四校 / 双主办（课代表 × AFN）/ 半调圆点 / 3D 厚涂滑板少年插画。
-
----
-
-## 建 deck 时的落地步骤（速记）
-
-1. `cp -r melbourne-2026-s2/* sydney-2026-s2/`（把三件套 + assets 拷进本目录）
-2. 用第四节 token 块替换 `styles.css` 顶部「城市主题」
-3. 把 `.slide::after` 的天际线 SVG path 换成 Opera House + Harbour Bridge（第五节）
-4. 套餐区扩成 4 档 + Premium 旗舰卡（第六节）；新增 AFN 双引擎页（第七节）
-5. 用 `content/sydney-2026-s2-prd.md` + `content/sydney-2026-s1-pages.md` 填文案，**届次统一 S2**
-6. 根 `index.html` 加悉尼卡片入口
-7. 回填本 design.md 与最终实现的差异（保持它是真相源）
+- 除 Google Fonts 外不引外部资源。
+- 不加 analytics、SEO schema 或新路由。
+- 不改播放器行为：左右翻页、`E` 编辑、`G` 总览、`F` 全屏。
+- 不在 UI 标记里用 emoji；需要图形感时用内联 SVG icon 或 CSS 装饰。
+- 活动报价、联系人、PRD 内容属于招商物料，不要把 `content/` 目录公开 serve。
