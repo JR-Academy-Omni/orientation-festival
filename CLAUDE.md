@@ -34,25 +34,27 @@ python3 -m http.server 8000                     # 然后访问 http://localhost:
 - `deck.js`（~100 行 vanilla）— 翻页 / hash 路由（`#3` 直达第 3 页）/ 编辑开关 / 总览 / 全屏 / 待机隐藏
 - `styles.css` — 所有视觉
 
-两类幻灯片：
-- `.slide`（默认）= **内容页**：浅纸白底 + 底部城市天际线带 + 角落星星/sparkle 装饰
-- `.slide.hero` = **封面 / 分隔页 / 收尾**：满版品牌渐变 + 贴纸大标题（`.sticker`）+ 更多装饰（星星/纸飞机）+ 滑板少年插画（仅封面与收尾）
+三类幻灯片（墨尔本 deck v3「Airbotix 质感」）：
+- `.slide`（默认）= **内容页**：暖奶油底 `#FDF6EF` + 角落极淡色晕（无天际线、无圆点噪点）；大号粗体 ink 标题 + 珊瑚短杠；圆角白卡 + 柔阴影；`.body` 内网格/单卡撑满正文高度
+- `.slide.hero` = 需要满版色块的分隔/CTA：品牌珊瑚暖渐变 + 白字大标题（加 `.blue` 用蓝渐变）
+- `.slide.photobg` = **封面 / 场地 / 往期回顾 / 成果展示 / 联络**：满铺现场照 + 暗渐变叠加 + 白字，照片用内联 `style="--bg:url('assets/past-events/xxx.jpg')"`
 
-**装饰全部是内联 SVG**：天际线/星星/纸飞机走 `styles.css` 里 `.slide::after` 的 CSS data-URI；卡片图标是内联 `<svg>` 配 `.ico` chip；摊位图是内联 SVG。**除 Google Fonts CDN 外不引任何外部图片资源**——这是刻意的（自包含、不依赖外链、离线可看）。新增装饰沿用此模式，不要 hotlink 网图。
+**装饰极简**：不再用天际线 / 圆点 / 纸飞机 / 滑板少年插画（旧 v2 元素已废）。视觉靠：现场照背景 + 彩色 `.ico` chip + 标签 `.tag` pill + 珊瑚数据大字。卡片图标 / 摊位图仍是内联 `<svg>`。照片为本地 asset（`assets/past-events/`，源自品牌往期归档），**除 Google Fonts CDN 外不引外部网络资源**，不 hotlink 网图。
 
 ## 视觉规范（改样式前先读对应 deck 的 design.md）
 
-- **城市主题色 = `styles.css` 顶部 `:root` 里一块 `--brand-a..d`**（墨尔本 = 翡翠绿青）。换城市只改这一块即可得到不同风格（如布里斯班 = 橙粉日落）。
+- **城市主题色 = `styles.css` 顶部 `:root` 里 `--accent*` / `--blue*` 一块**（墨尔本 = 珊瑚 `#FF6B5C` + 蓝 `#5B9BFF`）。换城市改这一块。
 - 字体：中文/大标题 **Noto Sans SC**（`--font-cn`），拉丁/数字/正文 **Sora**（`--font`），`<head>` 里引 Google Fonts。
-- hero 大标题 = 实色白字 + 柔和投影。**不要黑色描边贴纸字**（旧版被否决）。
-- 标题 marker 用渐变橙竖条 `.h .mk`，**不用 emoji 当 UI 标记**。
+- hero·photobg 大标题 = 白字 + 柔投影，点睛字 `.c` 暖黄 `#FFE15D`。**不要黑色描边贴纸字**（旧版被否决）。
+- 标题 marker 用珊瑚渐变短杠 `.h .mk`，**不用 emoji 当 UI 标记**。
+- **每页固定真 v2 logo**：内容页右上黑标 `assets/logo-zh.svg`、hero·photobg 左上白标 `assets/logo-zh-white.png`，`:has()` 自动切换。
 - 每个 HTML `<head>` 必须保留 `<meta name="robots" content="noindex, nofollow">`。
 
 ## 新增一座城市的 deck
 
 1. `cp -r melbourne-2026-s2/ {city}-{term}/`
 2. 用 `content/{city}-{term}-pages.md` 的逐页文字替换 deck 文案
-3. 只改 `styles.css` 顶部 `--brand-*` 城市主题色块
+3. 只改 `styles.css` 顶部 `--accent*` / `--blue*` 城市主题色块
 4. 在根 `index.html` 加一张城市卡片入口
 5. 更新该 deck 的 `design.md`，使其与实现一致
 
