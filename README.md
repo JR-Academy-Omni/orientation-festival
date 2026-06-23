@@ -47,11 +47,13 @@ open melbourne-2026-s2/index.html
 
 ## 设计规范
 
-视觉「活力·精致版」：浅底内容页 + 满版品牌渐变 hero 双层，Noto Sans SC + Sora 字体，
-主题色抽成「城市主题」一块（墨尔本=绿青，布里斯班=橙粉日落）。改样式前先读
-`melbourne-2026-s2/design.md`。
+> ⚠️ 墨尔本 deck 已升级到 **v3「Airbotix 质感」**（暖奶油底 + 珊瑚主色 + 现场照满铺背景 + 圆角白卡），
+> 是当前的设计标杆；sydney / brisbane 仍是旧 v2「活力·精致版」（浅底 + 渐变 hero），后续按需对齐。
+> **每套 deck 的唯一视觉真相源 = 该目录下的 `design.md`，改样式前先读。**
 
-## 新增城市 deck
+v3（墨尔本）：Noto Sans SC + Sora 字体；主题色 = `styles.css` 顶部 `--accent*` / `--blue*` 一块。
+
+## 新增城市 deck（对齐 v3）
 
 复制 `melbourne-2026-s2/` 三件套 → 套用 `content/{city}-pages.md` 文字 →
-只改 `styles.css` 顶部 `--brand-*` 城市主题色块 → 在根 `index.html` 加入口。
+只改 `styles.css` 顶部 `--accent*` / `--blue*` 城市主题色块 + 换 `assets/past-events/` 现场照 → 在根 `index.html` 加入口。
