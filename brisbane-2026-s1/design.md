@@ -1,96 +1,56 @@
-# 布里斯班新生节 deck 视觉风格（实现说明 · 与 styles.css 一致）
+# 布里斯班 2026 S1 新生节 Deck 设计说明
 
-> 本文件描述 **brisbane-2026-s1 这套 deck 当前 styles.css 实际实现** 的风格，是这套 deck 的唯一设计真相源。
-> 城市主题：**布里斯班 = 橙粉日落（warm sunset）**，与墨尔本（绿青）形成「两城不同」。
-> 配色根源：① 匠人品牌 v5 暖色 token（`jr-academy-brand/tokens/tokens.css`）② 布里斯班 Canva 原稿量化采样（`content/design-style.md`）。
+## 当前实现
 
-## 风格目标
+`brisbane-2026-s1` 是一套 React + Vite 的网页版招商 deck，入口为 `index.html`，页面由 `src/App.tsx` 组合 34 张 slide。核心视觉沿用 JR Academy 的高对比 Neo-brutalism 结构，但内容、图片和信息层级已按布里斯班三校新生节重做。
 
-招商 deck，给 sponsor 看要够专业可信；同时是大学新生欢迎活动，要阳光、活力、年轻。
-沿用墨尔本那套「浅底干净内容页 + 满版品牌渐变 hero 页」的双层结构与全部组件，**只换城市主题色**——
-布里斯班把 hero 渐变换成 **黄昏橙→珊瑚→玫粉** 的日落系，点睛色用**薄荷青冷色撞色**，
-正好是墨尔本「冷底（绿青）+ 暖点睛（柠檬黄）」的**温度镜像**：布里斯班 = **暖底（日落）+ 冷点睛（薄荷）**。
-两城一眼可分，又共用同一套排版骨架，保证「新生节」系列的整体一致性。
+活动主信息：
+- 城市与场次：布里斯班 2026 S1
+- 覆盖高校：UQ / QUT / Griffith
+- 时间：2026 年 2 月 28 日，10:00 AM - 2:00 PM
+- 场地：Ithaca Auditorium, Brisbane City Hall，64 Adelaide St
+- 规模：预计 1000 名学生，300+ 平米室内展区
+- 套餐：Silver $880 / Gold $1980 / Diamond $2970，包含 800 Student Gift Packs
 
-## 为什么是日落橙粉（品牌依据）
+## 视觉方向
 
-| 依据 | 内容 |
-|------|------|
-| 匠人品牌 v5 暖色 token | warmBg `#fff1e7`、orange `#FF914D`、coral-red `#ff5757`、yellow `#FFDE59` —— 天然就是橙粉日落家族 |
-| Canva 原稿主视觉 | 布里斯班滑板少年是**橙色外套**（采样 `#E76141`），日落 hero 与主角同温，视觉聚焦更稳 |
-| repo 既定规则 | `CLAUDE.md` / 墨尔本 `design.md` 均写明「布里斯班保留同结构，只把 `--brand-*` 换橙粉日落」 |
+布里斯班版使用「现场照片 + 亮色信息块」作为主语言：
+- 满版照片页用于封面、场地、回顾分隔、成果和联系页，强化真实活动感。
+- 内容页保持白底、粗黑描边、硬阴影、红黄蓝绿强对比，方便招商信息快速扫读。
+- 封面选用团队合照，场地页使用 AWS venue 照，套餐页保留高密度权益信息，回顾页使用现场物料与观众照片。
 
-## 双层结构（与墨尔本一致，不改）
+## 图片资产
 
-| 层 | 用在哪 | 视觉 |
-|----|--------|------|
-| **内容页**（默认 `.slide`） | 数据 / 套餐 / 表格 / 反馈等正文页 | 浅纸白底 + 极淡半调圆点 + 角落品牌微光；细线卡片 + 柔阴影 + 大号珊瑚色数据数字 |
-| **Hero 页**（`.slide.hero`） | 封面 / 场地 / 往期回顾 / 赞助商 / 成果展示 / 联络 共 6 页 | 满版**日落渐变** + 较强半调 + 大白字标题 + **薄荷青点睛**；封面与收尾页放橙衣滑板少年插画 |
+所有新增图片已先压缩到 1800px 长边，并以 JPEG 75 质量保存到：
 
-## 配色 token（布里斯班 = 橙粉日落）
+`public/past-events/`
 
-换城市**只改 `styles.css` 顶部「城市主题」这一块**即可：
+文件：
+- `team-photo.jpg`：封面、课代表介绍、联系页背景
+- `aws-venue.jpg`：场地页、活动概览
+- `jr-coke.jpg`：回顾分隔、品牌物料
+- `goodlife-booth.jpg`：展位互动
+- `bupa-gifts.jpg`：福利礼品
+- `jr-brochures.jpg`：品牌物料近景
+- `audience-session.jpg`：新生讲座现场
+- `aws-partner-photo.jpg`：成果展示页
 
-```css
-/* ---------- 城市主题（布里斯班 = 橙粉日落）---------- */
---brand-a:#FFC24B;            /* 渐变起点 暖金 amber（落日上缘）*/
---brand-b:#FF9248;            /* 渐变 芒果橙 mango（≈品牌 orange #FF914D）*/
---brand-c:#FF6F61;            /* 渐变 珊瑚 coral（≈品牌 red 暖化）*/
---brand-d:#F25C8E;            /* 渐变终点 玫粉 sunset rose（落日下缘）*/
---brand-grad:linear-gradient(135deg,var(--brand-a) 0%,var(--brand-b) 38%,var(--brand-c) 70%,var(--brand-d) 100%);
---brand-tint:255,146,72;      /* 主品牌色 RGB（浅底光晕，暖橙）*/
---brand-tint2:242,92,142;     /* 次品牌色 RGB（浅底光晕，玫粉）*/
---hero-accent:#34E3CD;        /* hero 点睛字 薄荷青（冷色撞色，warm base + cool pop）*/
+旧复制素材已从 Brisbane deck 的 `public/past-events/` 删除，避免构建产物带入未使用照片。
+
+## Slide 分组
+
+- `S01_Cover.tsx`：布里斯班三校新生节封面
+- `sec1_intro.tsx`：活动概览、介绍、目的、吸引新生、商家机会、为什么选匠人
+- `sec2_venue.tsx`：Brisbane City Hall 场地与摊位布局
+- `sec3_packages.tsx`：Silver / Gold / Diamond 合作套餐与价格对比
+- `sec4_recap.tsx`：往期数据、赞助商、活动亮点、反馈
+- `sec5_coordinator.tsx`：课代表媒体矩阵与社群资源
+- `sec6_achievements.tsx`：大学合作、品牌活动、企业合作成果
+- `S34_Contact.tsx`：Angela Han 联系页
+
+## 运行
+
+```bash
+npm run dev
+npm run build
 ```
-
-> **通用 token 不改**（`--navy / --ink / --orange / --canvas / --paper` 等照搬墨尔本）。
-> 内容页数据/CTA 仍用 `--orange:#E96343`（珊瑚橙）——它本就属日落家族，落在白底内容页上既醒目又与 hero 同系，
-> 不必单独换。**两城内容页共用同一套中性白底 + 珊瑚数据色**（系列一致性），**城市识别全靠 hero 页 + 页面光晕 + 点睛色**。
-
-### 渐变走向直觉
-左上**暖金 `#FFC24B`** → 中段**芒果橙→珊瑚** → 右下**玫粉 `#F25C8E`**，135° 对角，模拟黄昏天空由高到低的橙→粉过渡。
-
-## 字体（与墨尔本一致，已引 Google Fonts）
-
-- 中文 / 大标题：**Noto Sans SC**（`--font-cn`）。
-- 拉丁 / 数字 / 正文 Latin：**Sora**（`--font`）。
-- hero 大标题 = 实色白字 + 柔和投影；点睛字 `.sticker .c` 用 `--hero-accent` 薄荷青。
-- ⚠️ 不用黑色八向描边贴纸字（旧版已废）。
-
-## 规则（与墨尔本一致，逐条保留）
-
-- 16:9 frame、URL hash 路由、播放器行为（← → 翻页 / E 编辑 / G 总览 / F 全屏）保持不变。
-- 标题前用渐变橙竖条 `.h .mk` 作 marker；**不用 emoji ⭐ 当 UI 标记**（卡片正文里的彩色 emoji 保留做活力点缀）。
-- 圆角：卡片 16px、frame 20px、胶囊/状态点 999px。
-- 数据数字一律珊瑚橙 `--orange` + tabular-nums；价格卡 Diamond 用 navy 边框 + 「热门」角标强调。
-- 表格有深色（navy）表头带 + 斑马纹，不是裸表格线。
-- 保持 `<meta name="robots" content="noindex, nofollow">`；除 Google Fonts 外不引任何外部资源；不加 analytics / SEO schema / 不改路由。
-
-## 装饰元素（可选微调，非必须）
-
-`styles.css` 里 `.slide::after` 的角落小装饰是硬编码 SVG data-URI：
-
-- 黄色星星 `rgb(255,209,74)`、黄色纸飞机 —— **与日落同系，保留**。
-- 青色小星 `rgb(23,196,232)`（冷色）—— 在暖底上仍是不错的撞色点，可保留；若想更统一可改成薄荷青 `rgb(52,227,205)` 呼应 `--hero-accent`。
-- 底部城市天际线带（淡 navy）跨城通用，**不改**。
-
-> 这些是装饰层、非主视觉，改与不改都不影响「日落」识别。主识别由 hero 渐变承担。
-
-## 资产（已备）
-
-`content/assets/` 已有布里斯班 Canva 导出图，可按需放进 deck：
-
-- `brisbane-2026-s1-character.png` —— 橙衣滑板少年（放封面/收尾 hero，对应 `assets/character.png`）
-- `brisbane-2026-s1-cover.png` —— 整页封面（备查/参考，非 deck 内嵌）
-- `brisbane-2026-s1-title.png` —— 标题贴纸字（备查；deck 用 HTML 文字版，不内嵌 PNG）
-
-> deck 内主角插画放 `brisbane-2026-s1/assets/character.png`（从上面 character 图裁好的透明版）。
-
-## 建这套 deck 的步骤（落地指引）
-
-1. `cp -r melbourne-2026-s2/ brisbane-2026-s1/`（本 design.md 已先行单独建好，cp 时勿覆盖它）。
-2. 用 `content/brisbane-2026-s1-pages.md` 的逐页文字替换 deck 文案（UQ/QUT/Griffith、2/28、City Hall、套餐 $880/$1980/$2970 等）。
-3. 只改 `styles.css` 顶部「城市主题」一块为上方日落 token。
-4. 换 `assets/character.png` 为橙衣滑板少年透明版。
-5. 在根 `index.html` 把布里斯班卡片从「待制作」改为「deck 已就绪」入口。
-6. 校对 `content/brisbane-2026-s1-pages.md` 已标注的原稿笔误（2025 S2 / Auditrium / P13–P14 数字不一致），外发前人工定稿。
