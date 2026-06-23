@@ -5,7 +5,7 @@ import { colors, fonts, border, shadow } from '../ui';
 
 export function S08_Venue() {
 	return (
-		<PhotoSlide img="past-events/hall-1.jpg">
+		<PhotoSlide img="past-events/hers-luxe-booth.jpg">
 			<motion.span initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
 				style={{ display: 'inline-block', alignSelf: 'flex-start', padding: '6px 16px', marginBottom: 16, background: colors.black, color: colors.yellow, border, fontFamily: fonts.mono, fontWeight: 700, fontSize: 14, letterSpacing: 2 }}>
 				VENUE · 场地

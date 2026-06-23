@@ -5,7 +5,7 @@ import { colors, fonts, border, shadow } from '../ui';
 
 export function S30_AchDivider() {
 	return (
-		<PhotoSlide img="past-events/checkin-11.jpg" center>
+		<PhotoSlide img="past-events/speaker-host.jpg" center>
 			<motion.span initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
 				style={{ background: colors.black, color: colors.yellow, border, fontFamily: fonts.mono, fontWeight: 700, fontSize: 16, letterSpacing: 3, padding: '8px 18px' }}>ACHIEVEMENTS</motion.span>
 			<h1 style={{ fontFamily: fonts.heading, fontWeight: 900, color: colors.white, fontSize: 84, lineHeight: 1.06, letterSpacing: -1, marginTop: 22 }}>

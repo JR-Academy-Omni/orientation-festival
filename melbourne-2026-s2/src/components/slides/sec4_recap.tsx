@@ -5,7 +5,7 @@ import { colors, fonts, border, shadow } from '../ui';
 
 export function S12_RecapDivider() {
 	return (
-		<PhotoSlide img="past-events/checkin-1.jpg" center>
+		<PhotoSlide img="past-events/blockclub-booth.jpg" center>
 			<motion.span initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
 				style={{ background: colors.black, color: colors.yellow, border, fontFamily: fonts.mono, fontWeight: 700, fontSize: 16, letterSpacing: 3, padding: '8px 18px' }}>RECAP</motion.span>
 			<h1 style={{ fontFamily: fonts.heading, fontWeight: 900, color: colors.white, fontSize: 84, lineHeight: 1.06, letterSpacing: -1, marginTop: 22 }}>
@@ -49,7 +49,7 @@ export function S15_Data2() {
 				<div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 20 }}>
 					{stats.map(([n, l], i) => <StatCard key={l} i={i} n={n} label={l} bg={i === 1 ? colors.yellow : colors.white} accent={i === 1 ? colors.black : colors.red} />)}
 				</div>
-				<PhotoStrip h={170} imgs={[{ img: 'past-events/hall-1.jpg', caption: '赞助商展位' }, { img: 'past-events/checkin-11.jpg', caption: '领取礼品袋' }, { img: 'past-events/checkin-6.jpg', caption: '入场排队' }]} />
+				<PhotoStrip h={170} imgs={[{ img: 'past-events/hers-luxe-booth.jpg', caption: '赞助商展位' }, { img: 'past-events/speaker-host.jpg', caption: '主持分享' }, { img: 'past-events/venue-queue.jpg', caption: '入场排队' }]} />
 			</div>
 		</Page>
 	);

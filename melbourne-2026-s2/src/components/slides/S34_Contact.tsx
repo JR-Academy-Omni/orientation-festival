@@ -4,7 +4,7 @@ import { colors, fonts, border, shadow } from '../ui';
 
 export default function S34_Contact() {
 	return (
-		<PhotoSlide img="past-events/crowd-stage.jpg">
+		<PhotoSlide img="past-events/consulting-table.jpg">
 			<motion.span initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}
 				style={{ display: 'inline-block', alignSelf: 'flex-start', background: colors.black, color: colors.yellow, border, fontFamily: fonts.mono, fontWeight: 800, fontSize: 15, letterSpacing: 2.4, padding: '8px 18px', marginBottom: 18 }}>
 				NEXT STEP

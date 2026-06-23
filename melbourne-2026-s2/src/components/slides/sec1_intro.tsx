@@ -20,7 +20,7 @@ export function S02_Overview() {
 						))}
 					</div>
 				</div>
-				<Photo img="past-events/booth-wide.jpg" caption="往期现场 · 300+㎡ 室内展区" />
+				<Photo img="past-events/hers-luxe-booth.jpg" caption="往期现场 · 300+㎡ 室内展区" />
 			</div>
 		</Page>
 	);
@@ -59,7 +59,7 @@ export function S05_Highlights() {
 					<FeatureCard i={1} emoji="🎯" accent={colors.blue} title="互动活动" desc="设置多种有趣互动，提升新生参与度和现场氛围。" />
 					<FeatureCard i={2} emoji="🧭" accent={colors.green} title="实用信息" desc="提供墨尔本生活和学习的实用信息，帮助新生尽快适应新环境。" />
 				</CardsGrid>
-				<PhotoStrip h={150} imgs={[{ img: 'past-events/checkin-1.jpg', caption: '签到 · 领礼品' }, { img: 'past-events/booth-wide.jpg', caption: '展位互动' }, { img: 'past-events/crowd-stage.jpg', caption: '现场人潮' }]} />
+				<PhotoStrip h={150} imgs={[{ img: 'past-events/consulting-table.jpg', caption: '面对面咨询' }, { img: 'past-events/blockclub-booth.jpg', caption: '展位互动' }, { img: 'past-events/venue-queue.jpg', caption: '现场人潮' }]} />
 			</div>
 		</Page>
 	);

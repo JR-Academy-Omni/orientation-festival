@@ -10,7 +10,7 @@ export default function S01_Cover() {
 	] as const;
 
 	return (
-		<PhotoSlide img="past-events/booth-wide.jpg">
+		<PhotoSlide img="past-events/venue-queue.jpg">
 			<motion.div
 				initial={{ opacity: 0, y: -16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
 				style={{
