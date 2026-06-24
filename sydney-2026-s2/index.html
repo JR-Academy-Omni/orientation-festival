@@ -25,7 +25,6 @@
 
   <!-- 1 封面 -->
   <section class="slide hero cover-slide active" data-seg="封面" style="justify-content:center">
-    <img class="cover-bg" src="assets/illustrations/sydney-welcome-students.png" alt="悉尼新生节欢迎插画">
     <div class="logo">匠人学院<small>JR ACADEMY</small></div>
     <div class="sydney-mark" aria-hidden="true">
       <svg viewBox="0 0 520 260">
@@ -42,34 +41,45 @@
       </svg>
       <span>Sydney Harbour · George St</span>
     </div>
+    <figure class="cover-art">
+      <img src="assets/illustrations/sydney-welcome-students.png" alt="悉尼新生节欢迎插画">
+      <figcaption data-edit>Lower Town Hall · Sydney CBD · Four Universities</figcaption>
+    </figure>
     <div class="cover-copy">
-      <span class="eyebrow" data-edit style="font-size:clamp(16px,2.3vw,32px)">2026 S2 · JR Academy 主办</span>
-      <h1 class="sticker" data-edit style="font-size:clamp(30px,5.8vw,80px);margin:.12em 0">悉尼四校<br><span class="c">新生节</span></h1>
-      <p class="sticker" data-edit style="font-size:clamp(14px,2vw,28px);font-weight:800">USYD · UNSW · UTS · Macquarie</p>
-      <p data-edit style="margin-top:.7em;display:inline-block;background:var(--card);border:1.5px solid var(--edge);border-radius:999px;padding:.4em 1em;font-weight:700;font-size:clamp(12px,1.5vw,19px)">Fri. Aug. 28th, 2026 · 2:00 – 5:00 PM</p><br>
-      <p data-edit style="margin-top:.5em;display:inline-block;background:var(--card);border:1.5px solid var(--edge);border-radius:999px;padding:.4em 1em;font-weight:700;font-size:clamp(11px,1.4vw,18px)">Lower Town Hall, Sydney Town Hall, 483 George St, Sydney NSW 2000</p>
+      <span class="eyebrow" data-edit>2026 S2 · 悉尼四校联合迎新</span>
+      <h1 class="sticker" data-edit>悉尼四校<br><span class="c">新生节</span></h1>
+      <p class="cover-sub" data-edit>USYD · UNSW · UTS · Macquarie</p>
+      <div class="cover-meta">
+        <p data-edit>Fri. Aug. 28th, 2026 · 2:00 – 5:00 PM</p>
+        <p data-edit>Lower Town Hall, Sydney Town Hall, 483 George St, Sydney NSW 2000</p>
+      </div>
     </div>
   </section>
 
   <!-- 2 活动概览 -->
-  <section class="slide" data-seg="活动概览">
+  <section class="slide overview-slide" data-seg="活动概览">
     <div class="h"><span class="mk"></span><span data-edit>活动概览</span></div>
-    <div class="body"><div class="grid g2">
-      <div class="card"><h3 data-edit>谁会来</h3><p data-edit>预计参与 <b>1000 人</b>，均来自悉尼四所主要大学的新生：<b>USYD、UNSW、UTS、Macquarie</b>，覆盖约 80% 大学生消费群体。</p>
-        <h3 data-edit style="margin-top:.7em">活动形式</h3><p data-edit>室内展区内，合作伙伴设品牌专属展位，向四校新生赠送福利和小礼品，抢先获取首批大学生客户资源。</p></div>
-      <div class="card" style="display:flex;flex-direction:column;justify-content:center;gap:.7em">
-        <div><span class="pill">时间</span><p data-edit style="margin-top:.35em">2026 年 8 月 28 日（周五）下午 2:00 – 5:00 PM</p></div>
-        <div><span class="pill">地点</span><p data-edit style="margin-top:.35em">Lower Town Hall（Sydney Town Hall）· 483 George St, Sydney NSW 2000</p></div>
-        <div><span class="pill">主办方</span><p data-edit style="margin-top:.35em">匠人学院 课代表系列</p></div>
+    <div class="body">
+      <div class="overview-map">
+        <div class="overview-main">
+          <span class="label">Audience</span>
+          <strong data-edit>1000+ 四校新生</strong>
+          <p data-edit>USYD、UNSW、UTS、Macquarie 新生集中到场，活动目标覆盖约 80% 悉尼大学生消费群体。</p>
+        </div>
+        <div class="overview-side">
+          <div><span>时间</span><b data-edit>Aug. 28 · 2-5 PM</b></div>
+          <div><span>地点</span><b data-edit>Lower Town Hall</b></div>
+          <div><span>形式</span><b data-edit>室内展位 + 礼品互动</b></div>
+        </div>
       </div>
-    </div></div>
-    <div class="route-strip" aria-label="悉尼四校到活动场地">
-      <span>USYD</span><i></i><span>UNSW</span><i></i><span>UTS</span><i></i><span>Macquarie</span><b>→</b><strong>Sydney Town Hall</strong>
+      <div class="campus-line" aria-label="悉尼四校到活动场地">
+        <span>USYD</span><i></i><span>UNSW</span><i></i><span>UTS</span><i></i><span>Macquarie</span><b>→</b><strong>Sydney Town Hall</strong>
+      </div>
     </div>
   </section>
 
   <!-- 3 宣传矩阵 -->
-  <section class="slide dual-engine" data-seg="宣传矩阵">
+  <section class="slide matrix-slide" data-seg="宣传矩阵">
     <div class="h"><span class="mk"></span><span data-edit>课代表系列 · 宣传矩阵</span></div>
     <div class="body"><div class="grid g2">
       <div class="card" style="display:flex;flex-direction:column;justify-content:center;gap:.65em">
@@ -93,55 +103,68 @@
   </section>
 
   <!-- 4 活动介绍 -->
-  <section class="slide" data-seg="活动介绍">
+  <section class="slide intro-poster-slide" data-seg="活动介绍">
     <div class="h"><span class="mk"></span><span data-edit>活动介绍</span></div>
-    <div class="body"><div class="card"><p class="lead" data-edit>匠人学院举办<b>「2026 S2 悉尼四校新生节」</b>，聚焦 USYD、UNSW、UTS、Macquarie 四校新生，预计吸引超千名学生到场。活动把市中心室内展区、四校新生流量、课代表系列学生私域和现场展位互动放在同一个招商场景里，让品牌在开学季第一时间建立认知、完成互动并沉淀后续转化线索。</p></div></div>
+    <div class="body">
+      <div class="intro-poster">
+        <img src="assets/illustrations/sydney-welcome-students.png" alt="">
+        <div class="intro-copy">
+          <span class="label">Sydney CBD · Four Universities</span>
+          <p class="lead" data-edit>匠人学院举办<b>「2026 S2 悉尼四校新生节」</b>，聚焦 USYD、UNSW、UTS、Macquarie 四校新生，预计吸引超千名学生到场。</p>
+          <p data-edit>活动把市中心室内展区、四校新生流量、课代表系列学生私域和现场展位互动放在同一个招商场景里，让品牌在开学季第一时间建立认知、完成互动并沉淀后续转化线索。</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- 5 活动目的 -->
-  <section class="slide" data-seg="活动目的">
+  <section class="slide purpose-slide" data-seg="活动目的">
     <div class="h"><span class="mk"></span><span data-edit>活动目的</span></div>
-    <div class="body"><div class="grid g3">
-      <div class="card"><div class="ico cy"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20c0-3.3 2.6-5.5 5.5-5.5s5.5 2.2 5.5 5.5"/><path d="M16 5.2a3.2 3.2 0 0 1 0 6"/><path d="M17 14.6c2.3.5 4 2.5 4 5.4"/></svg></div><h3 data-edit>欢迎新生</h3><p data-edit>帮助新生融入校园生活和城市环境，提供实用信息和礼品。</p></div>
-      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 10v4h3l8 5V5l-8 5H3z"/><path d="M17 9a4 4 0 0 1 0 6"/></svg></div><h3 data-edit>扩大品牌影响力</h3><p data-edit>为商家提供展示品牌和产品的机会，增强在年轻人群体中的品牌认知度。</p></div>
-      <div class="card"><div class="ico gn"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5z"/></svg></div><h3 data-edit>促进交流</h3><p data-edit>搭建新生与商家之间的桥梁，通过互动活动和礼品派发，增加品牌亲和力。</p></div>
+    <div class="body"><div class="purpose-stack">
+      <div class="purpose-card cyan"><span>01</span><h3 data-edit>欢迎新生</h3><p data-edit>帮助新生融入校园生活和城市环境，提供实用信息和礼品。</p></div>
+      <div class="purpose-card gold"><span>02</span><h3 data-edit>扩大品牌影响力</h3><p data-edit>为商家提供展示品牌和产品的机会，增强在年轻人群体中的品牌认知度。</p></div>
+      <div class="purpose-card coral"><span>03</span><h3 data-edit>促进交流</h3><p data-edit>搭建新生与商家之间的桥梁，通过互动活动和礼品派发，增加品牌亲和力。</p></div>
     </div></div>
   </section>
 
   <!-- 6 吸引新生亮点 -->
-  <section class="slide" data-seg="吸引新生">
+  <section class="slide attraction-slide" data-seg="吸引新生">
     <div class="h"><span class="mk"></span><span data-edit>吸引新生的亮点</span></div>
-    <div class="body"><div class="grid g3">
-      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4"/><path d="M5 12v9h14v-9"/><path d="M12 8v13"/><path d="M12 8C12 8 10 3 7.5 4.5 5.5 5.7 8 8 12 8z"/><path d="M12 8C12 8 14 3 16.5 4.5 18.5 5.7 16 8 12 8z"/></svg></div><h3 data-edit>免费礼品</h3><p data-edit>现场可领取各种免费礼品，增加活动吸引力。</p></div>
-      <div class="card"><div class="ico cy"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/></svg></div><h3 data-edit>互动活动</h3><p data-edit>设置多种有趣互动，提升新生参与度和现场氛围。</p></div>
-      <div class="card"><div class="ico gn"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h3 data-edit>实用信息</h3><p data-edit>提供悉尼生活和学习的实用信息，帮助新生尽快适应新环境。</p></div>
+    <div class="body"><div class="attraction-flow">
+      <figure><img src="assets/illustrations/lucky-draw.png" alt=""></figure>
+      <div class="flow-steps">
+        <div><span>Gift</span><h3 data-edit>免费礼品</h3><p data-edit>现场可领取各种免费礼品，增加活动吸引力。</p></div>
+        <div><span>Play</span><h3 data-edit>互动活动</h3><p data-edit>设置多种有趣互动，提升新生参与度和现场氛围。</p></div>
+        <div><span>Guide</span><h3 data-edit>实用信息</h3><p data-edit>提供悉尼生活和学习的实用信息，帮助新生尽快适应新环境。</p></div>
+      </div>
     </div></div>
   </section>
 
   <!-- 7 商家机会 -->
-  <section class="slide" data-seg="商家机会">
+  <section class="slide merchant-slide" data-seg="商家机会">
     <div class="h"><span class="mk"></span><span data-edit>商家机会</span></div>
     <div class="body">
-      <figure class="inline-illust compact">
+      <figure class="merchant-visual">
         <img src="assets/illustrations/sponsor-booth.png" alt="展位互动插画">
         <figcaption data-edit>面对面互动 · 扫码沉淀 · 礼品触达</figcaption>
       </figure>
-      <div class="grid g3">
-      <div class="card"><div class="ico cy"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20c0-3.3 2.6-5.5 5.5-5.5s5.5 2.2 5.5 5.5"/><path d="M16 5.2a3.2 3.2 0 0 1 0 6"/><path d="M17 14.6c2.3.5 4 2.5 4 5.4"/></svg></div><h3 data-edit>直接接触目标群体</h3><p data-edit>面对面互动，直接触达大学新生，提升品牌曝光率。</p></div>
-      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 10v4h3l8 5V5l-8 5H3z"/><path d="M17 9a4 4 0 0 1 0 6"/></svg></div><h3 data-edit>品牌推广</h3><p data-edit>利用活动平台宣传品牌，增强在年轻消费群体中的知名度。</p></div>
-      <div class="card"><div class="ico gn"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20c0-3.3 2.6-5.5 5.5-5.5c1.5 0 2.9.6 3.9 1.5"/><path d="M17 13v6M14 16h6"/></svg></div><h3 data-edit>客户积累</h3><p data-edit>获取新生联系信息，为后续市场推广和销售活动奠定基础。</p></div>
+      <div class="merchant-funnel">
+        <div><b>01</b><h3 data-edit>直接接触目标群体</h3><p data-edit>面对面互动，直接触达大学新生，提升品牌曝光率。</p></div>
+        <div><b>02</b><h3 data-edit>品牌推广</h3><p data-edit>利用活动平台宣传品牌，增强在年轻消费群体中的知名度。</p></div>
+        <div><b>03</b><h3 data-edit>客户积累</h3><p data-edit>获取新生联系信息，为后续市场推广和销售活动奠定基础。</p></div>
       </div>
     </div>
   </section>
 
   <!-- 8 为什么选 -->
-  <section class="slide" data-seg="为什么选">
+  <section class="slide why-slide" data-seg="为什么选">
     <div class="h"><span class="mk"></span><span data-edit>为什么选择匠人学院</span></div>
-    <div class="body"><div class="grid g2">
-      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 10v4h3l8 5V5l-8 5H3z"/><path d="M17 9a4 4 0 0 1 0 6"/></svg></div><h3 data-edit>强大宣传支持</h3><p data-edit>14 个自媒体账号，覆盖 <b>10 万+粉丝 + 2 万+私域学生</b>；合作套餐含至少 3 次前期宣传，叠加大学群、朋友圈和线下宣传资源。</p></div>
-      <div class="card"><div class="ico cy"><svg viewBox="0 0 24 24"><path d="M2 9l10-4 10 4-10 4L2 9z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v5"/></svg></div><h3 data-edit>四校新生</h3><p data-edit>USYD / UNSW / UTS / Macquarie，覆盖约 80% 大学生消费群体，区别于单一大学 O-week 摊位。</p></div>
-      <div class="card"><div class="ico yl"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.2c0-1.2 1.1-2 2.5-2s2.5.8 2.5 1.9c0 2.6-5 1.4-5 4 0 1.1 1.1 2 2.5 2s2.5-.8 2.5-2"/></svg></div><h3 data-edit>低成本高参与度</h3><p data-edit>合作门槛低至 <b>$1500</b>，面对面接触 <b>1000+ 新生</b>，精准流量转私域。</p></div>
-      <div class="card"><div class="ico gn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/></svg></div><h3 data-edit>精准触达</h3><p data-edit>工作人员协助沟通、市中心室内场地、无校方限制、现场即时获取学生反馈。</p></div>
+    <div class="body"><div class="why-dashboard">
+      <div class="why-hero"><span>Festival Advantage</span><strong data-edit>四校流量 + 私域矩阵 + 线下转化</strong></div>
+      <div class="why-item"><b>14</b><h3 data-edit>强大宣传支持</h3><p data-edit>14 个自媒体账号，覆盖 <b>10 万+粉丝 + 2 万+私域学生</b>；合作套餐含至少 3 次前期宣传。</p></div>
+      <div class="why-item"><b>4</b><h3 data-edit>四校新生</h3><p data-edit>USYD / UNSW / UTS / Macquarie，区别于单一大学 O-week 摊位。</p></div>
+      <div class="why-item"><b>$</b><h3 data-edit>低成本高参与度</h3><p data-edit>合作门槛低至 <b>$1500</b>，面对面接触 <b>1000+ 新生</b>，精准流量转私域。</p></div>
+      <div class="why-item"><b>↗</b><h3 data-edit>精准触达</h3><p data-edit>工作人员协助沟通、市中心室内场地、无校方限制、现场即时获取学生反馈。</p></div>
     </div></div>
   </section>
 
@@ -155,32 +178,6 @@
       <span>George St CBD 核心位置</span>
       <span>四校新生集中动线</span>
     </div>
-  </section>
-
-  <!-- 10 Floor Plan -->
-  <section class="slide" data-seg="Floor Plan">
-    <div class="h"><span class="mk"></span><span data-edit>场地 Floor Plan 概览</span></div>
-    <div class="body"><div class="grid g2">
-      <div class="card" style="display:flex;flex-direction:column;justify-content:center;gap:.8em">
-        <p data-edit>📏 每张桌子尺寸：<b>1.8m × 0.8m</b></p>
-        <p data-edit>🪑 每张桌子配 <b>2 把椅子</b></p>
-        <p class="pill" data-edit>Premium / Diamond 合作方可优先选择摊位位置</p>
-      </div>
-      <div class="card fpwrap"><svg viewBox="0 0 400 270" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans SC,sans-serif">
-        <rect x="8" y="8" width="384" height="254" rx="12" fill="#FFF7F2" stroke="#0F2942" stroke-width="2"/>
-        <g fill="#fff" stroke="#0F2942" stroke-width="1.6">
-          <rect x="28" y="66" width="46" height="24" rx="3"/><rect x="88" y="66" width="46" height="24" rx="3"/><rect x="148" y="66" width="46" height="24" rx="3"/><rect x="208" y="66" width="46" height="24" rx="3"/><rect x="268" y="66" width="46" height="24" rx="3"/><rect x="328" y="66" width="46" height="24" rx="3"/>
-          <rect x="28" y="124" width="46" height="24" rx="3"/><rect x="88" y="124" width="46" height="24" rx="3"/><rect x="268" y="124" width="46" height="24" rx="3"/><rect x="328" y="124" width="46" height="24" rx="3"/>
-          <rect x="28" y="182" width="46" height="24" rx="3"/><rect x="88" y="182" width="46" height="24" rx="3"/><rect x="268" y="182" width="46" height="24" rx="3"/><rect x="328" y="182" width="46" height="24" rx="3"/>
-        </g>
-        <g fill="#EE3D7F" stroke="#0F2942" stroke-width="1.6">
-          <rect x="150" y="150" width="46" height="24" rx="3"/><rect x="206" y="150" width="46" height="24" rx="3"/>
-        </g>
-        <text x="200" y="166" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">Premium 优先选位</text>
-        <path d="M186 250 L200 234 L214 250" fill="none" stroke="#EE3D7F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-        <text x="200" y="262" text-anchor="middle" font-size="11" fill="#0F2942" font-weight="700">入口 Entrance</text>
-      </svg></div>
-    </div></div>
   </section>
 
   <!-- 11 套餐 -->
@@ -225,18 +222,36 @@
   </section>
 
   <!-- 12 价格对比 -->
-  <section class="slide" data-seg="价格对比">
-    <div class="h"><span class="mk"></span><span data-edit>价格对比 · 与学生社团</span></div>
-    <div class="body"><div class="card">
-      <p class="lead" data-edit style="margin-bottom:.7em">匠人学院四校新生节 vs 单一大学学生社团摊位：</p>
-      <table class="kv"><tbody data-edit>
-        <tr><th>对比项</th><th>匠人学院四校新生节</th><th>单一大学社团</th></tr>
-        <tr><td>覆盖高校</td><td>USYD + UNSW + UTS + Macquarie（四校）</td><td>单一大学</td></tr>
-        <tr><td>预宣传</td><td>14 账号 / 10 万+粉 / 至少 3 次 + 社群预热</td><td>有限</td></tr>
-        <tr><td>触达新生</td><td>1000+ 面对面</td><td>受单校客流限制</td></tr>
-        <tr><td>私域转化</td><td>扫码加微信 + 社群沉淀</td><td>—</td></tr>
-      </tbody></table>
-    </div></div>
+  <section class="slide roi-slide" data-seg="价格对比">
+    <div class="h"><span class="mk"></span><span data-edit>价格对比 · 对标大学 O-Week</span></div>
+    <div class="body">
+      <div class="roi-hero">
+        <div>
+          <span class="label">Cost per day</span>
+          <strong data-edit>大学 O-Week 单校一天约 $3,220</strong>
+          <p data-edit>摊位费 $2,500/天 + 6 个地推 × $30/小时 × 4 小时 = $720 人工；总成本约 $3,220/天，且通常只覆盖一所学校。</p>
+        </div>
+        <div class="roi-badge"><b data-edit>3x</b><span data-edit>约为 Silver 价格</span></div>
+      </div>
+      <div class="roi-compare">
+        <div class="roi-card festival">
+          <h3 data-edit>悉尼新生节</h3>
+          <div class="roi-row"><span>入门价格</span><b data-edit>$1,100</b></div>
+          <div class="roi-row"><span>覆盖范围</span><b data-edit>四校新生</b></div>
+          <div class="roi-row"><span>现场到场</span><b data-edit>1000+ 人</b></div>
+          <div class="roi-row"><span>线索沉淀</span><b data-edit>扫码 / 微信 / 社群</b></div>
+          <p data-edit>活动已包含预热、现场动线和工作人员引导；品牌不需要额外组织地推团队。</p>
+        </div>
+        <div class="roi-card school">
+          <h3 data-edit>大学 O-Week 单校摊位</h3>
+          <div class="roi-row"><span>摊位 + 人工</span><b data-edit>$3,220 / 天</b></div>
+          <div class="roi-row"><span>覆盖范围</span><b data-edit>单一学校</b></div>
+          <div class="roi-row"><span>可沉淀线索</span><b data-edit>约 500 个</b></div>
+          <div class="roi-row"><span>执行成本</span><b data-edit>自带 6 个地推</b></div>
+          <p data-edit>如果只是为了拿到相近数量的微信用户或 leads，O-Week 的现金成本和执行成本都更高。</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- 13 现场玩法 -->
