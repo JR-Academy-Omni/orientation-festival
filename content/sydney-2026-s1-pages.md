@@ -83,7 +83,7 @@
 |--|----------------|---------------|-------------|
 | Canva | `DAGlgc1Y288` | `DAHLA93aQ5k` | `DAGrb4CL9Xk` |
 | 时间 | 2026.2.28 周六 | 2026.8.7 周五 | 2026.2.22 周日 |
-| 场地 | Brisbane City Hall | 33 Exhibition St | Sydney Town Hall |
+| 场地 | Brisbane City Hall | Drill Hall, 26 Therry St | Sydney Town Hall |
 | 高校 | UQ/QUT/Griffith（三校） | UniMelb/Monash/RMIT（三校） | USYD/UNSW/UTS/Macquarie（四校） |
 | 主办 | 课代表系列 | 课代表系列 | **课代表 + AFN** |
 | 套餐 | Silver $792 / Gold $1980 / Diamond $2970 | Silver $990 / Gold $1980 / Diamond $3960 | Silver $1540 / Gold $2640 / Diamond $3740 / **Premium $6000** |

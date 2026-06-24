@@ -15,7 +15,7 @@ export function S02_Overview() {
 						<p style={{ fontSize: 18, lineHeight: 1.6, color: '#333' }}>300+ ㎡ 室内展区，合作伙伴设品牌专属展位，向三校新生赠送福利与小礼品，抢先获取首批大学生客户资源。</p>
 					</motion.div>
 					<div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-						{[['📅', '8/7 周五 2–5PM'], ['📍', '33 Exhibition St'], ['🎓', '三校 · 80% 群体']].map(([k, v]) => (
+						{[['📅', '8/7 周五 2–5PM'], ['📍', 'Drill Hall · 26 Therry St'], ['🎓', '三校 · 80% 群体']].map(([k, v]) => (
 							<span key={v} style={{ background: colors.dark, color: colors.white, border, boxShadow: shadow, padding: '10px 16px', fontWeight: 700, fontSize: 16 }}>{k} {v}</span>
 						))}
 					</div>

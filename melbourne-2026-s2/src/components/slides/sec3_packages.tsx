@@ -101,14 +101,14 @@ export function S10_Packages() {
 
 export function S11_PriceCompare() {
 	return (
-		<Page tag="09 · 价格对比" title="对比单一大学学生社团摊位" accent={colors.blue} watermark="VS" align="center">
+		<Page tag="09 · 价格对比" title="O-week 摊位 vs 三校新生节获客成本" accent={colors.blue} watermark="VS" align="center">
 			<KvTable
-				head={['对比项', '匠人学院三校新生节', '单一大学社团']}
+				head={['成本 / 线索', '匠人学院三校新生节', '学校 O-week 摊位']}
 				rows={[
-					['覆盖高校', 'UniMelb + Monash + RMIT（三校）', '单一大学'],
-					['预宣传', '14 账号 / 10 万+粉 / 至少 3 次', '有限'],
-					['触达新生', '900+ 面对面', '受单校客流限制'],
-					['私域转化', '扫码加微信 + 社群沉淀', '—'],
+					['摊位费用', 'Silver $990 起；Gold $1980；Diamond $3960', '约 $2500 / 天，仅覆盖单校场景'],
+					['额外人力', '现场集中在一个房间，JR 志愿者协助引导', '通常需另雇 4-10 人地推，约 $35 / 小时 / 人'],
+					['可触达学生', '每场约 1000 名新生，UniMelb + Monash + RMIT 三校集中到场', '单校 O-week 约 400 leads，受摊位位置和路过人流限制'],
+					['线索效率', '学生主动入场、逛摊、扫码加微信，线索更集中', '需要地推主动拦截，获客成本随人力继续上升'],
 				]}
 			/>
 		</Page>

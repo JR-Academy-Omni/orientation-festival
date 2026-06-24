@@ -6,7 +6,7 @@ export default function S01_Cover() {
 	const meta = [
 		['DATE', 'Aug. 7th, 2026'],
 		['TIME', '2:00 - 5:00 PM'],
-		['VENUE', 'Ground Floor, 33 Exhibition Street'],
+		['VENUE', 'Drill Hall, 26 Therry Street'],
 	] as const;
 
 	return (

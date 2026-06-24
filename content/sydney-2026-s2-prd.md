@@ -157,7 +157,7 @@
 | | 布里斯班 2026 S1 | 墨尔本 2026 S2 | **悉尼 2026 S2（本 PRD）** |
 |--|----------------|---------------|-------------|
 | 时间 | 2026.2.28 周六 | 2026.8.7 周五 | **S2 开学季 · 待定** |
-| 场地 | Brisbane City Hall | 33 Exhibition St | Sydney Town Hall（待复核） |
+| 场地 | Brisbane City Hall | Drill Hall, 26 Therry St | Sydney Town Hall（待复核） |
 | 高校 | UQ/QUT/Griffith（3） | UniMelb/Monash/RMIT（3） | **USYD/UNSW/UTS/Macquarie（4）** |
 | 主办 | 课代表系列 | 课代表系列 | **课代表 + AFN** |
 | 套餐 | $792 / $1980 / $2970 | $990 / $1980 / $3960 | **$1540 / $2640 / $3740 / Premium $6000** |

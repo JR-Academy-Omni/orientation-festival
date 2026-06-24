@@ -9,7 +9,7 @@
 |------|------|
 | 活动名称 | 匠人学院 2026 S2 墨尔本三校新生节（第三届墨尔本大学新生见面会） |
 | 时间 | 2026 年 8 月 7 日（周五）2:00 PM – 5:00 PM |
-| 地点 | Ground Floor, 33 Exhibition Street, Melbourne（室内 300+ ㎡ 展区） |
+| 地点 | Drill Hall, 26 Therry Street, Melbourne（已按 City of Melbourne 场地信息校正） |
 | 预计参与人数 | 1500 人，均为墨尔本三校新生 |
 | 覆盖高校 | University of Melbourne、Monash、RMIT（覆盖约 80% 大学生消费群体） |
 | 招商联系人 | Angela HAN · +61 452263727 · angela727hl@gmail.com |
