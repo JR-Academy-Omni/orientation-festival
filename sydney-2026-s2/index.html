@@ -25,7 +25,6 @@
 
   <!-- 1 封面 -->
   <section class="slide hero cover-slide active" data-seg="封面" style="justify-content:center">
-    <img class="cover-bg" src="assets/photo-1.jpg" alt="">
     <div class="logo">匠人学院<small>JR ACADEMY</small></div>
     <div class="sydney-mark" aria-hidden="true">
       <svg viewBox="0 0 520 260">
@@ -42,13 +41,18 @@
       </svg>
       <span>Sydney Harbour · George St</span>
     </div>
-    <img class="char cover-char" src="assets/character.png" alt="">
+    <figure class="cover-art">
+      <img src="assets/illustrations/sydney-welcome-students.png" alt="悉尼新生节欢迎插画">
+      <figcaption data-edit>Lower Town Hall · Sydney CBD · Four Universities</figcaption>
+    </figure>
     <div class="cover-copy">
-      <span class="eyebrow" data-edit style="font-size:clamp(16px,2.3vw,32px)">2026 S2 · JR Academy 主办</span>
-      <h1 class="sticker" data-edit style="font-size:clamp(30px,5.8vw,80px);margin:.12em 0">悉尼四校<br><span class="c">新生节</span></h1>
-      <p class="sticker" data-edit style="font-size:clamp(14px,2vw,28px);font-weight:800">USYD · UNSW · UTS · Macquarie</p>
-      <p data-edit style="margin-top:.7em;display:inline-block;background:var(--card);border:1.5px solid var(--edge);border-radius:999px;padding:.4em 1em;font-weight:700;font-size:clamp(12px,1.5vw,19px)">Fri. Aug. 28th, 2026 · 2:00 – 5:00 PM</p><br>
-      <p data-edit style="margin-top:.5em;display:inline-block;background:var(--card);border:1.5px solid var(--edge);border-radius:999px;padding:.4em 1em;font-weight:700;font-size:clamp(11px,1.4vw,18px)">Lower Town Hall, Sydney Town Hall, 483 George St, Sydney NSW 2000</p>
+      <span class="eyebrow" data-edit>2026 S2 · JR Academy 主办</span>
+      <h1 class="sticker" data-edit>悉尼四校<br><span class="c">新生节</span></h1>
+      <p class="cover-sub" data-edit>USYD · UNSW · UTS · Macquarie</p>
+      <div class="cover-meta">
+        <p data-edit>Fri. Aug. 28th, 2026 · 2:00 – 5:00 PM</p>
+        <p data-edit>Lower Town Hall, Sydney Town Hall, 483 George St, Sydney NSW 2000</p>
+      </div>
     </div>
   </section>
 
@@ -122,11 +126,17 @@
   <!-- 7 商家机会 -->
   <section class="slide" data-seg="商家机会">
     <div class="h"><span class="mk"></span><span data-edit>商家机会</span></div>
-    <div class="body"><div class="grid g3">
+    <div class="body">
+      <figure class="inline-illust compact">
+        <img src="assets/illustrations/sponsor-booth.png" alt="展位互动插画">
+        <figcaption data-edit>面对面互动 · 扫码沉淀 · 礼品触达</figcaption>
+      </figure>
+      <div class="grid g3">
       <div class="card"><div class="ico cy"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20c0-3.3 2.6-5.5 5.5-5.5s5.5 2.2 5.5 5.5"/><path d="M16 5.2a3.2 3.2 0 0 1 0 6"/><path d="M17 14.6c2.3.5 4 2.5 4 5.4"/></svg></div><h3 data-edit>直接接触目标群体</h3><p data-edit>面对面互动，直接触达大学新生，提升品牌曝光率。</p></div>
       <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 10v4h3l8 5V5l-8 5H3z"/><path d="M17 9a4 4 0 0 1 0 6"/></svg></div><h3 data-edit>品牌推广</h3><p data-edit>利用活动平台宣传品牌，增强在年轻消费群体中的知名度。</p></div>
       <div class="card"><div class="ico gn"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20c0-3.3 2.6-5.5 5.5-5.5c1.5 0 2.9.6 3.9 1.5"/><path d="M17 13v6M14 16h6"/></svg></div><h3 data-edit>客户积累</h3><p data-edit>获取新生联系信息，为后续市场推广和销售活动奠定基础。</p></div>
-    </div></div>
+      </div>
+    </div>
   </section>
 
   <!-- 8 为什么选 -->
@@ -252,6 +262,10 @@
           </div>
         </div>
         <div class="grid g2" style="gap:.8em">
+          <figure class="inline-illust">
+            <img src="assets/illustrations/lucky-draw.png" alt="抽奖互动插画">
+            <figcaption data-edit>礼品、抽奖券和展位互动集中推动现场动线</figcaption>
+          </figure>
           <div class="card"><h3 data-edit>签到基础券</h3><p data-edit>到场先拿 1 张券，现场签到直接进入抽奖池。</p></div>
           <div class="card"><h3 data-edit>组队奖励</h3><p data-edit>3 人队每人 2 张，5 人队每人 3 张，带动同学结伴报名。</p></div>
           <div class="card"><h3 data-edit>集章打卡</h3><p data-edit>每扫一个商家展位给 1 张券，默认最多 8 个展位。</p></div>
@@ -306,18 +320,6 @@
     </div></div>
   </section>
 
-  <!-- 18 赞助商 -->
-  <section class="slide hero" data-seg="赞助商" style="justify-content:center;align-items:center;text-align:center">
-    <div class="h" style="justify-content:center"><span class="mk"></span><span data-edit>赞助商 & 合作伙伴</span></div>
-    <div class="card" style="width:min(90%,880px);padding:1.5em 1.6em">
-      <div class="grid g4" style="gap:.85em">
-        <div class="logobox">LOGO</div><div class="logobox">LOGO</div><div class="logobox">LOGO</div><div class="logobox">LOGO</div>
-        <div class="logobox">LOGO</div><div class="logobox">LOGO</div><div class="logobox">LOGO</div><div class="logobox">+14</div>
-      </div>
-      <p class="note" data-edit style="margin-top:1.1em">往期 <b>18 家</b>参展企业 · 替换为真实赞助商 logo</p>
-    </div>
-  </section>
-
   <!-- 19 活动亮点 -->
   <section class="slide" data-seg="活动亮点">
     <div class="h"><span class="mk"></span><span data-edit>活动亮点</span></div>
@@ -363,16 +365,14 @@
     </div></div>
   </section>
 
-  <!-- 23-26 活动照片 -->
+  <!-- 23-24 活动照片 -->
   <section class="slide photo-slide" data-seg="活动照片"><img src="assets/photo-1.jpg" alt="匠人学院新生节现场 ①"><div class="h"><span class="mk"></span><span data-edit>现场人流 · 展位互动</span></div></section>
   <section class="slide photo-slide" data-seg="活动照片"><img src="assets/photo-2.jpg" alt="匠人学院新生节现场 ②"><div class="h"><span class="mk"></span><span data-edit>舞台区 · 抽奖与答疑</span></div></section>
-  <section class="slide" data-seg="活动照片" style="justify-content:center;align-items:center;text-align:center"><div class="h" style="justify-content:center"><span class="mk"></span><span data-edit>活动照片</span></div><div class="slot photo-slot"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M3 17l5-4 4 3 3-2 6 5"/></svg><span class="st" data-edit>现场照片 ③</span><span class="ss" data-edit>替换为真实活动照片</span></div></section>
-  <section class="slide" data-seg="活动照片" style="justify-content:center;align-items:center;text-align:center"><div class="h" style="justify-content:center"><span class="mk"></span><span data-edit>活动照片</span></div><div class="slot photo-slot"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M3 17l5-4 4 3 3-2 6 5"/></svg><span class="st" data-edit>现场照片 ④</span><span class="ss" data-edit>替换为真实活动照片</span></div></section>
 
   <!-- 27 关于课代表 -->
   <section class="slide" data-seg="关于课代表">
     <div class="h"><span class="mk"></span><span data-edit>关于课代表</span></div>
-    <div class="card" style="margin-bottom:.8em"><p class="lead" data-edit>课代表系列由匠人学院自 2017 年创建，聚焦大学生群体，7 年+ 运营，打造 <b>8 个小红书账号 + 6 个微信公众号</b>矩阵及活跃线下社区，已成为澳洲留学生广泛认可的品牌。</p></div>
+    <div class="card" style="margin-bottom:.8em"><p class="lead" data-edit>课代表系列由匠人学院自 2017 年创建，聚焦大学生群体，9 年+ 运营，打造 <b>8 个小红书账号 + 6 个微信公众号</b>矩阵及活跃线下社区，已成为澳洲留学生广泛认可的品牌。</p></div>
     <div class="grid g4" data-edit style="flex:1">
       <div class="card stat" style="display:flex;flex-direction:column;justify-content:center"><div class="n">50,000+</div><div class="l">小红书粉丝</div></div>
       <div class="card stat" style="display:flex;flex-direction:column;justify-content:center"><div class="n">70,000+</div><div class="l">公众号粉丝</div></div>
@@ -478,22 +478,13 @@
     <div class="h"><span class="mk"></span><span data-edit>活动合作 / 课代表系列品牌活动</span></div>
     <div class="body"><div class="grid g2">
       <div class="card"><h3 data-edit>品牌活动合作</h3><p data-edit>发放礼物/优惠券 · 赞助商视频展示 · 内容互动问答 · 发言环节 · 加微信 · 指定平台/APP 下载注册。</p><h3 data-edit style="margin-top:.6em">定制化</h3><p data-edit>主题活动 · 场地布置 · 物料礼品设计 · 活动冠名 · 现场展位 · Banner · 传单。</p></div>
-      <div class="card stat" style="display:flex;flex-direction:column;justify-content:center"><div class="n">200+</div><div class="l" data-edit>7 年累计举办活动场次<br>单场平均参与 100+</div></div>
-    </div></div>
-  </section>
-
-  <!-- 39 企业合作 -->
-  <section class="slide" data-seg="企业合作">
-    <div class="h"><span class="mk"></span><span data-edit>活动合作 / 澳洲本地领先企业</span></div>
-    <div class="body"><div class="grid g2">
-      <div class="card" style="display:flex;align-items:center"><p data-edit>积极与 <b>Atlassian、AWS、Canva</b> 等澳洲本地顶级企业深度合作，共同策划职业讲座、Hackathon 等系列活动，利用行业领军企业资源为合作伙伴创造更多价值。</p></div>
-      <div class="card"><h3 data-edit>企业合作形式</h3><p data-edit>冠名赞助企业参观和学习活动 · 冠名赞助企业职业发展讲座 · 冠名赞助企业主办的活动。</p><p class="pill" data-edit style="margin-top:.5em">协同发展 · 提升品牌形象</p></div>
+      <div class="card stat" style="display:flex;flex-direction:column;justify-content:center"><div class="n">200+</div><div class="l" data-edit>9 年累计举办活动场次<br>单场平均参与 100+</div></div>
     </div></div>
   </section>
 
   <!-- 40 联络 -->
   <section class="slide hero" data-seg="联络我们" style="justify-content:center;align-items:center;text-align:center">
-    <img class="char" src="assets/character.png" alt="" style="opacity:.55">
+    <img class="char" src="assets/illustrations/sponsor-booth.png" alt="" style="opacity:.2;width:58%;height:auto;right:-10%;bottom:2%">
     <h1 class="sticker" data-edit style="font-size:clamp(24px,4.4vw,58px);margin-bottom:.4em">期待<span class="c">听到您的声音</span></h1>
     <p class="lead" data-edit style="color:var(--navy);font-weight:700;margin-bottom:1em">我们为您和您的品牌提供定制化需求</p>
     <div class="grid g2" style="width:min(92%,760px);gap:1em">
@@ -527,7 +518,7 @@
 
 <div class="grid-ov">
   <button class="gclose" title="关闭（Esc）">✕</button>
-  <h2>全部 39 页 · 点击跳转</h2>
+  <h2>全部页面 · 点击跳转</h2>
   <div class="ovlist"></div>
 </div>
 
