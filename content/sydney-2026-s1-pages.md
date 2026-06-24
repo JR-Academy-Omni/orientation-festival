@@ -1,3 +1,11 @@
+---
+sot_doc: true
+sot: orientation-festival/sydney-2026-s2
+sot_role: legacy-page-archive
+sot_type: event
+title: 2026 S1 悉尼四校新生节逐页文字存档
+---
+
 # 2026 S1 悉尼四校新生节 合作手册 — 文字存档（内部）
 
 > 来源 Canva `DAGrb4CL9Xk`（《2025 悉尼新生节 合作手册（新）》，38 页，1920×1080）。

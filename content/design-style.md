@@ -1,3 +1,11 @@
+---
+sot_doc: true
+sot: orientation-festival
+sot_role: design-style
+sot_type: event
+title: 新生节招商 Deck 设计风格参考
+---
+
 # 新生节视觉风格 / 配色提取（内部参考）
 
 > 从布里斯班场招商 deck 封面（Canva `DAGlgc1Y288`, 1920×1080）用脚本量化采样得到，**非肉眼猜色**。

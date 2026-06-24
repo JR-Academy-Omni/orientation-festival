@@ -1,3 +1,11 @@
+---
+sot_doc: true
+sot: orientation-festival/brisbane-2026-s1
+sot_role: city-event-page-archive
+sot_type: event
+title: 布里斯班新生节逐页文字存档
+---
+
 # 2026 S1 布里斯班三校新生节 合作手册 — 逐页文字存档（内部）
 
 > 来源 Canva `DAGlgc1Y288`（《2026 S1 布里斯班新生节 合作手册》，38 页，1920×1080）。

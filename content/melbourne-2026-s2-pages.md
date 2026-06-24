@@ -1,3 +1,11 @@
+---
+sot_doc: true
+sot: orientation-festival/melbourne-2026-s2
+sot_role: city-event-page-archive
+sot_type: event
+title: 2026 S2 墨尔本三校新生节逐页文字存档
+---
+
 # 2026 S2 墨尔本三校新生节 合作企划 — 逐页文字存档（内部）
 
 > 来源 Canva `DAHLA93aQ5k`（《2026 S2墨尔本新生节商家合作企划 中文》，38 页，1920×1080）。

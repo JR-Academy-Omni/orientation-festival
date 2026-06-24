@@ -2,4 +2,4 @@ sot_root: true
 sot_type: event
 parent: orientation-festival
 title: 新生节 · 悉尼 2026 S2
-docs: design.md
+docs: design.md, ../content/sydney-2026-s2-prd.md, ../content/sydney-2026-s1-pages.md

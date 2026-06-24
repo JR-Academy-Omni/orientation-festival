@@ -1,3 +1,11 @@
+---
+sot_doc: true
+sot: orientation-festival
+sot_role: root-event
+sot_type: event
+title: 大学新生节（多城招商）
+---
+
 # 匠人学院 · 大学新生节（多城招商）
 
 > 真相文档（SoT）。新生节相关一切以本 repo 为唯一来源。各城 deck（`{city}-{term}/index.html`）、落地页（`index.html`）都是从这份真相派生的**产物**，不是真相本身。

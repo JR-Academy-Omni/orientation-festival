@@ -1,3 +1,11 @@
+---
+sot_doc: true
+sot: orientation-festival/brisbane-2026-s1
+sot_role: city-event-design
+sot_type: event
+title: 新生节 · 布里斯班 2026 S2
+---
+
 # 布里斯班 2026 S2 新生节 Deck 设计说明
 
 ## 当前实现

@@ -2,4 +2,4 @@ sot_root: true
 sot_type: event
 parent: orientation-festival
 title: 新生节 · 墨尔本 2026 S2
-docs: design.md
+docs: design.md, ../content/melbourne-2026-s2.md, ../content/melbourne-2026-s2-pages.md

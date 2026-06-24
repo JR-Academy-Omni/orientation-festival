@@ -1,3 +1,11 @@
+---
+sot_doc: true
+sot: orientation-festival/melbourne-2026-s2
+sot_role: city-event-brief
+sot_type: event
+title: 2026 S2 墨尔本新生节招商企划内部存档
+---
+
 # 2026 S2 墨尔本新生节 — 商家合作招商企划（内部存档）
 
 > 内部存档参考，**不对外发布**（位于 `jr-wiki/docs/`，不进 `src/content/`，不同步 DB）。

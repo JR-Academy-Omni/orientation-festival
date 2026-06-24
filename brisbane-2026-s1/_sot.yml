@@ -3,4 +3,4 @@ sot_type: event
 parent: orientation-festival
 aliases: brisbane-2026-s2
 title: 新生节 · 布里斯班 2026 S2
-docs: design.md
+docs: design.md, ../content/brisbane-2026-s1-pages.md

@@ -1,3 +1,11 @@
+---
+sot_doc: true
+sot: orientation-festival/sydney-2026-s2
+sot_role: city-event-prd
+sot_type: event
+title: 2026 S2 悉尼四校新生节 PRD
+---
+
 # PRD · 2026 S2 悉尼四校新生节 招商 deck
 
 > **状态**：规划中（deck 待做）｜**类型**：商家招商物料 PRD

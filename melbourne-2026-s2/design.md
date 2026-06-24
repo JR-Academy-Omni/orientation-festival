@@ -1,3 +1,11 @@
+---
+sot_doc: true
+sot: orientation-festival/melbourne-2026-s2
+sot_role: city-event-design
+sot_type: event
+title: 新生节 · 墨尔本 2026 S2
+---
+
 # 墨尔本新生节 deck —— 基于 talk-deck（React + Vite）
 
 > **2026-06 重构**：本 deck 从手搓 vanilla HTML 改为基于公司标准讲座工具 **talk-deck**（`jr-omni/talk-deck`，React + Vite + framer-motion）。
