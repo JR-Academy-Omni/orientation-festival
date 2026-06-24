@@ -1,3 +1,11 @@
+---
+sot_doc: true
+sot: orientation-festival
+sot_role: repository-guide
+sot_type: event
+title: Orientation Festival · 匠人学院新生节
+---
+
 # Orientation Festival · 匠人学院新生节
 
 匠人学院多城「大学新生节」招商物料大本营 —— 可播放招商 deck + 各城内容源 + 视觉规范。
