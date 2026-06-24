@@ -50,7 +50,7 @@ export default function S01_Cover() {
 				}}
 			>
 				<img
-					src={assetPath('illustrations/welcome-students.png')}
+					src={assetPath('illustrations/brisbane-city-hero.png')}
 					alt="布里斯班三校新生节欢迎插画"
 					style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
 				/>
@@ -105,7 +105,7 @@ export default function S01_Cover() {
 			</h1>
 
 			<motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.7 }}
-				style={{ fontFamily: fonts.heading, fontWeight: 800, color: colors.white, fontSize: 28, marginTop: 20, letterSpacing: 0, textShadow: '0 8px 22px rgba(0,0,0,.32)' }}>
+				style={{ display: 'inline-block', alignSelf: 'flex-start', fontFamily: fonts.heading, fontWeight: 900, color: colors.black, background: colors.white, border, boxShadow: shadow, padding: '8px 16px', fontSize: 25, marginTop: 20, letterSpacing: 0 }}>
 				UQ · QUT · Griffith
 			</motion.p>
 

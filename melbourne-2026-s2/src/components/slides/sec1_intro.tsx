@@ -77,9 +77,14 @@ export function S05_Highlights() {
 }
 
 export function S06_Merchant() {
+	const funnel = [
+		['01', '预热曝光', '14 个账号 + 三校社群提前种草，把品牌放进新生行前清单。', colors.yellow],
+		['02', '现场转化', '学生集中进场、逛摊、领礼品、扫码加微信，不靠路边拦截。', colors.red],
+		['03', '私域跟进', '活动后可按扫码、任务、中奖与咨询记录继续触达。', colors.green],
+	] as const;
 	return (
-		<Page tag="05 · 商家机会" title="商家能拿到什么" bg={colors.blue} tone="dark" accent={colors.dark} watermark="$" align="center">
-			<div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 24, flex: 1, minHeight: 0, alignItems: 'stretch' }}>
+		<Page tag="05 · 商家机会" title="赞助商拿到的是一条转化链路" bg={colors.blue} tone="dark" accent={colors.dark} watermark="$" align="center">
+			<div style={{ display: 'grid', gridTemplateColumns: '0.95fr 1.05fr', gap: 24, flex: 1, minHeight: 0, alignItems: 'stretch' }}>
 				<motion.figure
 					initial={{ opacity: 0, scale: 0.96 }}
 					animate={{ opacity: 1, scale: 1 }}
@@ -89,13 +94,20 @@ export function S06_Merchant() {
 					<img src={assetPath('illustrations/sponsor-booth.png')} alt="商家展位互动插画" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
 					<div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 48%, rgba(16,22,47,.82))' }} />
 					<figcaption style={{ position: 'absolute', left: 18, right: 18, bottom: 16, color: colors.white, fontFamily: fonts.heading, fontWeight: 900, fontSize: 26 }}>
-						面对面互动 · 扫码沉淀 · 礼品触达
+						学生主动入场，商家不需要在路边抢人流
 					</figcaption>
 				</motion.figure>
-				<div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
-					<FeatureCard i={0} emoji="👥" accent={colors.blue} title="直接接触目标群体" desc="面对面互动，直接触达大学新生，提升品牌曝光率。" />
-					<FeatureCard i={1} emoji="📣" accent={colors.red} title="品牌推广" desc="利用活动平台宣传品牌，增强在年轻消费群体中的知名度。" />
-					<FeatureCard i={2} emoji="📈" accent={colors.green} title="客户积累" desc="获取新生联系信息，为后续市场推广和销售活动奠定基础。" />
+				<div style={{ display: 'grid', gap: 14, alignContent: 'center' }}>
+					{funnel.map(([step, title, desc, accent], i) => (
+						<motion.div key={title} initial={{ opacity: 0, x: 28 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.42, delay: 0.08 * i }}
+							style={{ border, background: colors.white, color: colors.black, boxShadow: shadow, padding: '18px 20px', display: 'grid', gridTemplateColumns: '86px 1fr', gap: 18, alignItems: 'center' }}>
+							<div style={{ border, background: accent, height: 74, display: 'grid', placeItems: 'center', fontFamily: fonts.heading, fontWeight: 900, fontSize: 34 }}>{step}</div>
+							<div>
+								<h3 style={{ fontFamily: fonts.heading, fontWeight: 900, fontSize: 27, marginBottom: 6 }}>{title}</h3>
+								<p style={{ fontSize: 17, lineHeight: 1.45, fontWeight: 700, color: '#333' }}>{desc}</p>
+							</div>
+						</motion.div>
+					))}
 				</div>
 			</div>
 		</Page>
@@ -104,13 +116,13 @@ export function S06_Merchant() {
 
 export function S07_WhyUs() {
 	const items = [
-		['📣', '强大宣传支持', '14 个自媒体账号，覆盖 10 万+粉丝 + 4 万+私域学生；合作套餐含至少 3 次前期宣传。', colors.red],
-		['🎓', '三校新生', 'UniMelb / Monash / RMIT，覆盖 80% 大学生消费群体，区别于单一大学 O-week 摊位。', colors.blue],
-		['💰', '低成本高参与度', '合作费用低至 880 澳元，面对面接触 900+ 新生，精准流量转私域。', colors.yellow],
-		['🎯', '精准触达', '工作人员协助沟通、舒适室内场地、无校方限制、现场即时获取学生反馈。', colors.green],
+		['🏠', '租房 / 公寓 / 搬家', '新生刚到墨尔本，住宿、家具、宽带、保险是前 30 天刚需。', colors.red],
+		['💳', '银行 / 电信 / 生活服务', '开户、手机卡、交通、医保、日常消费，适合现场派福利换首批线索。', colors.blue],
+		['📚', '教育 / 职业 / 移民', '学生会主动咨询选课、补习、实习、签证与职业规划，决策周期更长。', colors.yellow],
+		['🍜', '餐饮 / 零售 / 美业', '适合用券包、抽奖和社群福利，把一次体验变成持续复购。', colors.green],
 	] as const;
 	return (
-		<Page tag="06 · 为什么选匠人" title="为什么选择匠人学院" watermark="JR" align="center">
+		<Page tag="06 · 适合谁投" title="哪些商家最适合新生节" watermark="FIT" align="center">
 			<CardsGrid cols={2} gap={20}>
 				{items.map(([e, t, d, a], i) => <FeatureCard key={t} i={i} emoji={e} title={t} desc={d} accent={a} />)}
 			</CardsGrid>

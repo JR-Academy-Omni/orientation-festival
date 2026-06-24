@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Page, KvTable } from './_layout';
+import { Page } from './_layout';
 import { colors, fonts, border, shadow } from '../ui';
 
 function Tier({
@@ -100,17 +100,35 @@ export function S10_Packages() {
 }
 
 export function S11_PriceCompare() {
+	const metrics = [
+		['$2,500/day', '学校 O-week 标准摊位', '通常只覆盖单一大学；位置和路过人流决定实际获客。', colors.blue],
+		['$35/hr', '额外地推人力成本', '常见配置 4-10 人，4 小时现场就会多出 $560-$1,400。', colors.red],
+		['1000+', '新生集中到场', 'UniMelb + Monash + RMIT 三校学生在一个室内场景里完成逛摊、扫码、咨询。', colors.green],
+	] as const;
 	return (
-		<Page tag="09 · 价格对比" title="O-week 摊位 vs 三校新生节获客成本" accent={colors.blue} watermark="VS" align="center">
-			<KvTable
-				head={['成本 / 线索', '匠人学院三校新生节', '学校 O-week 摊位']}
-				rows={[
-					['摊位费用', 'Silver $990 起；Gold $1980；Diamond $3960', '约 $2500 / 天，仅覆盖单校场景'],
-					['额外人力', '现场集中在一个房间，JR 志愿者协助引导', '通常需另雇 4-10 人地推，约 $35 / 小时 / 人'],
-					['可触达学生', '每场约 1000 名新生，UniMelb + Monash + RMIT 三校集中到场', '单校 O-week 约 400 leads，受摊位位置和路过人流限制'],
-					['线索效率', '学生主动入场、逛摊、扫码加微信，线索更集中', '需要地推主动拦截，获客成本随人力继续上升'],
-				]}
-			/>
+		<Page tag="09 · ROI 对比" title="用一场活动替代单校摊位 + 地推" accent={colors.blue} watermark="ROI" align="top">
+			<div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 18, marginBottom: 22 }}>
+				{metrics.map(([num, label, desc, accent], i) => (
+					<motion.div key={label} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.38, delay: 0.08 * i }}
+						style={{ border, background: colors.white, boxShadow: shadow, padding: '22px 20px', minHeight: 208, display: 'flex', flexDirection: 'column' }}>
+						<div style={{ fontFamily: fonts.heading, fontWeight: 900, fontSize: 45, lineHeight: 1, color: accent, marginBottom: 12 }}>{num}</div>
+						<h3 style={{ fontFamily: fonts.heading, fontWeight: 900, fontSize: 23, marginBottom: 10 }}>{label}</h3>
+						<p style={{ fontSize: 16, lineHeight: 1.45, fontWeight: 700, color: '#333' }}>{desc}</p>
+					</motion.div>
+				))}
+			</div>
+			<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, flex: 1, minHeight: 0 }}>
+				<div style={{ border, background: colors.dark, color: colors.white, boxShadow: shadow, padding: '24px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+					<div style={{ fontFamily: fonts.mono, color: colors.yellow, fontWeight: 900, letterSpacing: 2, fontSize: 14, marginBottom: 14 }}>SCHOOL O-WEEK</div>
+					<h3 style={{ fontFamily: fonts.heading, fontWeight: 900, fontSize: 34, lineHeight: 1.12, marginBottom: 16 }}>摊位费只是开始，真正贵的是分散人流和额外地推</h3>
+					<p style={{ fontSize: 19, lineHeight: 1.55, color: '#e9ebf4', fontWeight: 700 }}>一般商家在学校 O-week 能拿到约 400 个 leads，但还要靠 4-10 名地推持续拦截，整体成本很容易超过摊位报价本身。</p>
+				</div>
+				<div style={{ border, background: colors.yellow, color: colors.black, boxShadow: shadow, padding: '24px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+					<div style={{ fontFamily: fonts.mono, color: colors.red, fontWeight: 900, letterSpacing: 2, fontSize: 14, marginBottom: 14 }}>JR ORIENTATION FESTIVAL</div>
+					<h3 style={{ fontFamily: fonts.heading, fontWeight: 900, fontSize: 34, lineHeight: 1.12, marginBottom: 16 }}>学生在一个房间里逛完展位，志愿者帮你把人流导进来</h3>
+					<p style={{ fontSize: 19, lineHeight: 1.55, fontWeight: 800 }}>合作从 $990 起，三校学生集中到场；商家重点做福利、二维码、咨询和后续私域转化，不需要再雇大批地推。</p>
+				</div>
+			</div>
 		</Page>
 	);
 }
