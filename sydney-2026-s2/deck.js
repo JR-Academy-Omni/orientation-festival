@@ -5,6 +5,7 @@ const slides = $$('.slide');
 const N = slides.length;
 const counter = $('.count'), segEl = $('.seg'), barEl = $('.bar'), ovlist = $('.ovlist'), ovTitle = $('.grid-ov h2');
 let i = 0;
+const pdfHref = '../pdf-output/sydney-2026-s2.pdf';
 
 function chrome() {
   counter.textContent = (i + 1) + ' / ' + N;
@@ -52,7 +53,7 @@ $('.next').addEventListener('click', (e) => { e.stopPropagation(); go(i + 1); })
 $('.grid-btn').addEventListener('click', (e) => { e.stopPropagation(); openOv(); });
 $('.gclose').addEventListener('click', closeOv);
 $('.edit-btn').addEventListener('click', (e) => { e.stopPropagation(); toggleEdit(); });
-$('.print-btn').addEventListener('click', (e) => { e.stopPropagation(); window.print(); });
+$('.print-btn').addEventListener('click', (e) => { e.stopPropagation(); });
 $('.fs-btn').addEventListener('click', (e) => {
   e.stopPropagation();
   if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
@@ -83,7 +84,7 @@ document.addEventListener('keydown', (e) => {
     case 'Home': go(0); break; case 'End': go(N - 1); break;
     case 'g': case 'G': openOv(); break;
     case 'e': case 'E': toggleEdit(); break;
-    case 'p': case 'P': window.print(); break;
+    case 'p': case 'P': window.open(pdfHref, '_blank', 'noopener'); break;
     case 'f': case 'F':
       if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
       else document.exitFullscreen?.(); break;

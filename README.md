@@ -10,6 +10,7 @@
 ```
 orientation-festival/
 ├── index.html               ← 落地页：列出各城 deck 入口
+├── pdf-output/              ← 已生成 PDF，线上按钮直接打开这些文件
 ├── melbourne-2026-s2/        ← 墨尔本三校新生节 2026 S2 · 可播放 deck（已做完）
 │   ├── index.html
 │   └── design.md

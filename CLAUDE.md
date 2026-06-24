@@ -73,7 +73,7 @@ deck 含**赞助套餐报价 + 同事私人手机/邮箱（PII）**，`content/*
 git add -A && git commit -m "..." && git push origin main
 # 2) 把更新叠到 gh-pages（不含 content/），再推
 git checkout gh-pages
-git checkout main -- index.html .nojekyll README.md {city}-{term}
+git checkout main -- index.html .nojekyll README.md pdf-output {city}-{term}
 git commit -am "deploy: ..." && git push origin gh-pages
 git checkout main
 ```

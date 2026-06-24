@@ -5,6 +5,7 @@ import CameraBubble from './CameraBubble';
 
 const DESIGN_WIDTH = 1600;
 const DESIGN_HEIGHT = 900;
+const PDF_FILE = 'melbourne-2026-s2.pdf';
 
 interface SlideEngineProps {
 	children: ReactNode[];
@@ -38,6 +39,14 @@ function readPageFromUrl(total: number): number {
 	return Math.min(Math.max(0, Math.floor(raw) - 1), total - 1);
 }
 
+function pdfHref(): string {
+	if (typeof window === 'undefined') return `../pdf-output/${PDF_FILE}`;
+	const path = window.location.pathname;
+	return path.includes('/dist/') || path.endsWith('/dist')
+		? `../../pdf-output/${PDF_FILE}`
+		: `../pdf-output/${PDF_FILE}`;
+}
+
 export default function SlideEngine({ children }: SlideEngineProps) {
 	const slides = Children.toArray(children);
 	const total = slides.length;
@@ -57,7 +66,7 @@ export default function SlideEngine({ children }: SlideEngineProps) {
 	const next = useCallback(() => go(current + 1), [go, current]);
 	const prev = useCallback(() => go(current - 1), [go, current]);
 	const exportPdf = useCallback(() => {
-		window.print();
+		window.open(pdfHref(), '_blank', 'noopener');
 	}, []);
 
 	useEffect(() => {
@@ -163,14 +172,17 @@ export default function SlideEngine({ children }: SlideEngineProps) {
 			<div className="screen-deck" style={{ width: '100%', height: '100%', position: 'relative', overflow: 'hidden' }}>
 			{/* 演讲者摄像头圆圈（按 C 开关 · 录播露脸用） */}
 			<CameraBubble />
-			<button
-				onClick={exportPdf}
-				title="导出 PDF（P）"
+			<a
+				href={pdfHref()}
+				target="_blank"
+				rel="noreferrer"
+				title="打开 PDF（P）"
 				style={{
 					position: 'fixed', top: 18, right: 92, zIndex: 1000,
 					border: `3px solid ${colors.black}`,
 					background: colors.yellow,
 					color: colors.black,
+					textDecoration: 'none',
 					boxShadow: '4px 4px 0px #000',
 					fontFamily: '"Space Mono", monospace',
 					fontSize: 13,
@@ -180,7 +192,7 @@ export default function SlideEngine({ children }: SlideEngineProps) {
 				}}
 			>
 				PDF
-			</button>
+			</a>
 			<div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: 4, background: 'rgba(255,255,255,0.1)', zIndex: 1000 }}>
 				<motion.div animate={{ width: `${((current + 1) / total) * 100}%` }} transition={{ duration: 0.3 }} style={{ height: '100%', background: colors.indigo }} />
 			</div>
