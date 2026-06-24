@@ -1,3 +1,11 @@
+---
+sot_doc: true
+sot: orientation-festival/sydney-2026-s2
+sot_role: city-event-design
+sot_type: event
+title: 新生节 · 悉尼 2026 S2
+---
+
 # 2026 S2 悉尼四校新生节 deck · 视觉真相源
 
 本文件是 `sydney-2026-s2/` 的视觉真相源。改 `styles.css` 或 deck 结构前先读这里。
