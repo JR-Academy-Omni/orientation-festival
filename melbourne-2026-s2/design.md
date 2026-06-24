@@ -31,6 +31,33 @@ npm run build    # 产物 dist/，纯静态可托管
 - `public/xhs-matrix.png` — 课代表系列小红书账号矩阵图，用于 `S24_XhsMatrix`
 - `public/melbourne-floor-plan.png` — 墨尔本新生节展位布局图，用于 `S09_FloorPlan`
 
+## 本场活动事实（SoT）
+
+这些信息优先级高于 Canva 原稿、旧 HTML、旧 PDF 和任何导出文件；deck / PDF / 首页入口必须从这里同步。
+
+| 项目 | 真相 |
+|------|------|
+| 活动 | 匠人学院 2026 S2 墨尔本三校新生节 |
+| 覆盖高校 | UniMelb · Monash · RMIT |
+| 时间 | 2026 年 8 月 7 日（周五）2:00 PM – 5:00 PM |
+| 场地 | Drill Hall |
+| 地址 | 26 Therry Street, Melbourne |
+| 场地来源 | City of Melbourne · Multicultural Hub Drill Hall |
+| 对外 PDF | `../pdf-output/melbourne-2026-s2.pdf` |
+
+### 价格对比口径（商家获客成本）
+
+第 09 页「价格对比」不是泛泛比较覆盖高校，而是比较商家在学校 O-week 摊位与三校新生节的获客成本。
+
+| 对比项 | 墨尔本三校新生节 | 学校 O-week 摊位 |
+|--------|------------------|------------------|
+| 摊位费用 | Silver $990 起；Gold $1980；Diamond $3960 | 约 $2500 / 天，仅覆盖单校场景 |
+| 额外人力 | 学生集中在一个房间，JR 志愿者协助引导 | 通常另雇 4-10 人地推，约 $35 / 小时 / 人 |
+| 可触达学生 | 每场约 1000 名新生，三校集中到场 | 单校 O-week 约 400 leads，受摊位位置和路过人流限制 |
+| 线索效率 | 学生主动入场、逛摊、扫码加微信，线索更集中 | 需要地推主动拦截，获客成本随人力继续上升 |
+
+旧口径「Ground Floor, 33 Exhibition Street」已废弃；旧的 `deck.js` / `styles.css` / vanilla HTML 静态版也已从 GitHub Pages 删除。
+
 ## 设计纪律（照搬 talk-deck）
 
 - **引擎别碰**：`src/components/SlideEngine.tsx` / `ui.tsx` / `CameraBubble.tsx` / `src/styles/theme.ts` 是测过的运行时，加页/改页只动 `slides/*` + `App.tsx`。
