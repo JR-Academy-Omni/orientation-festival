@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { Page, CardsGrid, FeatureCard, Photo, PhotoStrip, Editorial } from './_layout';
-import { colors, fonts, border, shadow } from '../ui';
+import { Page, CardsGrid, FeatureCard, Photo, Editorial } from './_layout';
+import { colors, fonts, border, shadow, assetPath } from '../ui';
 
 export function S02_Overview() {
 	return (
@@ -53,13 +53,24 @@ export function S04_Purpose() {
 export function S05_Highlights() {
 	return (
 		<Page tag="04 · 吸引新生" title="新生为什么愿意来" accent={colors.purple}>
-			<div style={{ display: 'flex', flexDirection: 'column', gap: 20, flex: 1, minHeight: 0 }}>
-				<CardsGrid cols={3}>
+			<div style={{ display: 'grid', gridTemplateColumns: '0.95fr 1.05fr', gap: 24, flex: 1, minHeight: 0, alignItems: 'stretch' }}>
+				<motion.figure
+					initial={{ opacity: 0, x: -34 }}
+					animate={{ opacity: 1, x: 0 }}
+					transition={{ duration: 0.5 }}
+					style={{ position: 'relative', margin: 0, border, boxShadow: shadow, overflow: 'hidden', background: colors.dark, minHeight: 0 }}
+				>
+					<img src={assetPath('illustrations/lucky-draw.png')} alt="新生节抽奖互动插画" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+					<div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 48%, rgba(16,22,47,.78))' }} />
+					<figcaption style={{ position: 'absolute', left: 18, right: 18, bottom: 16, color: colors.white, fontFamily: fonts.heading, fontWeight: 900, fontSize: 26 }}>
+						礼品、抽奖、互动，把学生留在现场
+					</figcaption>
+				</motion.figure>
+				<div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 18 }}>
 					<FeatureCard i={0} emoji="🎁" accent={colors.yellow} title="免费礼品" desc="现场可领取各种免费礼品，增加活动吸引力。" />
 					<FeatureCard i={1} emoji="🎯" accent={colors.blue} title="互动活动" desc="设置多种有趣互动，提升新生参与度和现场氛围。" />
 					<FeatureCard i={2} emoji="🧭" accent={colors.green} title="实用信息" desc="提供墨尔本生活和学习的实用信息，帮助新生尽快适应新环境。" />
-				</CardsGrid>
-				<PhotoStrip h={150} imgs={[{ img: 'past-events/consulting-table.jpg', caption: '面对面咨询' }, { img: 'past-events/blockclub-booth.jpg', caption: '展位互动' }, { img: 'past-events/venue-queue.jpg', caption: '现场人潮' }]} />
+				</div>
 			</div>
 		</Page>
 	);
@@ -68,11 +79,25 @@ export function S05_Highlights() {
 export function S06_Merchant() {
 	return (
 		<Page tag="05 · 商家机会" title="商家能拿到什么" bg={colors.blue} tone="dark" accent={colors.dark} watermark="$" align="center">
-			<CardsGrid cols={3}>
-				<FeatureCard i={0} emoji="👥" accent={colors.blue} title="直接接触目标群体" desc="面对面互动，直接触达大学新生，提升品牌曝光率。" />
-				<FeatureCard i={1} emoji="📣" accent={colors.red} title="品牌推广" desc="利用活动平台宣传品牌，增强在年轻消费群体中的知名度。" />
-				<FeatureCard i={2} emoji="📈" accent={colors.green} title="客户积累" desc="获取新生联系信息，为后续市场推广和销售活动奠定基础。" />
-			</CardsGrid>
+			<div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 24, flex: 1, minHeight: 0, alignItems: 'stretch' }}>
+				<motion.figure
+					initial={{ opacity: 0, scale: 0.96 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 0.5 }}
+					style={{ position: 'relative', margin: 0, border, boxShadow: shadow, overflow: 'hidden', background: colors.dark, minHeight: 0 }}
+				>
+					<img src={assetPath('illustrations/sponsor-booth.png')} alt="商家展位互动插画" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+					<div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 48%, rgba(16,22,47,.82))' }} />
+					<figcaption style={{ position: 'absolute', left: 18, right: 18, bottom: 16, color: colors.white, fontFamily: fonts.heading, fontWeight: 900, fontSize: 26 }}>
+						面对面互动 · 扫码沉淀 · 礼品触达
+					</figcaption>
+				</motion.figure>
+				<div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
+					<FeatureCard i={0} emoji="👥" accent={colors.blue} title="直接接触目标群体" desc="面对面互动，直接触达大学新生，提升品牌曝光率。" />
+					<FeatureCard i={1} emoji="📣" accent={colors.red} title="品牌推广" desc="利用活动平台宣传品牌，增强在年轻消费群体中的知名度。" />
+					<FeatureCard i={2} emoji="📈" accent={colors.green} title="客户积累" desc="获取新生联系信息，为后续市场推广和销售活动奠定基础。" />
+				</div>
+			</div>
 		</Page>
 	);
 }
