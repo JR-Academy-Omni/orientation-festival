@@ -9,6 +9,25 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 纯静态站点：没有 build / lint / test / package.json。
 
+## Content Lineage
+
+新生节是**活动内容 SoT**，不是课程产品；不要给它补课程页、course slug 或 program 关联。
+
+- 根 SoT：`orientation-festival`（`_sot.yml`，活动总线）
+- 城市场次 SoT：`orientation-festival/{city}-{term}`（如 `sydney-2026-s2`，`parent: orientation-festival`）
+- 可播放 PPT/deck：`{city}-{term}/index.html`，作为 `landing`/页面产物挂到对应城市场次 SoT
+- 可发送 PDF：`pdf-output/{city}-{term}.pdf`，作为 `pdf` 产物挂到对应城市场次 SoT
+
+改完 deck 或重新生成 PDF 后，在 `jr-omni` 根目录跑：
+
+```bash
+python3 lineage/build_lineage.py
+cd ../jr-academy-admin && bash scripts/sync-lineage.sh
+```
+
+验证入口：`https://admin.jiangren.com.au/lineage/graph.html#sot=orientation-festival`。
+不要手改 `lineage/lineage.json`、`lineage/REGISTRY.md`、`lineage/content.js` 或 `graph.html` 的数据段。
+
 ## Commands
 
 ```bash
