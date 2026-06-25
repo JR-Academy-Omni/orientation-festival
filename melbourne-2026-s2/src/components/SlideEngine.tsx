@@ -172,48 +172,6 @@ export default function SlideEngine({ children }: SlideEngineProps) {
 			<div className="screen-deck" style={{ width: '100%', height: '100%', position: 'relative', overflow: 'hidden' }}>
 			{/* 演讲者摄像头圆圈（按 C 开关 · 录播露脸用） */}
 			<CameraBubble />
-			<a
-				href={pdfHref()}
-				target="_blank"
-				rel="noreferrer"
-				title="打开 PDF（P）"
-				style={{
-					position: 'fixed', top: 18, right: 92, zIndex: 1000,
-					border: `3px solid ${colors.black}`,
-					background: colors.yellow,
-					color: colors.black,
-					textDecoration: 'none',
-					boxShadow: '4px 4px 0px #000',
-					fontFamily: '"Space Mono", monospace',
-					fontSize: 13,
-					fontWeight: 800,
-					padding: '10px 14px',
-					cursor: 'pointer',
-				}}
-			>
-				PDF
-			</a>
-			<div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: 4, background: 'rgba(255,255,255,0.1)', zIndex: 1000 }}>
-				<motion.div animate={{ width: `${((current + 1) / total) * 100}%` }} transition={{ duration: 0.3 }} style={{ height: '100%', background: colors.indigo }} />
-			</div>
-			<div style={{
-				position: 'fixed', bottom: 24, right: 32, fontFamily: '"Space Mono", monospace',
-				fontSize: 14, fontWeight: 600, color: 'rgba(255,255,255,0.5)', zIndex: 1000, letterSpacing: 2,
-				mixBlendMode: 'difference',
-			}}>
-				{pad(current + 1)} / {pad(total)}
-			</div>
-			<div style={{ position: 'fixed', bottom: 24, left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: 8, zIndex: 1000 }}>
-				{slides.map((_, i) => (
-					<button key={i} onClick={() => go(i)} style={{
-						width: i === current ? 28 : 10, height: 10, borderRadius: 5, border: 'none',
-						background: i === current ? colors.indigo : 'rgba(255,255,255,0.3)',
-						cursor: 'pointer', transition: 'all 0.2s',
-					}} />
-				))}
-			</div>
-			<NavArrow direction="prev" onClick={prev} disabled={current === 0} />
-			<NavArrow direction="next" onClick={next} disabled={current === total - 1} />
 			<div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#000' }}>
 				<div style={{
 					width: DESIGN_WIDTH,
@@ -224,6 +182,48 @@ export default function SlideEngine({ children }: SlideEngineProps) {
 					transform: `scale(${scale})`,
 					transformOrigin: 'center center',
 				}}>
+					<a
+						href={pdfHref()}
+						target="_blank"
+						rel="noreferrer"
+						title="打开 PDF（P）"
+						style={{
+							position: 'absolute', top: 18, right: 92, zIndex: 1000,
+							border: `3px solid ${colors.black}`,
+							background: colors.yellow,
+							color: colors.black,
+							textDecoration: 'none',
+							boxShadow: '4px 4px 0px #000',
+							fontFamily: '"Space Mono", monospace',
+							fontSize: 13,
+							fontWeight: 800,
+							padding: '10px 14px',
+							cursor: 'pointer',
+						}}
+					>
+						PDF
+					</a>
+					<div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: 4, background: 'rgba(255,255,255,0.1)', zIndex: 1000 }}>
+						<motion.div animate={{ width: `${((current + 1) / total) * 100}%` }} transition={{ duration: 0.3 }} style={{ height: '100%', background: colors.indigo }} />
+					</div>
+					<div style={{
+						position: 'absolute', bottom: 24, right: 32, fontFamily: '"Space Mono", monospace',
+						fontSize: 14, fontWeight: 600, color: 'rgba(255,255,255,0.5)', zIndex: 1000, letterSpacing: 2,
+						mixBlendMode: 'difference',
+					}}>
+						{pad(current + 1)} / {pad(total)}
+					</div>
+					<div style={{ position: 'absolute', bottom: 24, left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: 8, zIndex: 1000 }}>
+						{slides.map((_, i) => (
+							<button key={i} onClick={() => go(i)} style={{
+								width: i === current ? 28 : 10, height: 10, borderRadius: 5, border: 'none',
+								background: i === current ? colors.indigo : 'rgba(255,255,255,0.3)',
+								cursor: 'pointer', transition: 'all 0.2s',
+							}} />
+						))}
+					</div>
+					<NavArrow direction="prev" onClick={prev} disabled={current === 0} />
+					<NavArrow direction="next" onClick={next} disabled={current === total - 1} />
 					{/* 固定品牌 logo · 跟 slide 一起 scale · 半透明不抢内容 */}
 					<div style={{
 						position: 'absolute', top: 18, right: 22, zIndex: 50,
@@ -267,7 +267,7 @@ function NavArrow({ direction, onClick, disabled }: { direction: 'prev' | 'next'
 			onMouseEnter={() => setHover(true)}
 			onMouseLeave={() => setHover(false)}
 			style={{
-				position: 'fixed', top: '50%',
+				position: 'absolute', top: '50%',
 				[direction === 'prev' ? 'left' : 'right']: 16,
 				transform: `translateY(-50%) ${hover ? 'translate(3px,3px)' : ''}`,
 				width: 52, height: 52,
