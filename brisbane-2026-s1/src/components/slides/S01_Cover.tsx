@@ -3,9 +3,9 @@ import { colors, fonts, border, shadow, assetPath } from '../ui';
 
 export default function S01_Cover() {
 	const meta = [
-		['DATE', 'Date TBC'],
+		['DATE', '2026年8月21日 周五'],
 		['TIME', '10:00 AM - 2:00 PM'],
-		['VENUE', 'Brisbane City Hall · 64 Adelaide St'],
+		['VENUE', 'Market Square'],
 	] as const;
 
 	return (
@@ -68,7 +68,7 @@ export default function S01_Cover() {
 					textTransform: 'uppercase',
 					textShadow: '0 3px 16px rgba(0,0,0,.45)',
 				}}>
-					Brisbane City Hall · UQ · QUT · Griffith
+					Market Square · UQ · QUT · Griffith
 				</figcaption>
 			</motion.figure>
 			<div style={{
