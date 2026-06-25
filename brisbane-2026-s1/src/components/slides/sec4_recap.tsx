@@ -110,15 +110,19 @@ function Quote({ i, text, who }: { i: number; text: string; who: string }) {
 export function S18_FbAttendee() {
 	return (
 		<Page tag="15 · 反馈 · 参与者" title="新生怎么说">
-			<div style={{ display: 'grid', gridTemplateColumns: '0.9fr 1.1fr', gap: 22, flex: 1, minHeight: 0 }}>
-				<div style={{ display: 'grid', gridTemplateRows: 'auto 1fr', gap: 16, minHeight: 0 }}>
+			<div style={{ display: 'grid', gridTemplateColumns: '0.78fr 1.22fr', gap: 22, flex: 1, minHeight: 0 }}>
+				<div style={{ display: 'grid', gridTemplateRows: 'auto auto 1fr', gap: 14, minHeight: 0 }}>
 					<StatCard i={0} n="98%" label="总体满意度（600 名参与者）" />
-					<Photo i={1} img="past-events/audience-session.jpg" caption="新生讲座现场" />
+					<StatCard i={1} n="600+" label="现场新生参与互动与答疑" accent={colors.purple} />
+					<Photo i={2} img="past-events/audience-session.jpg" caption="新生讲座现场" />
 				</div>
-				<div style={{ display: 'flex', flexDirection: 'column', gap: 12, justifyContent: 'center' }}>
+				<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, alignContent: 'center', minHeight: 0 }}>
 					<Quote i={0} text="领到超多免费礼品，还参与了抽奖，学长学姐耐心解答让我对大学生活充满信心！" who="UQ 新生 Jarrica" />
 					<Quote i={1} text="活动组织得很好，互动游戏有趣，还赢得了奖品！" who="QUT 新生 Ivan" />
 					<Quote i={2} text="结识了很多新朋友，特别喜欢答疑环节。" who="Griffith 新生 Lucy" />
+					<Quote i={3} text="刚到布里斯班人生地不熟，现场拿到了租房、开卡、选课的实用信息，少走很多弯路。" who="UQ 新生 Cindy" />
+					<Quote i={4} text="顾问帮我理清了毕业后找工作和签证规划的大致方向，心里一下有底多了。" who="QUT 新生 Marcus" />
+					<Quote i={5} text="扫码加了学长微信进了新生群，开学第一周遇到问题随时有人答，特别安心。" who="Griffith 新生 Yuki" />
 				</div>
 			</div>
 		</Page>
