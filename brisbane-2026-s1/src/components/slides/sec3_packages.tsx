@@ -93,7 +93,6 @@ export function S10_Packages() {
 					<div style={{ border, background: colors.white, boxShadow: shadow, padding: '8px 12px', fontSize: 12.5, lineHeight: 1.3 }}><b>公众号</b><br />UQ 课代表 / QUT 课代表 / 社群推送</div>
 					<div style={{ border, background: colors.white, boxShadow: shadow, padding: '8px 12px', fontSize: 12.5, lineHeight: 1.3 }}><b>小红书 & 社群</b><br />UQ 课代表 / QUT 课代表 / 线下宣传</div>
 					<div style={{ border, background: colors.white, boxShadow: shadow, padding: '8px 12px', fontSize: 12.5, lineHeight: 1.3 }}><b>曝光</b><br />线上 100,000+ ｜ 线下人流量 2,000+</div>
-					<div style={{ border, background: colors.yellow, boxShadow: shadow, padding: '8px 12px', fontSize: 14, fontWeight: 900 }}>Early Bird · 6 月 1 日前 10% off</div>
 				</div>
 			</div>
 		</Page>

@@ -36,7 +36,7 @@ export function S32_BrandAct() {
 					<h3 style={{ fontFamily: fonts.heading, fontWeight: 800, fontSize: 22, marginBottom: 8 }}>定制化</h3>
 					<p style={{ fontSize: 18, lineHeight: 1.65, color: '#333' }}>主题活动 · 场地布置 · 物料礼品设计 · 活动冠名 · 现场展位 · Banner · 传单。</p>
 				</div>
-				<StatCard i={0} n="200+" label="8 年累计举办活动场次 · 单场平均参与 100+" accent={colors.purple} />
+				<StatCard i={0} n="200+" label="9 年累计举办活动场次 · 单场平均参与 100+" accent={colors.purple} />
 			</div>
 		</Page>
 	);
