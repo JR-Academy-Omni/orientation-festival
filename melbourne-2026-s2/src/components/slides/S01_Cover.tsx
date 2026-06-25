@@ -81,35 +81,19 @@ export default function S01_Cover() {
 				display: 'flex',
 				flexDirection: 'column',
 				justifyContent: 'center',
+				gap: 14,
 			}}>
-			<motion.img
-				src={assetPath('melbourne-sticker.svg')}
-				alt="2026 S2 墨尔本三校 UniMelb Monash RMIT 三校新生节"
-				initial={{ opacity: 0, rotate: -8, scale: 0.86, y: 20 }}
-				animate={{ opacity: 1, rotate: -5, scale: 1, y: 0 }}
-				transition={{ duration: 0.55, delay: 0.28, ease: [0.16, 1, 0.3, 1] }}
-				style={{
-					position: 'absolute',
-					right: -44,
-					bottom: -24,
-					width: 360,
-					height: 'auto',
-					zIndex: 0,
-					opacity: 0.18,
-					pointerEvents: 'none',
-				}}
-			/>
 			<motion.div
 				initial={{ opacity: 0, y: -16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
 				style={{
-					display: 'inline-block', alignSelf: 'flex-start', padding: '8px 18px', marginBottom: 22,
+					display: 'inline-block', alignSelf: 'flex-start', padding: '8px 18px',
 					background: colors.black, color: colors.yellow, border,
 					fontFamily: fonts.mono, fontSize: 16, fontWeight: 700, letterSpacing: 2,
 				}}>
 				2026 S2 · 第 6 届新生节 · 商家合作企划
 			</motion.div>
 
-			<h1 style={{ fontFamily: fonts.heading, fontWeight: 900, color: colors.white, fontSize: 92, lineHeight: 1.02, letterSpacing: -2, maxWidth: 620 }}>
+			<h1 style={{ margin: 0, fontFamily: fonts.heading, fontWeight: 900, color: colors.white, fontSize: 92, lineHeight: 1.02, letterSpacing: -2, maxWidth: 620 }}>
 				<motion.span initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.15 }} style={{ display: 'block' }}>
 					墨尔本三校
 				</motion.span>
@@ -122,19 +106,18 @@ export default function S01_Cover() {
 			</h1>
 
 			<motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.7 }}
-				style={{ display: 'inline-block', alignSelf: 'flex-start', fontFamily: fonts.heading, fontWeight: 900, color: colors.black, background: colors.white, border, boxShadow: shadow, padding: '8px 16px', fontSize: 25, marginTop: 20, letterSpacing: 0 }}>
+				style={{ display: 'inline-block', alignSelf: 'flex-start', fontFamily: fonts.heading, fontWeight: 900, color: colors.black, background: colors.white, border, boxShadow: shadow, padding: '8px 16px', fontSize: 25, margin: 0, letterSpacing: 0 }}>
 				UniMelb · Monash · RMIT
 			</motion.p>
 
-			<motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.9 }}
-				style={{ position: 'absolute', left: 0, bottom: 0, display: 'grid', gridTemplateColumns: '1fr', gap: 12, maxWidth: 520, width: '100%' }}>
+			<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 10, maxWidth: 520, width: '100%' }}>
 				{meta.map(([k, v]) => (
-					<span key={k} style={{ background: colors.white, color: colors.black, border, boxShadow: shadow, padding: '13px 18px' }}>
+					<span key={k} style={{ background: colors.white, color: colors.black, border, boxShadow: shadow, padding: '11px 16px' }}>
 						<span style={{ display: 'block', fontFamily: fonts.mono, color: colors.red, fontSize: 12, fontWeight: 800, letterSpacing: 1.6 }}>{k}</span>
 						<span style={{ display: 'block', marginTop: 3, fontWeight: 800, fontSize: 19 }}>{v}</span>
 					</span>
 				))}
-			</motion.div>
+			</div>
 			</div>
 		</div>
 	);
