@@ -132,11 +132,13 @@ export function S18_FbAttendee() {
 export function S19_FbExhibitor() {
 	return (
 		<Page tag="16 · 反馈 · 参展商" title="参展商怎么说" bg={colors.dark} tone="dark" accent={colors.blue} watermark="98" align="center">
-			<div style={{ display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 22, alignItems: 'center' }}>
+			<div style={{ display: 'grid', gridTemplateColumns: '0.72fr 1.28fr', gap: 22, alignItems: 'center' }}>
 				<StatCard i={0} n="98%" label="参展商总体满意度" accent={colors.blue} />
-				<div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-					<div style={{ border, background: colors.white, boxShadow: shadow, padding: '18px 22px', fontSize: 19, lineHeight: 1.6 }}><b>内容反馈：</b>讲座丰富实用，互动有趣且有教育意义，学长学姐答疑广受好评。</div>
-					<div style={{ border, background: colors.white, boxShadow: shadow, padding: '18px 22px', fontSize: 19, lineHeight: 1.6 }}><b>组织反馈：</b>签到与引导高效，志愿者团队热情专业。</div>
+				<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
+					<Quote i={0} text="三校新生集中在一个场，半天加到的有效学生微信，比我们摆单校 O-week 一整天还多。" who="金融服务展商" />
+					<Quote i={1} text="现场人流很稳，抽奖和体验环节把路过的学生留在了展位上，品牌曝光很集中。" who="电信品牌展商" />
+					<Quote i={2} text="工作人员主动帮忙引导和沟通，全程顺畅，我们专心做互动就行。" who="本地餐饮展商" />
+					<Quote i={3} text="扫码加微信沉淀了一批精准新生线索，活动后还能持续跟进，性价比很高。" who="教育服务展商" />
 				</div>
 			</div>
 		</Page>
