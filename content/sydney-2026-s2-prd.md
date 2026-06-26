@@ -8,7 +8,7 @@ title: 2026 S2 悉尼四校新生节 PRD
 
 # PRD · 2026 S2 悉尼四校新生节 招商 deck
 
-> **状态**：规划中（deck 待做）｜**类型**：商家招商物料 PRD
+> **状态**：deck 已完成（`sydney-2026-s2/`，已上线 gh-pages）｜**类型**：商家招商物料 PRD｜⚠️ 待落定：S2 档期 + 场地（Sydney Town Hall 待复核）
 > **内部文档**：含赞助报价 + 同事私人手机/邮箱（PII），**不对外发布**，`content/` 目录不可公开 serve。
 > **蓝本**：本届以 [`sydney-2026-s1-pages.md`](./sydney-2026-s1-pages.md)（Canva `DAGrb4CL9Xk` 旧稿存档）为内容蓝本，对齐 [`brisbane-2026-s1-pages.md`](./brisbane-2026-s1-pages.md) 与 [`melbourne-2026-s2-pages.md`](./melbourne-2026-s2-pages.md)。
 > **关键变更**：届次由旧稿 **S1 → S2**（悉尼下一届放在下半年开学季），时间随之后移；旧稿里的「2025 悉尼新生节」旧名、布里斯班串台数据/证言一律视为**必修项**。

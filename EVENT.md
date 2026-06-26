@@ -31,8 +31,8 @@ title: 大学新生节（多城招商）
 | 城市 / 届 | 覆盖高校 | 内容源 | 可播放 deck | SoT 节点 |
 |-----------|---------|:---:|:---:|----------|
 | 墨尔本 2026 S2 | UniMelb · Monash · RMIT | ✅ | ✅ 已做完 | `melbourne-2026-s2/` |
-| 布里斯班 2026 S1 | UQ · QUT · Griffith | ✅ | ⏳ 待做 | `brisbane-2026-s1/` |
-| 悉尼 2026 S2 | （待补） | ✅ | ⏳ 待做 | `sydney-2026-s2/` |
+| 布里斯班 2026 S2 | UQ · QUT · Griffith | ✅ | ✅ 已做完 | `brisbane-2026-s1/`（目录沿用旧名） |
+| 悉尼 2026 S2 | USYD · UNSW · UTS · Macquarie | ✅ | ✅ 已做完 | `sydney-2026-s2/` |
 
 > 每座城市每一届 = 一个子 SoT（`parent: orientation-festival`），各自目录下的 `design.md` 是那场活动的真相文档。
 
