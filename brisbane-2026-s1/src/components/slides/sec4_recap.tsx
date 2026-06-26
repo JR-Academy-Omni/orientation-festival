@@ -148,9 +148,13 @@ export function S19_FbExhibitor() {
 export function S20_FbVolunteer() {
 	return (
 		<Page tag="17 · 反馈 · 志愿者" title="志愿者怎么说" bg={colors.green} accent={colors.dark} watermark="♥" align="center">
-			<CardsGrid cols={2} gap={20}>
+			<CardsGrid cols={2} gap={16}>
 				<Quote i={0} text="看到同学们开心参与、领取礼品，我觉得一切辛苦都值得。每次抽奖的欢呼让我感受到活动的成功。" who="Benny" />
 				<Quote i={1} text="帮助新生解答疑问，看到他们安心快乐我也很开心。这次活动让我认识了很多新朋友，也体验到团队合作的力量。" who="Dora" />
+				<Quote i={2} text="第一次负责签到引导，学会了怎么安抚紧张的新生，自己也更敢主动跟人沟通了。" who="Ariel" />
+				<Quote i={3} text="和团队一起把整个现场跑下来，配合越来越默契，结束时大家都特别有成就感。" who="Kevin" />
+				<Quote i={4} text="帮新生答疑的时候，发现自己其实懂得不少，那种被需要的价值感很难得。" who="Mia" />
+				<Quote i={5} text="负责抽奖环节暖场，看到现场气氛一下被带起来，那一刻觉得一切都值了。" who="Tom" />
 			</CardsGrid>
 		</Page>
 	);
