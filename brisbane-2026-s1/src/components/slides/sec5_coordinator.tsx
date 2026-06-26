@@ -1,5 +1,14 @@
-import { Page, StatCard, KvTable, Photo, GiantStat, GiantRow, Editorial } from './_layout';
-import { colors } from '../ui';
+import { Page, StatCard, KvTable, Photo, GiantStat, GiantRow, Editorial, CardsGrid } from './_layout';
+import { colors, border, shadow } from '../ui';
+
+function InfoCard({ t, d, accent }: { t: string; d: string; accent: string }) {
+	return (
+		<div style={{ border, background: colors.white, boxShadow: shadow, padding: '16px 18px' }}>
+			<div style={{ fontWeight: 900, fontSize: 19, color: accent, marginBottom: 6 }}>{t}</div>
+			<div style={{ fontSize: 15, lineHeight: 1.5, color: '#444' }}>{d}</div>
+		</div>
+	);
+}
 
 export function S21_About() {
 	const stats = [['50,000+', '小红书粉丝'], ['70,000+', '公众号粉丝'], ['100+', '每年举办活动'], ['4 · 8', '覆盖 4 地区 8 校']] as const;
@@ -30,11 +39,20 @@ export function S22_Xhs() {
 }
 
 export function S23_XhsDesc() {
+	const pillars = [
+		['大学生活', '选课 · 租房 · 社交 · 校园攻略，覆盖新生落地全场景'],
+		['教育资讯', '课程动态 · 升学 · 求职 · 签证政策第一手解读'],
+		['本地活动', 'meetup · 讲座 · 线下福利，把线上流量带到现场'],
+		['入学攻略', '新生 onboarding · 避坑指南，开学季高频刚需'],
+	] as const;
 	return (
 		<Page tag="19 · 小红书" title="四城八校的内容生态" accent={colors.red} watermark="XHS" align="center">
-			<Editorial accent={colors.red} size={28}>
-				借助小红书，「课代表系列」打造了囊括澳大利亚<b style={{ color: colors.red }}>四城八所顶级高校</b>的内容生态，其中布里斯班覆盖 UQ、QUT 与 Griffith 新生圈层。账号长期分享大学生活、教育资讯、本地活动和入学攻略。与之合作，您的品牌可<b style={{ color: colors.red }}>精准接触活跃、具消费潜力的年轻群体</b>，自然融入大学生日常，有效提升品牌知名度。
+			<Editorial accent={colors.red} size={25}>
+				借助小红书，「课代表系列」打造了囊括澳大利亚<b style={{ color: colors.red }}>四城八所顶级高校</b>的内容生态，其中布里斯班覆盖 UQ、QUT 与 Griffith 新生圈层。账号常年高频更新、笔记互动活跃，与之合作，您的品牌可<b style={{ color: colors.red }}>精准接触活跃、具消费潜力的年轻群体</b>，通过笔记种草、话题互动与线下联动自然融入大学生日常。
 			</Editorial>
+			<CardsGrid cols={4} gap={16} style={{ marginTop: 26 }}>
+				{pillars.map(([t, d]) => <InfoCard key={t} t={t} d={d} accent={colors.red} />)}
+			</CardsGrid>
 		</Page>
 	);
 }
@@ -51,11 +69,19 @@ export function S24_XhsMatrix() {
 export function S25_Wechat() {
 	const stats = [['7w+', '公众号粉丝'], ['4 · 8', '覆盖 4 地区 8 校'], ['3 类', '资讯 · 活动 · 攻略 聚焦大学生活']] as const;
 	const palette = [colors.dark, colors.red, colors.dark];
+	const detail = [
+		['矩阵与覆盖', '6 个公众号矩阵累计 7w+ 粉丝，覆盖墨尔本 / 悉尼 / 阿德莱德 / 布里斯班四地 8 所高校；布里斯班以 UQ · QUT 课代表为核心触达三校新生。'],
+		['内容三类', '教育资讯（课程 / 升学 / 求职 / 签证）· 校园活动（meetup / 讲座 / 福利）· 入学攻略（onboarding / 避坑），覆盖大学生活全周期。'],
+		['合作价值', '顶部 Banner 露出 · 图文推文深度植入 · 鸣谢 List 品牌曝光 · 社群定向推送，直达忠诚度高、活跃度高的大学生用户。'],
+	] as const;
 	return (
 		<Page tag="20 · 公众号" title="课代表系列微信公众号" bg={colors.green} accent={colors.dark} watermark="W" align="center">
 			<GiantRow cols={3} tone="light" gap={32}>
 				{stats.map(([n, l], i) => <GiantStat key={l} i={i} n={n} label={l} color={palette[i]} />)}
 			</GiantRow>
+			<CardsGrid cols={3} gap={16} style={{ marginTop: 30 }}>
+				{detail.map(([t, d]) => <InfoCard key={t} t={t} d={d} accent={colors.dark} />)}
+			</CardsGrid>
 		</Page>
 	);
 }
