@@ -31,7 +31,7 @@ export function S13_RecapOverview() {
 
 export function S14_Data() {
 	const palette = [colors.yellow, colors.red, colors.blue, colors.green, colors.purple, colors.yellow, colors.red, colors.blue];
-	const stats = [['90%', '报名到场率'], ['600+', 'UQ 学生'], ['200+', 'QUT 学生'], ['200+', 'Griffith 学生'], ['18', '参展企业'], ['600+', '赞助商平均获客'], ['5000+', '发放展位礼物'], ['500+', '发放抽奖券']] as const;
+	const stats = [['90%', '报名到场率'], ['600+', 'UQ 学生'], ['200+', 'QUT 学生'], ['200+', 'Griffith 学生'], ['18', '参展企业'], ['600+', '赞助商平均获客'], ['5000+', '发放展位礼物'], ['5000+', '发放抽奖券']] as const;
 	return (
 		<Page tag="12 · 活动数据" title="往期活动数据一览" bg={colors.dark} tone="dark" accent={colors.red} watermark="22" align="center">
 			<GiantRow cols={4} tone="dark" gap={28}>
