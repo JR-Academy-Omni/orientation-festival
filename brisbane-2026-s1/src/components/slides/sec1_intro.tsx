@@ -20,7 +20,7 @@ export function S02_Overview() {
 						))}
 					</div>
 				</div>
-				<Photo img="past-events/aws-venue.jpg" caption="往期现场 · 300+㎡ 室内展区" />
+				<Photo img="past-events/syd-checkin3.jpg" caption="往期现场 · 300+㎡ 室内展区" />
 			</div>
 		</Page>
 	);
