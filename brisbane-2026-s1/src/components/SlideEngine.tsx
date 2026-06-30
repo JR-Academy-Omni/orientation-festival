@@ -166,6 +166,9 @@ export default function SlideEngine({ children }: SlideEngineProps) {
 				{slides.map((child, i) => (
 					<div className="print-slide" key={i}>
 						{child}
+						<div style={{ position: 'absolute', top: 18, right: 22, zIndex: 50, display: 'flex', alignItems: 'center', background: 'rgba(16,22,47,0.86)', border: `2px solid ${colors.black}`, padding: '7px 12px' }}>
+							<img src={assetPath('logo-zh-white.png')} alt="匠人学院" style={{ height: 32, width: 'auto', display: 'block' }} />
+						</div>
 					</div>
 				))}
 			</div>
