@@ -8,7 +8,7 @@ export function S30_RecapPhotos1() {
 		<Page tag="往期回顾" title="往期活动现场（一）" accent={colors.red} watermark="01" align="center">
 			<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: '1fr 1fr', gap: 14, flex: 1, minHeight: 0 }}>
 				<Photo i={0} img="past-events/venue-queue.jpg" caption="现场排队人潮" />
-				<Photo i={1} img="past-events/mel-hall.jpg" caption="往期满场人气" />
+				<Photo i={1} img="past-events/syd-checkin2.jpg" caption="往期满场人气" />
 				<Photo i={2} img="past-events/syd-checkin8.jpg" caption="签到排队盛况" />
 				<Photo i={3} img="past-events/syd-checkin13.jpg" caption="展位人潮" />
 			</div>
