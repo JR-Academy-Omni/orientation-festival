@@ -7,10 +7,10 @@ export function S30_RecapPhotos1() {
 	return (
 		<Page tag="往期回顾" title="往期活动现场（一）" accent={colors.red} watermark="01" align="center">
 			<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: '1fr 1fr', gap: 14, flex: 1, minHeight: 0 }}>
-				<Photo i={0} img="past-events/mel-hall.jpg" caption="往期满场人气" />
-				<Photo i={1} img="past-events/syd-checkin9.jpg" caption="现场人潮" />
+				<Photo i={0} img="past-events/venue-queue.jpg" caption="现场排队人潮" />
+				<Photo i={1} img="past-events/mel-hall.jpg" caption="往期满场人气" />
 				<Photo i={2} img="past-events/syd-checkin8.jpg" caption="签到排队盛况" />
-				<Photo i={3} img="past-events/syd-photo1.jpg" caption="学生到场互动" />
+				<Photo i={3} img="past-events/syd-checkin13.jpg" caption="展位人潮" />
 			</div>
 		</Page>
 	);
@@ -22,8 +22,8 @@ export function S30_RecapPhotos2() {
 			<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: '1fr 1fr', gap: 14, flex: 1, minHeight: 0 }}>
 				<Photo i={0} img="past-events/booth-wide.jpg" caption="商家展位人气" />
 				<Photo i={1} img="past-events/syd-hall3.jpg" caption="会场座无虚席" />
-				<Photo i={2} img="past-events/syd-checkin13.jpg" caption="现场排队领礼" />
-				<Photo i={3} img="past-events/syd-photo2.jpg" caption="往期现场盛况" />
+				<Photo i={2} img="past-events/mel-checkin11.jpg" caption="学生到场互动" />
+				<Photo i={3} img="past-events/mel-checkin6.jpg" caption="现场咨询人气" />
 			</div>
 		</Page>
 	);
