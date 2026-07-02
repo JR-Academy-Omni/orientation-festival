@@ -147,6 +147,24 @@
   .counter{position:fixed;left:22px;bottom:24px;z-index:60;font-family:var(--f-mono);font-weight:700;font-size:13px;
     background:#fff;border:var(--bd);box-shadow:var(--sh-sm);padding:8px 14px}
   .progress{position:fixed;top:0;left:0;height:6px;background:var(--red);border-bottom:2px solid #000;z-index:70;width:0;transition:width .2s}
+  /* ── 活力封面 v2（突出布里斯班） ── */
+  .covr{padding:0;background:var(--warm);flex-direction:column;overflow:hidden}
+  .covr-img{position:relative;height:47%;border-bottom:3px solid #000;overflow:hidden}
+  .covr-main{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+  .covr .logo-w{top:22px;left:26px;height:36px}
+  .covr-kick{position:absolute;left:24px;bottom:20px;font-family:var(--f-mono);font-weight:700;font-size:14px;letter-spacing:2px;background:var(--red);color:#fff;border:3px solid #000;box-shadow:5px 5px 0 #000;padding:8px 16px;transform:rotate(-2deg)}
+  .covr-burst{position:absolute;right:26px;top:24px;font-family:var(--f-head);font-weight:900;font-size:19px;color:#000;background:var(--yellow);border:3px solid #000;box-shadow:5px 5px 0 #000;padding:12px 18px;transform:rotate(4deg);text-align:center;line-height:1.05}
+  .covr-txt{flex:1;padding:24px 62px 0;display:flex;flex-direction:column;justify-content:center;gap:14px;position:relative}
+  .covr-en{font-family:var(--f-head);font-weight:900;font-size:76px;line-height:.8;letter-spacing:-3px;color:var(--orange);text-shadow:4px 4px 0 #000}
+  .covr-h1{font-family:var(--f-head);font-weight:900;font-size:40px;line-height:1.05;letter-spacing:-1px;color:#000}
+  .covr-yr{background:var(--red);color:#fff;padding:0 10px;border:3px solid #000;display:inline-block;transform:rotate(-1deg)}
+  .covr-sub{font-family:var(--f-head);font-weight:700;font-size:23px;color:#000}
+  .covr-sub b{background:var(--yellow);padding:0 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .covr-stk{display:flex;flex-wrap:wrap;gap:14px;margin-top:6px}
+  .covr-stk .stk{font-family:var(--f-mono);font-weight:700;font-size:15px;border:3px solid #000;box-shadow:4px 4px 0 #000;padding:9px 15px}
+  .stk.sy{background:var(--yellow);transform:rotate(-2deg)}
+  .stk.sb{background:var(--blue);transform:rotate(1deg)}
+  .stk.sg{background:var(--green);transform:rotate(-1deg)}
   @media print{
     @page{size:A4 landscape;margin:0}
     html,body{background:#fff;padding:0;margin:0}
@@ -160,18 +178,25 @@
 <div class="progress" id="progress"></div>
 <div id="deck">
 
-  <!-- 01 COVER -->
-  <section class="slide cover photobg" style="--img:url('https://jr-academy-omni.github.io/orientation-festival/brisbane-2026-s1/past-events/crowd-stage.jpg')">
-    <img class="logo-w" src="https://jr-academy-omni.github.io/orientation-festival/brisbane-2026-s1/logo-zh-white.png" alt="匠人学院">
-    <span class="cover-badge">MARKET SQUARE · 场内商家专属邀请</span>
-    <h1>布里斯班三校<br>新生节 2026 S2</h1>
-    <div class="sub">把 1000 名新生,请进你的店门口</div>
-    <div class="meta">
-      <span>◆ 8 月 21 日 周五</span>
-      <span>◆ 10:00 – 14:00</span>
-      <span>◆ Market Square 室内展区</span>
+  <!-- 01 COVER v2 · 活力 · 突出布里斯班 -->
+  <section class="slide covr">
+    <div class="covr-img">
+      <img class="covr-main" src="https://jr-academy-omni.github.io/orientation-festival/brisbane-2026-s1/illustrations/brisbane-city-hero.png" alt="布里斯班城市与新生节现场插画">
+      <img class="logo-w" src="https://jr-academy-omni.github.io/orientation-festival/brisbane-2026-s1/logo-zh-white.png" alt="匠人学院">
+      <span class="covr-burst">1000+<br>新生到场</span>
+      <span class="covr-kick">MARKET SQUARE · 场内商家专属邀请</span>
     </div>
-    <div class="pageno" style="color:#fff;opacity:.7">01</div>
+    <div class="covr-txt">
+      <div class="covr-en">BRISBANE</div>
+      <h1 class="covr-h1">三校新生节 <span class="covr-yr">2026 S2</span></h1>
+      <p class="covr-sub">把 <b>1000 名新生</b>,请进你的店门口</p>
+      <div class="covr-stk">
+        <span class="stk sy">◆ 8 / 21 周五</span>
+        <span class="stk sb">◆ 10:00 – 14:00</span>
+        <span class="stk sg">◆ Market Square 室内展区</span>
+      </div>
+    </div>
+    <div class="pageno">01</div>
   </section>
 
   <!-- 02 DIVIDER 1 -->
