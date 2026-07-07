@@ -27,8 +27,9 @@ title: 新生节 · 悉尼 2026 S2
 
 | 类型 | 用途 | 视觉 |
 | --- | --- | --- |
-| 内容页 `.slide` | 活动概览、套餐、数据、表格、反馈 | 冷白纸底、浅海港蓝光晕、细线卡片、柔阴影、橙色数据数字 |
-| Hero 页 `.slide.hero` | 封面、场地、回顾、成果、联络 | 海港蓝渐变或活动插画/真实现场照片、暖金点睛、半调纹理、白色大标题 |
+| 内容页 `.slide` | 数据、表格、少量说明页 | 冷白纸底、浅海港蓝光晕、硬朗 4px 信息面板、顶部细色条、数据数字优先可读 |
+| 图片内容页 `.photo-band` | 反馈、亮点、社群、公众号、小红书等大量卡片页 | 真实现场照片作底，内容卡优先使用深海港蓝玻璃面板，避免大面积白盒堆叠 |
+| Hero 页 `.slide.hero` / `.photobg` | 封面、场地、回顾、成果、联络 | 真实现场照片满铺 + 深海港蓝遮罩、暖金点睛、白色大标题 |
 | 照片页 `.photo-slide` | 现场照片 | 满版真实活动照片，顶部胶囊标题，不放卡片框 |
 
 ## Token
@@ -63,9 +64,23 @@ title: 新生节 · 悉尼 2026 S2
 
 ## 关键页型
 
+### 活动概览
+
+第 2 页不能再使用三张白卡堆叠。当前结构为：
+
+- 左侧大幅真实现场图 `overview-hero` 承载 `1000+ 四校新生` 主数字。
+- 右侧 `overview-facts` 是整块深色事实面板，用细分隔和左侧色条区分时间、地点、形式。
+- 底部 `campus-route` 用深色路线带串联 USYD / UNSW / UTS / Macquarie 到 Sydney Town Hall。
+
+如果后续调整文案，保持“现场图 + 暗色信息带”的版式，不退回圆角白色 card。
+
+### 卡片系统
+
+全局 `.card` 使用 4px radius、细边框、顶部彩色细条和轻阴影；不要恢复 12px+ 圆角白卡。照片背景页 `.photo-band:not(.pricing-slide) .card` 使用深海港蓝半透明面板，正文白/浅蓝，统计数字用暖金。价格页和纯数据页可保留浅色卡片，因为表格和价格需要更高可读性。
+
 ### 封面
 
-封面使用 `assets/illustrations/sydney-welcome-students.png` 作为满版 Sydney 新生欢迎插画，叠深海港蓝遮罩。四校校名必须完整出现：
+封面使用 `assets/past-events/hall-1.jpg` 作为满版真实现场背景，右侧用 `assets/past-events/checkin-6.jpg` 展示签到与展位动线，叠深海港蓝遮罩。四校校名必须完整出现：
 
 `USYD · UNSW · UTS · Macquarie`
 
@@ -88,19 +103,30 @@ Premium 是最高规格卡，样式为暖金描边 + 浅金蓝渐变 + `旗舰 �
 
 价格对比后新增「抽奖券驱动现场动线」页：签到基础券、组队奖励、集章打卡、社交任务都收敛到抽奖券，赞助商价值表达为“逛展、扫码、分享、复访”。活动后复盘口径包含报名、签到、扫码、社交任务、中奖记录和商家线索。该页仍是内容页 `.slide`，可使用 `assets/illustrations/lucky-draw.png` 补足现场感，关键强调色用 `--harbour-gold`。
 
+### 真实现场照片
+
+优先使用 `assets/past-events/` 的真实现场照片：
+
+- `hall-1.jpg`：大场景人流，适合封面、回顾 divider、照片页。
+- `hall-3.jpg`：场地、舞台与人流结合，适合场地介绍；`hall-2.jpg` 偏礼品展示，保留备用。
+- `checkin-6.jpg`：签到与咨询动线，适合商家机会、联络页。
+- `checkin-10.jpg` / `checkin-12.jpg`：赞助礼品与抽奖权益，适合成果展示和数据页照片条。
+
+关键 hero 页使用 `.photobg`，通过内联 `style="--bg:url('...')"` 指定背景图；不要 hotlink 外部图片。
+
 ### 插画资产
 
-生成插画放在 `assets/illustrations/`：
+生成插画放在 `assets/illustrations/`，只在没有更合适的真实图时使用：
 
-- `sydney-welcome-students.png`：封面欢迎主视觉。
-- `sponsor-booth.png`：商家机会/联络页展位互动视觉。
+- `sydney-welcome-students.png`：旧封面欢迎插画，保留备用；当前封面优先使用真实现场图。
+- `sponsor-booth.png`：旧商家机会/联络页插画，保留备用；当前优先使用签到与展位真实图。
 - `lucky-draw.png`：抽奖券动线页视觉。
 
 插画不得包含可读品牌名、学校 logo 或不确定合作方 logo。若后续有真实现场图/真实 sponsor logo，优先用真实素材替换对应占位视觉。
 
 ### 照片页
 
-真实活动照片用 `.photo-slide` 满版展示。图片来自本目录 `assets/photo-1.jpg`、`assets/photo-2.jpg`。不要保留“替换为真实活动照片”的占位页；没有素材就先删掉。
+真实活动照片用 `.photo-slide` 满版展示。当前照片页直接引用 `assets/past-events/hall-1.jpg`、`assets/past-events/checkin-6.jpg`、`assets/past-events/checkin-10.jpg`，不再依赖旧的 `assets/photo-1.jpg` / `assets/photo-2.jpg` 占位。
 
 ## 规则
 
