@@ -10,7 +10,7 @@ export default function S34_Contact() {
 				NEXT STEP
 			</motion.span>
 			<h1 style={{ fontFamily: fonts.heading, fontWeight: 900, color: colors.white, fontSize: 76, lineHeight: 1.07, letterSpacing: -1, marginBottom: 16, maxWidth: 1120 }}>
-				一起把品牌放进<br /><span style={{ display: 'inline-block', marginTop: 8, background: colors.red, color: colors.white, padding: '0 20px', border, boxShadow: shadow }}>布里斯班新生第一周</span>
+				一起把品牌放进<br /><span style={{ display: 'inline-block', marginTop: 8, background: colors.red, color: colors.white, padding: '0 20px', border, boxShadow: shadow }}>布里斯班新生开学季</span>
 			</h1>
 			<p style={{ fontSize: 25, fontWeight: 800, color: colors.white, marginBottom: 26 }}>我们为您和您的品牌提供定制化合作方案</p>
 			<motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}
