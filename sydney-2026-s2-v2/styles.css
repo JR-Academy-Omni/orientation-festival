@@ -20,21 +20,21 @@
   --harbour-cyan:#2FD0E8;
 
   /* ---------- 通用（不随城市变） ---------- */
-  --navy:#0C2A4A;               /* 主深色 / 文字 / 描边 */
-  --ink:#1C2E47;
-  --muted:#5C6E86;
-  --stroke:#062A4A;
-  --canvas:#FDF6EF;
+  --navy:#000000;               /* Neo-Brutalism 黑色 */
+  --ink:#1C1C1C;
+  --muted:#4A4A4A;
+  --stroke:#000000;
+  --canvas:#fff1e7;             /* 墨尔本暖色底 */
   --paper:#FFFFFF;              /* 卡片底 */
   --card:#FFFFFF;               /* 兼容 index.html 内联 var(--card) */
-  --edge:#F0E8DF;
+  --edge:#E8E0D8;
   --cream:#FAF7F0;
-  --orange:#FFAA00;             /* 橙黄：CTA / 数据 / 强调 */
-  --orange-soft:#FFE0CC;
+  --orange:#FF6B5C;             /* 墨尔本珊瑚红 */
+  --orange-soft:#FFE0D8;
   --yellow:#FFF4CB;
   --cyan:#0E9CC8;
-  --shadow:0 6px 0 rgba(15,41,66,.12);
-  --shadow-lg:0 12px 0 rgba(15,41,66,.18);
+  --shadow:6px 6px 0 rgba(0,0,0,.2);        /* 硬阴影 Neo-Brutalism */
+  --shadow-lg:8px 8px 0 rgba(0,0,0,.25);
   --font:"Sora","Noto Sans SC","PingFang SC","Microsoft YaHei",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
   --font-cn:"Noto Sans SC","PingFang SC","Microsoft YaHei",-apple-system,system-ui,sans-serif;
 }
@@ -56,7 +56,7 @@ body.idle{cursor:none}
 @keyframes d2{0%,100%{transform:translate(0,0)}50%{transform:translate(-5vw,-3vw)}}
 
 /* 幻灯舞台 */
-.frame{position:relative;z-index:1;width:min(94vw,calc(92vh*16/9));height:min(92vh,calc(94vw*9/16));aspect-ratio:16/9;
+.frame{position:relative;z-index:1;width:min(94vw,calc(92vh*1.414));height:min(92vh,calc(94vw/1.414));aspect-ratio:1.414;
   border-radius:10px;box-shadow:0 34px 80px rgba(6,42,74,.22);overflow:hidden;background:var(--paper);border:1px solid rgba(12,42,74,.12)}
 
 /* ── 内容页：浅纸底 + 极淡半调 + 角落品牌微光 ── */
@@ -110,7 +110,7 @@ body.idle{cursor:none}
 .body{flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0}
 .grid{display:grid;gap:1.05em}
 .g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
-.card{background:linear-gradient(180deg,#fff 0%,#FBFDFF 100%);border:1px solid var(--edge);border-radius:10px;padding:1.1em 1.3em;box-shadow:var(--shadow)}
+.card{background:linear-gradient(180deg,#fff 0%,#FBFDFF 100%);border:3px solid var(--navy);border-radius:10px;padding:1.1em 1.3em;box-shadow:var(--shadow)}
 .card h3{font-size:clamp(15px,1.7vw,22px);color:var(--orange);margin-bottom:.36em;font-weight:800;letter-spacing:.005em}
 .card p,.card li{font-size:clamp(12px,1.32vw,18px);line-height:1.6;color:var(--ink)}
 .card ul{padding-left:1.1em}
@@ -127,13 +127,13 @@ b{color:var(--navy);font-weight:800}
 .tier .nm{font-weight:800;font-size:clamp(16px,2vw,26px);color:var(--navy);letter-spacing:.04em}
 .tier .pr{font-weight:900;font-size:clamp(22px,3.3vw,46px);color:var(--orange);margin:.1em 0;font-variant-numeric:tabular-nums}
 .tier .pk{font-size:clamp(11px,1.15vw,15px);color:var(--muted)}
-.tier.hot{border:2px solid var(--harbour-gold);box-shadow:0 18px 44px rgba(10,77,140,.18),0 0 0 4px rgba(255,200,61,.18);position:relative;background:linear-gradient(180deg,#FFFDF4 0%,#EEF8FF 100%)}
+.tier.hot{border:3px solid var(--navy);box-shadow:var(--shadow);position:relative;background:linear-gradient(180deg,#FFFDF4 0%,#EEF8FF 100%)}
 .tier.hot .nm{color:var(--brand-a)}
 .tier.hot .pr{color:var(--brand-a)}
 .tier.hot::after{content:"旗舰 · 优先资源";position:absolute;top:-.72em;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--harbour-gold),#FF9F43);color:var(--harbour-deep);font-size:clamp(10px,1vw,12px);font-weight:900;padding:.22em .86em;border-radius:999px;letter-spacing:.04em;white-space:nowrap}
 
 /* 表格 */
-table.kv{width:100%;border-collapse:separate;border-spacing:0;border-radius:12px;overflow:hidden;border:1px solid var(--edge)}
+table.kv{width:100%;border-collapse:separate;border-spacing:0;border-radius:12px;overflow:hidden;border:3px solid var(--navy)}
 table.kv td,table.kv th{padding:.58em .85em;font-size:clamp(12px,1.3vw,17px);text-align:left;border-bottom:1px solid var(--edge)}
 table.kv tr:last-child td{border-bottom:none}
 table.kv th{color:#fff;font-weight:700;background:var(--navy);letter-spacing:.02em}
@@ -146,11 +146,11 @@ table.kv tbody tr:nth-child(even of :not(:first-child)) td{background:#F3FAFF}
 .char{position:absolute;right:-2%;bottom:0;height:104%;z-index:0;filter:drop-shadow(0 18px 30px rgba(6,42,74,.26));pointer-events:none}
 
 .cover-slide{padding:0;background:
-    radial-gradient(680px 420px at 88% 18%,rgba(47,208,232,.35),transparent 62%),
-    radial-gradient(540px 360px at 6% 92%,rgba(255,200,61,.18),transparent 62%),
-    linear-gradient(135deg,#051B32 0%,#07385F 52%,#0B6FA7 100%)}
+    radial-gradient(680px 420px at 88% 18%,rgba(255,200,61,.35),transparent 62%),
+    radial-gradient(540px 360px at 6% 92%,rgba(255,150,20,.18),transparent 62%),
+    linear-gradient(135deg,#FF8800 0%,#FFAA00 52%,#FFB800 100%)}
 .cover-slide::before{background:
-    linear-gradient(90deg,rgba(5,29,53,.18) 0%,rgba(5,42,74,.04) 62%,rgba(255,255,255,.08) 100%),
+    linear-gradient(90deg,rgba(255,136,0,.18) 0%,rgba(255,170,0,.04) 62%,rgba(255,255,255,.08) 100%),
     radial-gradient(rgba(255,255,255,.16) 1.1px,transparent 1.5px) 0 0 / 24px 24px;
   opacity:1;z-index:1}
 .cover-slide::after{opacity:.25;z-index:1}
