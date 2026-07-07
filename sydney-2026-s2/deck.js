@@ -5,7 +5,20 @@ const slides = $$('.slide');
 const N = slides.length;
 const counter = $('.count'), segEl = $('.seg'), barEl = $('.bar'), ovlist = $('.ovlist'), ovTitle = $('.grid-ov h2');
 let i = 0;
-const pdfHref = '../pdf-output/sydney-2026-s2.pdf';
+const pdfHref = 'https://jr-academy-omni.github.io/orientation-festival/pdf-output/sydney-2026-s2.pdf';
+
+function injectPageLogos() {
+  slides.forEach((slide) => {
+    if (slide.querySelector('.page-logos')) return;
+    const logos = document.createElement('div');
+    logos.className = 'page-logos';
+    logos.innerHTML = `
+      <img class="page-logo page-logo-wordmark" src="assets/logos/logo-black.png" alt="匠人学院 logo">
+      <img class="page-logo page-logo-mark" src="assets/logos/logo-round.png" alt="匠人学院图形标">
+    `;
+    slide.appendChild(logos);
+  });
+}
 
 function chrome() {
   counter.textContent = (i + 1) + ' / ' + N;
@@ -28,6 +41,7 @@ function go(n) {
 
 // 板块总览
 if (ovTitle) ovTitle.textContent = '全部 ' + N + ' 页 · 点击跳转';
+injectPageLogos();
 slides.forEach((s, n) => {
   const b = document.createElement('button');
   b.innerHTML = `<span class="pg">${n + 1}</span> ${s.dataset.seg || ''}`;
