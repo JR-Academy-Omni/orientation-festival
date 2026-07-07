@@ -80,7 +80,7 @@ export default function S01_Cover() {
 				zIndex: 3,
 				display: 'flex',
 				flexDirection: 'column',
-				justifyContent: 'center',
+				justifyContent: 'flex-start',
 			}}>
 			<motion.div
 				initial={{ opacity: 0, y: -16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
@@ -110,7 +110,7 @@ export default function S01_Cover() {
 			</motion.p>
 
 			<motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.9 }}
-				style={{ position: 'absolute', left: 0, bottom: 0, display: 'grid', gridTemplateColumns: '1fr', gap: 12, maxWidth: 520, width: '100%' }}>
+				style={{ marginTop: 'auto', display: 'grid', gridTemplateColumns: '1fr', gap: 12, maxWidth: 520, width: '100%' }}>
 				{meta.map(([k, v]) => (
 					<span key={k} style={{ background: colors.white, color: colors.black, border, boxShadow: shadow, padding: '13px 18px' }}>
 						<span style={{ display: 'block', fontFamily: fonts.mono, color: colors.red, fontSize: 12, fontWeight: 800, letterSpacing: 1.6 }}>{k}</span>
