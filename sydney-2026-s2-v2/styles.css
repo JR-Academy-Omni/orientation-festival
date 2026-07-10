@@ -137,6 +137,8 @@ body.edit .slide.active [data-edit]:focus{outline:2px solid var(--orange)}
   position:absolute;top:3.4%;right:4.2%;display:flex;align-items:center;gap:12px;z-index:4
 }
 .content-logo img{width:64px;height:64px;object-fit:contain}
+.content-logo img.partner{width:auto;height:34px}
+.content-logo .plogo-sep{width:1px;height:30px;background:rgba(19,43,74,.16)}
 .cohost-badge{
   display:inline-flex;align-items:center;min-height:34px;padding:0 16px;border-radius:999px;
   background:rgba(13,32,56,.06);border:1px solid rgba(13,32,56,.1);font-size:12px;font-weight:800;color:var(--ink);letter-spacing:.06em
