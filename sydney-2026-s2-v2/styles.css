@@ -148,8 +148,8 @@ body.edit .slide.active [data-edit]:focus{outline:2px solid var(--orange)}
 }
 .h .mk{width:6px;height:30px;border-radius:999px;background:linear-gradient(180deg,var(--orange),var(--gold))}
 .body{flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0}
-.display{font-family:var(--font-head);font-weight:800;font-size:clamp(40px,5.2vw,80px);line-height:1.02;letter-spacing:-.04em}
-.display span{color:var(--gold)}
+.display{font-family:var(--font-head);font-weight:800;font-size:clamp(40px,5.2vw,80px);line-height:1.02;letter-spacing:-.04em;text-shadow:0 2px 18px rgba(90,42,6,.28)}
+.display span{color:#fff5e2}
 .eyebrow{
   display:inline-flex;align-items:center;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.12);
   border:1px solid rgba(255,255,255,.26);font-size:12px;font-weight:800;letter-spacing:.12em
