@@ -1,111 +1,97 @@
 ---
 sot_doc: true
-sot: orientation-festival/sydney-2026-s2
+sot: orientation-festival/sydney-2026-s2-v2
 sot_role: city-event-design
 sot_type: event
-title: 新生节 · 悉尼 2026 S2
+title: Sydney Orientation Festival Sponsor Deck · 2026 S2
 ---
 
-# 2026 S2 悉尼四校新生节 deck · 视觉真相源
+# 悉尼新生节招商 deck · 视觉与结构真相源
 
-本文件是 `sydney-2026-s2/` 的视觉真相源。改 `styles.css` 或 deck 结构前先读这里。
+本文件对应 `sydney-2026-s2-v2/` 这套全新重做的悉尼招商 deck。
 
-状态：已建，可直接打开 `index.html` 预览。实现采用三文件静态 deck：`index.html`、`styles.css`、`deck.js`。
+## 项目目标
 
-## 定位
+这套 deck 不是沿用旧 GitHub 版本修补，而是重新组织信息与视觉语言，服务两个目标：
 
-悉尼场的关键词是：海港都会、四校新生、课代表学生私域、活力中带精致。
+- 对外看起来更专业，适合招商沟通、品牌提案和会面展示。
+- 保留新生节的活力感，不做成传统企业路演 PPT。
 
-本 deck 需要同时接住两种叙事：
+核心关键词：
 
-- 学生端：USYD / UNSW / UTS / Macquarie 四校新生，开学季现场活动、礼品、答疑、社交。
-- 商家端：课代表系列的学生私域、线上内容矩阵、大学群和线下活动经验，支持 Premium $6000 旗舰招商档。
+- 悉尼城市感
+- 招商专业度
+- 开学季活力
+- 四校集中流量
+- Sydney Town Hall 场地价值
 
-## 视觉系统
+## 视觉方向
 
-2026 S2 悉尼 deck 已重新设计，参考墨尔本 v3「Airbotix 质感」和布里斯班的清晰竞争定位。视觉从海港蓝冷调改为暖奶油 + 珊瑚暖调，强调 neo-brutalism 风格（硬阴影、圆角卡片、最小装饰）。
+视觉不走旧版偏“学生社团海报”的做法，而是做成更偏活动品牌提案的气质：
 
-| 类型 | 用途 | 视觉 |
-| --- | --- | --- |
-| 内容页 `.slide` | 活动概览、套餐、数据、表格、反馈 | 暖奶油底 `#FDF6EF`、淡色角落光晕、圆角白卡 + 硬阴影（0 6px 0）、珊瑚色 `#FF5C4A` 数据和标记 |
-| Hero 页 `.slide.hero` | 封面、场地、回顾、成果、联络 | 品牌珊瑚/蓝渐变或满版现场照、暖金/白字大标题（点睛字用珊瑚）、无半调纹理 |
-| 照片页 `.photo-slide` | 现场照片 | 满版真实活动照片，顶部胶囊标题，不放卡片框 |
+- 主色：深海军蓝 `#0d2038`
+- 提亮色：暖金 `#f8c24e`
+- 动感色：海港蓝 `#3b84f6`
+- 背景：奶油纸张色 `#f4efe6` / `#fffdf8`
 
-## Token
+整体语感是：
 
-`styles.css` 顶部 token 为当前实现基准（2026 S2 新风格）：
+- 深色 hero 页做气势
+- 浅色内容页做信息消化
+- 大标题厚重，卡片圆角但不过分可爱
+- 有活力，但不是“卡通招商”
 
-```css
---brand-a:#0A4D8C;              /* 海港蓝 - 保留 */
---brand-b:#106DB8;
---brand-c:#1791D6;
---brand-d:#19B6E0;
---navy:#0C2A4A;                 /* 深色文字 */
---canvas:#FDF6EF;               /* 暖奶油底（改自 #EEF5FB） */
---edge:#F0E8DF;                 /* 浅色边线（改自 #DCE9F4） */
---cream:#FAF7F0;
---orange:#FF5C4A;               /* 珊瑚红（改自 #F2683C） */
---orange-soft:#FFE8E0;          /* 珊瑚淡色背景 */
---shadow:0 6px 0 rgba(...);     /* 硬阴影（改自 0 10px 26px 柔阴影） */
-```
+## 信息结构
 
-数据数字、标题短杠、按钮继续用 `--orange` 珊瑚色。不要改回海港蓝/橙粉日落，新方向是统一暖调 neo-brutalism。
+当前页序：
 
-## Sydney 装饰
+1. 封面
+2. 活动定位
+3. 目标人群
+4. 场地价值
+5. 活动亮点
+6. 商家价值
+7. 双引擎传播
+8. 现场玩法
+9. 合作套餐
+10. 权益对比
+11. 往期背书
+12. 现场氛围
+13. 收尾与合作联系
 
-内容页和 Hero 页底部使用内联 SVG 的 Opera House + Harbour Bridge 轮廓，写在 `.slide::after` / `.slide.hero::after`。规则：
+这套结构比旧版更强调“为什么值得投”“为什么是悉尼”“品牌能拿到什么”。
 
-- 只用 CSS data URI，不 hotlink 外部图片。
-- 轮廓颜色来自 `--harbour-deep`，桥灯/星点用暖金。
-- 保持低透明度，不能盖住正文。
-- 不再使用旧版通用城市高楼天际线。
+## 内容原则
 
-## 关键页型
+- 明确写死用户给定信息：`8 月 28 日`、`Sydney Town Hall`
+- 招商文案先讲场景价值，再讲主办方能力
+- 尽量避免空泛口号，优先写成可销售的句子
+- 往期数据统一用“匠人学院新生节往期综合口径”，避免串成其他城市
 
-### 封面
+## 组件约定
 
-封面使用 `assets/illustrations/sydney-welcome-students.png` 作为满版 Sydney 新生欢迎插画，叠深海港蓝遮罩。四校校名必须完整出现：
+- `.slide.hero`：封面和结尾，负责情绪与气势
+- 浅底内容页：负责解释、对比、招商逻辑
+- `.photo-card` / `.photo-slide`：用于真实活动感和场地信任感
+- `.tier-card`：招商套餐
+- `table.kv`：权益清晰对比
 
-`USYD · UNSW · UTS · Macquarie`
+## 资产使用
 
-### 宣传矩阵页
+当前使用：
 
-第 3 页是悉尼专属「课代表系列 · 宣传矩阵」页：
+- `assets/illustrations/sydney-welcome-students.png`
+- `assets/illustrations/lucky-draw.png`
+- `assets/past-events/hall-1.jpg`
+- `assets/past-events/checkin-10.jpg`
+- `assets/photo-2.jpg`
+- `assets/logo-zh.svg`
+- `assets/logo-zh-white.png`
 
-- 左侧：课代表系列，强调 14 个自媒体账号、2w+ 私域学生。
-- 右侧：内容分发 + 线下转化，强调 10w+ 线上粉丝、3+ 前期宣传、2000+ 线下人流。
+如果后续有更强的 Sydney Town Hall 现场图、赞助商现场照片或真实合作品牌素材，优先替换图片位，不必大改结构。
 
-这里不能出现第二主办方、第二联系人或外部财经社区信息。
+## 后续修改建议
 
-### 合作套餐
-
-四档并排：Silver ($1,110) / Gold ($2,480 - 推荐) / Diamond ($4,180) / Custom ($5,000+)。
-
-Gold 是推荐档，样式为金色边框 + `旗舰 · 优先资源` 标签，在权益对比表中用 ⭐ 标记。Diamond 强调「行业独家」。Custom 开放定制，允许扫码咨询或邮件联系。下方附加权益对比表（8 个维度 × 4 档）和曝光数据（渠道覆盖、线上线下数据、早鸟优惠）。
-
-### 现场玩法
-
-价格对比后新增「抽奖券驱动现场动线」页：签到基础券、组队奖励、集章打卡、社交任务都收敛到抽奖券，赞助商价值表达为“逛展、扫码、分享、复访”。活动后复盘口径包含报名、签到、扫码、社交任务、中奖记录和商家线索。该页仍是内容页 `.slide`，可使用 `assets/illustrations/lucky-draw.png` 补足现场感，关键强调色用 `--harbour-gold`。
-
-### 插画资产
-
-生成插画放在 `assets/illustrations/`：
-
-- `sydney-welcome-students.png`：封面欢迎主视觉。
-- `sponsor-booth.png`：商家机会/联络页展位互动视觉。
-- `lucky-draw.png`：抽奖券动线页视觉。
-
-插画不得包含可读品牌名、学校 logo 或不确定合作方 logo。若后续有真实现场图/真实 sponsor logo，优先用真实素材替换对应占位视觉。
-
-### 照片页
-
-真实活动照片用 `.photo-slide` 满版展示。图片来自本目录 `assets/photo-1.jpg`、`assets/photo-2.jpg`。不要保留“替换为真实活动照片”的占位页；没有素材就先删掉。
-
-## 规则
-
-- 每个 `<head>` 保留 `<meta name="robots" content="noindex, nofollow">`。
-- 除 Google Fonts 外不引外部资源。
-- 不加 analytics、SEO schema 或新路由。
-- 不改播放器行为：左右翻页、`E` 编辑、`G` 总览、`F` 全屏。
-- 不在 UI 标记里用 emoji；需要图形感时用内联 SVG icon 或 CSS 装饰。
-- 活动报价、联系人、PRD 内容属于招商物料，不要把 `content/` 目录公开 serve。
+- 若要继续强化“专业感”，优先加强第 7-10 页，不要先加装饰。
+- 若要继续强化“活力感”，优先换更好的现场图，不要先加更多颜色。
+- 若后面需要导出正式 PDF，可在不改结构的前提下做一轮字号和表格微调。
