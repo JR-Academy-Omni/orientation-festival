@@ -23,34 +23,33 @@ title: 新生节 · 悉尼 2026 S2
 
 ## 视觉系统
 
-页面仍沿用全系列双层结构：
+2026 S2 悉尼 deck 已重新设计，参考墨尔本 v3「Airbotix 质感」和布里斯班的清晰竞争定位。视觉从海港蓝冷调改为暖奶油 + 珊瑚暖调，强调 neo-brutalism 风格（硬阴影、圆角卡片、最小装饰）。
 
 | 类型 | 用途 | 视觉 |
 | --- | --- | --- |
-| 内容页 `.slide` | 活动概览、套餐、数据、表格、反馈 | 冷白纸底、浅海港蓝光晕、细线卡片、柔阴影、橙色数据数字 |
-| Hero 页 `.slide.hero` | 封面、场地、回顾、成果、联络 | 海港蓝渐变或活动插画/真实现场照片、暖金点睛、半调纹理、白色大标题 |
+| 内容页 `.slide` | 活动概览、套餐、数据、表格、反馈 | 暖奶油底 `#FDF6EF`、淡色角落光晕、圆角白卡 + 硬阴影（0 6px 0）、珊瑚色 `#FF5C4A` 数据和标记 |
+| Hero 页 `.slide.hero` | 封面、场地、回顾、成果、联络 | 品牌珊瑚/蓝渐变或满版现场照、暖金/白字大标题（点睛字用珊瑚）、无半调纹理 |
 | 照片页 `.photo-slide` | 现场照片 | 满版真实活动照片，顶部胶囊标题，不放卡片框 |
 
 ## Token
 
-`styles.css` 顶部 token 为当前实现基准：
+`styles.css` 顶部 token 为当前实现基准（2026 S2 新风格）：
 
 ```css
---brand-a:#0A4D8C;
+--brand-a:#0A4D8C;              /* 海港蓝 - 保留 */
 --brand-b:#106DB8;
 --brand-c:#1791D6;
 --brand-d:#19B6E0;
---hero-accent:#FFC83D;
---harbour-gold:#FFC83D;
---harbour-deep:#062A4A;
---harbour-cyan:#2FD0E8;
---navy:#0C2A4A;
---canvas:#EEF5FB;
---edge:#DCE9F4;
---orange:#F2683C;
+--navy:#0C2A4A;                 /* 深色文字 */
+--canvas:#FDF6EF;               /* 暖奶油底（改自 #EEF5FB） */
+--edge:#F0E8DF;                 /* 浅色边线（改自 #DCE9F4） */
+--cream:#FAF7F0;
+--orange:#FF5C4A;               /* 珊瑚红（改自 #F2683C） */
+--orange-soft:#FFE8E0;          /* 珊瑚淡色背景 */
+--shadow:0 6px 0 rgba(...);     /* 硬阴影（改自 0 10px 26px 柔阴影） */
 ```
 
-数据数字继续用 `--orange`，Hero 点睛字和 Premium 角标用 `--harbour-gold`。不要改回橙粉日落主题，那是旧 Sydney 草稿/其他城市风格。
+数据数字、标题短杠、按钮继续用 `--orange` 珊瑚色。不要改回海港蓝/橙粉日落，新方向是统一暖调 neo-brutalism。
 
 ## Sydney 装饰
 
@@ -80,9 +79,9 @@ title: 新生节 · 悉尼 2026 S2
 
 ### 合作套餐
 
-四档并排：Silver / Gold / Diamond / Premium。
+四档并排：Silver ($1,110) / Gold ($2,480 - 推荐) / Diamond ($4,180) / Custom ($5,000+)。
 
-Premium 是最高规格卡，样式为暖金描边 + 浅金蓝渐变 + `旗舰 · 优先资源`角标。不要把 Premium 降级成普通“热门”卡。
+Gold 是推荐档，样式为金色边框 + `旗舰 · 优先资源` 标签，在权益对比表中用 ⭐ 标记。Diamond 强调「行业独家」。Custom 开放定制，允许扫码咨询或邮件联系。下方附加权益对比表（8 个维度 × 4 档）和曝光数据（渠道覆盖、线上线下数据、早鸟优惠）。
 
 ### 现场玩法
 

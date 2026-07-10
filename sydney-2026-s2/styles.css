@@ -24,17 +24,17 @@
   --ink:#1C2E47;
   --muted:#5C6E86;
   --stroke:#062A4A;
-  --canvas:#EEF5FB;
+  --canvas:#FDF6EF;
   --paper:#FFFFFF;              /* 卡片底 */
   --card:#FFFFFF;               /* 兼容 index.html 内联 var(--card) */
-  --edge:#DCE9F4;
-  --cream:#EAF7FF;
-  --orange:#F2683C;             /* 橙：CTA / 数据 / 强调 */
-  --orange-soft:#FFF1EC;
+  --edge:#F0E8DF;
+  --cream:#FAF7F0;
+  --orange:#FFAA00;             /* 橙黄：CTA / 数据 / 强调 */
+  --orange-soft:#FFE0CC;
   --yellow:#FFF4CB;
   --cyan:#0E9CC8;
-  --shadow:0 10px 26px rgba(15,41,66,.08);
-  --shadow-lg:0 24px 58px rgba(15,41,66,.16);
+  --shadow:0 6px 0 rgba(15,41,66,.12);
+  --shadow-lg:0 12px 0 rgba(15,41,66,.18);
   --font:"Sora","Noto Sans SC","PingFang SC","Microsoft YaHei",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
   --font-cn:"Noto Sans SC","PingFang SC","Microsoft YaHei",-apple-system,system-ui,sans-serif;
 }
@@ -43,13 +43,12 @@ html,body{height:100%;overflow:hidden;background:#DDECF6;color:var(--navy);
   font-family:var(--font);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;cursor:default}
 body.idle{cursor:none}
 
-/* 浅色舞台 + 柔和品牌光晕 */
+/* 暖奶油舞台 + 品牌光晕（简化） */
 .deck{position:fixed;inset:0;display:grid;place-items:center;overflow:hidden;
   background:
-    linear-gradient(135deg,rgba(6,42,74,.06),rgba(25,182,224,.1)),
-    radial-gradient(980px 620px at 82% -10%,rgba(var(--brand-tint),.26),transparent 62%),
-    radial-gradient(760px 560px at 8% 110%,rgba(255,200,61,.18),transparent 60%),
-    #E6F2FA}
+    radial-gradient(980px 620px at 82% -10%,rgba(var(--brand-tint),.15),transparent 62%),
+    radial-gradient(760px 560px at 8% 110%,rgba(255,200,61,.08),transparent 60%),
+    #FDF6EF}
 .deck::before,.deck::after{content:"";position:absolute;border-radius:50%;filter:blur(100px);opacity:.32;z-index:0}
 .deck::before{width:48vw;height:48vw;left:-12vw;top:-14vw;background:radial-gradient(circle,rgba(var(--brand-tint),.55),transparent 66%);animation:d1 22s ease-in-out infinite}
 .deck::after{width:42vw;height:42vw;right:-12vw;bottom:-16vw;background:radial-gradient(circle,rgba(var(--brand-tint2),.5),transparent 66%);animation:d2 26s ease-in-out infinite}
@@ -84,8 +83,13 @@ body.idle{cursor:none}
 .slide.hero::before{background-image:radial-gradient(var(--cream) 1.5px,transparent 1.7px);background-size:26px 26px;opacity:.22}
 
 /* JR 角标 */
-.logo{position:absolute;top:4.6%;left:5.6%;font-weight:800;color:var(--navy);font-size:clamp(13px,1.5vw,20px);letter-spacing:.02em;z-index:2}
+.logo{position:absolute;top:3.8%;left:5%;z-index:2;width:clamp(56px,8vw,96px);height:clamp(56px,8vw,96px);display:flex;align-items:center;justify-content:center}
+.logo img{width:100%;height:100%;object-fit:contain}
 .logo small{display:block;font-size:.5em;letter-spacing:.28em;color:#46627c;font-weight:700}
+
+/* 内容页右上 logo（匠人+混沌并排） */
+.content-logo{position:absolute;top:3%;right:4.5%;display:flex;align-items:center;gap:1vw;z-index:3}
+.content-logo img{width:clamp(56px,7.5vw,100px);height:clamp(56px,7.5vw,100px);object-fit:contain}
 
 /* 大标题（hero 专用）— 干净无描边，柔和投影提升可读性 */
 .sticker{font-family:var(--font-cn);font-weight:900;line-height:1.1;color:#fff;letter-spacing:-.01em;
@@ -343,4 +347,115 @@ body.edit .editbadge{display:block}
   .slide.prep-next,.slide.prep-prev,.slide.active{transform:scale(1.041667)!important}
 }
 
-@media(max-width:760px){.g3,.g4{grid-template-columns:1fr 1fr}.top .name,.tip{display:none}.char{opacity:.5}}
+@media (max-width: 900px), (max-aspect-ratio: 4/3){
+  html,body{overflow:auto;background:#FDF6EF}
+  .deck{position:fixed;inset:0;display:block;overflow:hidden}
+  .frame{
+    width:100vw;
+    height:100vh;
+    aspect-ratio:auto;
+    border-radius:0;
+    box-shadow:none;
+    border:0;
+  }
+  .slide{
+    padding:72px 18px 92px;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+  .slide::after{background-size:100% 11%, 18px auto, 14px auto}
+  .top{top:10px;padding:0 12px}
+  .top .name,.tip{display:none}
+  .top .seg{font-size:11px;padding:4px 10px}
+  .hud{bottom:10px;padding:6px 10px;gap:2px}
+  .hud button,.hud a{width:32px;height:32px;font-size:15px}
+  .hud .count{min-width:54px;font-size:12px}
+  .editbadge{top:10px;font-size:11px}
+  .content-logo{top:12px;right:12px}
+  .content-logo img{width:42px;height:42px}
+  .h{font-size:clamp(20px,5.5vw,28px);margin-bottom:.55em}
+  .body{justify-content:flex-start}
+  .g2,.g3,.g4,
+  .overview-map,
+  .intro-poster,
+  .attraction-flow,
+  .roi-hero,
+  .roi-compare,
+  .purpose-stack,
+  .why-dashboard,
+  .pricing-detail{
+    grid-template-columns:1fr !important;
+  }
+  .matrix-slide,
+  .dual-engine{
+    background:linear-gradient(180deg,#FFFFFF 0%,#F8FCFF 58%,#072E52 58%,#0A4D8C 100%);
+  }
+  .matrix-slide .body>.grid.g2::after,
+  .dual-engine .body>.grid.g2::after{display:none}
+  .matrix-slide .card,
+  .dual-engine .card{min-height:auto}
+  .overview-main,
+  .purpose-card,
+  .why-hero,
+  .merchant-visual,
+  .attraction-flow figure,
+  .intro-poster img{
+    min-height:auto;
+    height:auto;
+  }
+  .intro-poster img,
+  .merchant-visual,
+  .attraction-flow figure,
+  .inline-illust{
+    min-height:210px;
+  }
+  .merchant-slide .body{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  .campus-line{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  .campus-line i{width:28px;flex:none}
+  .cover-slide{
+    padding:70px 18px 96px;
+    justify-content:flex-start !important;
+  }
+  .cover-copy{
+    width:100%;
+    margin-left:0;
+    padding-top:0;
+  }
+  .cover-copy .sticker{font-size:clamp(34px,12vw,62px)}
+  .cover-sub{font-size:clamp(16px,5vw,24px)}
+  .cover-art{
+    position:relative;
+    right:auto;
+    top:auto;
+    bottom:auto;
+    width:100%;
+    height:220px;
+    margin-top:16px;
+  }
+  .cover-meta{margin-top:.9em}
+  .sydney-mark{display:none}
+  .why-dashboard{grid-template-rows:auto}
+  .why-hero{min-height:220px}
+  .purpose-card{min-height:190px}
+  .purpose-card.gold{transform:none}
+  .flow-steps div{padding-left:4.2em}
+  .flow-steps span{left:.9em}
+  table.kv td,table.kv th{padding:.5em .55em;font-size:12px}
+  .photo-slide .h{
+    margin:16px;
+    max-width:calc(100% - 32px);
+    font-size:clamp(17px,4.8vw,26px);
+  }
+}
+
+@media(max-width:760px){
+  .g3,.g4{grid-template-columns:1fr 1fr}
+  .char{opacity:.5}
+}
