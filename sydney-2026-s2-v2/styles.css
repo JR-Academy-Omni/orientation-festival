@@ -201,16 +201,16 @@ body.edit .slide.active [data-edit]:focus{outline:2px solid var(--orange)}
   background:radial-gradient(circle,rgba(244,169,28,.4),transparent 68%);pointer-events:none
 }
 .statement p{font-size:clamp(18px,1.9vw,30px);line-height:1.5}
-.statement b{color:var(--gold)}
+.statement b{color:#ffb877}
 .mini-stats{align-content:stretch}
 .stat-card{padding:22px 22px 18px}
 .stat-card .k{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:800}
-.stat-card strong{display:block;margin-top:10px;font-family:var(--font-head);font-size:clamp(28px,3vw,44px);line-height:1;letter-spacing:-.02em;white-space:nowrap;background:linear-gradient(135deg,var(--orange),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat-card strong{display:block;margin-top:10px;font-family:var(--font-head);font-size:clamp(28px,3vw,44px);line-height:1;letter-spacing:-.02em;white-space:nowrap;background:linear-gradient(135deg,#e0700e,#ef9412);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .stat-card p{margin-top:10px;font-size:14px;line-height:1.5;color:var(--muted)}
 .pillars{margin-top:18px}
 .pill-card{padding:24px 20px 22px;position:relative}
 .pill-card::before{content:"";position:absolute;left:0;top:26px;width:4px;height:34px;border-radius:0 4px 4px 0;background:linear-gradient(180deg,var(--orange),var(--gold))}
-.pill-card b{display:block;font-family:var(--font-head);font-size:44px;line-height:.9;letter-spacing:-.02em;background:linear-gradient(135deg,var(--orange),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.pill-card b{display:block;font-family:var(--font-head);font-size:44px;line-height:.9;letter-spacing:-.02em;background:linear-gradient(135deg,#e0700e,#ef9412);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .pill-card h3{margin-top:12px;font-size:20px;color:var(--navy)}
 .pill-card p{margin-top:8px;font-size:14px;line-height:1.65;color:var(--muted)}
 
@@ -271,7 +271,7 @@ body.edit .slide.active [data-edit]:focus{outline:2px solid var(--orange)}
 .sponsor-grid{margin-bottom:18px}
 .value-card{padding:24px 22px;position:relative}
 .value-card::before{content:"";position:absolute;left:0;top:26px;width:4px;height:34px;border-radius:0 4px 4px 0;background:linear-gradient(180deg,var(--orange),var(--gold))}
-.value-card b{display:block;font-family:var(--font-head);font-size:44px;line-height:.9;letter-spacing:-.02em;background:linear-gradient(135deg,var(--orange),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.value-card b{display:block;font-family:var(--font-head);font-size:44px;line-height:.9;letter-spacing:-.02em;background:linear-gradient(135deg,#e0700e,#ef9412);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .value-card h3{margin-top:12px;font-size:20px;color:var(--navy)}
 .value-card p{margin-top:10px;font-size:14px;line-height:1.65;color:var(--muted)}
 .funnel-board{
@@ -298,7 +298,7 @@ body.edit .slide.active [data-edit]:focus{outline:2px solid var(--orange)}
 .engine-card p{margin-top:8px;font-size:14px;line-height:1.6;color:var(--muted)}
 .inner-stats{margin-top:18px}
 .mini-box{padding:16px 14px;border-radius:18px}
-.mini-box strong{display:block;font-family:var(--font-head);font-size:34px;line-height:.95;background:linear-gradient(135deg,var(--orange),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.mini-box strong{display:block;font-family:var(--font-head);font-size:34px;line-height:.95;background:linear-gradient(135deg,#e0700e,#ef9412);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .mini-box span{display:block;margin-top:6px;font-size:13px;line-height:1.45;color:var(--muted)}
 .afn-card{background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(252,245,227,.95))}
 
@@ -357,7 +357,7 @@ table.kv tbody tr:nth-child(even) td{background:rgba(140,201,255,.08)}
 
 .proof-stats{margin-bottom:18px}
 .proof-card{padding:24px 16px;text-align:center}
-.proof-card strong{display:block;font-family:var(--font-head);font-size:clamp(30px,3.3vw,46px);line-height:1;letter-spacing:-.02em;background:linear-gradient(135deg,var(--orange),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.proof-card strong{display:block;font-family:var(--font-head);font-size:clamp(30px,3.3vw,46px);line-height:1;letter-spacing:-.02em;background:linear-gradient(135deg,#e0700e,#ef9412);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .proof-card span{display:block;margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted)}
 .proof-panel{grid-template-columns:.96fr 1.04fr}
 .quote-stack{display:flex;flex-direction:column;justify-content:center;gap:14px}
