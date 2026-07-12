@@ -15,7 +15,7 @@ title: 新生节 · 布里斯班 2026 S2
 活动主信息：
 - 城市与场次：布里斯班 2026 S2
 - 覆盖高校：UQ / QUT / Griffith
-- 时间：Date TBC，10:00 AM - 2:00 PM
+- 时间：2026年8月21日 周五，2:00 PM - 5:00 PM
 - 场地：Ithaca Auditorium, Brisbane City Hall，64 Adelaide St
 - 规模：预计 1000 名学生，300+ 平米室内展区
 - 套餐：Silver $880 / Gold $1980 / Diamond $2970，包含 800 Student Gift Packs

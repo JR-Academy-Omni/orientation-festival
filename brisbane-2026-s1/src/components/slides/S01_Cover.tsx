@@ -4,7 +4,7 @@ import { colors, fonts, border, shadow, assetPath } from '../ui';
 export default function S01_Cover() {
 	const meta = [
 		['DATE', '2026年8月21日 周五'],
-		['TIME', '10:00 AM - 2:00 PM'],
+		['TIME', '2:00 PM - 5:00 PM'],
 		['VENUE', 'Market Square'],
 	] as const;
 
