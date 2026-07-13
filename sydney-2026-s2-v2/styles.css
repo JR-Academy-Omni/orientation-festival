@@ -253,7 +253,7 @@ body.edit .slide.active [data-edit]:focus{outline:2px solid var(--orange)}
   position:relative;overflow:hidden;min-height:360px;border-radius:28px;box-shadow:var(--shadow-strong)
 }
 .photo-card.compact{min-height:320px}
-.photo-card img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .photo-card::after{
   content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(13,32,56,.76) 100%)
 }
