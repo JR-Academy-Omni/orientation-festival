@@ -11,6 +11,7 @@ title: 2026 S2 墨尔本三校新生节逐页文字存档
 > 来源 Canva `DAHLA93aQ5k`（《2026 S2墨尔本新生节商家合作企划 中文》，38 页，1920×1080）。
 > 经 Canva MCP `get-design-content` 按页码逐页提取的原始文字，仅清理空行 / `${pageNumberOnly}` 占位符。含报价/私人联系方式，**不对外发布**。
 > ⚠️ 原稿多处「布里斯班」复制残留 + 笔误，如实标注，外发前必须校对。
+> ⚠️ **届次已弃用**：下方正文的「第三届墨尔本大学新生见面会」是原稿旧口径，现行统一为 **第 6 届 · 2026 S2**（见 [`EVENT.md`](../EVENT.md#届次口径唯一算法)）。此处按存档原则保留原文不改，引用时以 deck / EVENT.md 为准。
 > 另有招商要点精简版见 [`melbourne-orientation-festival-2026-s2.md`](./melbourne-orientation-festival-2026-s2.md)。
 
 ---

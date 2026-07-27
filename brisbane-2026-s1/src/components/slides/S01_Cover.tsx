@@ -89,7 +89,7 @@ export default function S01_Cover() {
 					background: colors.black, color: colors.yellow, border,
 					fontFamily: fonts.mono, fontSize: 16, fontWeight: 700, letterSpacing: 2,
 				}}>
-				2026 S2 · 布里斯班三校新生节 · 商家合作企划
+				2026 S2 · 第 6 届新生节 · 商家合作企划
 			</motion.div>
 
 			<h1 style={{ fontFamily: fonts.heading, fontWeight: 900, color: colors.white, fontSize: 92, lineHeight: 1.02, letterSpacing: -2, maxWidth: 660 }}>
