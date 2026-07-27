@@ -89,7 +89,7 @@ export default function S01_Cover() {
 					background: colors.black, color: colors.yellow, border,
 					fontFamily: fonts.mono, fontSize: 16, fontWeight: 700, letterSpacing: 2,
 				}}>
-				2026 S2 · Brisbane Tri-Uni Orientation Festival · Merchant Partnership Proposal
+				2026 S2 · 6th Orientation Festival · Merchant Partnership Proposal
 			</motion.div>
 
 			<h1 style={{ fontFamily: fonts.heading, fontWeight: 900, color: colors.white, fontSize: 52, lineHeight: 1.05, letterSpacing: -1.5, maxWidth: 700 }}>
