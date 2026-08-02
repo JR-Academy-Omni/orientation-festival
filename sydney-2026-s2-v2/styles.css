@@ -89,7 +89,16 @@ body.idle{cursor:none}
 body.idle .ui{opacity:0;transform:translateY(6px);pointer-events:none}
 .top{position:fixed;top:16px;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:0 26px;z-index:50;pointer-events:none}
 .top .name{font-size:13px;font-weight:700;color:#60738b}
+.top-actions{display:flex;align-items:center;gap:10px;pointer-events:auto}
 .top .seg{font-size:12px;font-weight:800;background:rgba(13,32,56,.86);color:#fff;border-radius:999px;padding:6px 14px}
+.pdf-link{
+  display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 16px;border-radius:999px;
+  text-decoration:none;font-size:12px;font-weight:900;letter-spacing:.04em;transition:transform .15s ease,box-shadow .15s ease,background .15s ease
+}
+.top-pdf{
+  background:#fff;color:var(--navy);box-shadow:0 10px 24px rgba(13,32,56,.12);border:1px solid rgba(13,32,56,.08)
+}
+.top-pdf:hover{transform:translateY(-1px);box-shadow:0 14px 30px rgba(13,32,56,.16)}
 .tip{position:fixed;left:50%;bottom:68px;transform:translateX(-50%);font-size:11px;color:#6b7d92;z-index:50;pointer-events:none}
 .hud{
   position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:4px;
@@ -190,6 +199,11 @@ body.edit .slide.active [data-edit]:focus{outline:2px solid var(--orange)}
   display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:14px;background:rgba(255,255,255,.12);
   border:1px solid rgba(255,255,255,.18);font-size:12px;font-weight:800
 }
+.cover-actions{display:flex;align-items:center;gap:12px;margin-top:4px}
+.cover-pdf{
+  background:#fff;color:#8f3d0a;box-shadow:0 12px 28px rgba(90,42,6,.18);border:1px solid rgba(255,255,255,.32)
+}
+.cover-pdf:hover{transform:translateY(-1px);box-shadow:0 16px 32px rgba(90,42,6,.24)}
 .cover-visual{position:relative;align-self:stretch;display:flex;align-items:center;justify-content:center}
 .cover-visual img{
   width:100%;height:74%;object-fit:cover;border-radius:28px;box-shadow:0 28px 66px rgba(7,19,32,.28)
