@@ -103,6 +103,11 @@ title: 2026 S2 墨尔本新生节招商企划内部存档
 - Diamond 合作方可优先选择摊位位置
 - Floor Plan 详情：企划案中标注 "Content to be provided"（待补）
 
+## 八、商家资料补充存档
+
+- 商家与合作社团的一段话介绍、补充品牌文案，见 [`melbourne-2026-s2-merchants.md`](./melbourne-2026-s2-merchants.md)
+- 该文件为内部素材库，供 deck、现场物料、招商跟进与外发文案二次整理使用
+
 ---
 
 ## ⚠️ 文案待修正项（外发前必须改）
