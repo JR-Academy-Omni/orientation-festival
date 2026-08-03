@@ -80,20 +80,16 @@
         gap: 12px;
       }
 
-      .media-partner-badge {
-        display: inline-flex;
-        align-items: center;
-        padding: 8px 15px 7px;
+      .consulate-support {
+        width: 410px;
+        height: 70px;
+        display: block;
+        padding: 3px;
         border: 2px solid rgba(49, 95, 158, 0.2);
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.92);
-        color: #315f9e;
+        border-radius: 14px;
+        background: white;
         box-shadow: 0 8px 20px rgba(28, 44, 83, 0.08);
-        font-size: 18px;
-        font-weight: 800;
-        letter-spacing: 0.035em;
-        line-height: 1;
-        white-space: nowrap;
+        object-fit: cover;
       }
 
       .partner-card {
@@ -263,13 +259,15 @@
 
       .prize-ribbon b { color: var(--yellow); }
 
+      .poster.mode-gifts .prize-ribbon { top: 1145px; }
+
       .partner-benefits-card {
         position: absolute;
-        top: 724px;
+        top: 758px;
         right: 70px;
-        width: 400px;
+        width: 500px;
         display: none;
-        padding: 13px;
+        padding: 15px;
         border: 2px solid rgba(18, 33, 63, 0.12);
         border-radius: 26px;
         background: rgba(255, 255, 255, 0.96);
@@ -280,7 +278,7 @@
 
       .partner-benefits-image {
         width: 100%;
-        height: 122px;
+        height: 210px;
         display: block;
         border-radius: 17px;
         object-fit: cover;
@@ -321,7 +319,7 @@
 
       .raffle-prize-items:empty { display: none; }
 
-      .partner-benefits-card.has-many-prizes .partner-benefits-image { height: 96px; }
+      .partner-benefits-card.has-many-prizes .partner-benefits-image { height: 178px; }
 
       .benefit-divider {
         height: 1px;
@@ -424,7 +422,7 @@
         <div class="brand-row">
           <div class="host-brand">
             <img class="logo" src="assets/jr-academy-logo-black.svg" alt="匠人学院 JR Academy" />
-            <div class="media-partner-badge">联合传播｜墨尔本大使馆</div>
+            <img class="consulate-support" src="assets/china-consulate-melbourne.webp" alt="中华人民共和国驻墨尔本总领事馆支持" />
           </div>
           <div class="partner-card" id="partner-card">
             <div class="partner-default">合作伙伴联合传播</div>
@@ -493,6 +491,7 @@
       const partner = (window.PARTNERS || []).find((item) => item.slug === partnerSlug);
 
       if (partner) {
+        document.querySelector('.poster').classList.add(`mode-${mode}`);
         const card = document.getElementById('partner-card');
         const logo = document.getElementById('partner-logo');
         const name = document.getElementById('partner-name');
