@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.dirname(fileURLToPath(import.meta.url));
 const relativeFiles = [
   'melbourne-2026-s2-partner-promo.png',
+  'image-model-bupa.png',
   'partner-logo-variants-contact-sheet.png',
   'partner-gift-variants-contact-sheet.png',
 ];

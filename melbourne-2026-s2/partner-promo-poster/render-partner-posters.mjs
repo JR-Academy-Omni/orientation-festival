@@ -1,4 +1,4 @@
-import { spawn } from 'node:child_process';
+import { execFileSync, spawn } from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -25,7 +25,7 @@ if (workspaceNodeModules) {
   const playwrightUrl = pathToFileURL(path.join(workspaceNodeModules, 'playwright/index.mjs')).href;
   const { chromium } = await import(playwrightUrl);
   browser = await chromium.launch({ executablePath: chrome, headless: true });
-} else {
+} else if (typeof WebSocket !== 'undefined') {
   chromeProfile = fs.mkdtempSync(path.join(os.tmpdir(), 'freshers-poster-chrome-'));
   chromeProcess = spawn(chrome, [
     '--headless=new',
@@ -121,7 +121,29 @@ const render = async (url, output) => {
       await page.close();
     }
   } else {
-    await renderWithCdp(url, output);
+    if (chromePort) {
+      await renderWithCdp(url, output);
+    } else {
+      const previousMtime = fs.existsSync(output) ? fs.statSync(output).mtimeMs : 0;
+      try {
+        execFileSync(chrome, [
+          '--headless=new',
+          '--disable-gpu',
+          '--disable-extensions',
+          '--disable-background-networking',
+          '--hide-scrollbars',
+          '--no-first-run',
+          '--allow-file-access-from-files',
+          '--window-size=1242,1660',
+          '--force-device-scale-factor=1',
+          `--screenshot=${output}`,
+          url,
+        ], { stdio: 'ignore', timeout: 30_000 });
+      } catch (error) {
+        const outputWasWritten = fs.existsSync(output) && fs.statSync(output).mtimeMs > previousMtime;
+        if (error.code !== 'ETIMEDOUT' || !outputWasWritten) throw error;
+      }
+    }
   }
 
   const png = fs.readFileSync(output);
