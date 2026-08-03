@@ -73,6 +73,29 @@
         height: auto;
       }
 
+      .host-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .media-partner-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 15px 7px;
+        border: 2px solid rgba(49, 95, 158, 0.2);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.92);
+        color: #315f9e;
+        box-shadow: 0 8px 20px rgba(28, 44, 83, 0.08);
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: 0.035em;
+        line-height: 1;
+        white-space: nowrap;
+      }
+
       .partner-card {
         width: 460px;
         height: 154px;
@@ -399,7 +422,10 @@
 
       <section class="top">
         <div class="brand-row">
-          <img class="logo" src="assets/jr-academy-logo-black.svg" alt="匠人学院 JR Academy" />
+          <div class="host-brand">
+            <img class="logo" src="assets/jr-academy-logo-black.svg" alt="匠人学院 JR Academy" />
+            <div class="media-partner-badge">联合传播｜墨尔本大使馆</div>
+          </div>
           <div class="partner-card" id="partner-card">
             <div class="partner-default">合作伙伴联合传播</div>
             <div class="partner-label">联合发布</div>
