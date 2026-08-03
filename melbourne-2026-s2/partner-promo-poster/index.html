@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>2026 S2 墨尔本三校新生节 · 企业联合传播海报</title>
+    <style>
+      :root {
+        --ink: #12213f;
+        --coral: #ff6b5c;
+        --blue: #5b9bff;
+        --yellow: #ffe15d;
+        --cream: #fdf6ef;
+      }
+
+      * { box-sizing: border-box; }
+
+      html,
+      body {
+        width: 1242px;
+        height: 1660px;
+        margin: 0;
+        overflow: hidden;
+        background: var(--cream);
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        color: var(--ink);
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      .poster {
+        position: relative;
+        width: 1242px;
+        height: 1660px;
+        overflow: hidden;
+        isolation: isolate;
+        background: var(--cream);
+      }
+
+      .background,
+      .wash {
+        position: absolute;
+        inset: 0;
+      }
+
+      .background {
+        z-index: -3;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .wash {
+        z-index: -2;
+        background:
+          linear-gradient(180deg, rgba(253, 246, 239, 0.98) 0%, rgba(253, 246, 239, 0.93) 29%, rgba(253, 246, 239, 0.1) 51%, rgba(253, 246, 239, 0.04) 72%, rgba(253, 246, 239, 0.96) 89%, #fdf6ef 100%);
+      }
+
+      .top {
+        padding: 58px 72px 0;
+      }
+
+      .brand-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 132px;
+      }
+
+      .logo {
+        width: 248px;
+        height: auto;
+      }
+
+      .partner-card {
+        width: 360px;
+        height: 132px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        padding: 11px 22px;
+        border: 2px solid rgba(18, 33, 63, 0.14);
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 12px 30px rgba(28, 44, 83, 0.1);
+      }
+
+      .partner-default {
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+      }
+
+      .partner-label {
+        display: none;
+        color: #7b8495;
+        font-size: 15px;
+        font-weight: 850;
+        letter-spacing: 0.12em;
+      }
+
+      .partner-logo {
+        display: none;
+        max-width: 278px;
+        max-height: 64px;
+        object-fit: contain;
+      }
+
+      .partner-name {
+        display: none;
+        max-width: 310px;
+        overflow: hidden;
+        color: #354158;
+        font-size: 15px;
+        font-weight: 850;
+        line-height: 1.15;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .partner-card.is-active .partner-default { display: none; }
+      .partner-card.is-active .partner-label,
+      .partner-card.is-active .partner-logo,
+      .partner-card.is-active .partner-name { display: block; }
+
+      .partner-card.mode-logo {
+        position: absolute;
+        top: 48px;
+        right: 70px;
+        width: 480px;
+        height: 190px;
+        padding: 22px 28px;
+      }
+
+      .partner-card.mode-logo .partner-label,
+      .partner-card.mode-logo .partner-name { display: none; }
+
+      .partner-card.mode-logo .partner-logo {
+        display: block;
+        max-width: 420px;
+        max-height: 142px;
+      }
+
+      .edition {
+        display: inline-flex;
+        margin-top: 28px;
+        padding: 11px 20px 10px;
+        border-radius: 12px;
+        background: var(--coral);
+        color: white;
+        font-size: 24px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+      }
+
+      .event-name {
+        margin-top: 18px;
+        font-family: "SF Pro Display", "PingFang SC", "Hiragino Sans GB", sans-serif;
+        font-size: 37px;
+        line-height: 1.15;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+      }
+
+      h1 {
+        max-width: 1040px;
+        margin: 8px 0 0;
+        font-family: "SF Pro Display", "PingFang SC", "Hiragino Sans GB", sans-serif;
+        font-size: 84px;
+        line-height: 1.04;
+        letter-spacing: -0.035em;
+        font-weight: 800;
+      }
+
+      h1 .count { font-size: 100px; }
+      h1 .accent { color: var(--coral); }
+
+      .schools {
+        margin-top: 22px;
+        font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+        font-size: 30px;
+        font-weight: 850;
+        letter-spacing: 0.08em;
+        color: #315f9e;
+      }
+
+      .facts {
+        display: grid;
+        grid-template-columns: 0.9fr 1.25fr;
+        gap: 16px;
+        width: 850px;
+        margin-top: 26px;
+      }
+
+      .fact {
+        min-height: 104px;
+        padding: 18px 22px;
+        border: 2px solid rgba(18, 33, 63, 0.1);
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 18px 44px rgba(41, 57, 91, 0.11);
+      }
+
+      .fact strong,
+      .fact span { display: block; }
+
+      .fact strong {
+        margin-bottom: 4px;
+        font-family: "SF Pro Display", "PingFang SC", sans-serif;
+        font-size: 29px;
+        line-height: 1.15;
+        font-weight: 750;
+      }
+
+      .fact span {
+        font-size: 21px;
+        line-height: 1.25;
+        color: #4f5c75;
+      }
+
+      .prize-ribbon {
+        position: absolute;
+        left: 66px;
+        top: 1074px;
+        max-width: 1030px;
+        padding: 18px 28px;
+        border-radius: 20px;
+        transform: rotate(-1.3deg);
+        background: var(--ink);
+        color: white;
+        box-shadow: 0 18px 34px rgba(15, 26, 52, 0.22);
+        font-size: 25px;
+        font-weight: 790;
+        line-height: 1.36;
+      }
+
+      .prize-ribbon b { color: var(--yellow); }
+
+      .partner-benefits-card {
+        position: absolute;
+        top: 724px;
+        right: 70px;
+        width: 400px;
+        display: none;
+        padding: 13px;
+        border: 2px solid rgba(18, 33, 63, 0.12);
+        border-radius: 26px;
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 24px 58px rgba(25, 43, 78, 0.2);
+      }
+
+      .partner-benefits-card.is-active { display: block; }
+
+      .partner-benefits-image {
+        width: 100%;
+        height: 122px;
+        display: block;
+        border-radius: 17px;
+        object-fit: cover;
+      }
+
+      .partner-benefits-image.is-hidden { display: none; }
+
+      .partner-benefits-content {
+        padding: 10px 8px 4px;
+      }
+
+      .benefit-section.is-hidden,
+      .benefit-divider.is-hidden { display: none; }
+
+      .benefit-kicker {
+        color: var(--coral);
+        font-size: 15px;
+        font-weight: 900;
+        letter-spacing: 0.06em;
+      }
+
+      .benefit-name {
+        margin-top: 4px;
+        font-family: "SF Pro Display", "PingFang SC", sans-serif;
+        font-size: 24px;
+        line-height: 1.16;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+
+      .raffle-prize-items {
+        margin-top: 5px;
+        color: #4f5c75;
+        font-size: 14px;
+        font-weight: 650;
+        line-height: 1.28;
+      }
+
+      .raffle-prize-items:empty { display: none; }
+
+      .partner-benefits-card.has-many-prizes .partner-benefits-image { height: 96px; }
+
+      .benefit-divider {
+        height: 1px;
+        margin: 10px 0 9px;
+        background: rgba(18, 33, 63, 0.12);
+      }
+
+      .onsite-gift .benefit-kicker { color: #315f9e; }
+
+      .onsite-gift .benefit-name {
+        font-size: 20px;
+        letter-spacing: -0.015em;
+      }
+
+      .benefit-items {
+        margin-top: 4px;
+        color: #4f5c75;
+        font-size: 16px;
+        font-weight: 750;
+        line-height: 1.32;
+      }
+
+      .footer-card {
+        position: absolute;
+        left: 62px;
+        right: 62px;
+        bottom: 48px;
+        height: 324px;
+        display: grid;
+        grid-template-columns: 1fr 252px;
+        gap: 34px;
+        align-items: center;
+        padding: 34px 36px 34px 44px;
+        border: 2px solid rgba(18, 33, 63, 0.11);
+        border-radius: 32px;
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 28px 70px rgba(29, 44, 73, 0.17);
+      }
+
+      .cta-kicker {
+        color: var(--coral);
+        font-size: 23px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+      }
+
+      .cta-title {
+        margin-top: 8px;
+        font-family: "SF Pro Display", "PingFang SC", sans-serif;
+        font-size: 51px;
+        line-height: 1.08;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+      }
+
+      .cta-copy {
+        margin-top: 15px;
+        font-size: 24px;
+        line-height: 1.45;
+        color: #4f5c75;
+      }
+
+      .fineprint {
+        margin-top: 13px;
+        font-size: 18px;
+        color: #7b8495;
+      }
+
+      .qr-wrap {
+        text-align: center;
+      }
+
+      .qr {
+        width: 220px;
+        height: 220px;
+        padding: 10px;
+        border-radius: 18px;
+        background: white;
+        box-shadow: inset 0 0 0 2px rgba(18, 33, 63, 0.08);
+      }
+
+      .qr-label {
+        margin-top: 4px;
+        font-size: 20px;
+        font-weight: 850;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      对外事实口径：2026-08-02 读取并验证生产活动页。
+      报名 URL：https://jiangren.com.au/events/6a5448bfc7d7a1b0782b41b4
+      当前奖品口径：31 款、56 份，来自网站 lottery-prizes.json。
+    -->
+    <main class="poster">
+      <img class="background" src="assets/melbourne-festival-background.png" alt="" />
+      <div class="wash"></div>
+
+      <section class="top">
+        <div class="brand-row">
+          <img class="logo" src="assets/jr-academy-logo-black.svg" alt="匠人学院 JR Academy" />
+          <div class="partner-card" id="partner-card">
+            <div class="partner-default">合作伙伴联合传播</div>
+            <div class="partner-label">联合发布</div>
+            <img class="partner-logo" id="partner-logo" alt="" />
+            <div class="partner-name" id="partner-name"></div>
+          </div>
+        </div>
+
+        <div class="edition">第 6 届 · 2026 S2</div>
+        <div class="event-name">墨尔本三校新生节</div>
+        <h1><span class="count">5000+</span> 份礼品<br /><span class="accent">免费领 · 现场抽大奖</span></h1>
+        <div class="schools">UNIMELB · MONASH · RMIT</div>
+
+        <div class="facts">
+          <div class="fact">
+            <strong>8 月 8 日 · 周六</strong>
+            <span>2:00 PM – 5:00 PM</span>
+          </div>
+          <div class="fact">
+            <strong>Drill Hall · Multicultural Hub</strong>
+            <span>26 Therry St, Melbourne VIC 3000</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="prize-ribbon">
+        <b>超百份现场好礼 · 大奖现场抽</b>　Switch 2 · DJI OSMO Pocket 3 · iWatch SE · AirPods 4 · Dyson 等
+      </div>
+
+      <section class="partner-benefits-card" id="partner-benefits-card">
+        <img class="partner-benefits-image" id="partner-benefits-image" alt="" />
+        <div class="partner-benefits-content">
+          <div class="benefit-section" id="raffle-prize-section">
+            <div class="benefit-kicker">抽奖奖品</div>
+            <div class="benefit-name" id="raffle-prize-summary"></div>
+            <div class="raffle-prize-items" id="raffle-prize-items"></div>
+          </div>
+          <div class="benefit-divider" id="benefit-divider"></div>
+          <div class="benefit-section onsite-gift" id="onsite-gift-section">
+            <div class="benefit-kicker">现场免费礼品</div>
+            <div class="benefit-name" id="onsite-gift-name"></div>
+            <div class="benefit-items" id="onsite-gift-items"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer-card">
+        <div>
+          <div class="cta-kicker">免费报名 · 必须提前登记</div>
+          <div class="cta-title">扫码锁定入场名额</div>
+          <div class="cta-copy">免费入场、免费礼品、电子抽奖与新生社交，一次认识墨尔本的新同学和本地生活资源。</div>
+          <div class="fineprint">活动不接受 walk-in；奖品与现场安排以活动页最新信息为准。</div>
+        </div>
+        <div class="qr-wrap">
+          <img class="qr" src="assets/register-qr.png" alt="活动报名二维码" />
+          <div class="qr-label">扫码查看活动详情</div>
+        </div>
+      </section>
+    </main>
+    <script src="partner-data.js"></script>
+    <script>
+      const query = new URLSearchParams(window.location.search);
+      const partnerSlug = query.get('partner');
+      const mode = query.get('mode') || 'gifts';
+      const partner = (window.PARTNERS || []).find((item) => item.slug === partnerSlug);
+
+      if (partner) {
+        const card = document.getElementById('partner-card');
+        const logo = document.getElementById('partner-logo');
+        const name = document.getElementById('partner-name');
+        card.classList.add('is-active');
+        card.classList.add(`mode-${mode}`);
+        logo.src = partner.logo;
+        logo.alt = `${partner.name} Logo`;
+        name.textContent = partner.name;
+        document.title = `${partner.name} × 2026 S2 墨尔本三校新生节 · ${mode}`;
+
+        const prizes = partner.prizes ?? [];
+        if (mode === 'gifts' && (prizes.length || partner.onsiteGift)) {
+          const benefitsCard = document.getElementById('partner-benefits-card');
+          const benefitsImage = document.getElementById('partner-benefits-image');
+          const raffleSection = document.getElementById('raffle-prize-section');
+          const raffleSummary = document.getElementById('raffle-prize-summary');
+          const raffleItems = document.getElementById('raffle-prize-items');
+          const divider = document.getElementById('benefit-divider');
+          const onsiteSection = document.getElementById('onsite-gift-section');
+          const onsiteName = document.getElementById('onsite-gift-name');
+          const onsiteItems = document.getElementById('onsite-gift-items');
+
+          benefitsCard.classList.add('is-active');
+
+          if (prizes.length) {
+            const representativePrize = prizes.find((prize) => prize.image);
+            const totalQuantity = prizes.reduce((sum, prize) => sum + prize.quantity, 0);
+            benefitsImage.src = representativePrize.image;
+            benefitsImage.alt = `${partner.name} 抽奖奖品`;
+
+            if (prizes.length === 1) {
+              raffleSummary.textContent = `${prizes[0].name} × ${prizes[0].quantity}`;
+            } else {
+              benefitsCard.classList.add('has-many-prizes');
+              raffleSummary.textContent = `${prizes.length} 款 · ${totalQuantity} 份`;
+              raffleItems.textContent = prizes
+                .map((prize) => `${prize.name} × ${prize.quantity}`)
+                .join(' · ');
+            }
+          } else {
+            benefitsImage.classList.add('is-hidden');
+            raffleSection.classList.add('is-hidden');
+          }
+
+          if (partner.onsiteGift) {
+            onsiteName.textContent = `${partner.onsiteGift.quantityLabel} ${partner.onsiteGift.name}`;
+            onsiteItems.textContent = partner.onsiteGift.items.join(' · ');
+          } else {
+            onsiteSection.classList.add('is-hidden');
+          }
+
+          if (!prizes.length || !partner.onsiteGift) {
+            divider.classList.add('is-hidden');
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
