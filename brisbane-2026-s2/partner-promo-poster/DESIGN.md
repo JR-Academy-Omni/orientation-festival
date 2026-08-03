@@ -23,7 +23,9 @@
 - 画布固定 `1242×1660`；底部报名卡保留约 330px。
 - 无法在布里斯班资料中核实的礼品、优惠条件或企业奖品归属不得展示。
 
-## 当前母版
+## 已完成系列
 
-- `image-model-bupa.html`
-- `image-model-bupa.png`
+- 14 家企业分别拥有独立图片模型主视觉，不使用单一背景批量换 Logo。
+- 有已验证权益的企业使用礼品／抽奖版；中国银行、Mobile Connect、UQCSSA、亿忆网使用大 Logo 联名版。
+- 每张保留同一信息骨架：JR Logo、企业大 Logo、免费权益标题、日期地点、二维码、支持单位横幅。
+- 最终总览：`brisbane-partner-posters-contact-sheet.png`。
