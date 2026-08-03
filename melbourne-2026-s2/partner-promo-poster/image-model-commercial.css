@@ -1,0 +1,165 @@
+* { box-sizing: border-box; }
+html, body { width: 1242px; height: 1660px; margin: 0; overflow: hidden; }
+body {
+  color: #10264b;
+  font-family: "SF Pro Text", "PingFang SC", "Hiragino Sans GB", sans-serif;
+}
+.poster { position: relative; width: 1242px; height: 1660px; overflow: hidden; background: #fdf6ef; }
+.art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.top-wash {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 760px;
+  background: linear-gradient(90deg, rgba(255,249,239,.95) 0%, rgba(255,249,239,.79) 47%, rgba(255,249,239,.08) 78%);
+}
+.jr-logo { position: absolute; top: 54px; left: 72px; width: 252px; }
+.partner-card {
+  position: absolute;
+  top: 50px;
+  right: 66px;
+  width: 520px;
+  height: 188px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 28px;
+  border: 2px solid rgba(20,48,89,.12);
+  border-radius: 28px;
+  background: rgba(255,255,255,.95);
+  box-shadow: 0 22px 54px rgba(39,55,84,.15);
+}
+.partner-card img { width: 454px; height: 142px; object-fit: contain; }
+.edition {
+  position: absolute;
+  top: 182px;
+  left: 72px;
+  padding: 12px 22px;
+  border-radius: 14px;
+  background: #ff6557;
+  color: white;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+.event-name { position: absolute; top: 252px; left: 72px; font-size: 36px; font-weight: 800; }
+.headline {
+  position: absolute;
+  top: 300px;
+  left: 68px;
+  max-width: 1100px;
+  margin: 0;
+  font-family: "SF Pro Display", "PingFang SC", sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -.035em;
+}
+.headline.medium { font-size: 64px; }
+.headline.small { font-size: 57px; line-height: 1.12; }
+.headline span { display: block; color: #ff5f50; }
+.benefit-pill {
+  position: absolute;
+  top: 472px;
+  left: 72px;
+  padding: 10px 18px;
+  border: 2px solid rgba(255,95,80,.18);
+  border-radius: 999px;
+  background: rgba(255,255,255,.9);
+  color: #ff5f50;
+  font-size: 25px;
+  font-weight: 850;
+}
+.schools {
+  position: absolute;
+  top: 532px;
+  left: 72px;
+  color: #2f68a7;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 29px;
+  font-weight: 850;
+  letter-spacing: .09em;
+}
+.facts { position: absolute; top: 582px; left: 72px; display: grid; gap: 14px; }
+.fact { display: grid; grid-template-columns: 54px auto; gap: 14px; align-items: center; }
+.fact-icon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255,225,202,.9);
+  color: #ff6557;
+  font-size: 25px;
+  font-weight: 900;
+}
+.fact strong { display: block; font-size: 27px; line-height: 1.18; }
+.fact span { display: block; margin-top: 3px; color: #52647d; font-size: 20px; }
+.gift-proofs { position: absolute; left: 76px; top: 746px; display: grid; gap: 10px; max-width: 920px; }
+.gift-proof {
+  width: fit-content;
+  max-width: 920px;
+  padding: 12px 18px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.93);
+  box-shadow: 0 14px 32px rgba(32,49,79,.14);
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+.gift-proof b { color: #ff5f50; }
+.footer-panel {
+  position: absolute;
+  left: 70px;
+  right: 70px;
+  top: 1268px;
+  bottom: 48px;
+  border: 2px solid rgba(20,48,89,.08);
+  border-radius: 32px;
+  background: rgba(255,252,247,.95);
+  box-shadow: 0 26px 70px rgba(45,60,82,.17);
+}
+.footer-copy { position: absolute; left: 98px; top: 1283px; width: 655px; }
+.cta-kicker { color: #ff5f50; font-size: 24px; font-weight: 900; letter-spacing: .08em; }
+.cta-title { margin-top: 7px; font-size: 48px; font-weight: 800; letter-spacing: -.025em; }
+.fineprint { margin-top: 7px; color: #718096; font-size: 17px; }
+.support-label {
+  position: absolute;
+  top: 1438px;
+  left: 98px;
+  width: 630px;
+  color: #53637b;
+  font-size: 17px;
+  font-weight: 800;
+  text-align: center;
+}
+.consulate {
+  position: absolute;
+  top: 1467px;
+  left: 98px;
+  width: 630px;
+  height: 108px;
+  padding: 4px;
+  border: 2px solid rgba(49,95,158,.16);
+  border-radius: 16px;
+  background: white;
+  object-fit: cover;
+}
+.qr {
+  position: absolute;
+  top: 1320px;
+  right: 104px;
+  width: 220px;
+  height: 220px;
+  padding: 10px;
+  border-radius: 18px;
+  background: white;
+}
+.qr-label {
+  position: absolute;
+  top: 1544px;
+  right: 92px;
+  width: 244px;
+  font-size: 19px;
+  font-weight: 850;
+  text-align: center;
+}

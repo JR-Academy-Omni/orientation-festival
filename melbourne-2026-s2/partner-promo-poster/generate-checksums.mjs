@@ -6,10 +6,14 @@ import { fileURLToPath } from 'node:url';
 const root = path.dirname(fileURLToPath(import.meta.url));
 const relativeFiles = [
   'melbourne-2026-s2-partner-promo.png',
-  'image-model-bupa.png',
   'partner-logo-variants-contact-sheet.png',
   'partner-gift-variants-contact-sheet.png',
+  'partner-image-model-contact-sheet.png',
 ];
+
+relativeFiles.push(...fs.readdirSync(root)
+  .filter((file) => file.startsWith('image-model-') && file.endsWith('.png'))
+  .sort());
 
 for (const directory of ['variants/gifts', 'variants/logo-only']) {
   const files = fs.readdirSync(path.join(root, directory))
