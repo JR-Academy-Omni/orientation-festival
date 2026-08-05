@@ -659,4 +659,3 @@ business@jiangren.com.au
 ![新生节图片](/image/events/melbourne-freshers-2026-s2/notion/083-39ddd76b-576d-808f-bf4e-caaf58c480aa.webp)
 
 ![新生节图片](/image/events/melbourne-freshers-2026-s2/notion/084-39ddd76b-576d-803e-8792-d2fd225e7b12.webp)
-
