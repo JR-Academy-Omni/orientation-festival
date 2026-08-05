@@ -4,13 +4,9 @@ import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
-const academyRoot = path.resolve(root, '../../../../jr-academy-ai');
-const eventContentRoot = path.join(
-  academyRoot,
-  'jr-academy-web-zh/src/content/events/melbourne-freshers-2026-s2',
-);
-const lotteryCatalogPath = path.join(eventContentRoot, 'lottery-prizes.json');
-const eventContentPath = path.join(eventContentRoot, 'notion-export/content.md');
+const evidenceRoot = path.join(root, 'evidence');
+const lotteryCatalogPath = path.join(evidenceRoot, 'lottery-prizes.json');
+const eventContentPath = path.join(evidenceRoot, 'event-content.md');
 
 const dataSource = fs.readFileSync(path.join(root, 'partner-data.js'), 'utf8');
 const context = { window: {} };

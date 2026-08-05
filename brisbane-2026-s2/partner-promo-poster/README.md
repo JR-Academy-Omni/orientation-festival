@@ -18,7 +18,7 @@
 - `brisbane-partner-image-posters-14.zip`：员工可直接分发的 PNG 包。
 - `DESIGN.md`：布里斯班城市覆盖规则与事实来源。
 
-所有 14 张最终 PNG 均已实扫二维码，目标为活动页：
+所有 14 张最终 PNG 均不放二维码；报名链接由配套发布文案承接：
 
 `https://jiangren.com.au/events/6a616fb6bbc08a65e1586c71`
 

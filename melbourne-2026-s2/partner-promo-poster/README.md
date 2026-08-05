@@ -48,6 +48,6 @@ node render-partner-posters.mjs --partner bupa --mode gifts
 node validate-partner-data.mjs --partner bupa --require-benefits
 ```
 
-所有二维码均指向：
+商家海报不放二维码。报名链接由配套发布文案承接：
 
 `https://jiangren.com.au/events/6a5448bfc7d7a1b0782b41b4`

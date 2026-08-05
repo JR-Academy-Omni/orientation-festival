@@ -23,11 +23,9 @@ body { color: #102b50; font-family: "SF Pro Text", "PingFang SC", "Hiragino Sans
 .proof b { color: #ff5f53; }
 .proof.raffle b { color: #2f6ead; }
 .footer-card { position: absolute; left: 62px; right: 62px; bottom: 48px; height: 334px; border: 1px solid rgba(16,43,80,.12); border-radius: 30px; background: rgba(255,255,255,.95); box-shadow: 0 24px 60px rgba(16,43,80,.18); }
-.footer-copy { position: absolute; top: 24px; left: 36px; }
+.footer-copy { position: absolute; top: 24px; left: 36px; right: 36px; }
 .cta-kicker { color: #ff5f53; font-size: 23px; font-weight: 900; letter-spacing: 1px; }
 .cta-title { margin-top: 6px; font-size: 43px; line-height: 1.08; font-weight: 950; letter-spacing: -1px; }
 .fineprint { margin-top: 12px; color: #667992; font-size: 16px; }
-.support-label { position: absolute; left: 36px; bottom: 132px; width: 645px; text-align: center; color: #4e6380; font-size: 15px; font-weight: 800; }
-.consulate { position: absolute; left: 36px; bottom: 28px; width: 645px; height: 96px; object-fit: cover; border: 2px solid #d9e5ef; border-radius: 15px; }
-.qr { position: absolute; right: 42px; top: 60px; width: 194px; height: 194px; padding: 10px; border-radius: 17px; background: white; box-shadow: 0 10px 24px rgba(16,43,80,.12); }
-.qr-label { position: absolute; right: 26px; bottom: 28px; width: 226px; text-align: center; color: #1c416f; font-size: 16px; font-weight: 800; }
+.support-label { position: absolute; left: 36px; right: 36px; bottom: 132px; text-align: center; color: #4e6380; font-size: 15px; font-weight: 800; }
+.consulate { position: absolute; left: 36px; right: 36px; bottom: 28px; width: calc(100% - 72px); height: 96px; object-fit: cover; border: 2px solid #d9e5ef; border-radius: 15px; }
