@@ -241,6 +241,7 @@ window.PARTNERS = [
     },
   },
   { slug: 'yeeyi', name: '亿忆网', logo: 'assets/partners/yeeyi.webp' },
+  { slug: 'seventeen-club', name: '17 社', logo: 'assets/partners/seventeen-club.jpg' },
   {
     slug: 'umvc',
     name: '墨尔本创投社',
