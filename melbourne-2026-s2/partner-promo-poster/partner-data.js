@@ -194,6 +194,17 @@ window.PARTNERS = [
       evidencePattern: '800+ICE U新生礼包',
     },
   },
+  {
+    slug: 'molly-tea',
+    name: '茉莉奶白',
+    logo: 'assets/partners/molly-tea.jpg',
+    onsiteGift: {
+      quantityLabel: '200 杯',
+      name: '茉莉奶白花香茶饮福利',
+      items: ['茉莉奶白 100 杯', '白兰金萱 100 杯'],
+      evidencePattern: '200 杯茉莉奶白花香茶饮福利',
+    },
+  },
   { slug: 'jobpin-ai', name: 'JobPin AI', logo: 'assets/partners/jobpin-ai.webp' },
   {
     slug: 'haidilao',
