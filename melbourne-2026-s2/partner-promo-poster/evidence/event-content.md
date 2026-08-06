@@ -340,7 +340,7 @@
 
 ![新生节图片](/image/events/melbourne-freshers-2026-s2/notion/019-3aadd76b-576d-801f-b1ce-d32e3ed89434.webp)
 
-### TUF-BE6500路由器 —— 澳世网络
+### TUF-BE6500路由器 —— ASUS
 
 ![新生节图片](/image/events/melbourne-freshers-2026-s2/notion/020-3acdd76b-576d-801c-9acf-eff55264a2af.webp)
 
