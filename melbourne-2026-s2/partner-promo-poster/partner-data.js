@@ -241,6 +241,27 @@ window.PARTNERS = [
     },
   },
   { slug: 'yeeyi', name: '亿忆网', logo: 'assets/partners/yeeyi.webp' },
+  {
+    slug: 'alipay-study-payment',
+    name: '支付宝留学缴费',
+    logo: 'assets/partners/alipay-study-payment.svg',
+    prizes: [
+      {
+        catalogId: 'alipay-pop-mart-crybaby-pink',
+        catalogSponsor: '支付宝留学缴费',
+        name: '泡泡玛特哭娃粉色款',
+        quantity: 1,
+        image: 'assets/prizes/alipay-crybaby-pink.png',
+      },
+      {
+        catalogId: 'alipay-pop-mart-crybaby-black',
+        catalogSponsor: '支付宝留学缴费',
+        name: '泡泡玛特哭娃黑色款',
+        quantity: 1,
+        image: 'assets/prizes/alipay-crybaby-black.png',
+      },
+    ],
+  },
   { slug: 'seventeen-club', name: '17 社', logo: 'assets/partners/seventeen-club.jpg' },
   {
     slug: 'umvc',
