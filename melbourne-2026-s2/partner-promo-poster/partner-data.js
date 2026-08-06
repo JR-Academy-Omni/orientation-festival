@@ -263,6 +263,7 @@ window.PARTNERS = [
     ],
   },
   { slug: 'seventeen-club', name: '17 社', logo: 'assets/partners/seventeen-club.jpg' },
+  { slug: 'monash-chinese-debate', name: '莫纳什中文辩论社', logo: 'assets/partners/monash-chinese-debate.jpg' },
   {
     slug: 'umvc',
     name: '墨尔本创投社',
