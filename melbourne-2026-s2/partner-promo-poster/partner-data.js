@@ -85,7 +85,7 @@ window.PARTNERS = [
     prizes: [
       {
         catalogId: 'tuf-be6500-router',
-        catalogSponsor: '澳世网络',
+        catalogSponsor: 'ASUS',
         name: 'TUF-BE6500 路由器',
         quantity: 1,
         image: 'assets/prizes/occom-router.webp',
