@@ -304,6 +304,26 @@
       "featured": false,
       "status": "published",
       "sortOrder": 310
+    },
+    {
+      "id": "alipay-pop-mart-crybaby-pink",
+      "name": "泡泡玛特哭娃粉色款",
+      "quantity": 1,
+      "image": "assets/prizes/alipay-crybaby-pink.png",
+      "sponsor": "支付宝留学缴费",
+      "featured": false,
+      "status": "published",
+      "sortOrder": 320
+    },
+    {
+      "id": "alipay-pop-mart-crybaby-black",
+      "name": "泡泡玛特哭娃黑色款",
+      "quantity": 1,
+      "image": "assets/prizes/alipay-crybaby-black.png",
+      "sponsor": "支付宝留学缴费",
+      "featured": false,
+      "status": "published",
+      "sortOrder": 330
     }
   ]
 }
