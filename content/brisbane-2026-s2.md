@@ -37,6 +37,10 @@ title: 2026 S2 布里斯班新生节招商企划内部存档
 
 **吸引新生的亮点**
 - 免费礼品：现场可领多种免费礼品，提升到场吸引力
+- 抽奖大奖（2026-08-07 确认，均为泡泡玛特、匠人学院提供）：
+  - 「星星人 Twinkle Twinkle Be a Little Star」系列公仔**一共 6 个**，含 1 只 38cm 大星星人（烘焙师造型）
+  - **LABUBU「Time to Chill」搪胶毛绒 38cm** ×1
+  - 图片资产：`brisbane-2026-s2-merchants/assets/popmart-twinkle-series.webp` + `popmart-twinkle-38cm.webp` + `popmart-labubu-38cm.webp`（中英 merchants deck 各新增第 06 页「泡泡玛特大奖」展示）
 - 互动活动：多种趣味互动环节，提升参与度与现场氛围
 - 实用信息：提供布里斯班本地生活与学习实用信息，助新生快速适应
 
