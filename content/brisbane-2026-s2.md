@@ -37,10 +37,12 @@ title: 2026 S2 布里斯班新生节招商企划内部存档
 
 **吸引新生的亮点**
 - 免费礼品：现场可领多种免费礼品，提升到场吸引力
-- 抽奖大奖（2026-08-07 确认，均为泡泡玛特、匠人学院提供）：
-  - 「星星人 Twinkle Twinkle Be a Little Star」系列公仔**一共 6 个**，含 1 只 38cm 大星星人（烘焙师造型）
+- 抽奖大奖（2026-08-07 确认，均为泡泡玛特、匠人学院提供；⚠️ 星星人是**两个独立奖项**，38cm 不含在系列 6 个内）：
+  - 「星星人 Twinkle Twinkle Be a Little Star」系列公仔 ×6
+  - **38cm 大星星人（烘焙师造型）×1**（单独一档大奖）
   - **LABUBU「Time to Chill」搪胶毛绒 38cm** ×1
   - 图片资产：`brisbane-2026-s2-merchants/assets/popmart-twinkle-series.webp` + `popmart-twinkle-38cm.webp` + `popmart-labubu-38cm.webp`（中英 merchants deck 各新增第 06 页「泡泡玛特大奖」展示）
+  - 官网活动页（主阵地）：`jr-academy-web-zh` `src/content/events/brisbane-freshers-2026-s2/lottery-prizes.json`，精选排序 DJI（最贵，恒定第一）→ LABUBU → 38cm 大星星人 → 星星人系列
 - 互动活动：多种趣味互动环节，提升参与度与现场氛围
 - 实用信息：提供布里斯班本地生活与学习实用信息，助新生快速适应
 
