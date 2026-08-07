@@ -236,7 +236,7 @@ window.PARTNERS = [
     onsiteGift: {
       quantityLabel: '300+',
       name: '玩咖玩乐馆新生礼包',
-      items: ['熊猫冰箱贴', '传统文化节Ins框', '玩咖玩乐馆代金券', '古风市集第二场门票'],
+      items: ['熊猫冰箱贴', '传统文化节Ins框', '玩咖玩乐馆代金券'],
       evidencePattern: '300+玩咖玩乐馆新生礼包',
     },
   },
