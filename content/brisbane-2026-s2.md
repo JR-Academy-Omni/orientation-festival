@@ -42,7 +42,8 @@ title: 2026 S2 布里斯班新生节招商企划内部存档
   - **38cm 大星星人（烘焙师造型）×1**（单独一档大奖）
   - **LABUBU「Time to Chill」搪胶毛绒 38cm** ×1
   - 图片资产：`brisbane-2026-s2-merchants/assets/popmart-twinkle-series.webp` + `popmart-twinkle-38cm.webp` + `popmart-labubu-38cm.webp`（中英 merchants deck 各新增第 06 页「泡泡玛特大奖」展示）
-  - 官网活动页（主阵地）：`jr-academy-web-zh` `src/content/events/brisbane-freshers-2026-s2/lottery-prizes.json`，精选排序 DJI（最贵，恒定第一）→ LABUBU → 38cm 大星星人 → 星星人系列
+  - 官网活动页（主阵地）：`jr-academy-web-zh` `src/content/events/brisbane-freshers-2026-s2/lottery-prizes.json`，精选排序 DJI（最贵，恒定第一）→ Dyson V8 → DJI Neo → LABUBU → 38cm 大星星人 → 星星人系列
+- 大奖追加（2026-08-07 第二批，均匠人学院提供，已上线）：Dyson V8 Advanced 吸尘器+车用清洁套装 ×1、DJI Neo 迷你无人机 ×1、Russell Hobbs 7L 慢炖锅 ×1、TUUMIIST 冷压慢磨榨汁机 ×1（官网奖品目录共 45 项）
 - 互动活动：多种趣味互动环节，提升参与度与现场氛围
 - 实用信息：提供布里斯班本地生活与学习实用信息，助新生快速适应
 
