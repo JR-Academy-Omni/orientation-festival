@@ -28,7 +28,7 @@
 | 饭团外卖 | Apapaya 身体香膏 × 20 | 奖品图 |
 | Zircle | 100 朱光玉限时代金券 × 3 | 奖品图 |
 | 澳大利亚中华道教协会 | 「财库」挂坠 × 2、手绘陶瓷手串 × 1 | 奖品图 |
-| ACIC 移民留学 | 惠普打印机 × 1、Monash 小熊 × 2 | 奖品图（补齐后可首次生成礼品版） |
+| ACIC 移民留学 | HP DeskJet 2131 打印机 × 1、Monash 小熊 × 2 | 奖品图（补齐后可首次生成礼品版）。小熊为 Monash University 灰色连帽衫款，打印机型号已按实物照片核实 |
 | 澳洲太平洋地产投资集团 | Stanley Quencher 水杯 × 1 | 奖品图 |
 | 玩咖玩乐馆 | 古风市集通票门票 × 2 | 奖品图。归属已定：**通票门票归抽奖**（活动页 `evidence/event-content.md:165` 的抽奖奖品区也列了它），已从 `onsiteGift.items` 移除 |
 | LMILE | lululemon 水杯 × 2 | 奖品图 + Logo，`partner-data.js` 中尚无该商家条目 |
