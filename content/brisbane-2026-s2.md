@@ -44,7 +44,7 @@ title: 2026 S2 布里斯班新生节招商企划内部存档
   - 图片资产：`brisbane-2026-s2-merchants/assets/popmart-twinkle-series.webp` + `popmart-twinkle-38cm.webp` + `popmart-labubu-38cm.webp`（中英 merchants deck 各新增第 06 页「泡泡玛特大奖」展示）
   - 官网活动页（主阵地）：`jr-academy-web-zh` `src/content/events/brisbane-freshers-2026-s2/lottery-prizes.json`，精选排序 DJI（最贵，恒定第一）→ Dyson V8 → DJI Neo → LABUBU → 38cm 大星星人 → 星星人系列
 - 大奖追加（2026-08-07 第二批，均匠人学院提供，已上线）：Dyson V8 Advanced 吸尘器+车用清洁套装 ×1、DJI Neo 迷你无人机 ×1、Russell Hobbs 7L 慢炖锅 ×1、TUUMIIST 冷压慢磨榨汁机 ×1（官网奖品目录共 45 项）
-- 大奖追加（2026-08-08 第三批，均匠人学院提供；⚠️ 用户未说明数量，暂按各 ×1 记，待确认）：
+- 大奖追加（2026-08-08 第三批，均匠人学院提供，数量已确认 = 各 ×1）：
   - Lenovo L24-4E 23.8″ FHD 显示器 ×1（与已有的「华硕 23.8 寸显示器」是两台独立奖品）
   - MagicRaven 15.6″ 便携显示器 ×1（Full HD IPS + HDR，570g / 5mm）
   - IKASA 120cm 大号泰迪熊 ×1（与已有的「UQ 毕业泰迪熊」「MINISO 小熊玩偶」是不同奖品）
