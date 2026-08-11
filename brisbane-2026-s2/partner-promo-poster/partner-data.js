@@ -87,10 +87,10 @@ export const partners = [
       { catalogId: 'lskd-gift-card', name: 'LSKD $50 Gift Card', quantity: 2, sponsor: 'Goodlife' },
     ],
     onsiteGift: {
-      quantityLabel: '300+',
+      quantityLabel: '200+',
       name: 'Goodlife 健身房礼品',
       items: ['健身包', '运动水杯', '健身季卡', 'LSKD $50 Gift Card'],
-      evidencePattern: '300+Goodlife 健身房礼品',
+      evidencePattern: '200+Goodlife 健身房礼品',
     },
   },
   {
