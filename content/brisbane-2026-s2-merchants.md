@@ -9,18 +9,21 @@ title: 2026 S2 布里斯班新生节商家信息存档
 # 2026 S2 布里斯班新生节商家信息存档（内部）
 
 > 内部资料，**不对外发布**。
-> 来源：2026 年 8 月整理的布里斯班新生节合作方与支持企业文案，供后续 deck、海报、招商跟进、官网活动页和现场物料复用。
+> 来源：2026 年 8 月整理的布里斯班新生节合作方、支持企业、奖品与图片素材，供后续 deck、海报、招商跟进、官网活动页和现场物料复用。
 > 说明：以下文案尽量保留原始表述，仅做基础排版整理；若用于外发，请再做品牌名、英文名、事实信息与措辞校对。
 
 ## 使用说明
 
-- 适用场景：赞助商 logo 墙配套介绍、一段话品牌简介、活动预热海报、现场展位导览、主持人口播资料
+- 适用场景：赞助商 logo 墙配套介绍、一段话品牌简介、奖品清单、活动预热海报、现场展位导览、主持人口播资料
 - 素材状态：
   - repo 内已存在部分布里斯班合作方 logo / 物料：`brisbane-2026-s2/partner-promo-poster/assets/partners/`
+  - 当前已入库 Goodlife 奖品图片。
+  - 当前已入库 AirBotix logo。
   - 本文档聚合的是当前可复用的合作方介绍正文，便于后续统一取用
 - 风险提示：
   - 个别条目带有较强宣传口径
   - 个别条目中的机构属性、业务规模、服务覆盖和时间信息，外发前建议人工复核
+  - UQCSSA、UQ 手工艺术俱乐部属于合作社团/学生组织，不应归类为商业公司。
 
 ## 一、支持机构与主办方
 
@@ -52,7 +55,7 @@ title: 2026 S2 布里斯班新生节商家信息存档
 
 Bupa 致力于帮助人们拥有更长寿、更健康、更快乐的生活，并创造一个更美好的世界。
 
-Bupa is a health and care company committed to helping our customers live longer, healthier, happier lives and making a better world. We offer a broad range of services, including aged care and retirement, dental, optical, health insurance, and community wellbeing initiatives, to improve the health of all Australians.
+Bupa is a health and care company committed to helping our customers live longer, healthier lives and making a better world. We offer a broad range of services, including aged care and retirement, dental, optical, health insurance, and community wellbeing initiatives, to improve the health of all Australians.
 
 ### 中国银行
 
@@ -77,7 +80,19 @@ Bupa is a health and care company committed to helping our customers live longer
 
 Goodlife Health Clubs 是澳大利亚最大、最受欢迎的健身房连锁品牌之一。
 
-Goodlife Health Clubs is one of Australia’s largest and most popular health club chains supporting more than 295,000 members to live healthier and more active lifestyles. Our purpose is very clear – we move people to achieve great things – whether it’s finding a better work/life balance, creating healthy habits or training for your first marathon.
+Goodlife Health Clubs is one of Australia’s largest and most popular health club chains supporting more than 295,000 members to live healthier and more active lifestyles. Our purpose is very clear - we move people to achieve great things - whether it’s finding a better work/life balance, creating healthy habits or training for your first marathon.
+
+Goodlife 提供的奖品：
+
+- Goodlife 健身季卡 × 1
+- Sunfox 运动背心 × 1
+- 健身包 × 5
+
+奖品图片：
+
+- `brisbane-2026-s2/partner-promo-poster/assets/prizes/goodlife-fitness-bag.jpg`
+- `brisbane-2026-s2/partner-promo-poster/assets/prizes/goodlife-season-pass-cards.jpg`
+- `brisbane-2026-s2/partner-promo-poster/assets/prizes/goodlife-sunfox-vest.jpg`
 
 ### 指南针留学移民
 
@@ -92,6 +107,14 @@ SOL 思安留学移民是昆士兰州最大的留学移民中介，24 年留学�
 **LuggEasy** 是全球领先的行李邮寄与国际物流服务品牌，专注于为留学生群体提供高效、可靠的一站式行李解决方案。品牌深耕国际物流领域多年，已成功服务 **10 万+ 留学生客户**，深受信赖。
 
 LuggEasy 提供 **1 对 1 免费咨询服务**，支持 **7×24 小时在线答疑**，物流轨迹全程可追溯，确保每一件行李安全、透明地送达目的地。无论是从中国集运出国，还是从澳洲邮寄回国，LuggEasy 都能提供灵活、便捷的邮寄方案，真正做到省心省力。
+
+### AirBotix
+
+AirBotix 是澳大利亚 K-12 AI 学习品牌，帮助孩子从使用 AI 走向用 AI 创造。通过结构化课程、智能学习工具和真人老师的共同引导下，孩子可以创作故事、游戏、互动作品和真实软件，在实践中培养想象力、表达力、编程思维、判断力与解决问题的能力。我们坚持孩子始终是作品的作者，AI 只是辅助创作的工具。
+
+素材：
+
+- Logo：`brisbane-2026-s2/partner-promo-poster/assets/partners/airbotix-logo.png`
 
 ### UQ 手工艺术俱乐部
 
@@ -117,22 +140,16 @@ Dealmoon ANZ 澳新省钱快报是北美省钱快报旗下的澳大利亚 / 新�
 - 方圆财富
 - 熊猫外卖
 - Bupa
-- 中国银行
-- Mobile Connect
-- Goodlife
-- 指南针留学移民
-- 思安留学移民
-- LuggEasy
-- UQ 手工艺术俱乐部
-- UQCSSA
-- 澳洲省钱快报
-- 亿忆网
+- AirBotix
+- Goodlife 奖品图片
 
 ## 五、待核与待补
 
 - 待核：
   - 中国银行条目中的时间、牌照和产品表述
   - Mobile Connect 条目中的 “UQU 合作伙伴” 官方写法
+  - Goodlife 健身季卡具体适用门店、有效期、使用条件与兑换方式
+  - Sunfox 运动背心尺码、颜色与发放方式
   - 各品牌英文名、对外标准简称与最新官方描述
 - 待补：
   - 若后续需要做官网或 deck 图文版，可补各品牌对应图片文件名映射

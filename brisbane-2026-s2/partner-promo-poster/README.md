@@ -2,11 +2,21 @@
 
 布里斯班第 6 届新生节企业专属宣传海报，画布为 `1242×1660`。
 
-当前完成 14 家企业专属图片模型海报：
+当前完成 14 家企业专属图片模型海报，并已补充 AirBotix 商家资料：
 
 - Bupa、方圆财富、熊猫外卖、中国银行、Mobile Connect
 - Goodlife、指南针留学移民、思安留学移民、LuggEasy
 - UQ 手工艺术俱乐部、UQCSSA、澳新省钱快报、亿忆网、Telstra
+- AirBotix
+
+已补充的奖品资料：
+
+- Goodlife：Goodlife 健身季卡 × 1、Sunfox 运动背心 × 1、健身包 × 5
+- Goodlife 奖品图片：`assets/prizes/goodlife-fitness-bag.jpg`、`assets/prizes/goodlife-season-pass-cards.jpg`、`assets/prizes/goodlife-sunfox-vest.jpg`
+
+已补充的商家资料：
+
+- AirBotix：澳大利亚 K-12 AI 学习品牌；logo：`assets/partners/airbotix-logo.png`
 
 目录内容：
 
