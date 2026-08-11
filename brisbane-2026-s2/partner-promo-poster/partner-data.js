@@ -84,6 +84,18 @@ export const partners = [
     },
   },
   {
+    slug: 'airbotix',
+    name: 'AirBotix',
+    logo: 'assets/partners/airbotix.png',
+    prizes: [],
+    onsiteGift: {
+      quantityLabel: '500+',
+      name: 'AirBotix 新生礼包',
+      items: ['马年挂件', '手提袋'],
+      evidencePattern: '500+ Airbotix 新生礼包',
+    },
+  },
+  {
     slug: 'goodlife',
     name: 'Goodlife',
     logo: 'assets/partners/goodlife.png',
