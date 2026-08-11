@@ -24,7 +24,7 @@ export const partners = [
     onsiteGift: {
       quantityLabel: '500+',
       name: 'Bupa 精选礼品',
-      items: ['Bupa 健康纸巾', 'Bupa 周边圆珠笔', 'Bupa 保湿唇膏'],
+      items: ['Bupa 健康纸巾', 'Bupa 周边圆珠笔', 'Bupa 保湿唇膏', '现场加入 Bupa 保险可享 6 周-8 周免保费优惠', '高级保温水壶'],
       evidencePattern: '500+Bupa精选礼品',
     },
   },
@@ -60,6 +60,12 @@ export const partners = [
     name: '中国银行',
     logo: 'assets/partners/bank-of-china.webp',
     prizes: [],
+    onsiteGift: {
+      quantityLabel: '500+',
+      name: '中国银行新生礼包',
+      items: ['纪念吉祥物', '手机支架', '多功能充电线', '温度/湿度计', '小米中性笔'],
+      evidencePattern: '500+中国银行新生礼包',
+    },
   },
   {
     slug: 'mobile-connect',
@@ -96,10 +102,10 @@ export const partners = [
       { catalogId: 'miniso-teddy-bear', name: 'MINISO 小熊玩偶', quantity: 2, sponsor: '指南针留学移民' },
     ],
     onsiteGift: {
-      quantityLabel: '400+',
+      quantityLabel: '800+',
       name: '指南针礼品',
-      items: ['精美帆布袋', '卡套挂绳', '定制 U 盘', '保温杯'],
-      evidencePattern: '400+指南针礼品',
+      items: ['帆布袋', '卡套鸭子气球', '水杯', '冬季润唇膏', 'UNO', '冰箱贴', '精美玩偶', 'LED 霓虹灯'],
+      evidencePattern: '800+指南针礼品',
     },
   },
   {
@@ -111,10 +117,10 @@ export const partners = [
       { catalogId: 'sol-plush-toy', name: '思安周边玩偶', quantity: 1, sponsor: '思安留学移民' },
     ],
     onsiteGift: {
-      quantityLabel: '900+',
+      quantityLabel: '800+',
       name: '思安留学新生礼包',
-      items: ['垃圾鸟玩偶', '夏日小风扇', '逢考必过钥匙扣', '摇摇杯', '考拉文件夹', '笔记本'],
-      evidencePattern: '900+思安留学新生礼包',
+      items: ['Mini 小风扇', '逢考必过钥匙扣', '摇摇杯', '考拉文件夹', '笔记本'],
+      evidencePattern: '800+思安留学新生礼包',
     },
   },
   {
@@ -123,10 +129,10 @@ export const partners = [
     logo: 'assets/partners/luggeasy.png',
     prizes: [],
     onsiteGift: {
-      quantityLabel: '500+',
+      quantityLabel: '300+',
       name: 'LuggEasy 新生礼品',
       items: ['LuggEasy 专属定制行李识别牌'],
-      evidencePattern: '500+Luggeasy新生礼品',
+      evidencePattern: '300+Luggeasy新生礼品',
     },
   },
   {
@@ -150,6 +156,12 @@ export const partners = [
     name: 'UQCSSA',
     logo: 'assets/partners/uqcssa.webp',
     prizes: [],
+    onsiteGift: {
+      quantityLabel: '300+',
+      name: 'UQCSSA 新生大礼包',
+      items: ['精美发饰', '发箍', '手机壳', '收纳包', '数据线', '手机支架'],
+      evidencePattern: '300+UQCSSA新生大礼包',
+    },
   },
   {
     slug: 'dealmoon',
@@ -159,10 +171,10 @@ export const partners = [
       { catalogId: 'ulike-air3', name: 'Ulike Air 3 脱毛仪', quantity: 1, sponsor: '澳新省钱快报' },
     ],
     onsiteGift: {
-      quantityLabel: '500+',
-      name: '澳新省钱快报新生盲盒福利',
-      items: ['Ulike Air 3', '学校限定 tote 包', '冰箱贴', '红绿灯钥匙扣', '随机饮品'],
-      evidencePattern: '500+ 澳新省钱快报新生盲盒福利',
+      quantityLabel: '800+',
+      name: '澳新省钱快报新生专属礼包',
+      items: ['FlexiSpot 人体工学椅', '键盘托', '办公学习脚垫', '城市限定透卡（2 款）', '可爱擦手巾', '小月亮折叠购物袋', 'tote 包', '小零食', '饮料'],
+      evidencePattern: '800+ DealMoon澳新',
     },
   },
   {
@@ -181,10 +193,10 @@ export const partners = [
       { catalogId: 'sprout-headphones-b', name: 'SPROUT 耳机', quantity: 1, sponsor: 'Telstra' },
     ],
     onsiteGift: {
-      quantityLabel: '500+',
+      quantityLabel: '1000+',
       name: 'Telstra 礼品',
-      items: ['手机支架', '文件夹', 'SPROUT 耳机', '耳麦', '音响'],
-      evidencePattern: '500+Telstra礼品',
+      items: ['手机支架', '文件夹', '拓香片', '定制笔', '若干小音响'],
+      evidencePattern: '1000+Telstra礼品',
     },
   },
 ];
