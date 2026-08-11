@@ -9,7 +9,7 @@
 
 ## 城市覆盖项
 
-- 标题：`布里斯班三校新生节`。
+- 标题：`布里斯班新生节`；`UQ · QUT · GRIFFITH` 作为覆盖高校信息单独呈现。
 - 学校：`UQ · QUT · GRIFFITH`。
 - 时间：`2026 年 8 月 21 日（周五）14:00–17:00`。
 - 地点：`Market Square · Sunnybank`，`341 Mains Rd, Sunnybank QLD 4109`。

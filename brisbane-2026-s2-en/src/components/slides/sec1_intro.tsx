@@ -29,10 +29,10 @@ export function S02_Overview() {
 export function S03_Intro() {
 	const hl = (t: string) => <b style={{ color: colors.yellow, fontWeight: 800 }}>{t}</b>;
 	return (
-		<Page tag="02 · About" title={<>The 6th Brisbane Tri-Uni <span style={{ color: colors.red }}>Orientation Festival</span></>}
+		<Page tag="02 · About" title={<>The 6th Brisbane <span style={{ color: colors.red }}>Orientation Festival</span></>}
 			bg={colors.dark} tone="dark" accent={colors.yellow} watermark="03" align="center">
 			<Editorial tone="dark" accent={colors.red} size={31}>
-				The Brisbane Tri-Uni Orientation Festival focuses on UQ, QUT and Griffith new students, bringing students, city living resources and local brands together in one place at the start of term. An expected <b style={{ color: colors.yellow }}>1,000 students</b> attend, with indoor booths, gift giveaways, lucky draws and face-to-face Q&A. For brands, it's a concentrated window to build awareness, capture leads and grow a private community right as students arrive in the city—{hl('exposure, engagement and conversion in one event')}.
+				The Brisbane Orientation Festival focuses on UQ, QUT and Griffith new students, bringing students, city living resources and local brands together in one place at the start of term. An expected <b style={{ color: colors.yellow }}>1,000 students</b> attend, with indoor booths, gift giveaways, lucky draws and face-to-face Q&A. For brands, it's a concentrated window to build awareness, capture leads and grow a private community right as students arrive in the city—{hl('exposure, engagement and conversion in one event')}.
 			</Editorial>
 		</Page>
 	);
