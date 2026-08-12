@@ -30,3 +30,11 @@
 - 每张保留同一信息骨架：JR Logo、企业大 Logo、免费权益标题、日期地点、无二维码报名提示、支持单位横幅。
 - 商家海报禁止放二维码，报名链接统一放到小红书等平台的发布文案或官方账号入口。
 - 最终总览：`brisbane-partner-posters-contact-sheet.png`。
+
+## 全图 Image Model 版（2026-08-12）
+
+- 用户确认本批海报的文字、商家 Logo、奖品陈列、活动信息和底部支持单位均由 Image Model 直接生成，不使用 HTML 精确图层作为最终成品。
+- 现有单商家成品仅作为事实与视觉参考；全图成品统一保存到 `full-image-model-final/`。
+- 去重后的 14 家商家各一张；Mobile Connect 与 Telstra 只生成一张合并海报。
+- 中国银行、UQCSSA、亿忆网、Airbotix 没有当前已确认礼品或抽奖，生成参展品牌版，不添加奖品。
+- 全图模型输出按比例 cover-and-crop 到 `1242×1660`，不得非等比拉伸。

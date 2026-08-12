@@ -63,9 +63,20 @@ export const partners = [
   },
   {
     slug: 'mobile-connect',
-    name: 'Mobile Connect',
+    name: 'Mobile Connect（Telstra）',
     logo: 'assets/partners/mobile-connect.webp',
-    prizes: [],
+    secondaryLogo: 'assets/partners/telstra.webp',
+    prizes: [
+      { catalogId: 'sprout-headphones-a', name: 'SPROUT 耳机', quantity: 1, sponsor: 'Telstra' },
+      { catalogId: 'sprout-speaker', name: 'SPROUT 音响', quantity: 1, sponsor: 'Telstra' },
+      { catalogId: 'sprout-headphones-b', name: 'SPROUT 耳机', quantity: 1, sponsor: 'Telstra' },
+    ],
+    onsiteGift: {
+      quantityLabel: '500+',
+      name: 'Mobile Connect / Telstra 礼品',
+      items: ['手机支架', '文件夹', 'SPROUT 耳机', '耳麦', '音响'],
+      evidencePattern: '500+Telstra礼品',
+    },
   },
   {
     slug: 'goodlife',
@@ -172,19 +183,9 @@ export const partners = [
     prizes: [],
   },
   {
-    slug: 'telstra',
-    name: 'Telstra',
-    logo: 'assets/partners/telstra.webp',
-    prizes: [
-      { catalogId: 'sprout-headphones-a', name: 'SPROUT 耳机', quantity: 1, sponsor: 'Telstra' },
-      { catalogId: 'sprout-speaker', name: 'SPROUT 音响', quantity: 1, sponsor: 'Telstra' },
-      { catalogId: 'sprout-headphones-b', name: 'SPROUT 耳机', quantity: 1, sponsor: 'Telstra' },
-    ],
-    onsiteGift: {
-      quantityLabel: '500+',
-      name: 'Telstra 礼品',
-      items: ['手机支架', '文件夹', 'SPROUT 耳机', '耳麦', '音响'],
-      evidencePattern: '500+Telstra礼品',
-    },
+    slug: 'airbotix',
+    name: 'Airbotix',
+    logo: 'assets/partners/airbotix.svg',
+    prizes: [],
   },
 ];
