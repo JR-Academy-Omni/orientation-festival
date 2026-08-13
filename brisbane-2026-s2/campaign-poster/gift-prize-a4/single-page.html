@@ -20,7 +20,7 @@
     .event { display: flex; align-items: center; gap: 4mm; font-size: 2.6mm; line-height: 1.35; font-weight: 760; text-align: right; }
     .event b { color: #ff6b5c; }
     .qr { width: 17mm; height: 17mm; padding: 1mm; border-radius: 2mm; background: #fff; box-shadow: 0 1mm 3mm rgba(18,33,63,.1); }
-    .content { display: grid; grid-template-columns: 64% 36%; gap: 4mm; height: 171mm; padding-top: 4mm; }
+    .content { display: grid; grid-template-columns: 62% 38%; gap: 3mm; height: 171mm; padding-top: 4mm; }
     .section { min-width: 0; }
     .section-title { display: flex; align-items: center; justify-content: space-between; height: 8mm; margin-bottom: 2mm; padding: 0 3mm; border-radius: 2.5mm; color: #fff; background: #12213f; font-size: 3.6mm; font-weight: 900; }
     .section-title span { color: #ffe15d; font-size: 2.3mm; font-weight: 700; }
@@ -43,17 +43,16 @@
     .item-name { font-size: 2.35mm; line-height: 1.13; font-weight: 900; }
     .item-sponsor { margin-top: .55mm; color: #315f9e; font-size: 1.8mm; line-height: 1.05; font-weight: 720; }
     .onsite-wrap { height: 160.2mm; display: flex; flex-direction: column; gap: .6mm; }
-    .onsite-group { display: grid; grid-template-columns: 28mm 1fr; align-items: center; gap: 1mm; min-height: 7.7mm; padding: .65mm 1.25mm; border: .22mm solid rgba(18,33,63,.10); border-radius: 2mm; background: rgba(255,255,255,.88); box-shadow: 0 .55mm 1.6mm rgba(18,33,63,.06); }
-    .onsite-group h3 { display: block; margin: 0; padding: .65mm 1mm; border-radius: 2mm; color: white; background: #315f9e; font-size: 1.95mm; line-height: 1.08; text-align: center; }
-    .onsite-group h3 small { display: block; margin-top: .35mm; color: #ffe15d; font-size: 1.5mm; line-height: 1; }
-    .onsite-items { display: flex; flex-wrap: wrap; align-items: center; gap: .45mm .7mm; }
-    .onsite-item { display: inline-flex; align-items: center; gap: .45mm; padding: .3mm .65mm; border-radius: 1.2mm; background: #f6f8fb; font-size: 1.68mm; line-height: 1.08; font-weight: 740; white-space: nowrap; }
-    .onsite-item img { width: 3.7mm; height: 3.7mm; object-fit: contain; }
-    .onsite-item.no-image::before { content: "字"; display: grid; place-items: center; width: 3.5mm; height: 3.5mm; border-radius: 1mm; color: white; background: #ff8f7f; font-size: 1.55mm; font-weight: 900; }
+    .onsite-group { display: grid; grid-template-columns: 30mm 1fr; align-items: center; gap: 1mm; min-height: 7.7mm; padding: .65mm 1.25mm; border: .22mm solid rgba(18,33,63,.10); border-radius: 2mm; background: rgba(255,255,255,.88); box-shadow: 0 .55mm 1.6mm rgba(18,33,63,.06); }
+    .onsite-group h3 { display: block; margin: 0; padding: .7mm 1mm; border-radius: 2mm; color: white; background: #315f9e; font-size: 2.15mm; line-height: 1.08; text-align: center; }
+    .onsite-group h3 small { display: block; margin-top: .35mm; color: #ffe15d; font-size: 1.65mm; line-height: 1; }
+    .onsite-items { display: flex; flex-wrap: wrap; align-items: center; gap: .5mm .7mm; }
+    .onsite-item { display: inline-flex; align-items: center; gap: .45mm; padding: .35mm .7mm; border-radius: 1.2mm; background: #f6f8fb; font-size: 1.88mm; line-height: 1.08; font-weight: 780; white-space: nowrap; }
+    .onsite-item img { width: 4mm; height: 4mm; object-fit: contain; }
+    .onsite-item.no-image::before { content: "字"; display: grid; place-items: center; width: 3.8mm; height: 3.8mm; border-radius: 1mm; color: white; background: #ff8f7f; font-size: 1.65mm; font-weight: 900; }
     .support-unit { margin-top: auto; align-self: flex-end; display: flex; align-items: center; gap: 1.6mm; padding: 1mm 1.3mm; border: .22mm solid rgba(18,33,63,.12); border-radius: 1.8mm; background: rgba(255,255,255,.95); box-shadow: 0 .7mm 2mm rgba(18,33,63,.08); }
     .support-unit span { color: #315f9e; font-size: 1.8mm; line-height: 1.1; font-weight: 900; white-space: nowrap; }
     .support-unit img { display: block; width: 60mm; height: 10mm; object-fit: contain; }
-    .pending { padding: 1mm 1.5mm; border: .25mm dashed rgba(18,33,63,.27); border-radius: 1.8mm; background: rgba(255,255,255,.72); font-size: 1.65mm; line-height: 1.2; }
     footer { position: absolute; left: 9mm; right: 9mm; bottom: 2.3mm; display: flex; justify-content: space-between; color: rgba(18,33,63,.60); font-size: 1.8mm; font-weight: 650; }
   </style>
 </head>
@@ -97,17 +96,13 @@
     window.A4_CATALOG.onsite.forEach((group) => {
       const el = document.createElement('section');
       el.className = 'onsite-group';
-      el.innerHTML = `<h3>${group.sponsor}<small>${group.quantity}</small></h3><div class="onsite-items">${group.items.map((item) => `<span class="onsite-item${item.image ? '' : ' no-image'}">${item.image ? `<img src="assets/${item.image}" alt="${item.name}">` : ''}${item.name}</span>`).join('')}</div>`;
+      el.innerHTML = `<h3>${group.sponsor}${group.quantity ? `<small>${group.quantity}</small>` : ''}</h3><div class="onsite-items">${group.items.map((item) => `<span class="onsite-item${item.image ? '' : ' no-image'}">${item.image ? `<img src="assets/${item.image}" alt="${item.name}">` : ''}${item.name}</span>`).join('')}</div>`;
       onsite.appendChild(el);
     });
     const support = document.createElement('div');
     support.className = 'support-unit';
     support.innerHTML = '<span>支持单位</span><img src="assets/china-consulate-brisbane.webp" alt="中华人民共和国驻布里斯班总领事馆">';
     onsite.appendChild(support);
-    const pending = document.createElement('div');
-    pending.className = 'pending';
-    pending.innerHTML = `<b>礼品资料尚待提供：</b>${window.A4_CATALOG.pending.join('、')}。已确认参与，但当前不虚构礼品内容或图片。`;
-    onsite.appendChild(pending);
   </script>
 </body>
 </html>

@@ -90,11 +90,11 @@ window.A4_CATALOG = {
     },
     {
       sponsor: 'UQ CSSA',
-      quantity: '数量待确认',
+      quantity: '',
       items: [['手机壳', null], ['收纳包', null], ['数据线', null], ['手机支架', null], ['精美发饰', null], ['发箍', null]],
     },
     { sponsor: 'LuggEasy', quantity: '定制行李牌 500+', items: [['专属定制行李识别牌', null]] },
-    { sponsor: 'Airbotix', quantity: '数量待确认', items: [['小马玩偶', null]] },
+    { sponsor: 'Airbotix', quantity: '', items: [['小马玩偶', null]] },
     { sponsor: 'Goodlife', quantity: '健身礼品 300+', items: [['健身主题礼品', null]] },
     {
       sponsor: 'UQ 手工艺术俱乐部',
