@@ -1,0 +1,11 @@
+audio-fix/*.aiff
+audio-fix/*.wav
+final/*.json
+final/*.mp4
+final/*.txt
+qa*/
+raw/*.mp4
+raw-v2/*.mp4
+voice-seedance/
+voice-seedance-v2/*.mp4
+voice-seedance-v2/qa/
