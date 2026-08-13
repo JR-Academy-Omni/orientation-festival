@@ -188,7 +188,14 @@ export const partners = [
     slug: 'airbotix',
     name: 'Airbotix',
     logo: 'assets/partners/airbotix.svg',
-    prizes: [],
+    prizes: [
+      {
+        catalogId: 'dyson-v8-advanced',
+        name: 'Dyson V8 Advanced 吸尘器＋车用清洁套装',
+        quantity: 1,
+        sponsor: 'Airbotix',
+      },
+    ],
     onsiteGift: {
       quantityLabel: 'unavailable',
       name: 'Airbotix 礼品',

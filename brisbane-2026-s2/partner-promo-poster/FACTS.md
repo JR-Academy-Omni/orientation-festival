@@ -13,7 +13,7 @@
 - 活动 ID：`6a616fb6bbc08a65e1586c71`
 - 报名页：`https://jiangren.com.au/events/6a616fb6bbc08a65e1586c71`
 
-## 16 家去重合作方
+## 16 家去重合作方＋主办方
 
 | 商家 | 层级 | 现场参与／礼品 | 当前抽奖奖品 |
 |---|---|---|---|
@@ -29,12 +29,13 @@
 | UQ 手工艺术俱乐部 | 银牌 | 300+ 新会员套装 | 一年会员 ×5；手作水晶／珍珠手链 ×3；手作珍珠项链 ×2；手工材料包 ×2 |
 | UQ CSSA | 银牌 | 精美发饰、发箍、手机壳、收纳包、数据线、手机支架；数量 unavailable | unavailable |
 | DealMoon 澳新省钱快报 | 银牌 | 新生专属礼包 ×800+；包含城市限定透卡（2款）、可爱擦手巾、小月亮折叠购物袋、Tote 包、小零食、饮料等 | FlexiSpot 人体工学椅 ×1；键盘托架 ×1；办公学习脚垫 ×1 |
-| Airbotix | 银牌 | 小马玩偶；数量 unavailable | unavailable |
+| Airbotix | 银牌 | 小马玩偶；数量 unavailable | Dyson V8 Advanced 吸尘器＋车用清洁套装 ×1 |
 | 亿忆网 | 合作伙伴 | 参展；礼品资料 unavailable | unavailable |
 | 海底捞 | 层级 unavailable | 合作方；礼品资料 unavailable | unavailable |
 | ACYA 中澳青年联合会 | 层级 unavailable | 合作方；礼品资料 unavailable | unavailable |
+| 匠人学院（主办方） | 主办方 | 活动组织及现场服务 | 22 类、41 件：DJI OSMO Pocket 3 ×1；Nintendo Switch 2 ×1；DJI Neo 迷你无人机 ×1；LABUBU Time to Chill 38cm 搪胶毛绒玩偶 ×1；泡泡玛特 38cm 大星星人 ×1；泡泡玛特星星人系列公仔 ×6；Philips Air Fryer 空气炸锅 ×1；华硕 23.8 寸显示器 ×1；Russell Hobbs 7L 慢炖锅 ×1；TUUMIIST 冷压慢磨榨汁机 ×1；Lenovo L24-4E 23.8 寸显示器 ×1；MagicRaven 15.6 寸便携显示器 ×1；IKASA 120cm 大号泰迪熊 ×1；Stanley Flip Straw 水杯 887ml ×1；ANKO 吸尘器 ×2；Domo 多功能烧烤支架 ×1；Philips 手持蒸汽熨斗 ×1；Canon PIXMA 打印机 ×6；UQ Jacaranda Globe 水晶球 ×6；Mobi 购物车 ×2；UQ 毕业泰迪熊 ×3；Valentina 四件套马克杯 ×1 |
 
-匠人学院是主办方，不计入上表 16 家合作方；当前另提供 23 类、42 件已确认抽奖奖品。
+匠人学院是主办方，不计入 16 家合作方数量，但按当前展示要求作为第 17 行列入同一张表。Dyson V8 Advanced 吸尘器＋车用清洁套装已归属 Airbotix，因此匠人学院当前提供 22 类、41 件抽奖奖品。
 
 ## 本轮实物图片证据
 
