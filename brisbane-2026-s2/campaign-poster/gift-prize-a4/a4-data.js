@@ -43,45 +43,54 @@ window.A4_CATALOG = {
   onsite: [
     {
       sponsor: '指南针留学移民',
+      quantity: '帆布袋 800+ 等',
       items: [
-        ['水杯', 'compass-tumbler.png'], ['LED 霓虹灯', 'compass-led.png'], ['精美玩偶', 'compass-teddy.png'],
-        ['UNO', 'compass-uno.png'], ['帆布袋', 'compass-canvas-bag.png'], ['冬季润唇膏', 'compass-nivea-lip-balm.png'],
-        ['冰箱贴', 'compass-magnets.png'], ['鸭子礼品／卡套气球', 'compass-duck.png'],
+        ['水杯 ×100+', 'compass-tumbler.png'], ['LED 霓虹灯若干', 'compass-led.png'], ['精美玩偶若干', 'compass-teddy.png'],
+        ['UNO ×50+', 'compass-uno.png'], ['帆布袋 ×800+', 'compass-canvas-bag.png'], ['冬季润唇膏 ×50+', 'compass-nivea-lip-balm.png'],
+        ['冰箱贴 ×50+', 'compass-magnets.png'], ['卡套鸭子气球 ×100+', 'compass-duck.png'],
       ],
     },
     {
       sponsor: '思安留学移民',
+      quantity: '新生礼包 ×800+',
       items: [['Mini 小风扇', 'sol-mini-fan.png'], ['摇摇杯', 'sol-shaker.png'], ['逢考必过钥匙扣', null], ['考拉文件夹', null], ['笔记本', null]],
     },
     {
       sponsor: 'Mobile Connect（Telstra）',
-      items: [['小音响', null], ['手机支架', null], ['文件袋', null], ['拓香片', null], ['定制笔', null]],
+      quantity: '3,000+ 及若干',
+      items: [['小音响若干', null], ['手机支架 ×500', null], ['文件袋 ×1,000', null], ['拓香片 ×500', null], ['定制笔 ×1,000', null]],
     },
     {
       sponsor: '方圆财富',
+      quantity: '礼品 600+',
       items: [['高档浴巾', null], ['小熊毛巾伴手礼', null], ['金属商务签字笔', null], ['五色幸运花荧光笔', null]],
     },
     {
       sponsor: '熊猫外卖',
+      quantity: '新生盲盒 ×800+',
       items: [['线下堂食优惠券', null], ['草稿本', null], ['鼠标垫', null], ['限量随机水果公仔', null]],
     },
     {
       sponsor: 'Bupa',
+      quantity: '精选礼品 500+',
       items: [['健康纸巾', null], ['周边圆珠笔', null], ['保湿唇膏', null]],
     },
     {
       sponsor: 'DealMoon 澳新省钱快报',
+      quantity: '新生礼包 ×800+',
       items: [['Tote 包', null], ['小月亮折叠购物袋', null], ['可爱擦手巾', null], ['城市限定透卡（2款）', null], ['小零食', null], ['饮料', null]],
     },
     {
       sponsor: 'UQ CSSA',
+      quantity: '数量待确认',
       items: [['手机壳', null], ['收纳包', null], ['数据线', null], ['手机支架', null], ['精美发饰', null], ['发箍', null]],
     },
-    { sponsor: 'LuggEasy', items: [['专属定制行李识别牌', null]] },
-    { sponsor: 'Airbotix', items: [['小马玩偶', null]] },
-    { sponsor: 'Goodlife', items: [['健身主题礼品', null]] },
+    { sponsor: 'LuggEasy', quantity: '定制行李牌 500+', items: [['专属定制行李识别牌', null]] },
+    { sponsor: 'Airbotix', quantity: '数量待确认', items: [['小马玩偶', null]] },
+    { sponsor: 'Goodlife', quantity: '健身礼品 300+', items: [['健身主题礼品', null]] },
     {
       sponsor: 'UQ 手工艺术俱乐部',
+      quantity: '新会员套装 300+',
       items: [['精美钥匙扣', null], ['限定胸章', null], ['实用记事本', null], ['多款神秘小惊喜', null]],
     },
   ].map((group) => ({ ...group, items: group.items.map(([name, image]) => ({ name, image })) })),
