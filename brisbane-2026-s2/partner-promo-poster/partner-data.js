@@ -10,6 +10,20 @@ export const event = {
 
 export const partners = [
   {
+    slug: 'china-consulate-brisbane',
+    name: '中国驻布里斯班总领馆',
+    logo: 'assets/partners/china-consulate-brisbane.webp',
+    prizes: [
+      { catalogId: 'panda-koala-gift-pack', name: '熊猫考拉大礼包', quantity: 10, sponsor: '中国驻布里斯班总领馆' },
+    ],
+    onsiteGift: {
+      quantityLabel: '500+',
+      name: '总领馆文创小礼品',
+      items: ['考拉熊猫马克杯', '钥匙扣', '冰箱贴', '手提袋', '手账本', '各类文创用品'],
+      evidencePattern: '500+总领馆文创小礼品',
+    },
+  },
+  {
     slug: 'bupa',
     name: 'Bupa',
     logo: 'assets/partners/bupa.webp',
