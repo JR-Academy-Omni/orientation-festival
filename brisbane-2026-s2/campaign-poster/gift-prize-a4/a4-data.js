@@ -42,6 +42,14 @@ window.A4_CATALOG = {
   ].map(([name, sponsor, image]) => ({ name, sponsor, image })),
   onsite: [
     {
+      sponsor: '匠人学院（主办方）',
+      quantity: '现场礼品 1,300+ 及若干',
+      items: [
+        ['运动水杯 ×400+', null], ['手机支架 ×400+', null], ['UQ 冰箱贴 ×300+', null],
+        ['纪念 T-shirt ×200+', null], ['发光眼镜', null], ['手提袋', null],
+      ],
+    },
+    {
       sponsor: '指南针留学移民',
       quantity: '帆布袋 800+ 等',
       items: [
