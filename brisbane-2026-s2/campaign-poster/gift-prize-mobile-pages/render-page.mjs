@@ -8,8 +8,7 @@ const directory = path.dirname(fileURLToPath(import.meta.url));
 const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
 
-await page.goto(pathToFileURL(path.join(directory, 'page-01.html')).href, { waitUntil: 'networkidle' });
-await page.evaluate(async () => {
+const waitForAssets = async () => page.evaluate(async () => {
   await document.fonts.ready;
   await Promise.all([...document.images].map((image) => image.complete
     ? Promise.resolve()
@@ -19,10 +18,22 @@ await page.evaluate(async () => {
       })));
 });
 
-await page.screenshot({
-  path: path.join(directory, 'page-01.png'),
-  type: 'png',
-  fullPage: false,
-});
+for (let pageNumber = 1; pageNumber <= 9; pageNumber += 1) {
+  const fileName = pageNumber === 1
+    ? 'page-01.html'
+    : pageNumber === 9
+      ? 'page-09.html'
+      : 'page-series.html';
+  const url = new URL(pathToFileURL(path.join(directory, fileName)).href);
+  if (pageNumber > 1 && pageNumber < 9) url.searchParams.set('page', String(pageNumber));
+  await page.goto(url.href, { waitUntil: 'networkidle' });
+  await waitForAssets();
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.screenshot({
+    path: path.join(directory, `page-${String(pageNumber).padStart(2, '0')}.png`),
+    type: 'png',
+    fullPage: false,
+  });
+}
 
 await browser.close();
