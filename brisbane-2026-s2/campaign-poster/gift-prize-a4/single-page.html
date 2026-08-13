@@ -47,7 +47,10 @@
     .onsite-item { display: inline-flex; align-items: center; gap: .45mm; padding: .3mm .65mm; border-radius: 1.2mm; background: #f6f8fb; font-size: 1.68mm; line-height: 1.08; font-weight: 740; white-space: nowrap; }
     .onsite-item img { width: 3.7mm; height: 3.7mm; object-fit: contain; }
     .onsite-item.no-image::before { content: "字"; display: grid; place-items: center; width: 3.5mm; height: 3.5mm; border-radius: 1mm; color: white; background: #ff8f7f; font-size: 1.55mm; font-weight: 900; }
-    .pending { margin-top: auto; padding: 1mm 1.5mm; border: .25mm dashed rgba(18,33,63,.27); border-radius: 1.8mm; background: rgba(255,255,255,.72); font-size: 1.65mm; line-height: 1.2; }
+    .support-unit { margin-top: auto; align-self: flex-end; display: flex; align-items: center; gap: 1.3mm; padding: .8mm 1mm; border: .22mm solid rgba(18,33,63,.12); border-radius: 1.8mm; background: rgba(255,255,255,.92); box-shadow: 0 .55mm 1.6mm rgba(18,33,63,.06); }
+    .support-unit span { color: #315f9e; font-size: 1.55mm; line-height: 1.1; font-weight: 850; white-space: nowrap; }
+    .support-unit img { display: block; width: 44mm; height: 7mm; object-fit: contain; }
+    .pending { padding: 1mm 1.5mm; border: .25mm dashed rgba(18,33,63,.27); border-radius: 1.8mm; background: rgba(255,255,255,.72); font-size: 1.65mm; line-height: 1.2; }
     footer { position: absolute; left: 9mm; right: 9mm; bottom: 2.3mm; display: flex; justify-content: space-between; color: rgba(18,33,63,.60); font-size: 1.8mm; font-weight: 650; }
   </style>
 </head>
@@ -90,6 +93,10 @@
       el.innerHTML = `<h3>${group.sponsor}<small>${group.quantity}</small></h3><div class="onsite-items">${group.items.map((item) => `<span class="onsite-item${item.image ? '' : ' no-image'}">${item.image ? `<img src="assets/${item.image}" alt="${item.name}">` : ''}${item.name}</span>`).join('')}</div>`;
       onsite.appendChild(el);
     });
+    const support = document.createElement('div');
+    support.className = 'support-unit';
+    support.innerHTML = '<span>支持单位</span><img src="assets/china-consulate-brisbane.webp" alt="中华人民共和国驻布里斯班总领事馆">';
+    onsite.appendChild(support);
     const pending = document.createElement('div');
     pending.className = 'pending';
     pending.innerHTML = `<b>礼品资料尚待提供：</b>${window.A4_CATALOG.pending.join('、')}。已确认参与，但当前不虚构礼品内容或图片。`;
