@@ -201,12 +201,14 @@ export const partners = [
     name: '澳新省钱快报',
     logo: 'assets/partners/dealmoon.webp',
     prizes: [
-      { catalogId: 'ulike-air3', name: 'Ulike Air 3 脱毛仪', quantity: 1, sponsor: '澳新省钱快报' },
+      { catalogId: 'dealmoon-ergonomic-chair', name: '人体工学椅', quantity: 1, sponsor: '澳新省钱快报', image: 'assets/prizes/dealmoon-ergonomic-chair.png' },
+      { catalogId: 'dealmoon-keyboard-tray', name: '键盘托', quantity: 1, sponsor: '澳新省钱快报', image: 'assets/prizes/dealmoon-keyboard-tray.png' },
+      { catalogId: 'dealmoon-work-study-foot-mat', name: '工作学习脚垫', quantity: 1, sponsor: '澳新省钱快报', image: 'assets/prizes/dealmoon-work-study-foot-mat.png' },
     ],
     onsiteGift: {
       quantityLabel: '800+',
       name: '澳新省钱快报新生专属礼包',
-      items: ['FlexiSpot 人体工学椅', '键盘托', '办公学习脚垫', '城市限定透卡（2 款）', '可爱擦手巾', '小月亮折叠购物袋', 'tote 包', '小零食', '饮料'],
+      items: ['城市限定透卡（2 款）', '可爱擦手巾', '小月亮折叠购物袋', 'tote 包', '小零食', '饮料'],
       evidencePattern: '800+ DealMoon澳新',
     },
   },
