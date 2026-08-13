@@ -120,7 +120,7 @@ export const partners = [
       { catalogId: 'sunfox-fitness-pants', name: 'Sunfox 健身裤', quantity: 1, sponsor: 'Goodlife' },
       { catalogId: 'muscle-building-pack', name: '增肌健身大礼包', quantity: 1, sponsor: 'Goodlife' },
       { catalogId: 'lorna-jane-gift-card', name: 'Lorna Jane $50 Gift Card', quantity: 1, sponsor: 'Goodlife' },
-      { catalogId: 'lskd-gift-card', name: 'LSKD $50 Gift Card', quantity: 2, sponsor: 'Goodlife' },
+      { catalogId: 'lskd-gift-card', name: 'LSKD $50 Gift Card', quantity: 2, sponsor: 'Goodlife', image: 'assets/prizes/goodlife-lskd-gift-card.jpg' },
     ],
     onsiteGift: {
       quantityLabel: '200+',
