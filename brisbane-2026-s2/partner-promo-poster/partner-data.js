@@ -173,9 +173,10 @@ export const partners = [
     name: 'UQ 手工艺术俱乐部',
     logo: 'assets/partners/uqhac.webp',
     prizes: [
-      { catalogId: 'uqhac-crystal-bracelet', name: '水晶手链', quantity: 5, sponsor: 'UQ 手工艺术俱乐部' },
-      { catalogId: 'uqhac-pearl-necklace', name: '珍珠项链', quantity: 1, sponsor: 'UQ 手工艺术俱乐部' },
       { catalogId: 'uqhac-membership', name: 'UQ 手工艺术俱乐部一年会员', quantity: 5, sponsor: 'UQ 手工艺术俱乐部' },
+      { catalogId: 'uqhac-handmade-crystal-pearl-bracelet', name: '手作水晶/珍珠手链', quantity: 3, sponsor: 'UQ 手工艺术俱乐部' },
+      { catalogId: 'uqhac-handmade-pearl-necklace', name: '手作珍珠项链', quantity: 2, sponsor: 'UQ 手工艺术俱乐部' },
+      { catalogId: 'uqhac-craft-material-kit', name: '手工材料包', quantity: 2, sponsor: 'UQ 手工艺术俱乐部' },
     ],
     onsiteGift: {
       quantityLabel: '300+',
