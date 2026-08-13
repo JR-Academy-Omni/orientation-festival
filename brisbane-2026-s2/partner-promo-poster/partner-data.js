@@ -114,10 +114,10 @@ export const partners = [
     name: 'Goodlife',
     logo: 'assets/partners/goodlife.png',
     prizes: [
-      { catalogId: 'goodlife-season-pass', name: 'Goodlife 全澳通用健身季卡', quantity: 1, sponsor: 'Goodlife' },
-      { catalogId: 'goodlife-gym-bag-bottle', name: '健身包与水杯套装', quantity: 1, sponsor: 'Goodlife' },
+      { catalogId: 'goodlife-season-pass', name: 'Goodlife 全澳通用健身季卡', quantity: 1, sponsor: 'Goodlife', image: 'assets/prizes/goodlife-season-pass-cards.jpg' },
+      { catalogId: 'goodlife-fitness-bag', name: '健身包', quantity: 5, sponsor: 'Goodlife', image: 'assets/prizes/goodlife-fitness-bag.jpg' },
       { catalogId: 'sunfox-tennis-skirt', name: 'Sunfox 网球裙', quantity: 1, sponsor: 'Goodlife' },
-      { catalogId: 'sunfox-fitness-pants', name: 'Sunfox 健身裤', quantity: 1, sponsor: 'Goodlife' },
+      { catalogId: 'sunfox-fitness-pants', name: 'Sunfox 健身裤', quantity: 1, sponsor: 'Goodlife', image: 'assets/prizes/goodlife-sunfox-vest.jpg' },
       { catalogId: 'muscle-building-pack', name: '增肌健身大礼包', quantity: 1, sponsor: 'Goodlife' },
       { catalogId: 'lorna-jane-gift-card', name: 'Lorna Jane $50 Gift Card', quantity: 1, sponsor: 'Goodlife' },
       { catalogId: 'lskd-gift-card', name: 'LSKD $50 Gift Card', quantity: 2, sponsor: 'Goodlife', image: 'assets/prizes/goodlife-lskd-gift-card.jpg' },
