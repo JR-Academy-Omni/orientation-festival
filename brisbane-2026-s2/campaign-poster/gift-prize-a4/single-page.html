@@ -36,6 +36,9 @@
     .raffle-featured .item-name { font-size: 2.55mm; line-height: 1.08; }
     .raffle-featured .item-sponsor { font-size: 1.85mm; }
     .text-icon { width: 8mm; height: 8mm; display: grid; place-items: center; border-radius: 2.2mm; background: linear-gradient(145deg, #ffe15d, #ff8f7f); color: white; font-size: 3mm; font-weight: 900; }
+    .more-prizes { display: flex; align-items: center; justify-content: center; gap: 1.5mm; padding: 1.2mm 1.6mm; border: .3mm dashed rgba(49,95,158,.45); border-radius: 2.2mm; background: linear-gradient(145deg, rgba(255,225,93,.24), rgba(91,155,255,.14)); color: #315f9e; text-align: center; }
+    .more-prizes strong { font-size: 2.55mm; line-height: 1.1; }
+    .more-prizes b { color: #ff6b5c; font-size: 4mm; line-height: 1; }
     .item-copy { min-width: 0; }
     .item-name { font-size: 2.35mm; line-height: 1.13; font-weight: 900; }
     .item-sponsor { margin-top: .55mm; color: #315f9e; font-size: 1.8mm; line-height: 1.05; font-weight: 720; }
@@ -57,17 +60,17 @@
 <body>
   <main class="poster">
     <header>
-      <div class="brand"><img class="event-logo" src="assets/event-logo.png" alt="布里斯班新生节"><div><h1>全部礼品＋抽奖一览</h1><div class="subtitle">一张A4纸完整打印 · 有图放图 · 无图列文字 · 每项标明提供方</div></div></div>
+      <div class="brand"><img class="event-logo" src="assets/event-logo.png" alt="布里斯班新生节"><div><h1>全部礼品＋抽奖一览</h1><div class="subtitle">大奖抽不停 · 到场礼品免费领 · 扫码报名</div></div></div>
       <div class="event"><div><b>8月21日 周五 · 14:00–17:00</b><br>Market Square · Sunnybank<br>341 Mains Rd, Sunnybank</div><img class="qr" src="assets/register-qr.png" alt="报名二维码"></div>
     </header>
     <div class="content">
       <section class="section">
-        <div class="section-title">抽奖奖品 <span>完整列出 · 不显示数量</span></div>
+        <div class="section-title">抽奖奖品</div>
         <div id="raffleFeatured" class="raffle-featured"></div>
         <div id="raffle" class="raffle-grid"></div>
       </section>
       <section class="section">
-        <div class="section-title">到场礼品 <span>按商家完整列出</span></div>
+        <div class="section-title">到场礼品</div>
         <div id="onsite" class="onsite-wrap"></div>
       </section>
     </div>
@@ -86,6 +89,10 @@
       el.innerHTML += `<div class="item-copy"><div class="item-name">${item.name}</div><div class="item-sponsor">${item.sponsor} 提供</div></div>`;
       (index < 8 ? featured : raffle).appendChild(el);
     });
+    const morePrizes = document.createElement('article');
+    morePrizes.className = 'more-prizes';
+    morePrizes.innerHTML = '<b>＋</b><strong>还有更多抽奖<br>现场等你揭晓</strong>';
+    raffle.appendChild(morePrizes);
     const onsite = document.getElementById('onsite');
     window.A4_CATALOG.onsite.forEach((group) => {
       const el = document.createElement('section');
