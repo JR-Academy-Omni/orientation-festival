@@ -36,7 +36,6 @@ const Bubble = ({
   top,
 }: BubbleProps) => {
   const frame = useCurrentFrame();
-  const {fps} = useVideoConfig();
   const isAnswer = tone === 'answer';
   const colors = {
     question: {background: cyan, foreground: navy, shadow: lime},
@@ -107,19 +106,6 @@ const Bubble = ({
         }}
       >
         {children}
-        <span
-          style={{
-            position: 'absolute',
-            width: 16,
-            height: 62,
-            left: side === 'right' ? -30 : 'auto',
-            right: side === 'left' ? -30 : 'auto',
-            top: '50%',
-            borderRadius: 9,
-            background: colors.shadow,
-            rotate: `${side === 'right' ? -42 : 42}deg`,
-          }}
-        />
       </div>
     </AbsoluteFill>
   );
@@ -139,34 +125,115 @@ const QuestionAnswer = ({question, start}: {question: string; start: number}) =>
   );
 };
 
-const SpeedLines = () => {
+const EventInfoCard = () => {
   const frame = useCurrentFrame();
+  const enter = interpolate(frame, [0, 8], [0, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+    easing: Easing.bezier(0.16, 1, 0.3, 1),
+  });
+
+  const rowStyle = (delay: number): CSSProperties => ({
+    opacity: interpolate(frame, [delay, delay + 6], [0, 1], {
+      extrapolateLeft: 'clamp',
+      extrapolateRight: 'clamp',
+    }),
+    translate: `0 ${interpolate(frame, [delay, delay + 7], [22, 0], {
+      extrapolateLeft: 'clamp',
+      extrapolateRight: 'clamp',
+      easing: Easing.bezier(0.16, 1, 0.3, 1),
+    })}px`,
+  });
+
   return (
     <AbsoluteFill style={{pointerEvents: 'none'}}>
-      {Array.from({length: 12}).map((_, index) => (
+      <div
+        style={{
+          position: 'absolute',
+          left: 42,
+          right: 42,
+          top: 785,
+          padding: '28px 30px 30px',
+          borderRadius: 30,
+          border: `4px solid ${cream}`,
+          background: 'rgba(4, 28, 44, 0.95)',
+          boxShadow: `10px 12px 0 ${coral}, 0 18px 45px rgba(0,0,0,0.34)`,
+          color: cream,
+          fontFamily: 'Arial Black, Arial, sans-serif',
+          opacity: enter,
+          scale: interpolate(frame, [0, 8], [0.9, 1], {
+            extrapolateLeft: 'clamp',
+            extrapolateRight: 'clamp',
+            easing: Easing.bezier(0.34, 1.56, 0.64, 1),
+          }),
+          translate: `0 ${interpolate(frame, [0, 8], [85, 0], {
+            extrapolateLeft: 'clamp',
+            extrapolateRight: 'clamp',
+            easing: Easing.bezier(0.16, 1, 0.3, 1),
+          })}px`,
+        }}
+      >
         <div
-          key={index}
           style={{
-            position: 'absolute',
-            left: 360,
-            top: 540,
-            width: interpolate(frame, [0, 6], [0, 210 + (index % 3) * 34], {
-              extrapolateLeft: 'clamp',
-              extrapolateRight: 'clamp',
-              easing: Easing.bezier(0.16, 1, 0.3, 1),
-            }),
-            height: 9,
-            borderRadius: 9,
-            background: index % 2 === 0 ? lime : cyan,
-            transformOrigin: '0 50%',
-            rotate: `${index * 30}deg`,
-            opacity: interpolate(frame, [0, 4, 24, 30], [0, 0.95, 0.95, 0], {
-              extrapolateLeft: 'clamp',
-              extrapolateRight: 'clamp',
-            }),
+            ...rowStyle(3),
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: 16,
           }}
-        />
-      ))}
+        >
+          <span
+            style={{
+              padding: '9px 18px 8px',
+              borderRadius: 999,
+              background: coral,
+              color: cream,
+              fontSize: 29,
+              lineHeight: 1,
+              whiteSpace: 'nowrap',
+            }}
+          >
+            8月21日 · 周五
+          </span>
+          <span style={{color: lime, fontSize: 23, letterSpacing: '0.04em'}}>布里斯班新生节</span>
+        </div>
+
+        <div style={{...rowStyle(8), marginTop: 22, color: cream, fontSize: 62, lineHeight: 1}}>
+          14:00–17:00
+        </div>
+        <div style={{...rowStyle(12), marginTop: 15, color: cyan, fontSize: 38, lineHeight: 1.08}}>
+          Market Square · Sunnybank
+        </div>
+        <div
+          style={{
+            ...rowStyle(16),
+            marginTop: 14,
+            color: cream,
+            fontFamily: 'Arial, sans-serif',
+            fontSize: 25,
+            fontWeight: 800,
+            lineHeight: 1.15,
+          }}
+        >
+          341 Mains Rd, Sunnybank QLD 4109
+        </div>
+        <div
+          style={{
+            ...rowStyle(20),
+            display: 'inline-flex',
+            marginTop: 24,
+            padding: '10px 17px 9px',
+            borderRadius: 12,
+            background: cream,
+            color: navy,
+            fontSize: 29,
+            lineHeight: 1,
+            letterSpacing: '-0.03em',
+          }}
+        >
+          今天谁还接单？
+        </div>
+      </div>
     </AbsoluteFill>
   );
 };
@@ -194,14 +261,11 @@ export const DriverOffDutyCaptions = () => {
       </Sequence>
 
       <Sequence from={Math.round(9.72 * fps)} durationInFrames={34} premountFor={fps}>
-        <SpeedLines />
         <Bubble side="center" tone="action" rotate={-3} fontSize={126}>上车！</Bubble>
       </Sequence>
 
-      <Sequence from={Math.round(12.08 * fps)} durationInFrames={70} premountFor={fps}>
-        <Bubble side="center" tone="closing" rotate={1} fontSize={54} lifetime={70} top={1005}>
-          今天谁还接单？
-        </Bubble>
+      <Sequence from={Math.round(11.50 * fps)} durationInFrames={86} premountFor={fps}>
+        <EventInfoCard />
       </Sequence>
     </AbsoluteFill>
   );
