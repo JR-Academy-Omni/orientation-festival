@@ -131,8 +131,9 @@ export const partners = [
     name: '指南针留学移民',
     logo: 'assets/partners/compass.jpg',
     prizes: [
-      { catalogId: 'monika-food-processor', name: 'Monika 料理机', quantity: 1, sponsor: '指南针留学移民' },
-      { catalogId: 'miniso-teddy-bear', name: 'MINISO 小熊玩偶', quantity: 2, sponsor: '指南针留学移民' },
+      { catalogId: 'lego-flower-bouquet', name: '乐高花束', quantity: 1, sponsor: '指南针留学移民', image: 'assets/prizes/compass-lego-flower-bouquet.jpg' },
+      { catalogId: 'dachshund-neck-pillow', name: '腊肠狗颈枕', quantity: 1, sponsor: '指南针留学移民', image: 'assets/prizes/compass-dachshund-neck-pillow.jpg' },
+      { catalogId: 'miniso-harry-potter-bear', name: '名创优品哈利波特联名小熊', quantity: 1, sponsor: '指南针留学移民', image: 'assets/prizes/compass-miniso-harry-potter-bear.jpg' },
     ],
     onsiteGift: {
       quantityLabel: '800+',
