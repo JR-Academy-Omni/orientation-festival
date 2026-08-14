@@ -1,0 +1,12 @@
+node_modules/
+output/
+public/source.mp4
+.remotion/
+out/
+review/
+qa/*
+!qa/contact-sheet-final-270.jpg
+!qa/cover-final.jpg
+!qa/ffprobe.json
+!qa/registry-entry.json
+!qa/tail-transcript.txt

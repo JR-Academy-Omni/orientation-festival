@@ -4,6 +4,12 @@ final/*.json
 final/*.mp4
 final/*.txt
 qa*/
+!remotion-captions/qa/
+!remotion-captions/qa/contact-sheet-final-270.jpg
+!remotion-captions/qa/cover-final.jpg
+!remotion-captions/qa/ffprobe.json
+!remotion-captions/qa/registry-entry.json
+!remotion-captions/qa/tail-transcript.txt
 raw/*.mp4
 raw-v2/*.mp4
 voice-seedance/
