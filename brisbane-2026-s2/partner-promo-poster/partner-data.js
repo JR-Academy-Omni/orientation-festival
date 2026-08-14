@@ -146,8 +146,7 @@ export const partners = [
     name: '思安留学移民',
     logo: 'assets/partners/sol.jpg',
     prizes: [
-      { catalogId: 'byron-bay-day-trip', name: '拜伦湾一日游免费名额', quantity: 2, sponsor: '思安留学移民' },
-      { catalogId: 'sol-plush-toy', name: '思安周边玩偶', quantity: 1, sponsor: '思安留学移民' },
+      { catalogId: 'jbl-grip-speaker', name: 'JBL Grip Compact Portable Speaker with Ambient Light (Black)', quantity: 1, sponsor: '思安留学移民', image: 'assets/prizes/sol-jbl-grip-speaker.png' },
     ],
     onsiteGift: {
       quantityLabel: '800+',
