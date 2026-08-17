@@ -310,4 +310,18 @@ window.PARTNERS = [
       evidencePattern: '100+ 蒙纳士中国学生会 MCSA 新生礼包',
     },
   },
+  {
+    slug: 'lmile',
+    name: 'LMILE',
+    logo: 'assets/partners/lmile.png',
+    prizes: [
+      {
+        catalogId: 'lmile-lululemon-bottle',
+        catalogSponsor: 'LMILE',
+        name: 'Lululemon 水杯',
+        quantity: 2,
+        image: 'assets/prizes/lmile-lululemon-bottles-card.png',
+      },
+    ],
+  },
 ];

@@ -410,11 +410,12 @@
       "id": "lmile-lululemon-bottle",
       "name": "lululemon 水杯",
       "quantity": 2,
-      "image": null,
+      "image": "assets/prizes/lmile-lululemon-bottle.png",
       "sponsor": "LMILE",
       "featured": false,
       "status": "published",
-      "sortOrder": 420
+      "sortOrder": 420,
+      "evidence": "User-confirmed prize and supplied product image on 2026-08-05"
     }
   ]
 }
