@@ -3,7 +3,7 @@
   "eventKey": "melbourne-freshers-2026-s2",
   "city": "Melbourne",
   "term": "2026 S2",
-  "updatedAt": "2026-08-03",
+  "updatedAt": "2026-08-05",
   "prizes": [
     {
       "id": "nintendo-switch-2",
@@ -304,6 +304,17 @@
       "featured": false,
       "status": "published",
       "sortOrder": 310
+    },
+    {
+      "id": "lmile-lululemon-bottle",
+      "name": "Lululemon 水杯",
+      "quantity": 2,
+      "image": "assets/prizes/lmile-lululemon-bottle.png",
+      "sponsor": "LMILE",
+      "featured": false,
+      "status": "published",
+      "sortOrder": 320,
+      "evidence": "User-confirmed prize and supplied product image on 2026-08-05"
     }
   ]
 }

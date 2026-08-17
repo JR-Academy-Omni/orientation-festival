@@ -59,3 +59,6 @@ c4c30848c85d3359ee038eb9fae24a09b08289baea25469621c7bd18267974b5  variants/logo-
 742406cedd3783fa225ac8164b14444efa9e30b1e23a2ddbbf4f40aade39364f  variants/logo-only/melbourne-2026-s2-wankawan-logo.png
 0bd714d7f4d6d96d115762d324e5b449a7a2d170911e9ca4ec0b9e41ee90a849  variants/logo-only/melbourne-2026-s2-yeeyi-logo.png
 1d76b44b0c69995a6f67022b69263bdb4d8f241cfae5031b3e3081642ade5165  variants/logo-only/melbourne-2026-s2-zircle-logo.png
+d94fee670989aa8517201c1f9087dee9e150efce455e1e813cb8611c860f626a  image-model-lmile.png
+d394506e7a33dc15ec08fdd3eac751bd90958e88935d8f4381be0fb1fa5d146b  variants/logo-only/melbourne-2026-s2-lmile-logo.png
+1f4410c570f34f48dd8bf2aed2ae99789956507627ae7facd583b5f7df0a93ca  variants/gifts/melbourne-2026-s2-lmile-gifts.png
