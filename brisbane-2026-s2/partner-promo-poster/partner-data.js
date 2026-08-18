@@ -87,11 +87,7 @@ export const partners = [
     slug: 'mobile-connect',
     name: 'Mobile Connect',
     logo: 'assets/partners/mobile-connect.webp',
-    prizes: [
-      { catalogId: 'sprout-headphones-a', name: 'SPROUT 耳机', quantity: 1, sponsor: 'Mobile Connect' },
-      { catalogId: 'sprout-speaker', name: 'SPROUT 音响', quantity: 1, sponsor: 'Mobile Connect' },
-      { catalogId: 'sprout-headphones-b', name: 'SPROUT 耳机', quantity: 1, sponsor: 'Mobile Connect' },
-    ],
+    prizes: [],
     onsiteGift: {
       quantityLabel: '1000+',
       name: 'Mobile Connect 礼品',
