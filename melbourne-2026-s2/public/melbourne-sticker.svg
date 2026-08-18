@@ -1,0 +1,34 @@
+<svg width="860" height="520" viewBox="0 0 860 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="0" y="0" width="860" height="520" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="14" stdDeviation="0" flood-color="#000817" flood-opacity="0.38"/>
+    </filter>
+    <style>
+      .mono { font-family: Arial Black, Impact, system-ui, sans-serif; font-weight: 900; }
+      .zh { font-family: "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Arial Black, system-ui, sans-serif; font-weight: 900; }
+    </style>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <path d="M144 94C154 58 190 48 222 62C238 25 294 24 314 55C340 25 392 26 410 58C440 27 495 33 506 70C548 57 586 78 594 116C642 113 680 143 681 185C725 205 734 262 697 294C718 338 686 393 637 394C621 435 572 448 536 421C503 456 445 455 414 418C381 449 325 441 308 397C265 416 215 398 202 352C157 352 119 318 122 273C84 253 78 197 112 170C105 139 119 110 144 94Z" fill="#F6FBFF"/>
+    <path d="M154 104C164 72 196 65 222 80C238 45 287 45 304 76C335 40 384 46 400 80C431 47 481 55 490 92C531 76 568 102 569 142C617 133 657 166 652 209C697 227 697 277 663 301C689 343 654 381 614 369C600 414 548 419 520 388C492 424 440 420 416 381C385 413 340 403 326 364C284 388 231 363 231 318C187 327 152 292 165 251C126 231 128 185 165 166C149 140 139 123 154 104Z" fill="#001926"/>
+    <path d="M126 148L68 118" stroke="#D9FF68" stroke-width="16" stroke-linecap="round"/>
+    <path d="M121 179L58 170" stroke="#D9FF68" stroke-width="16" stroke-linecap="round"/>
+    <path d="M127 212L76 237" stroke="#D9FF68" stroke-width="16" stroke-linecap="round"/>
+    <path d="M710 148L768 118" stroke="#D9FF68" stroke-width="16" stroke-linecap="round"/>
+    <path d="M716 181L780 171" stroke="#D9FF68" stroke-width="16" stroke-linecap="round"/>
+    <path d="M709 213L761 238" stroke="#D9FF68" stroke-width="16" stroke-linecap="round"/>
+
+    <text x="430" y="108" text-anchor="middle" class="mono" font-size="66" letter-spacing="2" stroke="#001926" stroke-width="14" stroke-linejoin="round">2026 S2</text>
+    <text x="430" y="108" text-anchor="middle" class="mono" font-size="66" letter-spacing="2" fill="#45E7F1">2026 S2</text>
+
+    <text x="430" y="202" text-anchor="middle" class="zh" font-size="78" letter-spacing="4" stroke="#001926" stroke-width="18" stroke-linejoin="round">墨尔本三校</text>
+    <text x="430" y="202" text-anchor="middle" class="zh" font-size="78" letter-spacing="4" fill="#EAFBFF">墨尔本三校</text>
+
+    <text x="430" y="298" text-anchor="middle" class="mono" font-size="54" letter-spacing="0" stroke="#001926" stroke-width="16" stroke-linejoin="round">UNIMELB · MONASH · RMIT</text>
+    <text x="430" y="298" text-anchor="middle" class="mono" font-size="54" letter-spacing="0" fill="#F3FCFF">UNIMELB · MONASH · RMIT</text>
+
+    <text x="430" y="395" text-anchor="middle" class="zh" font-size="76" letter-spacing="3" stroke="#001926" stroke-width="18" stroke-linejoin="round">三校新生节</text>
+    <text x="430" y="395" text-anchor="middle" class="zh" font-size="76" letter-spacing="3" fill="#45E7F1">三校新生节</text>
+  </g>
+</svg>
