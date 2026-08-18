@@ -87,7 +87,10 @@ export const partners = [
     slug: 'mobile-connect',
     name: 'Mobile Connect',
     logo: 'assets/partners/mobile-connect.webp',
-    prizes: [],
+    prizes: [
+      { catalogId: 'telstra-party-speaker', name: 'Party Speaker', quantity: 1, sponsor: 'Telstra', image: 'assets/prizes/telstra-party-speaker.png' },
+      { catalogId: 'telstra-printer', name: '打印机', quantity: 1, sponsor: 'Telstra' },
+    ],
     onsiteGift: {
       quantityLabel: '1000+',
       name: 'Mobile Connect 礼品',
