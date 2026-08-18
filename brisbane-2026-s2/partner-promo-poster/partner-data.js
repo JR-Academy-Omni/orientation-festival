@@ -73,7 +73,9 @@ export const partners = [
     slug: 'bank-of-china',
     name: '中国银行',
     logo: 'assets/partners/bank-of-china.webp',
-    prizes: [],
+    prizes: [
+      { catalogId: 'bank-of-china-40th-thermos-set', name: '40周年保温杯套装', quantity: 1, sponsor: '中国银行', image: 'assets/prizes/bank-of-china-40th-thermos-set.jpg' },
+    ],
     onsiteGift: {
       quantityLabel: '500+',
       name: '中国银行新生礼包',
