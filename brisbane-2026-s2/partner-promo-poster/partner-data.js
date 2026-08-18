@@ -216,7 +216,7 @@ export const partners = [
     name: '海底捞',
     logo: 'assets/partners/haidilao.webp',
     prizes: [
-      { catalogId: 'haidilao-50-voucher', name: '海底捞 $50 代金券', quantity: 5, sponsor: '海底捞' },
+      { catalogId: 'haidilao-50-voucher', name: '海底捞 $50 代金券', quantity: 5, sponsor: '海底捞', image: 'assets/prizes/haidilao-50-voucher.jpg' },
     ],
   },
   {
