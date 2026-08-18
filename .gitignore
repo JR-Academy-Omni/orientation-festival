@@ -1,0 +1,6 @@
+
+# 导出件由源文件重出，不进 git（曾占 91MB）
+pdf-output/
+
+# macOS 垃圾
+.DS_Store
