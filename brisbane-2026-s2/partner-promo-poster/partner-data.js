@@ -102,7 +102,9 @@ export const partners = [
     slug: 'airbotix',
     name: 'AirBotix',
     logo: 'assets/partners/airbotix.png',
-    prizes: [],
+    prizes: [
+      { catalogId: 'popmart-twinkle-series', name: '泡泡玛特星星人系列公仔', quantity: 2, sponsor: 'AirBotix' },
+    ],
     onsiteGift: {
       quantityLabel: '500+',
       name: 'AirBotix 新生礼包',
