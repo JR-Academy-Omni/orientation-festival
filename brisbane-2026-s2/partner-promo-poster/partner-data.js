@@ -223,6 +223,16 @@ export const partners = [
     ],
   },
   {
+    slug: 'nan-hotpot',
+    name: '楠火锅',
+    logo: 'assets/partners/nan-hotpot.webp',
+    prizes: [
+      { catalogId: 'nan-hotpot-100-voucher', name: '楠火锅 $100 代金券', quantity: 1, sponsor: '楠火锅' },
+      { catalogId: 'nan-hotpot-50-voucher', name: '楠火锅 $50 代金券', quantity: 2, sponsor: '楠火锅' },
+      { catalogId: 'nan-hotpot-dessert-voucher', name: '楠火锅甜品券', quantity: 10, sponsor: '楠火锅' },
+    ],
+  },
+  {
     slug: 'occom',
     name: 'Occom 澳世网络',
     logo: 'assets/partners/occom.webp',
