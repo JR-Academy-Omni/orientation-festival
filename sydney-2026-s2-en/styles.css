@@ -431,6 +431,8 @@ b{font-weight:800}
   .frame{position:static!important;width:1600px!important;height:auto!important;margin:0!important;padding:0!important;aspect-ratio:auto!important;border-radius:0!important;overflow:visible!important;box-shadow:none!important}
   .slide{position:relative!important;inset:auto!important;width:1600px!important;height:900px!important;opacity:1!important;transform:none!important;pointer-events:auto!important;page-break-after:always;break-after:page}
   .slide:last-child{page-break-after:auto;break-after:auto}
+  *{box-shadow:none!important;text-shadow:none!important}
+  .photo-slide .content-logo img{filter:none!important}
 }
 
 @media (max-width:900px){
