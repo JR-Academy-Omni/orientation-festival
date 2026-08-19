@@ -223,6 +223,14 @@ export const partners = [
     ],
   },
   {
+    slug: 'occom',
+    name: 'Occom 澳世网络',
+    logo: 'assets/partners/occom.webp',
+    prizes: [
+      { catalogId: 'occom-nb-uq-bear', name: 'NB x UQ 联名小熊', quantity: 1, sponsor: 'Occom 澳世网络', image: 'assets/prizes/occom-nb-uq-bear.jpg' },
+    ],
+  },
+  {
     slug: 'yeeyi',
     name: '亿忆网',
     logo: 'assets/partners/yeeyi.webp',
