@@ -12,6 +12,8 @@ title: 悉尼新生节 · Local Schools Edition PRD
 
 Sponsor proposition 已建立；日期、场地、学校 / P&C 合作、容量和价格均待业务确认。现阶段 deck 可用于早期 Sponsor discovery，不可当作已落地活动合同或学校官方合作证明。
 
+对外 deck 提供中文 canonical 版 `sydney-local-schools/` 与英文派生版 `sydney-local-schools-en/`。英文版必须沿用相同的 `TBD` 事实、Sponsor 权益、安全边界与 12 页信息结构，不得通过翻译引入新数字或合作背书。
+
 ## 目标
 
 把悉尼新生节扩展为面向本地 Year 7–12 新生的青年活动平台。活动需要让学生愿意参与，让学校、P&C、家长/监护人与青年社区都能找到合作角色，并让 Sponsor 在合规范围内提供真实价值。

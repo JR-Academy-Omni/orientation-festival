@@ -52,6 +52,8 @@ title: 新生节（多城、多受众 Sponsor Programme）
 | 悉尼 University · 2026 S2 | 大学生、留学生 | ✅ | ✅ | `sydney-2026-s2-v2/` |
 | 悉尼 Local Schools | Year 7–12 新生与本地青年生态 | ✅ | ✅ Discovery | `sydney-local-schools/` |
 
+悉尼 Local Schools 另有英文语言派生版 `sydney-local-schools-en/`；它与中文 canonical 版属于同一商业线，不单独计为活动或 SoT 根节点。
+
 > 每座城市每一届 = 一个子 SoT（`parent: orientation-festival`），各自目录下的 `design.md` 是那场活动的真相文档。
 
 ## 对谁、解决什么

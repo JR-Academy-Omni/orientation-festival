@@ -19,7 +19,7 @@ title: Orientation Festival · 匠人学院新生节
 | 悉尼新生节 | University Edition | 大学生、留学生 | `sydney-2026-s2-v2/` | 2026 S2 场次已落定 |
 | 悉尼新生节 | Local Schools Edition | Year 7–12 新生、学校、P&C、家长/监护人与青年社区 | `sydney-local-schools/` | Sponsor discovery；场次事实 TBD |
 
-`sydney-2026-s2-en/` 是 University Edition 的英文派生版，不是第三种活动。`sydney-2026-s2/` 是已上线历史 URL，只保留跳转兼容，不再声明 SoT。
+`sydney-2026-s2-en/` 与 `sydney-local-schools-en/` 分别是两条商业线的英文派生版，不是新的活动版本。`sydney-2026-s2/` 是已上线历史 URL，只保留跳转兼容，不再声明 SoT。
 
 两版共同内容真相源：`content/sydney-sponsor-decks-sot.md`。
 
@@ -37,6 +37,7 @@ orientation-festival/
 ├── sydney-2026-s2-v2/       # University Edition canonical
 ├── sydney-2026-s2-en/       # University English translation
 ├── sydney-local-schools/    # Local Schools Edition canonical
+├── sydney-local-schools-en/ # Local Schools English derivative
 ├── sydney-2026-s2/          # Legacy URL compatibility only
 └── pdf-output/
 ```
@@ -58,6 +59,7 @@ python3 -m http.server 8000
 
 - University: `http://localhost:8000/sydney-2026-s2-v2/`
 - Local Schools: `http://localhost:8000/sydney-local-schools/`
+- Local Schools English: `http://localhost:8000/sydney-local-schools-en/`
 
 快捷键：← → 翻页 · E 编辑文字 · G 总览 · F 全屏 · P 打开 PDF。
 

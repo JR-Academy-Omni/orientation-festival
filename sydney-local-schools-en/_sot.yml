@@ -1,0 +1,7 @@
+sot_root: false
+sot_type: event
+parent: orientation-festival
+slug: sydney-local-schools-en
+title: Sydney Freshers Festival · Local Schools Edition · English
+derives_from: sydney-local-schools
+docs: design.md, ../content/sydney-sponsor-decks-sot.md, ../content/sydney-local-schools-prd.md

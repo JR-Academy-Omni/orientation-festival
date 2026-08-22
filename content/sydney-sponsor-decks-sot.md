@@ -19,7 +19,7 @@ title: 悉尼新生节 · 双 Sponsor Deck 内容真相源
 | 悉尼新生节 | University Edition | 大学新生、留学生 | 社群增长、留学生服务获客、大学生场景合作 | `sydney-2026-s2-v2/` |
 | 悉尼新生节 | Local Schools Edition | 悉尼 Year 7–12 新生与本地青年生态 | 青年客群 Sponsor 收入、学校与社区合作 | `sydney-local-schools/` |
 
-英文大学版是 University Edition 的语言派生物，不是第三条活动线。
+英文大学版与 Local Schools 英文版分别是两条商业线的语言派生物，不是新的活动线。Local Schools 英文版路径为 `sydney-local-schools-en/`，商业事实、视觉结构和安全边界仍以 `sydney-local-schools/` 为准。
 
 ## 2. 命名规则
 
@@ -86,4 +86,5 @@ Local 版是面向进入新学校、新年级和新阶段的悉尼 Year 7–12 �
 - `sydney-2026-s2/` 是历史 URL，仅作为兼容入口，不再声明独立 SoT。
 - `sydney-2026-s2-en/` 归属于 University Edition。
 - `sydney-local-schools/` 是 Local Schools Edition 的 canonical 路径。
+- `sydney-local-schools-en/` 是 Local Schools Edition 的英文语言派生路径，不声明新的 `sot_root`。
 - 根入口只展示两个悉尼商业版本；语言入口放在对应版本内部。
