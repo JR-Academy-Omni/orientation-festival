@@ -8,67 +8,70 @@ title: Orientation Festival · 匠人学院新生节
 
 # Orientation Festival · 匠人学院新生节
 
-匠人学院多城「大学新生节」招商物料大本营 —— 可播放招商 deck + 各城内容源 + 视觉规范。
-从 `jr-wiki` 抽离独立成库（2026-06），新生节相关一切以**本 repo 为唯一来源**。
+匠人学院多城“新生节” Sponsor Deck、活动内容源与视觉规范仓库。公共活动名按城市统一，Sponsor proposition 按受众独立维护。
 
-> ⚠️ 含**赞助套餐报价 + 同事私人手机/邮箱**。repo 公开但 deck HTML 全站 `noindex,nofollow`；发给 sponsor 用 Pages 链接即可，不要把内容源 `content/*.md` 当对外文案散播。
+> 本 repo 是新生节唯一真相源。`content/` 含内部商业信息，不公开 serve；对外发送 deck 或 PDF。所有 HTML 保持 `noindex,nofollow`。
 
-## 结构
+## 悉尼双版本
 
-```
+| 公共活动名 | 内部版本 | 受众 | canonical deck | 状态 |
+|---|---|---|---|---|
+| 悉尼新生节 | University Edition | 大学生、留学生 | `sydney-2026-s2-v2/` | 2026 S2 场次已落定 |
+| 悉尼新生节 | Local Schools Edition | Year 7–12 新生、学校、P&C、家长/监护人与青年社区 | `sydney-local-schools/` | Sponsor discovery；场次事实 TBD |
+
+`sydney-2026-s2-en/` 是 University Edition 的英文派生版，不是第三种活动。`sydney-2026-s2/` 是已上线历史 URL，只保留跳转兼容，不再声明 SoT。
+
+两版共同内容真相源：`content/sydney-sponsor-decks-sot.md`。
+
+## 目录
+
+```text
 orientation-festival/
-├── index.html               ← 落地页：列出各城 deck 入口
-├── pdf-output/              ← 已生成 PDF，线上按钮直接打开这些文件
-├── melbourne-2026-s2/        ← 墨尔本三校新生节 2026 S2 · 可播放 deck（已做完）
-│   ├── index.html
-│   └── design.md
-├── brisbane-2026-s1/         ← 布里斯班三校新生节 2026 S2 · 可播放 deck（源码目录沿用旧名）
-│   ├── index.html
-│   └── design.md
-├── sydney-2026-s2/           ← 悉尼四校新生节 2026 S2 · 可播放 deck（已做完）
-│   ├── index.html  styles.css  deck.js
-│   ├── design.md            ← 这套 deck 的唯一视觉真相源
-│   └── assets/character.png
-└── content/                 ← 内容源 / 规范（内部）
-    ├── melbourne-2026-s2.md         招商要点精简版
-    ├── melbourne-2026-s2-pages.md   38 页逐页文字存档（Canva 原稿提取）
-    ├── brisbane-2026-s1-pages.md    布里斯班场内容源（deck 对外口径已改 2026 S2）
-    ├── sydney-2026-s1-pages.md      悉尼旧场内容源
-    ├── design-style.md              配色/视觉量化采样（Canva）
-    └── assets/                      brisbane 封面/人物/标题 PNG
+├── _sot.yml
+├── EVENT.md
+├── index.html
+├── content/
+│   ├── sydney-sponsor-decks-sot.md
+│   ├── sydney-2026-s2-prd.md
+│   └── sydney-local-schools-prd.md
+├── sydney-2026-s2-v2/       # University Edition canonical
+├── sydney-2026-s2-en/       # University English translation
+├── sydney-local-schools/    # Local Schools Edition canonical
+├── sydney-2026-s2/          # Legacy URL compatibility only
+└── pdf-output/
 ```
 
-## 各城状态
+## 内容规则
 
-| 城市 / 届 | 内容源 | 可播放 deck |
-|-----------|--------|-------------|
-| 墨尔本 2026 S2（UniMelb/Monash/RMIT） | ✅ | ✅ `melbourne-2026-s2/` |
-| 布里斯班 2026 S2（UQ/QUT/Griffith） | ✅ | ✅ 已完成 |
-| 悉尼 2026 S2 | ✅ | ✅ 已完成 |
+- 活动封面和主标题只写 `{城市}新生节`，不拼学校名称。
+- 版本标签用于内部管理和 Sponsor Deck 导航。
+- University 数据不能证明 Local Schools 的人数、青年覆盖、合作机构或转化。
+- Local Schools 日期、场地、学校、容量和价格没有书面确认时写 `TBD` / `Custom proposal`。
+- Local Schools 面向更广义的本地青年生态；涉及未成年人联系时，以 parent / guardian 或其他合规授权渠道为准，不交付学生名单。
+- 学校名称、校徽和“官方合作”需要书面批准。
 
-## 预览 deck
+## 预览
 
-纯静态，直接开浏览器即可（← → 翻页 · E 编辑文字 · G 总览 · F 全屏）：
-
+```bash
+python3 -m http.server 8000
 ```
-open melbourne-2026-s2/index.html
+
+- University: `http://localhost:8000/sydney-2026-s2-v2/`
+- Local Schools: `http://localhost:8000/sydney-local-schools/`
+
+快捷键：← → 翻页 · E 编辑文字 · G 总览 · F 全屏 · P 打开 PDF。
+
+## PDF 与 lineage
+
+修改 deck 后重新生成对应 PDF，然后在 `jr-omni` 根目录运行：
+
+```bash
+python3 lineage/build_lineage.py
+cd ../jr-academy-admin && bash scripts/sync-lineage.sh
 ```
 
-## 在线托管（GitHub Pages）
+不要手改 `lineage/lineage.json`、`lineage/REGISTRY.md`、`lineage/content.js` 或 Admin `graph.html` 的数据段。
 
-根 `index.html` = 落地页；各城 deck 在子目录。Pages 启用后 sponsor 链接形如
-`https://jr-academy-omni.github.io/orientation-festival/melbourne-2026-s2/`。
-`.nojekyll` 关掉 Jekyll，按原样静态服务。
+## 部署
 
-## 设计规范
-
-> ⚠️ 墨尔本 deck 已升级到 **v3「Airbotix 质感」**（暖奶油底 + 珊瑚主色 + 现场照满铺背景 + 圆角白卡），
-> 是当前的设计标杆；sydney / brisbane 仍是旧 v2「活力·精致版」（浅底 + 渐变 hero），后续按需对齐。
-> **每套 deck 的唯一视觉真相源 = 该目录下的 `design.md`，改样式前先读。**
-
-v3（墨尔本）：Noto Sans SC + Sora 字体；主题色 = `styles.css` 顶部 `--accent*` / `--blue*` 一块。
-
-## 新增城市 deck（对齐 v3）
-
-复制 `melbourne-2026-s2/` 三件套 → 套用 `content/{city}-pages.md` 文字 →
-只改 `styles.css` 顶部 `--accent*` / `--blue*` 城市主题色块 + 换 `assets/past-events/` 现场照 → 在根 `index.html` 加入口。
+源码在 private `main`；GitHub Pages 使用不含 `content/` 的 `gh-pages`。更新已有页面前先提交并推送 main，再只把入口、deck 与 PDF 同步到 gh-pages。新建公开入口需要按仓库安全规则确认部署范围。

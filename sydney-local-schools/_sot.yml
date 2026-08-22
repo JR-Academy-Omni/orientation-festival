@@ -1,0 +1,6 @@
+sot_root: true
+sot_type: event
+parent: orientation-festival
+slug: sydney-local-schools
+title: 悉尼新生节 · Local Schools Edition
+docs: design.md, ../content/sydney-sponsor-decks-sot.md, ../content/sydney-local-schools-prd.md
