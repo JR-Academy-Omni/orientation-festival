@@ -80,8 +80,5 @@ magick "$current" -units PixelsPerInch -density 300 \
 magick "$OUT/brisbane-freshers-all-partners-a4-print.png" \
   -quality 96 "$OUT/brisbane-freshers-all-partners-a4-print.jpg"
 
-magick "$OUT/brisbane-freshers-all-partners-a4-print.png" \
-  -units PixelsPerInch -density 300 "$OUT/brisbane-freshers-all-partners-a4-print.pdf"
-
 magick identify -format '%f: %w×%h, %x×%y DPI\n' \
   "$OUT/brisbane-freshers-all-partners-a4-print.png"
