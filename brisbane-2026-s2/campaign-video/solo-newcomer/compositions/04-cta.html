@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html><head></head><body><template>
+  <style>
+    @font-face { font-family: "Hiragino Sans GB"; src: url("assets/fonts/hiragino-sans-gb.ttc") format("truetype"); font-weight: 300 900; }
+    #root { position:absolute; inset:0; width:1080px; height:1920px; overflow:hidden; background:#071921; color:#fff; font-family:"Hiragino Sans GB",sans-serif; }
+    .photo { position:absolute; inset:-60px; width:1200px; height:2040px; object-fit:cover; filter:saturate(.8) brightness(.34) blur(5px); transform:scale(1.04); }
+    .wash { position:absolute; inset:0; background:linear-gradient(180deg,rgba(7,25,33,.5),rgba(7,25,33,.86) 68%,#071921); }
+    .topline { position:absolute; top:112px; left:78px; font:900 25px/1 Inter,sans-serif; color:#d6ff67; letter-spacing:.16em; }
+    .thesis { position:absolute; top:210px; left:70px; width:920px; font-size:78px; font-weight:900; line-height:1.1; letter-spacing:-.035em; }
+    .thesis span { color:#43dde6; }
+    .logo-wrap { position:absolute; top:568px; left:65px; width:950px; padding:8px 20px; }
+    .logo { display:block; width:100%; height:auto; filter:drop-shadow(0 24px 40px rgba(0,0,0,.42)); }
+    .details { position:absolute; left:70px; top:1065px; width:940px; }
+    .date { font:900 68px/1.05 Inter,"Hiragino Sans GB",sans-serif; color:#fff; }
+    .date b { color:#ff7866; }
+    .place { margin-top:32px; font-size:43px; font-weight:900; line-height:1.22; }
+    .place small { display:block; margin-top:12px; font:700 25px/1.4 Inter,sans-serif; color:rgba(255,255,255,.72); letter-spacing:.02em; }
+    .cta { position:absolute; left:70px; bottom:116px; display:flex; align-items:center; gap:22px; padding:24px 34px; border-radius:999px; background:#d6ff67; color:#071921; font-size:42px; font-weight:900; box-shadow:0 16px 44px rgba(214,255,103,.24); }
+    .arrow { width:44px; height:44px; border-radius:50%; background:#071921; color:#d6ff67; display:grid; place-items:center; font:900 28px/1 Inter,sans-serif; }
+  </style>
+  <div data-hf-id="hf-1zow" id="root" data-composition-id="scene-cta" data-width="1080" data-height="1920" data-duration="7.5">
+    <img data-hf-id="hf-gp6z" class="photo" data-layout-allow-overflow="" src="assets/images/03-meet-friends.png" alt=""><div data-hf-id="hf-7h0d" class="wash"></div>
+    <div data-hf-id="hf-cd8w" class="topline">YOUR FIRST DAY, MAYBE</div>
+    <div data-hf-id="hf-z9ih" class="thesis">你以为是参加一场活动，<br data-hf-id="hf-x5px"><span data-hf-id="hf-t150">也许是认识新朋友的第一天。</span></div>
+    <div data-hf-id="hf-bt52" class="logo-wrap"><img data-hf-id="hf-tvt4" class="logo" src="assets/logos/brisbane-freshers-festival-logo.png" alt="布里斯班新生节"></div>
+    <div data-hf-id="hf-osyq" class="details"><div data-hf-id="hf-x03p" class="date"><b data-hf-id="hf-tbbc">08.21</b> 周五 · 14:00–17:00</div><div data-hf-id="hf-2wp4" class="place">Market Square · Sunnybank<small data-hf-id="hf-o5k0">341 Mains Rd, Sunnybank QLD 4109</small></div></div>
+    <div data-hf-id="hf-2m4e" class="cta">免费报名 <span data-hf-id="hf-v68i" class="arrow">→</span></div>
+  </div>
+  <script>
+    window.__timelines=window.__timelines||{}; const tl=gsap.timeline({paused:true});
+    tl.fromTo('.photo',{scale:1.08},{scale:1.02,duration:7.5,ease:'none'},0)
+      .fromTo('.topline',{opacity:0,y:18},{opacity:1,y:0,duration:.55,ease:'power3.out'},.3)
+      .fromTo('.thesis',{opacity:0,y:44,filter:'blur(20px)'},{opacity:1,y:0,filter:'blur(0px)',duration:1,ease:'power3.out'},.55)
+      .fromTo('.logo-wrap',{opacity:0,y:54,scale:.97},{opacity:1,y:0,scale:1,duration:.9,ease:'power3.out'},1.55)
+      .fromTo('.details',{opacity:0,y:35},{opacity:1,y:0,duration:.75,ease:'power2.out'},2.35)
+      .fromTo('.cta',{opacity:0,y:30},{opacity:1,y:0,duration:.7,ease:'power2.out'},3.15)
+      .to('.cta',{scale:1.025,duration:.8,yoyo:true,repeat:1,ease:'sine.inOut'},4.2);
+    window.__timelines['scene-cta']=tl;
+  </script>
+</template></body></html>
