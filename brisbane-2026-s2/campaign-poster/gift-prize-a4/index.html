@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>第6届布里斯班新生节 · 礼品与抽奖图鉴 A4</title>
+  <style>
+    @page { size: A4 portrait; margin: 0; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #dce3ed; color: #12213f; font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .sheet { position: relative; width: 210mm; height: 297mm; overflow: hidden; page-break-after: always; background: linear-gradient(145deg, #fdf6ef, #fffaf5 52%, #eef6ff); padding: 12mm 12mm 10mm; }
+    .sheet:last-child { page-break-after: auto; }
+    .sheet::before { content: ""; position: absolute; right: -28mm; top: -25mm; width: 95mm; height: 95mm; border-radius: 50%; background: rgba(255,107,92,.11); }
+    .sheet::after { content: ""; position: absolute; left: -32mm; bottom: -34mm; width: 100mm; height: 100mm; border-radius: 50%; background: rgba(91,155,255,.11); }
+    header, main, footer { position: relative; z-index: 2; }
+    header { height: 31mm; display: flex; align-items: flex-start; justify-content: space-between; border-bottom: .35mm solid rgba(18,33,63,.12); }
+    .brand { display: flex; align-items: center; gap: 5mm; }
+    .event-logo { width: 31mm; height: 20mm; object-fit: contain; }
+    h1 { margin: 0; font-size: 8mm; line-height: 1; letter-spacing: -.4mm; }
+    .subtitle { margin-top: 2mm; color: #315f9e; font-size: 3.2mm; font-weight: 750; }
+    .page-no { padding: 2.6mm 4mm; border-radius: 99mm; background: #12213f; color: white; font-size: 3mm; font-weight: 800; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 57mm; gap: 4mm; padding-top: 6mm; }
+    .card { position: relative; overflow: hidden; display: flex; flex-direction: column; border: .3mm solid rgba(18,33,63,.1); border-radius: 4.5mm; background: rgba(255,255,255,.9); box-shadow: 0 2.5mm 7mm rgba(18,33,63,.09); }
+    .type { position: absolute; top: 2.4mm; left: 2.4mm; z-index: 3; padding: 1.2mm 2.2mm; border-radius: 99mm; background: #ff6b5c; color: white; font-size: 2.4mm; font-weight: 850; }
+    .gift-card .type { background: #315f9e; }
+    .visual { height: 37mm; display: grid; place-items: center; padding: 5.5mm 5mm 1mm; }
+    .visual img { max-width: 100%; max-height: 31mm; object-fit: contain; filter: drop-shadow(0 2mm 2mm rgba(18,33,63,.15)); }
+    .text-only { width: 24mm; height: 24mm; display: grid; place-items: center; border-radius: 7mm; background: linear-gradient(145deg, #ffe15d, #ff8f7f); color: white; font-size: 9mm; font-weight: 900; box-shadow: 0 2mm 5mm rgba(255,107,92,.18); }
+    .copy { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 1.2mm; padding: 1mm 3mm 3mm; text-align: center; }
+    .name { font-size: 3.25mm; line-height: 1.15; font-weight: 900; }
+    .sponsor { color: #315f9e; font-size: 2.55mm; line-height: 1.15; font-weight: 750; }
+    .no-photo { color: rgba(18,33,63,.55); font-size: 2.2mm; font-weight: 700; }
+    footer { position: absolute; left: 12mm; right: 12mm; bottom: 5mm; display: flex; justify-content: space-between; color: rgba(18,33,63,.6); font-size: 2.3mm; font-weight: 650; }
+    .groups { padding-top: 5mm; }
+    .group { margin-bottom: 4mm; break-inside: avoid; }
+    .group-title { display: inline-block; margin: 0 0 2.3mm; padding: 1.6mm 3mm; border-radius: 99mm; background: #12213f; color: white; font-size: 3.1mm; font-weight: 850; }
+    .gift-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.7mm; }
+    .gift-grid .card { height: 38mm; }
+    .gift-grid .visual { height: 22mm; padding-top: 3.5mm; }
+    .gift-grid .visual img { max-height: 18.5mm; }
+    .gift-grid .name { font-size: 2.9mm; }
+    .gift-grid .sponsor { font-size: 2.25mm; }
+    .closing { display: grid; grid-template-columns: 1fr 45mm; gap: 8mm; align-items: center; margin-top: 7mm; padding: 6mm; border-radius: 6mm; background: #12213f; color: white; }
+    .closing h2 { margin: 0 0 2mm; color: #ffe15d; font-size: 7mm; }
+    .closing p { margin: 0; font-size: 3.3mm; line-height: 1.55; font-weight: 650; }
+    .qr { padding: 3mm; border-radius: 4mm; background: white; text-align: center; color: #12213f; font-size: 2.7mm; font-weight: 800; }
+    .qr img { display: block; width: 39mm; height: 39mm; }
+    .pending { margin-top: 4mm; padding: 3mm 4mm; border-radius: 4mm; background: rgba(255,255,255,.78); border: .3mm dashed rgba(18,33,63,.25); font-size: 2.8mm; line-height: 1.45; }
+  </style>
+</head>
+<body>
+  <div id="pages"></div>
+  <script src="a4-data.js"></script>
+  <script>
+    const root = document.getElementById('pages');
+    const card = (item, type, sponsorOverride) => `<article class="card ${type === '现场礼品' ? 'gift-card' : ''}"><span class="type">${type}</span><div class="visual">${item.image ? `<img src="assets/${item.image}" alt="${item.name}">` : '<div class="text-only">礼</div>'}</div><div class="copy"><div class="name">${item.name}</div><div class="sponsor">由 ${sponsorOverride || item.sponsor} 提供</div>${item.image ? '' : '<div class="no-photo">暂无准确实物图 · 文字记录</div>'}</div></article>`;
+    const header = (title, subtitle, page, total = 9) => `<header><div class="brand"><img class="event-logo" src="assets/event-logo.png"><div><h1>${title}</h1><div class="subtitle">${subtitle}</div></div></div><div class="page-no">A4 · ${String(page).padStart(2,'0')} / ${String(total).padStart(2,'0')}</div></header>`;
+    const footer = () => `<footer><span>第6届布里斯班新生节 · 2026年8月21日</span><span>礼品、奖品及现场安排以活动页最新信息为准。</span></footer>`;
+    const raffleChunks = [window.A4_CATALOG.raffle.slice(0, 10), window.A4_CATALOG.raffle.slice(10, 20), window.A4_CATALOG.raffle.slice(20, 30), window.A4_CATALOG.raffle.slice(30)];
+    raffleChunks.forEach((items, index) => {
+      const sheet = document.createElement('section');
+      sheet.className = 'sheet';
+      sheet.innerHTML = header(index === 0 ? '抽奖奖品图鉴' : '抽奖奖品图鉴 · 续', '有图放实物图 · 无图完整写明名称和提供方', index + 1) + `<main class="cards">${items.map((item) => card(item, '抽奖奖品')).join('')}</main>` + footer();
+      root.appendChild(sheet);
+    });
+    const giftGroups = window.A4_CATALOG.onsite;
+    const giftPages = [giftGroups.slice(0, 2), giftGroups.slice(2, 5), giftGroups.slice(5, 7), giftGroups.slice(7, 11), giftGroups.slice(11)];
+    giftPages.forEach((groups, index) => {
+      const sheet = document.createElement('section');
+      sheet.className = 'sheet';
+      const groupsHtml = groups.map((group) => `<section class="group"><h2 class="group-title">${group.sponsor}</h2><div class="gift-grid">${group.items.map((item) => card(item, '现场礼品', group.sponsor)).join('')}</div></section>`).join('');
+      const isLast = index === giftPages.length - 1;
+      const closing = isLast ? `<div class="pending"><b>礼品资料尚待提供：</b>${window.A4_CATALOG.pending.join('、')}。以上合作方已确认参与，但当前不虚构礼品内容或图片。</div><div class="closing"><div><h2>还有更多礼品，现场等你发现</h2><p>8月21日 周五 · 14:00–17:00<br>Market Square · Sunnybank<br>341 Mains Rd, Sunnybank</p></div><div class="qr"><img src="assets/register-qr.png">扫码免费报名</div></div>` : '';
+      sheet.innerHTML = header(index === 0 ? '到场礼品图鉴' : '到场礼品图鉴 · 续', '按商家完整列出 · 没有图片的内容使用文字卡', index + 5) + `<main class="groups">${groupsHtml}${closing}</main>` + footer();
+      root.appendChild(sheet);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>第6届布里斯班新生节 · 全部礼品与抽奖 A4单页</title>
+  <style>
+    @page { size: A4 landscape; margin: 0; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 297mm; height: 210mm; overflow: hidden; }
+    body { color: #12213f; font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .poster { position: relative; width: 297mm; height: 210mm; overflow: hidden; padding: 8mm 9mm 6mm; background: linear-gradient(145deg, #fdf6ef, #fffaf5 58%, #eef6ff); }
+    .poster::before { content: ""; position: absolute; right: -20mm; top: -28mm; width: 82mm; height: 82mm; border-radius: 50%; background: rgba(255,107,92,.10); }
+    .poster::after { content: ""; position: absolute; left: -24mm; bottom: -35mm; width: 85mm; height: 85mm; border-radius: 50%; background: rgba(91,155,255,.10); }
+    header, .content, footer { position: relative; z-index: 2; }
+    header { height: 23mm; display: flex; align-items: center; justify-content: space-between; border-bottom: .3mm solid rgba(18,33,63,.13); padding-bottom: 3mm; }
+    .brand { display: flex; align-items: center; gap: 4mm; }
+    .event-logo { width: 29mm; height: 17mm; object-fit: contain; }
+    h1 { margin: 0; font-size: 7mm; line-height: 1; letter-spacing: -.3mm; }
+    .subtitle { margin-top: 1.4mm; color: #315f9e; font-size: 2.7mm; font-weight: 760; }
+    .event { display: flex; align-items: center; gap: 4mm; font-size: 2.6mm; line-height: 1.35; font-weight: 760; text-align: right; }
+    .event b { color: #ff6b5c; }
+    .qr { width: 17mm; height: 17mm; padding: 1mm; border-radius: 2mm; background: #fff; box-shadow: 0 1mm 3mm rgba(18,33,63,.1); }
+    .content { display: grid; grid-template-columns: 62% 38%; gap: 3mm; height: 171mm; padding-top: 4mm; }
+    .section { min-width: 0; }
+    .section-title { display: flex; align-items: center; justify-content: space-between; height: 8mm; margin-bottom: 2mm; padding: 0 3mm; border-radius: 2.5mm; color: #fff; background: #12213f; font-size: 3.6mm; font-weight: 900; }
+    .section-title span { color: #ffe15d; font-size: 2.3mm; font-weight: 700; }
+    .raffle-featured, .raffle-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .raffle-featured { grid-auto-rows: 21.5mm; gap: 1mm; margin-bottom: 1mm; }
+    .raffle-grid { grid-auto-rows: 13.55mm; gap: 1mm; }
+    .raffle-item { position: relative; display: grid; grid-template-columns: 13mm 1fr; gap: 1.5mm; align-items: center; overflow: hidden; padding: 1.2mm 1.6mm; border: .22mm solid rgba(18,33,63,.09); border-radius: 2.2mm; background: rgba(255,255,255,.9); box-shadow: 0 .8mm 2.2mm rgba(18,33,63,.07); }
+    .raffle-item.text { grid-template-columns: 9mm 1fr; }
+    .thumb { position: relative; width: 12mm; height: 11.5mm; overflow: hidden; }
+    .thumb img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; }
+    .raffle-featured .raffle-item { grid-template-columns: 20mm 1fr; gap: 1.8mm; padding: 1.2mm 1.8mm; }
+    .raffle-featured .thumb { width: 19mm; height: 18.5mm; }
+    .raffle-featured .item-name { font-size: 2.55mm; line-height: 1.08; }
+    .raffle-featured .item-sponsor { font-size: 1.85mm; }
+    .text-icon { width: 8mm; height: 8mm; display: grid; place-items: center; border-radius: 2.2mm; background: linear-gradient(145deg, #ffe15d, #ff8f7f); color: white; font-size: 3mm; font-weight: 900; }
+    .more-prizes { display: flex; align-items: center; justify-content: center; gap: 1.5mm; padding: 1.2mm 1.6mm; border: .3mm dashed rgba(49,95,158,.45); border-radius: 2.2mm; background: linear-gradient(145deg, rgba(255,225,93,.24), rgba(91,155,255,.14)); color: #315f9e; text-align: center; }
+    .more-prizes strong { font-size: 2.55mm; line-height: 1.1; }
+    .more-prizes b { color: #ff6b5c; font-size: 4mm; line-height: 1; }
+    .item-copy { min-width: 0; }
+    .item-name { font-size: 2.35mm; line-height: 1.13; font-weight: 900; }
+    .item-sponsor { margin-top: .55mm; color: #315f9e; font-size: 1.8mm; line-height: 1.05; font-weight: 720; }
+    .onsite-wrap { height: 160.2mm; display: flex; flex-direction: column; gap: .6mm; }
+    .onsite-group { display: grid; grid-template-columns: 30mm 1fr; align-items: center; gap: 1mm; min-height: 7.7mm; padding: .65mm 1.25mm; border: .22mm solid rgba(18,33,63,.10); border-radius: 2mm; background: rgba(255,255,255,.88); box-shadow: 0 .55mm 1.6mm rgba(18,33,63,.06); }
+    .onsite-group h3 { display: block; margin: 0; padding: .7mm 1mm; border-radius: 2mm; color: white; background: #315f9e; font-size: 2.15mm; line-height: 1.08; text-align: center; }
+    .onsite-group h3 small { display: block; margin-top: .35mm; color: #ffe15d; font-size: 1.65mm; line-height: 1; }
+    .onsite-items { display: flex; flex-wrap: wrap; align-items: center; gap: .5mm .7mm; }
+    .onsite-item { display: inline-flex; align-items: center; gap: .45mm; padding: .35mm .7mm; border-radius: 1.2mm; background: #f6f8fb; font-size: 1.88mm; line-height: 1.08; font-weight: 780; white-space: nowrap; }
+    .onsite-item img { width: 4mm; height: 4mm; object-fit: contain; }
+    .onsite-item.no-image::before { content: "字"; display: grid; place-items: center; width: 3.8mm; height: 3.8mm; border-radius: 1mm; color: white; background: #ff8f7f; font-size: 1.65mm; font-weight: 900; }
+    .support-unit { margin-top: auto; align-self: flex-end; display: flex; align-items: center; gap: 1.6mm; padding: 1mm 1.3mm; border: .22mm solid rgba(18,33,63,.12); border-radius: 1.8mm; background: rgba(255,255,255,.95); box-shadow: 0 .7mm 2mm rgba(18,33,63,.08); }
+    .support-unit span { color: #315f9e; font-size: 1.8mm; line-height: 1.1; font-weight: 900; white-space: nowrap; }
+    .support-unit img { display: block; width: 60mm; height: 10mm; object-fit: contain; }
+    footer { position: absolute; left: 9mm; right: 9mm; bottom: 2.3mm; display: flex; justify-content: space-between; color: rgba(18,33,63,.60); font-size: 1.8mm; font-weight: 650; }
+  </style>
+</head>
+<body>
+  <main class="poster">
+    <header>
+      <div class="brand"><img class="event-logo" src="assets/event-logo.png" alt="布里斯班新生节"><div><h1>全部礼品＋抽奖一览</h1><div class="subtitle">大奖抽不停 · 到场礼品免费领 · 扫码报名</div></div></div>
+      <div class="event"><div><b>8月21日 周五 · 14:00–17:00</b><br>Market Square · Sunnybank<br>341 Mains Rd, Sunnybank</div><img class="qr" src="assets/register-qr.png" alt="报名二维码"></div>
+    </header>
+    <div class="content">
+      <section class="section">
+        <div class="section-title">抽奖奖品</div>
+        <div id="raffleFeatured" class="raffle-featured"></div>
+        <div id="raffle" class="raffle-grid"></div>
+      </section>
+      <section class="section">
+        <div class="section-title">到场礼品</div>
+        <div id="onsite" class="onsite-wrap"></div>
+      </section>
+    </div>
+    <footer><span>第6届布里斯班新生节 · 主办方：匠人学院</span><span>礼品、奖品及现场安排以活动页最新信息为准。</span></footer>
+  </main>
+  <script src="a4-data.js"></script>
+  <script src="a4-data-en.js"></script>
+  <script>
+    const english = new URLSearchParams(location.search).get('lang') === 'en';
+    if (english) {
+      document.documentElement.lang = 'en-AU';
+      document.title = 'Brisbane Freshers Festival · Gifts & Prize Draw A4 Handout';
+      document.querySelector('h1').textContent = 'Gifts & Prize Draw';
+      document.querySelector('.subtitle').textContent = 'Win major prizes · Collect free gifts · Scan to register';
+      document.querySelector('.event div').innerHTML = '<b>Friday 21 August · 2:00–5:00 PM</b><br>Market Square · Sunnybank<br>341 Mains Rd, Sunnybank';
+      document.querySelectorAll('.section-title')[0].textContent = 'Prize Draw';
+      document.querySelectorAll('.section-title')[1].textContent = 'Free Gifts Onsite';
+      document.querySelector('footer').innerHTML = '<span>6th Brisbane Freshers Festival · Organised by JR Academy</span><span>Gifts, prizes and event arrangements are subject to the latest event-page information.</span>';
+    }
+    const catalog = english ? window.A4_CATALOG_EN : window.A4_CATALOG;
+    const featured = document.getElementById('raffleFeatured');
+    const raffle = document.getElementById('raffle');
+    catalog.raffle.forEach((item, index) => {
+      const el = document.createElement('article');
+      el.className = `raffle-item${item.image ? '' : ' text'}`;
+      el.innerHTML = item.image
+        ? `<div class="thumb"><img src="assets/${item.image}" alt="${item.name}"></div>`
+        : `<div class="text-icon">${english ? 'TXT' : '字'}</div>`;
+      el.innerHTML += `<div class="item-copy"><div class="item-name">${item.name}</div><div class="item-sponsor">${english ? 'Provided by ' : ''}${item.sponsor}${english ? '' : ' 提供'}</div></div>`;
+      (index < 8 ? featured : raffle).appendChild(el);
+    });
+    const morePrizes = document.createElement('article');
+    morePrizes.className = 'more-prizes';
+    morePrizes.innerHTML = english ? '<b>＋</b><strong>More prizes<br>await onsite</strong>' : '<b>＋</b><strong>还有更多抽奖<br>现场等你揭晓</strong>';
+    raffle.appendChild(morePrizes);
+    const onsite = document.getElementById('onsite');
+    catalog.onsite.forEach((group) => {
+      const el = document.createElement('section');
+      el.className = 'onsite-group';
+      el.innerHTML = `<h3>${group.sponsor}${group.quantity ? `<small>${group.quantity}</small>` : ''}</h3><div class="onsite-items">${group.items.map((item) => `<span class="onsite-item${item.image ? '' : ' no-image'}">${item.image ? `<img src="assets/${item.image}" alt="${item.name}">` : ''}${item.name}</span>`).join('')}</div>`;
+      onsite.appendChild(el);
+    });
+    const support = document.createElement('div');
+    support.className = 'support-unit';
+    support.innerHTML = `<span>${english ? 'SUPPORTING ORGANISATION' : '支持单位'}</span><img src="assets/china-consulate-brisbane.webp" alt="Consulate-General of the People’s Republic of China in Brisbane">`;
+    onsite.appendChild(support);
+  </script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>布里斯班第 6 届新生节 · 抽奖大奖海报</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1242px; height: 1660px; overflow: hidden; }
+    body {
+      font-family: "PingFang SC", "Hiragino Sans GB", "Arial Unicode MS", Arial, sans-serif;
+      color: #12213f;
+      background: #fdf6ef;
+    }
+    .poster {
+      position: relative;
+      width: 1242px;
+      height: 1660px;
+      padding: 52px 62px 48px;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .poster::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+      background: url("./assets/prize-poster-background.png") center / cover no-repeat;
+    }
+    .poster::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background: linear-gradient(180deg, rgba(253,246,239,.93) 0%, rgba(253,246,239,.72) 31%, rgba(253,246,239,.20) 73%, rgba(18,33,63,.94) 100%);
+    }
+    .topline { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .logo { width: 220px; height: 58px; object-fit: contain; object-position: left center; }
+    .edition {
+      padding: 13px 21px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.88);
+      box-shadow: 0 12px 32px rgba(18,33,63,.13);
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: .02em;
+    }
+    .schools {
+      margin-top: 22px;
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      color: #315f9e;
+    }
+    h1 {
+      margin: 9px 0 4px;
+      max-width: 1000px;
+      font-size: 86px;
+      line-height: .98;
+      letter-spacing: -.055em;
+      font-weight: 950;
+    }
+    h1 .accent { color: #ff5f52; }
+    .promise-row { display: flex; align-items: center; gap: 15px; margin-top: 20px; }
+    .promise {
+      display: inline-flex;
+      align-items: center;
+      min-height: 52px;
+      padding: 8px 20px;
+      border-radius: 16px;
+      background: #12213f;
+      color: #fff;
+      font-size: 27px;
+      font-weight: 850;
+    }
+    .free {
+      display: inline-flex;
+      align-items: center;
+      min-height: 52px;
+      padding: 8px 19px;
+      border-radius: 16px;
+      background: #ffe15d;
+      color: #12213f;
+      font-size: 27px;
+      font-weight: 900;
+    }
+    .grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 218px;
+      gap: 16px;
+    }
+    .prize {
+      position: relative;
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid rgba(18,33,63,.10);
+      border-radius: 24px;
+      background: rgba(255,255,255,.91);
+      box-shadow: 0 15px 35px rgba(18,33,63,.16);
+    }
+    .prize.hero { grid-column: span 2; grid-row: span 2; }
+    .prize img {
+      position: absolute;
+      inset: 10px 12px 55px;
+      width: calc(100% - 24px);
+      height: calc(100% - 65px);
+      object-fit: contain;
+      filter: drop-shadow(0 10px 10px rgba(18,33,63,.12));
+    }
+    .prize.hero img { inset: 4px 18px 72px; width: calc(100% - 36px); height: calc(100% - 76px); }
+    .label {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 9px;
+      z-index: 2;
+      min-height: 43px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 7px 10px;
+      border-radius: 13px;
+      background: #12213f;
+      color: #fff;
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.12;
+      font-weight: 850;
+    }
+    .hero .label { min-height: 58px; font-size: 26px; background: #ff6255; }
+    .mini-ribbon {
+      position: absolute;
+      top: 11px;
+      left: 11px;
+      z-index: 3;
+      padding: 6px 10px;
+      border-radius: 11px;
+      background: #ffe15d;
+      font-size: 16px;
+      font-weight: 900;
+      box-shadow: 0 5px 12px rgba(18,33,63,.12);
+    }
+    .more-prizes {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.88);
+      box-shadow: 0 10px 26px rgba(18,33,63,.11);
+      font-size: 20px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .more-prizes strong { color: #ff5f52; }
+    .footer {
+      position: absolute;
+      left: 62px;
+      right: 62px;
+      bottom: 46px;
+      display: grid;
+      grid-template-columns: 1fr 250px;
+      gap: 26px;
+      align-items: end;
+      color: #fff;
+    }
+    .when {
+      margin-bottom: 9px;
+      font-size: 37px;
+      line-height: 1.18;
+      font-weight: 900;
+    }
+    .where { font-size: 24px; line-height: 1.35; font-weight: 700; }
+    .support-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .support-row span {
+      flex: 0 0 auto;
+      font-size: 16px;
+      font-weight: 800;
+      color: rgba(255,255,255,.86);
+    }
+    .support-row img {
+      width: 330px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 9px;
+      background: #fff;
+    }
+    .fine { margin-top: 15px; font-size: 16px; color: rgba(255,255,255,.78); }
+    .qr-card {
+      padding: 14px 14px 11px;
+      border-radius: 24px;
+      background: #fffdf9;
+      color: #12213f;
+      text-align: center;
+      box-shadow: 0 16px 40px rgba(0,0,0,.25);
+    }
+    .qr-card img { display: block; width: 184px; height: 184px; margin: 0 auto 7px; }
+    .qr-card strong { display: block; font-size: 24px; line-height: 1.1; }
+    .qr-card span { display: block; margin-top: 4px; font-size: 16px; font-weight: 750; color: #ff5f52; }
+  </style>
+</head>
+<body>
+  <main class="poster">
+    <div class="topline">
+      <img class="logo" src="../partner-promo-poster/assets/jr-academy-logo.svg" alt="匠人学院">
+      <div class="edition">布里斯班 · 第 6 届新生节</div>
+    </div>
+    <div class="schools">UQ · QUT · GRIFFITH</div>
+    <h1>你的抽奖券，<br><span class="accent">可以抽这些</span></h1>
+    <div class="promise-row">
+      <div class="promise">49 项奖品已公布</div>
+      <div class="free">免费报名</div>
+    </div>
+
+    <section class="grid" aria-label="本届精选抽奖奖品">
+      <article class="prize hero">
+        <span class="mini-ribbon">头号大奖</span>
+        <img src="https://jiangren.com.au/image/events/brisbane-freshers-2026-s2/notion/011-3addd76b-576d-80a4-b3cc-fe4c2a9f456a.webp" alt="DJI OSMO Pocket 3">
+        <div class="label">DJI OSMO Pocket 3 ×1</div>
+      </article>
+      <article class="prize">
+        <img src="https://jiangren.com.au/image/events/brisbane-freshers-2026-s2/notion/088-nintendo-switch-2.webp" alt="Nintendo Switch 2">
+        <div class="label">Nintendo Switch 2 ×1</div>
+      </article>
+      <article class="prize">
+        <img src="https://jiangren.com.au/image/events/brisbane-freshers-2026-s2/notion/087-dyson-v8-advanced.webp" alt="Dyson V8 Advanced">
+        <div class="label">Dyson V8 Advanced ×1</div>
+      </article>
+      <article class="prize">
+        <img src="https://jiangren.com.au/image/events/brisbane-freshers-2026-s2/notion/084-dji-neo-drone.webp" alt="DJI Neo 迷你无人机">
+        <div class="label">DJI Neo 无人机 ×1</div>
+      </article>
+      <article class="prize">
+        <img src="https://jiangren.com.au/image/events/brisbane-freshers-2026-s2/notion/080-popmart-labubu-38cm.webp" alt="LABUBU Time to Chill 38cm">
+        <div class="label">LABUBU 38cm ×1</div>
+      </article>
+      <article class="prize">
+        <img src="https://jiangren.com.au/image/events/brisbane-freshers-2026-s2/notion/083-popmart-twinkle-38cm-hd.webp" alt="泡泡玛特 38cm 大星星人">
+        <div class="label">38cm 大星星人 ×1</div>
+      </article>
+      <article class="prize">
+        <img src="https://jiangren.com.au/image/events/brisbane-freshers-2026-s2/notion/082-popmart-twinkle-series.webp" alt="泡泡玛特星星人系列公仔">
+        <div class="label">星星人系列公仔 ×6</div>
+      </article>
+      <article class="prize">
+        <img src="https://jiangren.com.au/image/events/brisbane-freshers-2026-s2/notion/089-lenovo-l24-monitor.webp" alt="Lenovo L24-4E 显示器">
+        <div class="label">Lenovo 23.8″ 显示器 ×1</div>
+      </article>
+      <article class="prize">
+        <img src="https://jiangren.com.au/image/events/brisbane-freshers-2026-s2/notion/091-ikasa-teddy-bear-120cm.webp" alt="IKASA 120cm 大号泰迪熊">
+        <div class="label">120cm 大号泰迪熊 ×1</div>
+      </article>
+    </section>
+
+    <div class="more-prizes"><strong>还有 29 项：</strong>空气炸锅 · 便携显示器 · 打印机 · 人体工学椅 · 健身季卡 · 更多生活好物</div>
+
+    <footer class="footer">
+      <div>
+        <div class="when">8月21日 周五 · 14:00–17:00</div>
+        <div class="where">Market Square · 341 Mains Rd, Sunnybank</div>
+        <div class="support-row">
+          <span>感谢支持</span>
+          <img src="../partner-promo-poster/assets/china-consulate-brisbane.webp" alt="中国驻布里斯班总领事馆">
+        </div>
+        <div class="fine">奖品与现场安排以活动页最新信息为准。抽奖轮次以活动当天现场公布为准。</div>
+      </div>
+      <div class="qr-card">
+        <img src="./assets/register-qr.png" alt="活动报名二维码">
+        <strong>扫码免费报名</strong>
+        <span>先报名，再到场抽大奖</span>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

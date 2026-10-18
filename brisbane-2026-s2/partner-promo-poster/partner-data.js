@@ -1,5 +1,6 @@
 export const event = {
   id: '6a616fb6bbc08a65e1586c71',
+  organizer: '匠人学院',
   url: 'https://jiangren.com.au/events/6a616fb6bbc08a65e1586c71',
   date: '2026-08-21',
   time: '14:00–17:00',
@@ -9,20 +10,6 @@ export const event = {
 };
 
 export const partners = [
-  {
-    slug: 'china-consulate-brisbane',
-    name: '中国驻布里斯班总领馆',
-    logo: 'assets/partners/china-consulate-brisbane.webp',
-    prizes: [
-      { catalogId: 'panda-koala-gift-pack', name: '熊猫考拉大礼包', quantity: 10, sponsor: '中国驻布里斯班总领馆' },
-    ],
-    onsiteGift: {
-      quantityLabel: '500+',
-      name: '总领馆文创小礼品',
-      items: ['考拉熊猫马克杯', '钥匙扣', '冰箱贴', '手提袋', '手账本', '各类文创用品'],
-      evidencePattern: '500+总领馆文创小礼品',
-    },
-  },
   {
     slug: 'bupa',
     name: 'Bupa',
@@ -38,7 +25,7 @@ export const partners = [
     onsiteGift: {
       quantityLabel: '500+',
       name: 'Bupa 精选礼品',
-      items: ['Bupa 健康纸巾', 'Bupa 周边圆珠笔', 'Bupa 保湿唇膏', '现场加入 Bupa 保险可享 6 周-8 周免保费优惠', '高级保温水壶'],
+      items: ['Bupa 健康纸巾', 'Bupa 周边圆珠笔', 'Bupa 保湿唇膏'],
       evidencePattern: '500+Bupa精选礼品',
     },
   },
@@ -73,43 +60,23 @@ export const partners = [
     slug: 'bank-of-china',
     name: '中国银行',
     logo: 'assets/partners/bank-of-china.webp',
-    prizes: [
-      { catalogId: 'bank-of-china-40th-thermos-set', name: '40周年保温杯套装', quantity: 1, sponsor: '中国银行', image: 'assets/prizes/bank-of-china-40th-thermos-set.jpg' },
-    ],
-    onsiteGift: {
-      quantityLabel: '500+',
-      name: '中国银行新生礼包',
-      items: ['纪念吉祥物', '手机支架', '多功能充电线', '温度/湿度计', '小米中性笔'],
-      evidencePattern: '500+中国银行新生礼包',
-    },
+    prizes: [],
   },
   {
     slug: 'mobile-connect',
-    name: 'Mobile Connect',
+    name: 'Mobile Connect（Telstra）',
     logo: 'assets/partners/mobile-connect.webp',
+    secondaryLogo: 'assets/partners/telstra.webp',
     prizes: [
-      { catalogId: 'telstra-party-speaker', name: 'Party Speaker', quantity: 1, sponsor: 'Telstra', image: 'assets/prizes/telstra-party-speaker.png' },
-      { catalogId: 'telstra-printer', name: '打印机', quantity: 1, sponsor: 'Telstra' },
+      { catalogId: 'sprout-headphones-a', name: 'SPROUT 耳机', quantity: 1, sponsor: 'Mobile Connect（Telstra）' },
+      { catalogId: 'sprout-speaker', name: 'SPROUT 音响', quantity: 1, sponsor: 'Mobile Connect（Telstra）' },
+      { catalogId: 'sprout-headphones-b', name: 'SPROUT 耳机', quantity: 1, sponsor: 'Mobile Connect（Telstra）' },
     ],
     onsiteGift: {
-      quantityLabel: '1000+',
-      name: 'Mobile Connect 礼品',
-      items: ['手机支架', '文件夹', '拓香片', '定制笔', '若干小音响'],
-      evidencePattern: '1000+Mobile Connect礼品',
-    },
-  },
-  {
-    slug: 'airbotix',
-    name: 'AirBotix',
-    logo: 'assets/partners/airbotix.png',
-    prizes: [
-      { catalogId: 'popmart-twinkle-series', name: '泡泡玛特星星人系列公仔', quantity: 2, sponsor: 'AirBotix' },
-    ],
-    onsiteGift: {
-      quantityLabel: '500+',
-      name: 'AirBotix 新生礼包',
-      items: ['马年挂件', '手提袋'],
-      evidencePattern: '500+ Airbotix 新生礼包',
+      quantityLabel: '3,000+ 及若干',
+      name: 'Mobile Connect / Telstra 礼品',
+      items: ['手机支架 ×500', '文件袋 ×1,000', '拓香片 ×500', '定制笔 ×1,000', '小音响若干'],
+      evidencePattern: '手机支架 ×500；文件袋 ×1,000；拓香片 ×500；定制笔 ×1,000；小音响若干',
     },
   },
   {
@@ -117,46 +84,41 @@ export const partners = [
     name: 'Goodlife',
     logo: 'assets/partners/goodlife.png',
     prizes: [
-      { catalogId: 'goodlife-season-pass', name: 'Goodlife 全澳通用健身季卡', quantity: 1, sponsor: 'Goodlife', image: 'assets/prizes/goodlife-season-pass-cards.jpg' },
-      { catalogId: 'sunfox-vest', name: 'Sunfox 运动背心', quantity: 1, sponsor: 'Goodlife', image: 'assets/prizes/goodlife-sunfox-vest.jpg' },
-      { catalogId: 'goodlife-fitness-bag', name: '健身包', quantity: 5, sponsor: 'Goodlife', image: 'assets/prizes/goodlife-fitness-bag.jpg' },
-      { catalogId: 'lskd-gift-card', name: 'LSKD $50 Gift Card', quantity: 2, sponsor: 'Goodlife', image: 'assets/prizes/goodlife-lskd-gift-card.jpg' },
+      { catalogId: 'goodlife-season-pass', name: '价值 $471 的 Goodlife 全澳通用健身季卡', quantity: 1, sponsor: 'Goodlife' },
+      { catalogId: null, name: '健身包', quantity: 5, sponsor: 'Goodlife', publication: 'blocked_missing_image' },
+      { catalogId: 'lskd-gift-card', name: 'LSKD $50 Gift Card', quantity: 2, sponsor: 'Goodlife' },
+      { catalogId: null, name: 'Sunfox 价值 $65 运动背心', quantity: 1, sponsor: 'Goodlife', publication: 'blocked_missing_image' },
     ],
     onsiteGift: {
-      quantityLabel: '200+',
+      quantityLabel: '300+',
       name: 'Goodlife 健身房礼品',
-      items: ['健身包', '运动水杯'],
-      evidencePattern: '200+Goodlife 健身房礼品',
+      items: ['健身礼品'],
+      evidencePattern: '300+ Goodlife 健身礼品',
     },
   },
   {
     slug: 'compass',
     name: '指南针留学移民',
     logo: 'assets/partners/compass.jpg',
-    prizes: [
-      { catalogId: 'lego-flower-bouquet', name: '乐高花束', quantity: 1, sponsor: '指南针留学移民', image: 'assets/prizes/compass-lego-flower-bouquet.jpg' },
-      { catalogId: 'dachshund-neck-pillow', name: '腊肠狗颈枕', quantity: 1, sponsor: '指南针留学移民', image: 'assets/prizes/compass-dachshund-neck-pillow.jpg' },
-      { catalogId: 'miniso-harry-potter-bear', name: '名创优品哈利波特联名小熊', quantity: 1, sponsor: '指南针留学移民', image: 'assets/prizes/compass-miniso-harry-potter-bear.jpg' },
-    ],
+    prizes: [],
+    prizeClassification: 'pending_gift_raffle_split',
     onsiteGift: {
-      quantityLabel: '800+',
+      quantityLabel: '800+ 帆布袋及其他礼品',
       name: '指南针礼品',
-      items: ['帆布袋', '卡套鸭子气球', '水杯', '冬季润唇膏', 'UNO', '冰箱贴', '精美玩偶', 'LED 霓虹灯'],
-      evidencePattern: '800+指南针礼品',
+      items: ['帆布袋 ×800+', '卡套鸭子气球 ×100+', '水杯 ×100+', '冬季润唇膏 ×50+', 'UNO ×50+', '冰箱贴 ×50+', '精美玩偶若干', 'LED 霓虹灯若干'],
+      evidencePattern: '指南针当前礼品与抽奖合并清单；归属待拆分',
     },
   },
   {
     slug: 'sol',
     name: '思安留学移民',
     logo: 'assets/partners/sol.jpg',
-    prizes: [
-      { catalogId: 'jbl-grip-speaker', name: 'JBL Grip Compact Portable Speaker with Ambient Light (Black)', quantity: 1, sponsor: '思安留学移民', image: 'assets/prizes/sol-jbl-grip-speaker.png' },
-    ],
+    prizes: [],
     onsiteGift: {
       quantityLabel: '800+',
       name: '思安留学新生礼包',
-      items: ['Mini 小风扇', '逢考必过钥匙扣', '摇摇杯', '考拉文件夹', '笔记本'],
-      evidencePattern: '800+思安留学新生礼包',
+      items: ['Mini 小风扇', '逢考必过钥匙扣', '摇摇杯', '考拉文件夹', '笔记本等'],
+      evidencePattern: '800+ 思安留学新生礼包',
     },
   },
   {
@@ -165,10 +127,10 @@ export const partners = [
     logo: 'assets/partners/luggeasy.png',
     prizes: [],
     onsiteGift: {
-      quantityLabel: '300+',
+      quantityLabel: '500+',
       name: 'LuggEasy 新生礼品',
       items: ['LuggEasy 专属定制行李识别牌'],
-      evidencePattern: '300+Luggeasy新生礼品',
+      evidencePattern: '500+Luggeasy新生礼品',
     },
   },
   {
@@ -176,10 +138,10 @@ export const partners = [
     name: 'UQ 手工艺术俱乐部',
     logo: 'assets/partners/uqhac.webp',
     prizes: [
+      { catalogId: 'uqhac-crystal-bracelet', name: '手作水晶／珍珠手链', quantity: 3, sponsor: 'UQ 手工艺术俱乐部' },
+      { catalogId: 'uqhac-pearl-necklace', name: '手作珍珠项链', quantity: 2, sponsor: 'UQ 手工艺术俱乐部' },
       { catalogId: 'uqhac-membership', name: 'UQ 手工艺术俱乐部一年会员', quantity: 5, sponsor: 'UQ 手工艺术俱乐部' },
-      { catalogId: 'uqhac-handmade-crystal-pearl-bracelet', name: '手作水晶/珍珠手链', quantity: 3, sponsor: 'UQ 手工艺术俱乐部' },
-      { catalogId: 'uqhac-handmade-pearl-necklace', name: '手作珍珠项链', quantity: 2, sponsor: 'UQ 手工艺术俱乐部' },
-      { catalogId: 'uqhac-craft-material-kit', name: '手工材料包', quantity: 2, sponsor: 'UQ 手工艺术俱乐部' },
+      { catalogId: null, name: '手工材料包', quantity: 2, sponsor: 'UQ 手工艺术俱乐部', publication: 'blocked_missing_image' },
     ],
     onsiteGift: {
       quantityLabel: '300+',
@@ -190,44 +152,67 @@ export const partners = [
   },
   {
     slug: 'uqcssa',
-    name: 'UQCSSA',
+    name: 'UQ CSSA',
     logo: 'assets/partners/uqcssa.webp',
     prizes: [],
     onsiteGift: {
-      quantityLabel: '300+',
-      name: 'UQCSSA 新生大礼包',
+      quantityLabel: 'unavailable',
+      name: 'UQ CSSA 礼品',
       items: ['精美发饰', '发箍', '手机壳', '收纳包', '数据线', '手机支架'],
-      evidencePattern: '300+UQCSSA新生大礼包',
+      evidencePattern: 'UQ CSSA 当前礼品清单；数量 unavailable',
     },
   },
   {
     slug: 'dealmoon',
-    name: '澳新省钱快报',
+    name: 'DealMoon 澳新省钱快报',
     logo: 'assets/partners/dealmoon.webp',
     prizes: [
-      { catalogId: 'dealmoon-ergonomic-chair', name: '人体工学椅', quantity: 1, sponsor: '澳新省钱快报', image: 'assets/prizes/dealmoon-ergonomic-chair.png' },
-      { catalogId: 'dealmoon-keyboard-tray', name: '键盘托', quantity: 1, sponsor: '澳新省钱快报', image: 'assets/prizes/dealmoon-keyboard-tray.png' },
-      { catalogId: 'dealmoon-work-study-foot-mat', name: '工作学习脚垫', quantity: 1, sponsor: '澳新省钱快报', image: 'assets/prizes/dealmoon-work-study-foot-mat.png' },
+      { catalogId: 'dealmoon-flexispot-ergonomic-chair', name: 'FlexiSpot 人体工学椅', quantity: 1, sponsor: 'DealMoon 澳新省钱快报' },
+      { catalogId: 'dealmoon-keyboard-tray', name: '键盘托架', quantity: 1, sponsor: 'DealMoon 澳新省钱快报' },
+      { catalogId: 'dealmoon-office-standing-mat', name: '办公学习脚垫', quantity: 1, sponsor: 'DealMoon 澳新省钱快报' },
     ],
     onsiteGift: {
       quantityLabel: '800+',
-      name: '澳新省钱快报新生专属礼包',
-      items: ['城市限定透卡（2 款）', '可爱擦手巾', '小月亮折叠购物袋', 'tote 包', '小零食', '饮料'],
-      evidencePattern: '800+ DealMoon澳新',
+      name: 'DealMoon 澳新省钱快报新生专属礼包',
+      items: ['城市限定透卡（2款）', '可爱擦手巾', '小月亮折叠购物袋', 'Tote 包', '小零食', '饮料等'],
+      evidencePattern: '800+ DealMoon 澳新新生专属礼包',
     },
-  },
-  {
-    slug: 'haidilao',
-    name: '海底捞',
-    logo: 'assets/partners/haidilao.webp',
-    prizes: [
-      { catalogId: 'haidilao-50-voucher', name: '海底捞 $50 代金券', quantity: 5, sponsor: '海底捞', image: 'assets/prizes/haidilao-50-voucher.jpg' },
-    ],
   },
   {
     slug: 'yeeyi',
     name: '亿忆网',
     logo: 'assets/partners/yeeyi.webp',
+    prizes: [],
+  },
+  {
+    slug: 'airbotix',
+    name: 'Airbotix',
+    logo: 'assets/partners/airbotix.svg',
+    prizes: [
+      {
+        catalogId: 'dyson-v8-advanced',
+        name: 'Dyson V8 Advanced 吸尘器＋车用清洁套装',
+        quantity: 1,
+        sponsor: 'Airbotix',
+      },
+    ],
+    onsiteGift: {
+      quantityLabel: 'unavailable',
+      name: 'Airbotix 礼品',
+      items: ['小马玩偶'],
+      evidencePattern: 'Airbotix 小马玩偶；数量 unavailable',
+    },
+  },
+  {
+    slug: 'haidilao',
+    name: '海底捞',
+    logo: null,
+    prizes: [],
+  },
+  {
+    slug: 'acya',
+    name: 'ACYA 中澳青年联合会',
+    logo: null,
     prizes: [],
   },
 ];
