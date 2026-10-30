@@ -1,0 +1,47 @@
+{
+  "id": "driver-off-duty-full-v2",
+  "task_id": "cgt-20260813212645-99pcb",
+  "model": "doubao-seedance-2-5-260628",
+  "video": "driver-off-duty-full-v2.mp4",
+  "last_frame": "driver-off-duty-full-v2-last-frame.jpg",
+  "request": {
+    "model": "ep-20260812221158-hb576",
+    "content": [
+      {
+        "type": "text",
+        "text": "竖屏9:16，15秒，一条完整连续的TikTok手机偷拍视频风格短片。虚构演员：同一辆普通白色右舵网约面包车；同一位在澳洲生活的印度裔中年男司机，灰鬓短发、整洁盐胡、深海军蓝Polo、全程冷静死脸；同一位穿奶油色连帽衫、背黑色双肩包的亚裔男新生。地点是布里斯班暖阳下有砂岩建筑和棕榈树的校园路边。保持人物、服装、车辆、光线和空间关系完全连续。\n\n对白必须逐句说完，每个角色只说分配给自己的台词，不得改词、合并、重复或翻译：\n0.0-1.0秒：学生拉开侧门，真实车门把手声。\n1.0-2.3秒：学生问英文：\"UQ?\" 司机低沉短答：\"No.\"\n2.3-3.8秒：学生问：\"QUT?\" 司机短答：\"No.\"\n3.8-5.3秒：学生问：\"Griffith?\" 司机短答：\"No.\" 每个No后留0.25秒安静停顿。\n5.3-7.2秒：学生困惑问：\"Where then?\"\n7.2-8.8秒：司机仍然不笑，抬起亮青黄色抽象活动腕带，只说：\"Freshers Festival.\"\n8.8-12.5秒：面包车侧滑门伴随清晰机械声完全打开，镜头略后退。车内挤着六位兴奋的亚洲留学生、彩色礼品袋和一只巨大泰迪熊。一位后排学生伸手，用兴奋但清楚的中文只喊：\"上车！\" 随后所有人短促欢呼和大笑，司机依然死脸。\n12.5-15.0秒：奶油色连帽衫学生愣住半秒后向车内迈一步，镜头因拍摄者笑而轻微抖动。画外年轻中文女声在音乐降低后，缓慢清楚地只说：\"布－里－斯－班，新生节。\" “班”必须是班级的班，绝不能说成“本”。说完留0.5秒纯音乐收尾。\n\n声音设计：真实校园环境声；开头非常轻的干燥拨弦喜剧节拍，每个No后音乐也停顿；腕带出现时一个很轻的木质点音；侧滑门机械声清晰，门打开后进入轻快克制的青年节奏，配合车内一秒欢呼；对白与旁白始终高于音乐。司机使用自然、克制的印度裔澳洲男性英语声线，不夸张口音，不模仿，不用印度音乐或刻板音效。\n\n禁止字幕、屏幕文字、学校Logo、品牌Logo、二维码、水印、旁白提前解释、广告级稳定器、慢动作、魔法特效、车辆变形、司机换脸、复制脸、手指畸形、空间穿帮、商品目录感。笑点只来自司机始终死脸与车门打开后满车新生、礼品和大熊的反差。"
+      }
+    ],
+    "resolution": "720p",
+    "duration": 15,
+    "generate_audio": true,
+    "watermark": false,
+    "return_last_frame": true
+  },
+  "result": {
+    "id": "cgt-20260813212645-99pcb",
+    "model": "doubao-seedance-2-5-260628",
+    "status": "succeeded",
+    "content": {
+      "video_url": "https://ark-acg-cn-beijing.tos-cn-beijing.volces.com/doubao-seedance-2-5/2129380310/Video/bcp99-54621231806202-tgc_bf98f6886a51caffff00000000000000000000215506726687120/cgt-20260813212645-99pcb.mp4",
+      "last_frame_url": "https://ark-acg-cn-beijing.tos-cn-beijing.volces.com/doubao-seedance-2-5/2129380310/Image/bcp99-54621231806202-tgc_bf98f6886a51caffff00000000000000000000215506726687120/cgt-20260813212645-99pcb.jpeg"
+    },
+    "usage": {
+      "completion_tokens": 324900,
+      "total_tokens": 324900
+    },
+    "created_at": 1786627605,
+    "updated_at": 1786627752,
+    "seed": 97859,
+    "resolution": "720p",
+    "ratio": "9:16",
+    "duration": 15,
+    "framespersecond": 24,
+    "service_tier": "default",
+    "execution_expires_after": 172800,
+    "generate_audio": true,
+    "draft": false,
+    "priority": 0,
+    "output_format": "mp4"
+  }
+}

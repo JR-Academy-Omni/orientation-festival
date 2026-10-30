@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html><head></head><body><template>
+  <style>
+    @font-face { font-family: "Hiragino Sans GB"; src: url("assets/fonts/hiragino-sans-gb.ttc") format("truetype"); font-weight: 300 900; }
+    #root { position:absolute; inset:0; width:1080px; height:1920px; overflow:hidden; background:#071921; color:#fff; font-family:"Hiragino Sans GB",sans-serif; }
+    .photo { position:absolute; inset:-45px; width:1170px; height:2010px; object-fit:cover; filter:saturate(.82) contrast(1.04) brightness(.72); }
+    .shade { position:absolute; inset:0; background:linear-gradient(180deg,rgba(7,25,33,.9) 0%,rgba(7,25,33,.18) 39%,rgba(7,25,33,.08) 61%,rgba(7,25,33,.78) 100%); }
+    .eyebrow { position:absolute; top:132px; left:78px; font:900 27px/1 Inter,sans-serif; letter-spacing:.18em; color:#d6ff67; }
+    .copy { position:absolute; top:218px; left:72px; width:900px; font-size:90px; font-weight:900; line-height:1.08; letter-spacing:-.04em; text-shadow:0 5px 32px rgba(7,25,33,.5); }
+    .copy span { color:#43dde6; }
+    .small { position:absolute; left:78px; bottom:116px; font-size:31px; font-weight:700; letter-spacing:.02em; color:#f5fff9; opacity:.86; }
+    .line { position:absolute; left:78px; top:184px; width:62px; height:7px; border-radius:9px; background:#ff7866; transform-origin:left center; }
+  </style>
+  <div data-hf-id="hf-yhun" id="root" data-composition-id="scene-alone" data-width="1080" data-height="1920" data-duration="5.5">
+    <img data-hf-id="hf-7z6b" class="photo" data-layout-allow-overflow="" src="assets/images/01-alone.png" alt="">
+    <div data-hf-id="hf-q0n7" class="shade"></div><div data-hf-id="hf-np12" class="line"></div>
+    <div data-hf-id="hf-0a3u" class="eyebrow">NEW TO BRISBANE</div>
+    <div data-hf-id="hf-qaxv" class="copy">来布里斯班<br data-hf-id="hf-x5px">两周了，<br data-hf-id="hf-rsrt"><span data-hf-id="hf-i2j7">通讯录还是空的？</span></div>
+    <div data-hf-id="hf-yg6v" class="small">一个人的安静，有时也会变成犹豫。</div>
+  </div>
+  <script>
+    window.__timelines=window.__timelines||{}; const tl=gsap.timeline({paused:true});
+    tl.fromTo('.photo',{scale:1.08,x:-10,y:18},{scale:1.015,x:10,y:-12,duration:5.5,ease:'none'},0)
+      .fromTo('.line',{scaleX:0},{scaleX:1,duration:.45,ease:'power3.out'},.28)
+      .fromTo('.eyebrow',{opacity:0,y:18,filter:'blur(12px)'},{opacity:1,y:0,filter:'blur(0px)',duration:.7,ease:'power3.out'},.38)
+      .fromTo('.copy',{opacity:0,y:54,filter:'blur(24px)'},{opacity:1,y:0,filter:'blur(0px)',duration:1.05,ease:'power3.out'},.7)
+      .fromTo('.small',{opacity:0,y:22},{opacity:.86,y:0,duration:.8,ease:'power2.out'},2.1);
+    window.__timelines['scene-alone']=tl;
+  </script>
+</template></body></html>

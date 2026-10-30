@@ -1,0 +1,47 @@
+{
+  "id": "driver-off-duty-full",
+  "task_id": "cgt-20260813211032-b279v",
+  "model": "doubao-seedance-2-5-260628",
+  "video": "driver-off-duty-full.mp4",
+  "last_frame": "driver-off-duty-full-last-frame.jpg",
+  "request": {
+    "model": "ep-20260812221158-hb576",
+    "content": [
+      {
+        "type": "text",
+        "text": "竖屏9:16，12秒，一条完整连续的TikTok手机偷拍视频风格短片。严格保持所有参考图中的同一辆白色右舵网约面包车、同一位印度裔澳洲中年司机（灰鬓短发、整洁盐胡、深海军蓝Polo、全程冷静死脸）、同一位穿奶油色连帽衫背黑色双肩包的亚裔新生、同一处布里斯班暖阳砂岩校园路边。参考图依次定义开门对视、连续询问、司机亮腕带、车门完全打开的最终反转。不得改变人物身份、服装、车辆、光线和空间关系。\n\n时间线与对白必须严格按角色执行：\n0.0-0.7秒：学生拉开侧门，司机无表情回头。只有真实车门把手声、远处鸟声和轻微道路环境声。\n0.7-2.0秒：学生用自然年轻男声、轻微澳洲留学生语气问英文：\"UQ?\" 司机用低沉克制的印度裔澳洲男性英文声线回答：\"No.\" 不夸张口音，不模仿，不做文化笑点。\n2.0-4.3秒：学生快速追问：\"QUT? Griffith?\" 司机配合两个极小摇头，短促回答：\"No. No.\" 镜头轻微手持推进，保留尴尬停顿。\n4.3-6.5秒：学生困惑问：\"Then where are you going?\" 司机仍完全不笑，抬起亮青黄色活动腕带，平静说：\"Brisbane Freshers Festival.\" 腕带只做抽象波浪和爆发图案，不生成文字或Logo。\n6.5-9.8秒：白色面包车侧滑门伴随清晰机械滑开声完全打开。镜头略后退，严格转为最终参考图：车内挤着六位兴奋的亚洲留学生、彩色礼品袋和一只巨大泰迪熊。一位后排学生伸手，用自然兴奋的中文喊：\"你上不上？就差你了！\" 其他人同时发出短促真实欢呼和笑声，司机依然死脸。\n9.8-12.0秒：奶油色连帽衫学生愣住半秒，随后向车内迈一步；镜头因拍摄者笑而轻微抖动，定格在司机死脸与后排狂欢同框的视觉反差。画外一位年轻中文女声只说一句收尾旁白：\"布里斯班新生节，今天谁还接单？\"\n\n声音设计：开头只有环境声和非常轻的干燥拨弦节拍，不能压住对白；每次No之后音乐都短暂停一下；腕带亮出时加入很轻的木鱼式喜剧点音；滑门打开时低频上扬，随后音乐才进入轻快但克制的青年节奏，结尾用一个短促收束音。对白必须清晰、角色声线稳定、口型与说话者同步；司机是尊重且真实的印度裔澳洲日常形象，绝不使用夸张印度音乐、口音模仿或刻板音效。\n\n禁止：字幕、屏幕文字、学校Logo、品牌Logo、二维码、水印、旁白提前解释反转、广告级稳定器、电影慢动作、魔法特效、车辆变形、司机换脸、复制人脸、手指畸形、车内空间穿帮、礼品像商品目录、过度背景音乐、所有人一直喊叫。成片必须像学生偶然拍到的真实短视频，笑点来自司机始终死脸与满车新生的反差。"
+      }
+    ],
+    "resolution": "720p",
+    "duration": 12,
+    "generate_audio": true,
+    "watermark": false,
+    "return_last_frame": true
+  },
+  "result": {
+    "id": "cgt-20260813211032-b279v",
+    "model": "doubao-seedance-2-5-260628",
+    "status": "succeeded",
+    "content": {
+      "video_url": "https://ark-acg-cn-beijing.tos-cn-beijing.volces.com/doubao-seedance-2-5/2129380310/Video/v972b-23011231806202-tgc_5e2b8b07a541caffff00000000000000000000794236626687120/cgt-20260813211032-b279v.mp4",
+      "last_frame_url": "https://ark-acg-cn-beijing.tos-cn-beijing.volces.com/doubao-seedance-2-5/2129380310/Image/v972b-23011231806202-tgc_5e2b8b07a541caffff00000000000000000000794236626687120/cgt-20260813211032-b279v.jpeg"
+    },
+    "usage": {
+      "completion_tokens": 260100,
+      "total_tokens": 260100
+    },
+    "created_at": 1786626632,
+    "updated_at": 1786626763,
+    "seed": 89789,
+    "resolution": "720p",
+    "ratio": "9:16",
+    "duration": 12,
+    "framespersecond": 24,
+    "service_tier": "default",
+    "execution_expires_after": 172800,
+    "generate_audio": true,
+    "draft": false,
+    "priority": 0,
+    "output_format": "mp4"
+  }
+}

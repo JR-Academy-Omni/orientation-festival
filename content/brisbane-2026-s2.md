@@ -6,7 +6,7 @@ sot_type: event
 title: 2026 S2 布里斯班新生节招商企划内部存档
 ---
 
-# 2026 S2 布里斯班三校新生节 — 商家合作招商企划（内部存档）
+# 2026 S2 布里斯班新生节 — 商家合作招商企划（内部存档）
 
 > 内部存档参考，**不对外发布**。含报价、私人联系方式与内部宣传策略，禁止直接外发。
 > 来源：本届内容沿用 [`brisbane-2026-s1-pages.md`](./brisbane-2026-s1-pages.md)（Canva `DAGlgc1Y288` · 2026 S1 合作手册 38 页）为蓝本，**对外口径已改 2026 S2**。
@@ -16,7 +16,7 @@ title: 2026 S2 布里斯班新生节招商企划内部存档
 
 | 项目 | 内容 |
 |------|------|
-| 活动名称 | 匠人学院 2026 S2 布里斯班三校新生节 |
+| 活动名称 | 匠人学院 2026 S2 布里斯班新生节 |
 | 时间 | **待定** — S2 开学季（约 2026 年 7–8 月）｜S1 为 2026-02-28（周六）10am–2pm，仅作时长参考 |
 | 地点 | **待复核** — S1 为 Ithaca Auditorium, Brisbane City Hall（64 Adelaide St, Brisbane City 4000；原稿笔误「Auditrium」） |
 | 预计参与人数 | 约 1000 人，布里斯班三校新生 |
@@ -37,6 +37,18 @@ title: 2026 S2 布里斯班新生节招商企划内部存档
 
 **吸引新生的亮点**
 - 免费礼品：现场可领多种免费礼品，提升到场吸引力
+- 抽奖大奖（2026-08-07 确认，均为泡泡玛特、匠人学院提供；⚠️ 星星人是**两个独立奖项**，38cm 不含在系列 6 个内）：
+  - 「星星人 Twinkle Twinkle Be a Little Star」系列公仔 ×6
+  - **38cm 大星星人（烘焙师造型）×1**（单独一档大奖）
+  - **LABUBU「Time to Chill」搪胶毛绒 38cm** ×1
+  - 图片资产：`brisbane-2026-s2-merchants/assets/popmart-twinkle-series.webp` + `popmart-twinkle-38cm.webp` + `popmart-labubu-38cm.webp`（中英 merchants deck 各新增第 06 页「泡泡玛特大奖」展示）
+  - 官网活动页（主阵地）：`jr-academy-web-zh` `src/content/events/brisbane-freshers-2026-s2/lottery-prizes.json`，精选排序 DJI（最贵，恒定第一）→ Dyson V8 → DJI Neo → LABUBU → 38cm 大星星人 → 星星人系列
+- 大奖追加（2026-08-07 第二批，均匠人学院提供，已上线）：Dyson V8 Advanced 吸尘器+车用清洁套装 ×1、DJI Neo 迷你无人机 ×1、Russell Hobbs 7L 慢炖锅 ×1、TUUMIIST 冷压慢磨榨汁机 ×1（官网奖品目录共 45 项）
+- 大奖追加（2026-08-08 第三批，均匠人学院提供，数量已确认 = 各 ×1）：
+  - Lenovo L24-4E 23.8″ FHD 显示器 ×1（与已有的「华硕 23.8 寸显示器」是两台独立奖品）
+  - MagicRaven 15.6″ 便携显示器 ×1（Full HD IPS + HDR，570g / 5mm）
+  - IKASA 120cm 大号泰迪熊 ×1（与已有的「UQ 毕业泰迪熊」「MINISO 小熊玩偶」是不同奖品）
+  - 图片资产：`brisbane-2026-s2-merchants/assets/lenovo-l24-monitor-24in.webp` + `magicraven-portable-monitor-15in.webp` + `ikasa-teddy-bear-120cm.webp`（中英 merchants deck 各新增第 07 页「数码大奖」展示，原第 07 页起顺延）
 - 互动活动：多种趣味互动环节，提升参与度与现场氛围
 - 实用信息：提供布里斯班本地生活与学习实用信息，助新生快速适应
 

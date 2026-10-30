@@ -1,0 +1,5 @@
+sot_root: true
+sot_type: translation
+parent: orientation-festival/sydney-2026-s2-v2
+title: 悉尼新生节 · University Edition · English
+docs: design.md, ../content/sydney-sponsor-decks-sot.md, ../content/sydney-2026-s2-prd.md

@@ -1,6 +1,6 @@
 ---
 sot_doc: true
-sot: orientation-festival/sydney-2026-s2
+sot: orientation-festival/sydney-2026-s2-v2
 sot_role: legacy-page-archive
 sot_type: event
 title: 2026 S1 悉尼四校新生节逐页文字存档

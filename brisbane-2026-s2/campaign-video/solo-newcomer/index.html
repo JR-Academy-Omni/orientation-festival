@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Hiragino Sans GB"; src: url("assets/fonts/hiragino-sans-gb.ttc") format("truetype"); font-weight: 300 900; }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #000;
+      }
+      body { font-family: "Hiragino Sans GB", "Inter", sans-serif; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #071921; }
+      .scene { position: absolute; inset: 0; width: 1080px; height: 1920px; }
+      .flash { position: absolute; inset: 0; background: #ffd6a3; opacity: 0; mix-blend-mode: screen; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-cp53" id="root" data-composition-id="main" data-start="0" data-duration="25" data-width="1080" data-height="1920" data-fps="30">
+      <div data-hf-id="hf-d5ay" id="scene-alone" class="scene" data-composition-id="scene-alone" data-composition-src="compositions/01-alone.html" data-start="0" data-duration="5.5" data-track-index="1" data-width="1080" data-height="1920"></div>
+      <div data-hf-id="hf-p3aa" id="scene-step-out" class="scene" data-composition-id="scene-step-out" data-composition-src="compositions/02-step-out.html" data-start="5.5" data-duration="5" data-track-index="1" data-width="1080" data-height="1920"></div>
+      <div data-hf-id="hf-6ioz" id="scene-meet" class="scene" data-composition-id="scene-meet" data-composition-src="compositions/03-meet.html" data-start="10.5" data-duration="7" data-track-index="1" data-width="1080" data-height="1920"></div>
+      <div data-hf-id="hf-lmz7" id="scene-cta" class="scene" data-composition-id="scene-cta" data-composition-src="compositions/04-cta.html" data-start="17.5" data-duration="7.5" data-track-index="1" data-width="1080" data-height="1920"></div>
+      <div data-hf-id="hf-0tgz" id="flash-one" class="clip flash" data-start="5.18" data-duration="0.62" data-track-index="8"></div>
+      <div data-hf-id="hf-wwrn" id="flash-two" class="clip flash" data-start="10.18" data-duration="0.62" data-track-index="8"></div>
+      <audio data-hf-id="hf-p2a7" id="decision-whoosh" src=".media/audio/sfx/sfx_001.mp3" data-start="5.18" data-volume="0.28"></audio>
+      <audio data-hf-id="hf-xukj" id="final-chime" src=".media/audio/sfx/sfx_002.mp3" data-start="18.05" data-volume="0.3"></audio>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#flash-one", { opacity: 0 }, { opacity: 0.68, duration: 0.18, yoyo: true, repeat: 1, ease: "power2.inOut" }, 5.18);
+      tl.fromTo("#flash-two", { opacity: 0 }, { opacity: 0.58, duration: 0.18, yoyo: true, repeat: 1, ease: "power2.inOut" }, 10.18);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

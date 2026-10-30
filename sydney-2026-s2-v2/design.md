@@ -3,16 +3,16 @@ sot_doc: true
 sot: orientation-festival/sydney-2026-s2-v2
 sot_role: city-event-design
 sot_type: event
-title: Sydney Orientation Festival Sponsor Deck · 2026 S2
+title: Sydney Freshers Festival · University Edition Sponsor Deck · 2026 S2
 ---
 
-# 悉尼新生节招商 deck · 视觉与结构真相源
+# 悉尼新生节 · University Edition 视觉与结构真相源
 
 本文件对应 `sydney-2026-s2-v2/` 这套全新重做的悉尼招商 deck。
 
 ## 项目目标
 
-这套 deck 不是沿用旧 GitHub 版本修补，而是重新组织信息与视觉语言，服务两个目标：
+这套 deck 是“悉尼新生节”的大学版 Sponsor Deck。公共活动名不包含大学名称；`University Edition` 只作内部版本识别。它服务两个目标：
 
 - 对外看起来更专业，适合招商沟通、品牌提案和会面展示。
 - 保留新生节的活力感，不做成传统企业路演 PPT。
@@ -22,7 +22,7 @@ title: Sydney Orientation Festival Sponsor Deck · 2026 S2
 - 悉尼城市感
 - 招商专业度
 - 开学季活力
-- 四校集中流量
+- 大学新生场景；高校名单只在受众分析页出现
 - Sydney Town Hall 场地价值
 
 ## 视觉方向
@@ -63,10 +63,11 @@ title: Sydney Orientation Festival Sponsor Deck · 2026 S2
 
 ## 内容原则
 
-- 明确写死用户给定信息：`8 月 28 日`、`Sydney Town Hall`
+- 已确认场次信息使用 `2026 年 9 月 26 日`、`Sydney Town Hall`；旧稿的 8 月日期不再使用
 - 招商文案先讲场景价值，再讲主办方能力
 - 尽量避免空泛口号，优先写成可销售的句子
 - 往期数据统一用“匠人学院新生节往期综合口径”，避免串成其他城市
+- 大学版数据不得用于证明 Local Schools Edition 的人数、家长覆盖或转化
 
 ## 组件约定
 

@@ -85,7 +85,7 @@ window.PARTNERS = [
     prizes: [
       {
         catalogId: 'tuf-be6500-router',
-        catalogSponsor: '澳世网络',
+        catalogSponsor: 'ASUS',
         name: 'TUF-BE6500 路由器',
         quantity: 1,
         image: 'assets/prizes/occom-router.webp',
@@ -194,6 +194,17 @@ window.PARTNERS = [
       evidencePattern: '800+ICE U新生礼包',
     },
   },
+  {
+    slug: 'molly-tea',
+    name: '茉莉奶白',
+    logo: 'assets/partners/molly-tea.jpg',
+    onsiteGift: {
+      quantityLabel: '200 杯',
+      name: '茉莉奶白花香茶饮福利',
+      items: ['茉莉奶白 100 杯', '白兰金萱 100 杯'],
+      evidencePattern: '200 杯茉莉奶白花香茶饮福利',
+    },
+  },
   { slug: 'jobpin-ai', name: 'JobPin AI', logo: 'assets/partners/jobpin-ai.webp' },
   {
     slug: 'haidilao',
@@ -225,11 +236,34 @@ window.PARTNERS = [
     onsiteGift: {
       quantityLabel: '300+',
       name: '玩咖玩乐馆新生礼包',
-      items: ['熊猫冰箱贴', '传统文化节Ins框', '玩咖玩乐馆代金券', '古风市集通票门票', '古风市集第二场门票'],
+      items: ['熊猫冰箱贴', '传统文化节Ins框', '玩咖玩乐馆代金券'],
       evidencePattern: '300+玩咖玩乐馆新生礼包',
     },
   },
   { slug: 'yeeyi', name: '亿忆网', logo: 'assets/partners/yeeyi.webp' },
+  {
+    slug: 'alipay-study-payment',
+    name: '支付宝留学缴费',
+    logo: 'assets/partners/alipay-study-payment.svg',
+    prizes: [
+      {
+        catalogId: 'alipay-pop-mart-crybaby-pink',
+        catalogSponsor: '支付宝留学缴费',
+        name: '泡泡玛特哭娃粉色款',
+        quantity: 1,
+        image: 'assets/prizes/alipay-crybaby-pink.png',
+      },
+      {
+        catalogId: 'alipay-pop-mart-crybaby-black',
+        catalogSponsor: '支付宝留学缴费',
+        name: '泡泡玛特哭娃黑色款',
+        quantity: 1,
+        image: 'assets/prizes/alipay-crybaby-black.png',
+      },
+    ],
+  },
+  { slug: 'seventeen-club', name: '17 社', logo: 'assets/partners/seventeen-club.jpg' },
+  { slug: 'monash-chinese-debate', name: '莫纳什中文辩论社', logo: 'assets/partners/monash-chinese-debate.jpg' },
   {
     slug: 'umvc',
     name: '墨尔本创投社',
@@ -275,5 +309,19 @@ window.PARTNERS = [
       items: ['定制钥匙链', 'Logo 周边', '冰箱贴', '零食礼包'],
       evidencePattern: '100+ 蒙纳士中国学生会 MCSA 新生礼包',
     },
+  },
+  {
+    slug: 'lmile',
+    name: 'LMILE',
+    logo: 'assets/partners/lmile.png',
+    prizes: [
+      {
+        catalogId: 'lmile-lululemon-bottle',
+        catalogSponsor: 'LMILE',
+        name: 'Lululemon 水杯',
+        quantity: 2,
+        image: 'assets/prizes/lmile-lululemon-bottles-card.png',
+      },
+    ],
   },
 ];

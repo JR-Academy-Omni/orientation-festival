@@ -4,7 +4,7 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 
 ## What this is
 
-匠人学院（JR Academy）多城「大学新生节」**商家招商 deck** 仓库 —— 2026-06 从 `jr-wiki` 抽离独立。
+匠人学院（JR Academy）多城「新生节」**Sponsor Deck** 仓库 —— 2026-06 从 `jr-wiki` 抽离独立。公共活动品牌不绑定学校；Sponsor proposition 可按大学新生或 Local Schools 家庭受众拆分。
 新生节相关的一切（可播放 deck + 各城内容源 + 视觉规范）以**本 repo 为唯一真相源**，不要再在 jr-wiki 或别处留并行副本。
 
 纯静态站点：没有 build / lint / test / package.json。
@@ -14,9 +14,11 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 新生节是**活动内容 SoT**，不是课程产品；不要给它补课程页、course slug 或 program 关联。
 
 - 根 SoT：`orientation-festival`（`_sot.yml`，活动总线）
-- 城市场次 SoT：`orientation-festival/{city}-{term}`（如 `sydney-2026-s2`，`parent: orientation-festival`）
+- 城市 / 受众 SoT：`orientation-festival/{city}-{edition}`；已有线上路径保持兼容，例如 University canonical 仍为 `sydney-2026-s2-v2`
 - 可播放 PPT/deck：`{city}-{term}/index.html`，作为 `landing`/页面产物挂到对应城市场次 SoT
 - 可发送 PDF：`pdf-output/{city}-{term}.pdf`，作为 `pdf` 产物挂到对应城市场次 SoT
+
+悉尼必须遵守 `content/sydney-sponsor-decks-sot.md`：University Edition 与 Local Schools Edition 数据隔离；英文版只是 University 的翻译；`sydney-2026-s2/` 只作兼容入口。
 
 改完 deck 或重新生成 PDF 后，在 `jr-omni` 根目录跑：
 
@@ -69,13 +71,15 @@ python3 -m http.server 8000                     # 然后访问 http://localhost:
 - **每页固定真 v2 logo**：内容页右上黑标 `assets/logo-zh.svg`、hero·photobg 左上白标 `assets/logo-zh-white.png`，`:has()` 自动切换。
 - 每个 HTML `<head>` 必须保留 `<meta name="robots" content="noindex, nofollow">`。
 
-## 新增一座城市的 deck
+## 新增一座城市或受众版本的 deck
 
 1. `cp -r melbourne-2026-s2/ {city}-{term}/`
-2. 用 `content/{city}-{term}-pages.md` 的逐页文字替换 deck 文案
+2. 先建立独立 PRD / SoT，再替换 deck 文案；不得从其他受众复制人数、合作学校或转化数据
 3. 只改 `styles.css` 顶部 `--accent*` / `--blue*` 城市主题色块
 4. 在根 `index.html` 加一张城市卡片入口
 5. 更新该 deck 的 `design.md`，使其与实现一致
+
+Local Schools 版本额外要求：parent / guardian 为报名和 Sponsor opt-in 主体；学校名称、校徽、日期、场地、容量与价格无书面确认即保持 `TBD`；不得把未成年人名单作为 Sponsor 权益。
 
 ## 🚨 隐私红线（决定本 repo 为何私有 + 如何部署）
 

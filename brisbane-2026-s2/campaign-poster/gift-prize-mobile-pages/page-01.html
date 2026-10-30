@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1080, initial-scale=1" />
+  <title>布里斯班新生节 · 礼品图鉴 01</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; }
+    body {
+      color: #12213f;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: #fdf6ef;
+    }
+    .poster {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #fdf6ef url("assets/page-01/brisbane-display-background.png") center / cover no-repeat;
+    }
+    .poster::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(253,246,239,.18) 0%, rgba(253,246,239,.02) 45%, rgba(18,33,63,.08) 100%);
+      pointer-events: none;
+    }
+    .header {
+      position: relative;
+      z-index: 2;
+      height: 326px;
+      padding: 44px 58px 20px;
+    }
+    .header-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 30px; }
+    .event-logo {
+      width: 286px;
+      height: 124px;
+      object-fit: contain;
+      object-position: left center;
+      filter: drop-shadow(0 8px 18px rgba(18,33,63,.12));
+    }
+    .page-tag {
+      margin-top: 8px;
+      padding: 14px 23px;
+      border: 1px solid rgba(18,33,63,.14);
+      border-radius: 999px;
+      background: rgba(255,255,255,.76);
+      box-shadow: 0 10px 26px rgba(18,33,63,.08);
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+    h1 {
+      margin: 6px 0 8px;
+      font-size: 64px;
+      line-height: 1.05;
+      letter-spacing: -.045em;
+      font-weight: 950;
+    }
+    h1 span { color: #ff6b5c; }
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 23px;
+      font-weight: 750;
+    }
+    .meta b {
+      padding: 9px 17px;
+      color: #fff;
+      background: #315f9e;
+      border-radius: 999px;
+    }
+    .grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 28px 30px;
+      height: 1510px;
+      padding: 16px 56px 42px;
+    }
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      overflow: hidden;
+      border: 1.5px solid rgba(255,255,255,.94);
+      border-radius: 38px;
+      background: linear-gradient(155deg, rgba(255,255,255,.88), rgba(255,255,255,.66));
+      box-shadow: 0 22px 54px rgba(18,33,63,.13), inset 0 0 0 1px rgba(18,33,63,.05);
+      backdrop-filter: blur(12px);
+    }
+    .rank {
+      position: absolute;
+      z-index: 4;
+      top: 18px;
+      left: 20px;
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      border-radius: 18px;
+      color: #fff;
+      background: #ff6b5c;
+      box-shadow: 0 10px 22px rgba(255,107,92,.3);
+      font-size: 24px;
+      font-weight: 900;
+    }
+    .photo {
+      position: relative;
+      display: grid;
+      place-items: center;
+      height: 304px;
+      padding: 35px 35px 8px;
+    }
+    .photo img {
+      display: block;
+      max-width: 100%;
+      max-height: 270px;
+      object-fit: contain;
+      filter: drop-shadow(0 18px 18px rgba(18,33,63,.19));
+    }
+    .photo img.tall { max-height: 282px; }
+    .photo img.wide { max-width: 105%; max-height: 236px; }
+    .copy {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 9px;
+      padding: 6px 28px 25px;
+      text-align: center;
+    }
+    .name {
+      min-height: 58px;
+      display: grid;
+      place-items: center;
+      font-size: 29px;
+      line-height: 1.16;
+      letter-spacing: -.025em;
+      font-weight: 900;
+    }
+    .name.long { font-size: 25px; line-height: 1.18; }
+    .sponsor {
+      align-self: center;
+      max-width: 100%;
+      padding: 10px 20px;
+      border-radius: 999px;
+      color: #fff;
+      background: #12213f;
+      font-size: 22px;
+      line-height: 1.15;
+      font-weight: 750;
+      white-space: nowrap;
+    }
+    .fine-print {
+      position: absolute;
+      z-index: 4;
+      bottom: 11px;
+      left: 0;
+      width: 100%;
+      color: rgba(18,33,63,.68);
+      text-align: center;
+      font-size: 15px;
+      font-weight: 650;
+      letter-spacing: .03em;
+    }
+  </style>
+</head>
+<body>
+  <main class="poster">
+    <header class="header">
+      <div class="header-top">
+        <img class="event-logo" src="assets/page-01/event-logo.png" alt="布里斯班新生节" />
+        <div class="page-tag">礼品图鉴 · 01 / 09</div>
+      </div>
+      <h1>大奖，<span>从这里开始</span></h1>
+      <div class="meta"><b>8月21日</b><span>Market Square · Sunnybank</span></div>
+    </header>
+
+    <section class="grid" aria-label="高价值抽奖奖品">
+      <article class="card">
+        <div class="rank">01</div>
+        <div class="photo"><img class="tall" src="assets/page-01/dji-osmo-pocket-3.png" alt="DJI OSMO Pocket 3" /></div>
+        <div class="copy"><div class="name">DJI OSMO Pocket 3</div><div class="sponsor">由 匠人学院 提供</div></div>
+      </article>
+      <article class="card">
+        <div class="rank">02</div>
+        <div class="photo"><img src="assets/page-01/nintendo-switch-2.png" alt="Nintendo Switch 2" /></div>
+        <div class="copy"><div class="name">Nintendo Switch 2</div><div class="sponsor">由 匠人学院 提供</div></div>
+      </article>
+      <article class="card">
+        <div class="rank">03</div>
+        <div class="photo"><img class="tall" src="assets/page-01/dyson-v8-advanced.png" alt="Dyson V8 Advanced 吸尘器及车用清洁套装" /></div>
+        <div class="copy"><div class="name long">Dyson V8 Advanced<br />吸尘器＋车用清洁套装</div><div class="sponsor">由 Airbotix 提供</div></div>
+      </article>
+      <article class="card">
+        <div class="rank">04</div>
+        <div class="photo"><img class="wide" src="assets/page-01/dji-neo.png" alt="DJI Neo 迷你无人机" /></div>
+        <div class="copy"><div class="name">DJI Neo 迷你无人机</div><div class="sponsor">由 匠人学院 提供</div></div>
+      </article>
+      <article class="card">
+        <div class="rank">05</div>
+        <div class="photo"><img class="tall" src="assets/page-01/flexispot-chair.png" alt="FlexiSpot 人体工学椅" /></div>
+        <div class="copy"><div class="name">FlexiSpot 人体工学椅</div><div class="sponsor">由 DealMoon 提供</div></div>
+      </article>
+      <article class="card">
+        <div class="rank">06</div>
+        <div class="photo"><img class="tall" src="assets/page-01/labubu-time-to-chill.png" alt="LABUBU Time to Chill 38cm" /></div>
+        <div class="copy"><div class="name long">LABUBU Time to Chill<br />38cm 搪胶毛绒玩偶</div><div class="sponsor">由 匠人学院 提供</div></div>
+      </article>
+    </section>
+    <div class="fine-print">奖品与现场安排以活动页最新信息为准。</div>
+  </main>
+</body>
+</html>

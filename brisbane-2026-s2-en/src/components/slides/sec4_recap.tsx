@@ -9,7 +9,7 @@ export function S12_RecapDivider() {
 			<motion.span initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
 				style={{ background: colors.black, color: colors.yellow, border, fontFamily: fonts.mono, fontWeight: 700, fontSize: 16, letterSpacing: 3, padding: '8px 18px' }}>RECAP</motion.span>
 			<h1 style={{ fontFamily: fonts.heading, fontWeight: 900, color: colors.white, fontSize: 84, lineHeight: 1.06, letterSpacing: -1, marginTop: 22 }}>
-				Brisbane Tri-Campus Orientation<br /><span style={{ background: colors.red, color: colors.white, padding: '0 22px', border, boxShadow: shadow }}>Event Highlights</span>
+				Brisbane Orientation Festival<br /><span style={{ background: colors.red, color: colors.white, padding: '0 22px', border, boxShadow: shadow }}>Event Highlights</span>
 			</h1>
 		</PhotoSlide>
 	);

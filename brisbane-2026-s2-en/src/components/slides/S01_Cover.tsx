@@ -51,7 +51,7 @@ export default function S01_Cover() {
 			>
 				<img
 					src={assetPath('illustrations/brisbane-city-hero.png')}
-					alt="Brisbane Tri-Uni Orientation Festival welcome illustration"
+					alt="Brisbane Orientation Festival welcome illustration"
 					style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
 				/>
 				<div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(16,22,47,.04) 42%, rgba(16,22,47,.84) 100%)' }} />
@@ -92,17 +92,20 @@ export default function S01_Cover() {
 				2026 S2 · 6th Orientation Festival · Merchant Partnership Proposal
 			</motion.div>
 
-			<h1 style={{ fontFamily: fonts.heading, fontWeight: 900, color: colors.white, fontSize: 52, lineHeight: 1.05, letterSpacing: -1.5, maxWidth: 700 }}>
-				<motion.span initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.15 }} style={{ display: 'block' }}>
-					Brisbane Tri-Uni
-				</motion.span>
-				<motion.span
-					initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }}
-					transition={{ duration: 0.4, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-					style={{ display: 'inline-block', background: colors.red, color: colors.white, padding: '0 22px', marginTop: 14, border, boxShadow: shadow }}>
-					Orientation Festival
-				</motion.span>
-			</h1>
+			<motion.div
+				initial={{ opacity: 0, y: 24, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }}
+				transition={{ duration: 0.5, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+				style={{ alignSelf: 'flex-start', width: 430, maxWidth: '100%' }}
+			>
+				<img
+					src={assetPath('brisbane-freshers-festival-logo.png')}
+					alt="布里斯班新生节"
+					style={{ display: 'block', width: '100%', height: 'auto' }}
+				/>
+				<div style={{ marginTop: 10, fontFamily: fonts.heading, fontWeight: 900, color: colors.white, fontSize: 26, letterSpacing: -0.4 }}>
+					Brisbane Orientation Festival
+				</div>
+			</motion.div>
 
 			<motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.7 }}
 				style={{ display: 'inline-block', alignSelf: 'flex-start', fontFamily: fonts.heading, fontWeight: 900, color: colors.black, background: colors.white, border, boxShadow: shadow, padding: '8px 16px', fontSize: 25, marginTop: 20, letterSpacing: 0 }}>

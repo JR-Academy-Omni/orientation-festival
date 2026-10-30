@@ -1,14 +1,14 @@
 ---
 sot_doc: true
-sot: orientation-festival/sydney-2026-s2
+sot: orientation-festival/sydney-2026-s2-v2
 sot_role: city-event-prd
 sot_type: event
-title: 2026 S2 悉尼四校新生节 PRD
+title: 悉尼新生节 · University Edition · 2026 S2 PRD
 ---
 
-# PRD · 2026 S2 悉尼四校新生节 招商 deck
+# PRD · 悉尼新生节 · University Edition · 2026 S2 Sponsor Deck
 
-> **状态**：deck 已完成（`sydney-2026-s2/`，已上线 gh-pages）｜**类型**：商家招商物料 PRD｜⚠️ 待落定：S2 档期 + 场地（Sydney Town Hall 待复核）
+> **状态**：University Edition deck 位于 `sydney-2026-s2-v2/`；历史路径 `sydney-2026-s2/` 仅作兼容跳转。当前公开活动记录为 2026-09-26、Sydney Town Hall、报名容量 1000。套餐价格仍需商业负责人复核。
 > **内部文档**：含赞助报价 + 同事私人手机/邮箱（PII），**不对外发布**，`content/` 目录不可公开 serve。
 > **蓝本**：本届以 [`sydney-2026-s1-pages.md`](./sydney-2026-s1-pages.md)（Canva `DAGrb4CL9Xk` 旧稿存档）为内容蓝本，对齐 [`brisbane-2026-s1-pages.md`](./brisbane-2026-s1-pages.md) 与 [`melbourne-2026-s2-pages.md`](./melbourne-2026-s2-pages.md)。
 > **关键变更**：届次由旧稿 **S1 → S2**（悉尼下一届放在下半年开学季），时间随之后移；旧稿里的「2025 悉尼新生节」旧名、布里斯班串台数据/证言一律视为**必修项**。
@@ -21,7 +21,7 @@ title: 2026 S2 悉尼四校新生节 PRD
 
 1. **届次过期**：旧稿是 S1（2026-02-22）。悉尼下一届定为 **2026 S2**，时间、标题、届数、早鸟截止都要重设。
 2. **大量串台残留**：旧稿往期数据页仍是布里斯班 UQ/QUT/Griffith，参与者证言写着「这次**布里斯班**新生迎新节真是太棒了」——直接外发会穿帮。
-3. **缺一份能驱动建 deck 的规格**：现有 `*-pages.md` 是"逐页文字考古"，不是"该做成什么"。本 PRD 补上这块，作为 `sydney-2026-s2/` deck 的唯一规格来源。
+3. **缺一份能驱动建 deck 的规格**：现有 `*-pages.md` 是“逐页文字考古”，不是“该做成什么”。本 PRD 是 University Edition 的历史规格；现行双版本边界以 `sydney-sponsor-decks-sot.md` 为准，canonical deck 为 `sydney-2026-s2-v2/`。
 
 ---
 
@@ -29,12 +29,12 @@ title: 2026 S2 悉尼四校新生节 PRD
 
 | 项目 | 内容 | 来源 / 说明 |
 |------|------|-------------|
-| 活动名称 | **匠人学院 2026 S2 悉尼四校新生节**（第 6 届新生节） | 旧稿「2025 悉尼新生节」为过期名，弃用；「首届悉尼大学新生见面会」旧口径同样弃用 |
+| 活动名称 | **悉尼新生节** | 公共活动名不含大学名称；内部版本为 University Edition |
 | 届次 | **第 6 届** · 2026 S2（下半年开学季） | ⚠️ 届数按新生节整体连续计数，三城同为第 6 届，不按单城分别计数、不写「首届」 |
-| 时间 | **待定** — S2 开学季（约 2026 年 7 月底 – 8 月，建议周末 10am–2pm） | 旧 S1 为 2026-02-22 周日，仅作时长参考 |
-| 地点 | **倾向沿用 Sydney Town Hall**（483 George St, Sydney NSW 2000），需复核 S2 档期 | 旧稿场地；室内、市中心、四校通达 |
+| 时间 | **2026 年 9 月 26 日（周六）14:00–17:00** | 当前公开活动记录 |
+| 地点 | **Sydney Town Hall · Lower Town Hall & Vault**（483 George St, Sydney NSW 2000） | 当前公开活动记录 |
 | 覆盖高校 | **USYD、UNSW、UTS、Macquarie（四校）** | 四城里唯一四校，覆盖约 80% 大学生消费群体 |
-| 预计参与 | 1000 人，悉尼四校新生 | 旧稿口径 |
+| 报名容量 | 1000 | 当前公开活动记录；不是已到场人数 |
 | 合作门槛 | 低至 **$1500**，面对面接触 1000+ 新生 | 旧稿口径，S2 定价待复核（见第五节） |
 | **联合主办** | **AFN 澳洲财经见闻** | 🆕 悉尼场独有，布/墨场无 |
 | 招商联系人 | Angela Han（JR）+ Charles Hong（AFN） | 见第九节 |
@@ -117,16 +117,16 @@ title: 2026 S2 悉尼四校新生节 PRD
 
 ---
 
-## 八、deck 交付规格（建 `sydney-2026-s2/`）
+## 八、University Edition deck 交付规格（canonical `sydney-2026-s2-v2/`）
 
 按 repo 既定流程（见根 `CLAUDE.md`「新增一座城市的 deck」）：
 
-1. `cp -r melbourne-2026-s2/ sydney-2026-s2/`（复用三文件播放器：`index.html` / `deck.js` / `styles.css`）
+1. University Edition 维护 `sydney-2026-s2-v2/` 三文件播放器；`sydney-2026-s2/` 只保留兼容跳转
 2. 用本 PRD + `sydney-2026-s1-pages.md` 的逐页文字替换 deck 文案（**届次统一改 S2**）
 3. 只改 `styles.css` 顶部 `:root` 的 `--brand-a..d` 城市主题色块 → 给悉尼一套独立主题色（建议：海港蓝 / 悉尼地标色系，区别于墨尔本绿青、布里斯班橙粉；最终以 `jr-academy-brand/` 为准）
 4. 底部天际线装饰：悉尼可换 Opera House / Harbour Bridge 轮廓（内联 SVG，沿用 `.slide::after` data-URI 模式，不 hotlink 网图）
 5. 在根 `index.html` 加悉尼城市卡片入口
-6. 写 `sydney-2026-s2/design.md`（该 deck 唯一视觉真相源）
+6. 更新 `sydney-2026-s2-v2/design.md`（University Edition 唯一视觉真相源）
 7. 每个 `<head>` 保留 `<meta name="robots" content="noindex, nofollow">`
 
 **deck 建议页序**（参考三城 38 页结构，悉尼版增 AFN 页）：

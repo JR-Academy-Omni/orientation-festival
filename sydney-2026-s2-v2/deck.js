@@ -1,4 +1,4 @@
-// 2026 S2 悉尼四校新生节 · 真文字播放器
+// 悉尼新生节 · University Edition · 真文字播放器
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => Array.from(document.querySelectorAll(s));
 const slides = $$('.slide');

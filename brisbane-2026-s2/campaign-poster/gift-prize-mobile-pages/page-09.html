@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1080, initial-scale=1" />
+  <title>布里斯班新生节 · 还有更多礼品</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; }
+    body { color: #12213f; font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+    .poster { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #fdf6ef url("assets/final/more-gifts-background.png") center / cover no-repeat; }
+    .poster::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(253,246,239,.12), rgba(253,246,239,.02) 48%, rgba(18,33,63,.13)); }
+    .content { position: relative; z-index: 2; height: 100%; padding: 48px 56px 42px; }
+    .header-top { display: flex; align-items: flex-start; justify-content: space-between; }
+    .event-logo { width: 286px; height: 124px; object-fit: contain; object-position: left center; filter: drop-shadow(0 8px 18px rgba(18,33,63,.12)); }
+    .page-tag { margin-top: 8px; padding: 14px 23px; border: 1px solid rgba(18,33,63,.14); border-radius: 999px; background: rgba(255,255,255,.78); box-shadow: 0 10px 26px rgba(18,33,63,.08); font-size: 25px; font-weight: 800; }
+    h1 { margin: 28px 0 4px; max-width: 820px; font-size: 88px; line-height: .98; letter-spacing: -.06em; font-weight: 950; }
+    h1 span { display: block; color: #ff6b5c; }
+    .lead { margin-top: 18px; font-size: 29px; line-height: 1.35; font-weight: 800; }
+    .more-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px 18px; margin-top: 32px; }
+    .more-card { min-height: 132px; display: flex; align-items: center; gap: 18px; padding: 18px 20px; border: 1px solid rgba(255,255,255,.9); border-radius: 28px; background: rgba(255,255,255,.82); box-shadow: 0 14px 34px rgba(18,33,63,.11); backdrop-filter: blur(10px); }
+    .logo-box { flex: 0 0 104px; height: 72px; display: grid; place-items: center; padding: 8px; border-radius: 18px; background: #fff; }
+    .logo-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .more-copy { min-width: 0; }
+    .more-copy b { display: block; margin-bottom: 5px; font-size: 21px; line-height: 1.12; }
+    .more-copy span { display: block; color: rgba(18,33,63,.74); font-size: 16px; line-height: 1.25; font-weight: 650; }
+    .cta { position: absolute; left: 56px; right: 56px; bottom: 48px; display: grid; grid-template-columns: 1fr 238px; gap: 30px; align-items: center; padding: 28px 30px; border: 1.5px solid rgba(255,255,255,.92); border-radius: 42px; background: rgba(255,255,255,.91); box-shadow: 0 24px 58px rgba(18,33,63,.2); backdrop-filter: blur(14px); }
+    .cta h2 { margin: 0 0 13px; font-size: 43px; line-height: 1.05; letter-spacing: -.035em; }
+    .event-info { font-size: 22px; line-height: 1.45; font-weight: 780; }
+    .event-info b { color: #ff6b5c; }
+    .support { display: flex; align-items: center; gap: 12px; margin-top: 15px; color: rgba(18,33,63,.68); font-size: 15px; font-weight: 650; }
+    .support img { width: 112px; height: 34px; object-fit: contain; object-position: left center; }
+    .qr-wrap { padding: 13px; border-radius: 30px; background: #fff; text-align: center; box-shadow: 0 14px 30px rgba(18,33,63,.13); }
+    .qr-wrap img { display: block; width: 212px; height: 212px; }
+    .qr-wrap b { display: block; margin-top: 7px; font-size: 19px; }
+    .fine { position: absolute; left: 0; right: 0; bottom: 13px; color: rgba(18,33,63,.7); text-align: center; font-size: 14px; font-weight: 650; }
+  </style>
+</head>
+<body>
+  <main class="poster">
+    <div class="content">
+      <div class="header-top"><img class="event-logo" src="assets/page-01/event-logo.png" alt="布里斯班新生节" /><div class="page-tag">礼品图鉴 · 09 / 09</div></div>
+      <h1>还有更多礼品<span>现场等你发现</span></h1>
+      <div class="lead">更多合作方礼品持续加入 · 到场逛展位就能看到</div>
+
+      <section class="more-grid" aria-label="更多现场礼品">
+        <article class="more-card"><div class="logo-box"><img src="assets/final/mobile-connect.webp" alt="Mobile Connect" /></div><div class="more-copy"><b>Mobile Connect（Telstra）</b><span>小音响、手机支架、文件袋、拓香片、定制笔</span></div></article>
+        <article class="more-card"><div class="logo-box"><img src="assets/final/fortune-forward.webp" alt="方圆财富" /></div><div class="more-copy"><b>方圆财富</b><span>浴巾、毛巾伴手礼、商务签字笔、荧光笔</span></div></article>
+        <article class="more-card"><div class="logo-box"><img src="assets/final/dealmoon.webp" alt="DealMoon" /></div><div class="more-copy"><b>DealMoon</b><span>Tote包、折叠购物袋、擦手巾、城市透卡、零食饮料</span></div></article>
+        <article class="more-card"><div class="logo-box"><img src="assets/final/uqcssa.webp" alt="UQ CSSA" /></div><div class="more-copy"><b>UQ CSSA</b><span>手机壳、收纳包、数据线、手机支架、发饰、发箍</span></div></article>
+        <article class="more-card"><div class="logo-box"><img src="assets/final/luggeasy.png" alt="LuggEasy" /></div><div class="more-copy"><b>LuggEasy</b><span>定制行李识别牌</span></div></article>
+        <article class="more-card"><div class="logo-box"><img src="assets/final/airbotix.svg" alt="Airbotix" /></div><div class="more-copy"><b>Airbotix</b><span>小马玩偶</span></div></article>
+      </section>
+
+      <section class="cta">
+        <div>
+          <h2>扫码免费报名</h2>
+          <div class="event-info"><b>8月21日 周五</b> · 14:00–17:00<br />Market Square · Sunnybank<br />341 Mains Rd, Sunnybank</div>
+          <div class="support"><img src="assets/final/china-consulate-brisbane.webp" alt="中国驻布里斯班总领事馆" /><span>感谢中国驻布里斯班总领事馆的大力支持</span></div>
+        </div>
+        <div class="qr-wrap"><img src="assets/final/register-qr.png" alt="活动报名二维码" /><b>长按识别二维码</b></div>
+      </section>
+      <div class="fine">礼品、奖品及现场安排以活动页最新信息为准。</div>
+    </div>
+  </main>
+</body>
+</html>

@@ -3,21 +3,28 @@ sot_doc: true
 sot: orientation-festival
 sot_role: root-event
 sot_type: event
-title: 大学新生节（多城招商）
+title: 新生节（多城、多受众 Sponsor Programme）
 ---
 
-# 匠人学院 · 大学新生节（多城招商）
+# 匠人学院 · 新生节（多城、多受众 Sponsor Programme）
 
 > 真相文档（SoT）。新生节相关一切以本 repo 为唯一来源。各城 deck（`{city}-{term}/index.html`）、落地页（`index.html`）都是从这份真相派生的**产物**，不是真相本身。
 > ⚠️ 含赞助报价与同事私人联系方式，private repo 内部留存；对外只发 deck 链接，`content/*.md` 不作对外文案散播。
 
 ## 这是什么
 
-匠人学院在澳洲多座城市、面向当季大学新生办的**线下新生见面会 + 商家招商**活动。一次活动同时触达一座城市多所高校的新生，区别于单一大学 O-week 摊位。核心理念：**链接高校与城市资源**——帮新生融入、给商家面对面触达高潜用户的展位。
+匠人学院在澳洲多座城市运营“新生节”公共活动品牌。城市品牌名不绑定学校；每个 Sponsor Deck 按受众拆成独立版本，避免把大学生、留学生与本地 Year 7–12 青年生态混为同一客群。
 
-收入模式：向商家卖赞助套餐（展位 + 线上线下曝光 + 礼包露出），匠人用自有「课代表」自媒体矩阵做前期宣传引流。
+收入模式：向适配该受众的品牌提供赞助与联合体验方案。University Edition 负责大学生与留学生场景；Local Schools Edition 负责本地 Year 7–12 新生、学校、P&C、家长/监护人与青年社区场景。两版数据、合作方、价格和线索权益独立管理。
 
-## 商家成本对比口径
+## 公共命名与内部版本
+
+- 对外活动名统一为 `{城市}新生节`，例如“悉尼新生节”。
+- 大学或学校名称不得进入活动主标题、封面 H1 或海报主标题。
+- `University Edition` / `Local Schools Edition` 只用于内部识别、Sponsor Deck 导航和后台标签。
+- 悉尼双版本的唯一内容真相源见 `content/sydney-sponsor-decks-sot.md`。
+
+## University Edition 商家成本对比口径
 
 招商 deck 里的「价格对比」必须围绕商家真实获客成本，不要只写覆盖范围或泛泛品牌曝光：
 
@@ -28,33 +35,36 @@ title: 大学新生节（多城招商）
 
 ## 届次口径（唯一算法）
 
-**届数按新生节整体连续计数，同一学期的所有城市共用同一个届数。** 当前 = **第 6 届 · 2026 S2**，墨/布/悉三城全部是第 6 届。
+**届数按同一活动产品线连续计数。** 当前第 6 届 · 2026 S2 只适用于现有 University Edition 城市场次；Local Schools Edition 在正式立项前不继承该届数。
 
 - ❌ 不按单城分别计数（旧稿的「第三届墨尔本大学新生见面会」「第三届布里斯班大学新生见面会」已弃用）
 - ❌ 不写「首届」（旧稿的「首届悉尼大学新生见面会」已弃用——悉尼不是新开的系列，只是这一届加入的城市）
-- ✅ 对外统一写法：`第 6 届 · 2026 S2 {城市}{N}校新生节`
+- ✅ 对外统一写法：`第 6 届 · 2026 S2 {城市}新生节`
 
 > 新增城市或新一届时，先在这里把届数改掉，再改各城 deck；**不要在城市文档里自己另起一套届数**。
 
 ## 各城状态
 
-| 城市 / 届 | 覆盖高校 | 内容源 | 可播放 deck | SoT 节点 |
+| 城市 / 版本 | 受众 | 内容源 | 可播放 deck | SoT 节点 |
 |-----------|---------|:---:|:---:|----------|
-| 墨尔本 第 6 届 · 2026 S2 | UniMelb · Monash · RMIT | ✅ | ✅ 已做完 | `melbourne-2026-s2/` |
-| 布里斯班 第 6 届 · 2026 S2 | UQ · QUT · Griffith | ✅ | ✅ 已做完 | `brisbane-2026-s1/`（目录沿用旧名） |
-| 悉尼 第 6 届 · 2026 S2 | USYD · UNSW · UTS · Macquarie | ✅ | ✅ 已做完 | `sydney-2026-s2/` |
+| 墨尔本 University · 2026 S2 | 大学新生 | ✅ | ✅ | `melbourne-2026-s2/` |
+| 布里斯班 University · 2026 S2 | 大学新生 | ✅ | ✅ | `brisbane-2026-s1/`（目录沿用旧名） |
+| 悉尼 University · 2026 S2 | 大学生、留学生 | ✅ | ✅ | `sydney-2026-s2-v2/` |
+| 悉尼 Local Schools | Year 7–12 新生与本地青年生态 | ✅ | ✅ Discovery | `sydney-local-schools/` |
+
+悉尼 Local Schools 另有英文语言派生版 `sydney-local-schools-en/`；它与中文 canonical 版属于同一商业线，不单独计为活动或 SoT 根节点。
 
 > 每座城市每一届 = 一个子 SoT（`parent: orientation-festival`），各自目录下的 `design.md` 是那场活动的真相文档。
 
 ## 对谁、解决什么
 
-- **对新生**：免费礼品 + 互动 + 本地生活/学习实用信息，帮快速适应校园与城市。
-- **对商家**：第一时间面对面触达大学新生（高潜消费群），品牌曝光 + 沉淀私域联系方式 + 长期口碑。
-- **对匠人**：用线下活动激活并变现 7 年积累的留学生流量矩阵，同时为课程招生引流。
+- **University Edition**：服务大学新生的城市落地、社交、学习与职业场景；由学生本人决定是否留下后续联系。
+- **Local Schools Edition**：服务进入新学校、新年级和新阶段的 Year 7–12 青少年，连接学校、P&C、家长/监护人与青年社区；涉及未成年人后续联系时使用 parent / guardian 或其他合规授权渠道。
+- **对 Sponsor**：获得与对应受众匹配的现场体验、内容与经授权的后续触点，而不是购买一份混合人群名单。
 
 ## 产品玩法系统（Admin 已沉淀）
 
-> 本节是新生节互动玩法的产品 SoT。招商 deck 可以选择性表达这些能力，但不要另写一套规则。当前主平台 Admin 入口是 `jr-academy-admin/src/pages/FestivalConfigPage.tsx`，仅对 `jrEventType === 'freshersFestival'` 的活动开放。
+> 本节是现有 University Edition 互动玩法的产品 SoT。Local Schools Edition 可以复用系统能力，但必须另设适龄报名、未成年人隐私、拍摄同意、合规授权和 Sponsor 数据边界；不得直接照搬大学版规则。当前主平台 Admin 入口是 `jr-academy-admin/src/pages/FestivalConfigPage.tsx`，仅对 `jrEventType === 'freshersFestival'` 的活动开放。
 
 核心原则：所有互动玩法最终都沉淀到报名记录 `MeetupEnrollment.lotteryTickets` 上，抽奖大屏按抽奖券权重抽取中奖者。`lotteryTicketHistory.source` 用来追踪券来源，当前主要来源为：
 
@@ -142,6 +152,14 @@ Admin 支持搜索现有 Company 后加入活动、编辑展位、拖拽排序�
 | `maxSubmissions` | 同一任务最大有效提交次数，被拒绝的不计入上限 |
 | `description` | 展示给用户的任务说明 |
 
+**每次提交还会存 `screenshotHash`（截图内容 SHA-256）。** 同一场活动内命中已有 hash 直接拒收，
+不分是本人重传还是几个人传同一张 —— 这条是 2026-08-08 墨尔本场加的，
+起因是大量学员拿同一张照片反复上传刷券，而当时的「重复截图」风控面板按 `screenshotUrl` 分组、
+上传链路又给每次上传塞了毫秒时间戳，同一张图每次 URL 都不同，面板恒为空。
+
+被拒绝的提交不占 `maxSubmissions`（学员改好能重来），但总尝试次数封顶
+`maxSubmissions × 3`，防止「传一张 → 被拒 → 再传一张」无限循环。
+
 当前支持的任务类型：
 
 - 小红书分享：`xiaohongshu_share`
@@ -157,6 +175,16 @@ Admin 支持搜索现有 Company 后加入活动、编辑展位、拖拽排序�
 - 推广达人：`top_promoter`
 
 用户端上传截图后进入 `pending`；Admin 审核通过后才发 `task_complete` 抽奖券。审核台支持按状态/类型筛选、批量通过/拒绝、查看截图，并统计提交漏斗、高价值用户、重复截图、高频提交等风控线索。
+
+**拒绝必须选理由。** 理由字典是 `SOCIAL_TASK_REJECTION_REASONS`（后端 `socialTask.schema.ts`），
+经 `GET /social-task/rejection-reasons` 同时供 admin 下拉和学员端说明使用 —— 一份文案，两端共用，
+admin 不另抄一份。学员在活动页能看到「未通过：{理由} + 怎么改」，改好可重新提交。
+
+**分享类任务的对外规则**（写在活动页 `SocialTasksSection` 的发帖指引里，marketing 对外口径要一致）：
+
+- 笔记要公开发布并**保留到活动结束**，不能发完就删或转私密。
+- 截图**必须露出发布账号名** —— 审核员按账号名去平台逐篇核对笔记是否真实存在，搜不到就拒绝。
+- 几篇券就得是**几篇不同的笔记**；同一张截图被系统当场拦下，同一篇笔记换角度截图由人工拒绝。
 
 ### 优惠券
 
