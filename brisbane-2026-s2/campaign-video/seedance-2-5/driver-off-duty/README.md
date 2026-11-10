@@ -16,6 +16,6 @@
 - 内部审核视频：`/Users/lightman/Downloads/布里斯班新生节-司机今天不接单-Seedance尾声配音修正版.mp4`
 - 发布中心状态：`verified_internal`
 - 视频 URL：`https://jr-image.s3.ap-southeast-2.amazonaws.com/video-publishing/brisbane-freshers-festival/2026-08-13/driver-off-duty-vertical-v2.mp4`
-- Admin：`https://admin.jiangren.com.au/video-publishing`
+- Admin：`https://admin.jracademy.ai/video-publishing`
 
 未获得社交平台排程或发布授权。

@@ -20,6 +20,6 @@
 
 当前历史成品二维码均已实扫，目标为活动页：
 
-`https://jiangren.com.au/events/6a616fb6bbc08a65e1586c71`
+`https://jracademy.ai/events/6a616fb6bbc08a65e1586c71`
 
 所有企业海报必须使用布里斯班活动 URL、布里斯班总领馆横幅和布里斯班礼品／抽奖目录，不得复用墨尔本权益映射。
