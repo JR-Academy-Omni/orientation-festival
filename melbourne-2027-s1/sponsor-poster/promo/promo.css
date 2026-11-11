@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Archivo+Black&display=block');
+
+/* 3D 大促风：蜜桃橙底 + 立体描边大字 + 奶油卡片 + 红色胶囊按钮（参考双十一大促海报） */
+:root {
+  --peach: #f6a97f;
+  --peach-2: #f08c63;
+  --cream: #fff4e6;
+  --cream-2: #ffe6cc;
+  --navy: #1d3a4a;
+  --teal: #2f6f73;
+  --red: #c8282d;
+  --red-2: #e2463c;
+  --orange: #f08a3c;
+  --cn: "Noto Sans SC", "PingFang SC", sans-serif;
+  --num: "Archivo Black", "Noto Sans SC", sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1242px; height: 1656px; overflow: hidden; }
+body { font-family: var(--cn); color: var(--navy); -webkit-font-smoothing: antialiased; }
+
+.poster {
+  position: relative; width: 1242px; height: 1656px; overflow: hidden;
+  background:
+    radial-gradient(ellipse 70% 40% at 50% 30%, rgba(255, 236, 214, .75), transparent 70%),
+    linear-gradient(180deg, #f8b892 0%, var(--peach) 45%, var(--peach-2) 100%);
+}
+
+/* 顶部奶油条 + 居中 logo */
+.head { position: absolute; top: 0; left: 0; right: 0; height: 128px; background: var(--cream); display: flex; justify-content: center; align-items: center; box-shadow: 0 6px 0 rgba(0,0,0,.06); }
+.head img { height: 72px; }
+
+/* 透视网格舞台 */
+.stage { position: absolute; left: 70px; right: 70px; top: 300px; height: 520px; border-radius: 28px;
+  background:
+    linear-gradient(rgba(214,150,120,.25) 2px, transparent 2px) 0 0 / 46px 46px,
+    linear-gradient(90deg, rgba(214,150,120,.25) 2px, transparent 2px) 0 0 / 46px 46px,
+    linear-gradient(180deg, #fde3d0, #f8d2bb);
+  transform: perspective(900px) rotateX(18deg); transform-origin: bottom;
+  box-shadow: 0 26px 0 #e9b796, 0 34px 40px rgba(120,50,20,.25); }
+
+/* 立体字：前层白描边+深蓝字，后层(::before)粗深色描边下移做挤出。需写 data-t="同样文字" */
+.t3d { position: relative; isolation: isolate; font-family: var(--cn); font-weight: 900; color: var(--navy); letter-spacing: 2px; white-space: nowrap;
+  -webkit-text-stroke: var(--sw, 14px) #fff; paint-order: stroke fill; }
+.t3d::before { content: attr(data-t); position: absolute; inset: 0; z-index: -1; color: #0f2430;
+  -webkit-text-stroke: calc(var(--sw, 14px) + 6px) #0f2430; transform: translateY(var(--depth, 12px));
+  filter: drop-shadow(0 14px 14px rgba(80,30,10,.35)); }
+.title { position: absolute; top: 158px; left: 0; right: 0; text-align: center; font-size: 132px; line-height: 1.1; }
+
+/* 斜丝带 */
+.ribbon { position: absolute; left: 90px; right: 90px; height: 170px; transform: rotate(-4deg);
+  background: linear-gradient(180deg, #f7a35a, var(--orange)); border-radius: 12px;
+  box-shadow: 0 12px 0 #c8642a, 0 20px 30px rgba(100,40,10,.3);
+  display: flex; align-items: center; justify-content: center; gap: 18px; }
+.hero-row { position: absolute; left: 0; right: 0; display: flex; align-items: center; justify-content: center; gap: 14px; transform: rotate(-4deg); }
+.hero-row .t3d { font-size: 76px; --sw: 10px; --depth: 9px; }
+
+/* 大号立体数字（奶油色 + 青色挤出） */
+.big-num { position: relative; isolation: isolate; font-family: var(--num); color: var(--cream); line-height: 1; letter-spacing: -2px;
+  -webkit-text-stroke: 10px var(--navy); paint-order: stroke fill; }
+.big-num::before { content: attr(data-t); position: absolute; inset: 0; z-index: -1; color: var(--teal);
+  -webkit-text-stroke: 16px var(--navy); transform: translate(10px, 14px); filter: drop-shadow(0 18px 18px rgba(60,20,10,.35)); }
+
+/* 红色印章 */
+.stamp { position: absolute; transform: rotate(-6deg); background: var(--cream); border: 12px solid var(--red); border-radius: 30px;
+  outline: 6px solid var(--cream); box-shadow: 0 0 0 18px var(--red), 0 24px 30px rgba(90,20,10,.35);
+  color: var(--red); font-family: var(--cn); font-weight: 900; text-align: center; line-height: 1.05; padding: 14px 40px; }
+
+/* 闪光星星 */
+.spark { position: absolute; width: 70px; height: 70px; }
+.spark path { fill: #5fb3b0; stroke: #fff; stroke-width: 4; }
+.burst { position: absolute; width: 120px; height: 120px; }
+.burst line { stroke: #fff3e8; stroke-width: 10; stroke-linecap: round; }
+
+/* 规则卡片 */
+.card { position: absolute; left: 50px; right: 50px; border-radius: 40px; background: linear-gradient(180deg, var(--cream) 0%, #fff9f1 100%);
+  border: 8px solid #fbd2ae; box-shadow: 0 14px 0 #e59a6c, 0 24px 40px rgba(110,40,10,.25); padding: 70px 46px 34px; }
+.card-tag { position: absolute; top: -46px; left: 50%; transform: translateX(-50%); white-space: nowrap;
+  background: linear-gradient(180deg, var(--red-2), var(--red)); color: #fff; border: 6px solid #ffd9b8; border-radius: 999px;
+  padding: 10px 70px; font-weight: 900; font-style: italic; font-size: 50px; letter-spacing: 6px; box-shadow: 0 8px 0 #8f1a1d; }
+.sub-tag { display: block; width: fit-content; margin: 0 auto 22px; background: linear-gradient(180deg, #ffe2b8, #ffc98e); border-radius: 18px;
+  padding: 6px 60px; font-weight: 900; font-size: 46px; letter-spacing: 6px; box-shadow: 0 6px 0 #e9a46a; }
+.cols { display: grid; grid-template-columns: 1fr 1fr 1fr; text-align: center; }
+.col { padding: 4px 8px; }
+.col + .col { border-left: 5px solid var(--navy); }
+.col .k { font-weight: 900; font-size: 40px; }
+.col .v { font-family: var(--num); font-style: italic; font-size: 58px; color: var(--red); line-height: 1.1; }
+.col .d { font-weight: 900; font-size: 30px; margin-top: 6px; }
+.strip { margin-top: 18px; border-radius: 18px; background: linear-gradient(90deg, #ffd7a8, #ffe9cf 50%, #ffd7a8); text-align: center;
+  font-weight: 900; font-size: 46px; padding: 12px 10px; box-shadow: 0 6px 0 #ecb27f; }
+.strip em { font-style: italic; font-family: var(--num); color: var(--red); }
+.fine { margin-top: 14px; text-align: center; font-weight: 700; font-size: 32px; line-height: 1.55; }
+.fine .rule { display: flex; align-items: center; gap: 24px; justify-content: center; }
+.fine .rule::before, .fine .rule::after { content: ""; flex: 1; height: 4px; background: var(--red-2); border-radius: 2px; }
+
+/* 底部 */
+.bottom { position: absolute; left: 60px; right: 60px; bottom: 54px; display: flex; align-items: center; justify-content: space-between; }
+.bottom .t3d { font-size: 104px; --sw: 12px; }
+.btn { background: linear-gradient(180deg, var(--red-2), var(--red)); color: #fff; border: 8px solid #ffd9b8; border-radius: 999px;
+  font-weight: 900; font-size: 92px; letter-spacing: 8px; padding: 10px 64px 16px; box-shadow: 0 14px 0 #8f1a1d, 0 24px 30px rgba(90,20,10,.35);
+  text-shadow: 0 5px 0 #8f1a1d; }
+.contact { position: absolute; left: 0; right: 0; bottom: 14px; text-align: center; font-weight: 700; font-size: 26px; color: #5a2410; }
