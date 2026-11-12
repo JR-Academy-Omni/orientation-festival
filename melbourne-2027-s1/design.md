@@ -49,7 +49,7 @@ npm run build    # 产物 dist/，纯静态可托管
 |------|------|
 | 活动 | 匠人学院 2027 S1 墨尔本三校新生节（第 7 届） |
 | 覆盖高校 | UniMelb · Monash · RMIT |
-| 时间 | 2027 年 3 月 6 日（周六）2:00 PM – 5:00 PM（场地预订中，待 Multicultural Hub 确认） |
+| 时间 | 2027 年 3 月 6 日（周六）2:00 PM – 5:00 PM（Drill Hall 场地已确认，2026-11-12） |
 | 场地 | Drill Hall |
 | 地址 | 26 Therry Street, Melbourne |
 | 场地来源 | City of Melbourne · Multicultural Hub Drill Hall |
