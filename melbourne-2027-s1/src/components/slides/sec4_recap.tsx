@@ -1,15 +1,15 @@
 import { motion } from 'framer-motion';
 import PhotoSlide from './_PhotoSlide';
 import { Page, CardsGrid, FeatureCard, StatCard, Photo, PhotoStrip, GiantStat, GiantRow } from './_layout';
-import { colors, fonts, border, shadow } from '../ui';
+import { colors, fonts, border, radius, shadow } from '../ui';
 
 export function S12_RecapDivider() {
 	return (
 		<PhotoSlide img="past-events/blockclub-booth.jpg" center>
 			<motion.span initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
-				style={{ background: colors.black, color: colors.yellow, border, fontFamily: fonts.mono, fontWeight: 700, fontSize: 16, letterSpacing: 3, padding: '8px 18px' }}>RECAP</motion.span>
+				style={{ background: colors.black, color: colors.yellow, border, borderRadius: radius, fontFamily: fonts.mono, fontWeight: 700, fontSize: 16, letterSpacing: 3, padding: '8px 18px' }}>RECAP</motion.span>
 			<h1 style={{ fontFamily: fonts.heading, fontWeight: 900, color: colors.white, fontSize: 84, lineHeight: 1.06, letterSpacing: -1, marginTop: 22 }}>
-				匠人学院新生节<br /><span style={{ background: colors.red, color: colors.white, padding: '0 22px', border, boxShadow: shadow }}>活动精彩回顾</span>
+				匠人学院新生节<br /><span style={{ background: colors.red, color: colors.white, padding: '0 22px', border, borderRadius: radius, boxShadow: shadow }}>活动精彩回顾</span>
 			</h1>
 		</PhotoSlide>
 	);
@@ -73,11 +73,11 @@ export function S16_Sponsors() {
 						<div style={{ fontFamily: fonts.mono, fontWeight: 800, fontSize: 11, color: colors.purple, letterSpacing: 1.4 }}>{slot}</div>
 					</div>
 				))}
-				<div style={{ border, background: colors.dark, boxShadow: shadow, height: 112, display: 'grid', placeItems: 'center', color: colors.yellow, fontFamily: fonts.heading, fontWeight: 900, fontSize: 34 }}>+14</div>
+				<div style={{ border, borderRadius: radius, background: colors.dark, boxShadow: shadow, height: 112, display: 'grid', placeItems: 'center', color: colors.yellow, fontFamily: fonts.heading, fontWeight: 900, fontSize: 34 }}>+14</div>
 			</div>
 			<div style={{ display: 'flex', gap: 14, marginTop: 24 }}>
-				<span style={{ border, background: colors.black, color: colors.yellow, boxShadow: shadow, padding: '12px 18px', fontFamily: fonts.mono, fontWeight: 800 }}>PAST EVENT · 22 EXHIBITORS</span>
-				<span style={{ border, background: colors.white, color: colors.black, boxShadow: shadow, padding: '12px 18px', fontWeight: 800 }}>上线前替换为真实赞助商 logo</span>
+				<span style={{ border, borderRadius: radius, background: colors.black, color: colors.yellow, boxShadow: shadow, padding: '12px 18px', fontFamily: fonts.mono, fontWeight: 800 }}>PAST EVENT · 22 EXHIBITORS</span>
+				<span style={{ border, borderRadius: radius, background: colors.white, color: colors.black, boxShadow: shadow, padding: '12px 18px', fontWeight: 800 }}>上线前替换为真实赞助商 logo</span>
 			</div>
 		</Page>
 	);
@@ -100,7 +100,7 @@ export function S17_Highlights() {
 function Quote({ i, text, who }: { i: number; text: string; who: string }) {
 	return (
 		<motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.1 + i * 0.12 }}
-			style={{ border, background: colors.white, boxShadow: shadow, padding: '18px 22px' }}>
+			style={{ border, borderRadius: radius, background: colors.white, boxShadow: shadow, padding: '18px 22px' }}>
 			<p style={{ fontSize: 18, lineHeight: 1.6, color: '#333' }}>「{text}」</p>
 			<p style={{ marginTop: 8, fontWeight: 800, color: colors.red }}>—— {who}</p>
 		</motion.div>
@@ -131,8 +131,8 @@ export function S19_FbExhibitor() {
 			<div style={{ display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 22, alignItems: 'center' }}>
 				<StatCard i={0} n="98%" label="参展商总体满意度" accent={colors.blue} />
 				<div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-					<div style={{ border, background: colors.white, boxShadow: shadow, padding: '18px 22px', fontSize: 19, lineHeight: 1.6 }}><b>内容反馈：</b>讲座丰富实用，互动有趣且有教育意义，学长学姐答疑广受好评。</div>
-					<div style={{ border, background: colors.white, boxShadow: shadow, padding: '18px 22px', fontSize: 19, lineHeight: 1.6 }}><b>组织反馈：</b>签到与引导高效，志愿者团队热情专业。</div>
+					<div style={{ border, borderRadius: radius, background: colors.white, boxShadow: shadow, padding: '18px 22px', fontSize: 19, lineHeight: 1.6 }}><b>内容反馈：</b>讲座丰富实用，互动有趣且有教育意义，学长学姐答疑广受好评。</div>
+					<div style={{ border, borderRadius: radius, background: colors.white, boxShadow: shadow, padding: '18px 22px', fontSize: 19, lineHeight: 1.6 }}><b>组织反馈：</b>签到与引导高效，志愿者团队热情专业。</div>
 				</div>
 			</div>
 		</Page>

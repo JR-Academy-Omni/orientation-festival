@@ -1,15 +1,15 @@
 import { motion } from 'framer-motion';
 import PhotoSlide from './_PhotoSlide';
 import { Page, CardsGrid, FeatureCard, StatCard } from './_layout';
-import { colors, fonts, border, shadow } from '../ui';
+import { colors, fonts, border, radius, shadow } from '../ui';
 
 export function S30_AchDivider() {
 	return (
 		<PhotoSlide img="past-events/speaker-host.jpg" center>
 			<motion.span initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
-				style={{ background: colors.black, color: colors.yellow, border, fontFamily: fonts.mono, fontWeight: 700, fontSize: 16, letterSpacing: 3, padding: '8px 18px' }}>ACHIEVEMENTS</motion.span>
+				style={{ background: colors.black, color: colors.yellow, border, borderRadius: radius, fontFamily: fonts.mono, fontWeight: 700, fontSize: 16, letterSpacing: 3, padding: '8px 18px' }}>ACHIEVEMENTS</motion.span>
 			<h1 style={{ fontFamily: fonts.heading, fontWeight: 900, color: colors.white, fontSize: 84, lineHeight: 1.06, letterSpacing: -1, marginTop: 22 }}>
-				<span style={{ background: colors.red, color: colors.white, padding: '0 22px', border, boxShadow: shadow }}>往期活动</span><br />成果展示
+				<span style={{ background: colors.red, color: colors.white, padding: '0 22px', border, borderRadius: radius, boxShadow: shadow }}>往期活动</span><br />成果展示
 			</h1>
 		</PhotoSlide>
 	);
@@ -30,7 +30,7 @@ export function S32_BrandAct() {
 	return (
 		<Page tag="24 · 品牌活动" title="课代表系列品牌活动" bg={colors.dark} tone="dark" accent={colors.purple} watermark="200" align="center">
 			<div style={{ display: 'grid', gridTemplateColumns: '1.3fr 0.7fr', gap: 22, alignItems: 'center' }}>
-				<div style={{ border, background: colors.white, boxShadow: shadow, padding: '26px 28px' }}>
+				<div style={{ border, borderRadius: radius, background: colors.white, boxShadow: shadow, padding: '26px 28px' }}>
 					<h3 style={{ fontFamily: fonts.heading, fontWeight: 800, fontSize: 22, marginBottom: 8 }}>品牌活动合作</h3>
 					<p style={{ fontSize: 18, lineHeight: 1.65, color: '#333', marginBottom: 16 }}>发放礼物/优惠券 · 赞助商视频展示 · 内容互动问答 · 发言环节 · 加微信 · 指定平台/APP 下载注册。</p>
 					<h3 style={{ fontFamily: fonts.heading, fontWeight: 800, fontSize: 22, marginBottom: 8 }}>定制化</h3>
@@ -46,7 +46,7 @@ export function S33_Enterprise() {
 	return (
 		<Page tag="25 · 企业合作" title="澳洲本地领先企业" watermark="AU" align="center">
 			<CardsGrid cols={2} gap={22}>
-				<div style={{ border, background: colors.dark, boxShadow: shadow, padding: '28px 30px', display: 'flex', alignItems: 'center' }}>
+				<div style={{ border, borderRadius: radius, background: colors.dark, boxShadow: shadow, padding: '28px 30px', display: 'flex', alignItems: 'center' }}>
 					<p style={{ fontSize: 21, lineHeight: 1.7, color: colors.white }}>积极与 <b style={{ color: colors.yellow }}>Atlassian、AWS、Canva</b> 等澳洲本地顶级企业深度合作，共同策划职业讲座、Hackathon 等系列活动，利用行业领军企业资源为合作伙伴创造更多价值。</p>
 				</div>
 				<FeatureCard i={1} emoji="🏢" accent={colors.red} title="企业合作形式" desc="冠名赞助企业参观与学习活动 · 冠名赞助企业职业发展讲座 · 冠名赞助企业主办的活动。协同发展 · 提升品牌形象。" />

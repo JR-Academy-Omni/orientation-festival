@@ -15,7 +15,7 @@ export function S02_Overview() {
 						<p style={{ fontSize: 18, lineHeight: 1.6, color: '#333' }}>A 300+ m² indoor exhibition space where partners run their own branded booths, hand out perks and gifts to first-years, and lock in the season's first cohort of university-student customers.</p>
 					</motion.div>
 					<div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-						{[['📅', 'Sat 6 Mar · 2–5PM'], ['📍', 'Drill Hall · 26 Therry St'], ['🎓', '3 unis · 80% of the market']].map(([k, v]) => (
+						{[['📅', 'Sat 6 Mar · 2–5PM'], ['📍', 'Drill Hall, Multicultural Hub · 26 Therry St, Melbourne VIC 3000'], ['🎓', '3 unis · 80% of the market']].map(([k, v]) => (
 							<span key={v} style={{ background: colors.dark, color: colors.white, border, boxShadow: shadow, padding: '10px 16px', fontWeight: 700, fontSize: 16 }}>{k} {v}</span>
 						))}
 					</div>

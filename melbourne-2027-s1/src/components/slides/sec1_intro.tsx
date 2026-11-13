@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Page, CardsGrid, FeatureCard, Photo, Editorial } from './_layout';
-import { colors, fonts, border, shadow, assetPath } from '../ui';
+import { colors, fonts, border, radius, shadow, assetPath } from '../ui';
 
 export function S02_Overview() {
 	return (
@@ -8,15 +8,15 @@ export function S02_Overview() {
 			<div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 24, flex: 1, minHeight: 0 }}>
 				<div style={{ display: 'flex', flexDirection: 'column', gap: 16, minHeight: 0 }}>
 					<motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.45, delay: 0.1 }}
-						style={{ border, background: colors.white, boxShadow: shadow, padding: '24px 26px' }}>
+						style={{ border, borderRadius: radius, background: colors.white, boxShadow: shadow, padding: '24px 26px' }}>
 						<h3 style={{ fontFamily: fonts.heading, fontWeight: 800, fontSize: 23, marginBottom: 6 }}>谁会来</h3>
 						<p style={{ fontSize: 18, lineHeight: 1.6, color: '#333', marginBottom: 14 }}>预计参与 <b>1500 人</b>，均来自墨尔本三所主要大学新生：<b>UniMelb、Monash、RMIT</b>。</p>
 						<h3 style={{ fontFamily: fonts.heading, fontWeight: 800, fontSize: 23, marginBottom: 6 }}>活动形式</h3>
 						<p style={{ fontSize: 18, lineHeight: 1.6, color: '#333' }}>300+ ㎡ 室内展区，合作伙伴设品牌专属展位，向三校新生赠送福利与小礼品，抢先获取首批大学生客户资源。</p>
 					</motion.div>
 					<div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-						{[['📅', '3/6 周六 2–5PM'], ['📍', 'Drill Hall · 26 Therry St'], ['🎓', '三校 · 80% 群体']].map(([k, v]) => (
-							<span key={v} style={{ background: colors.dark, color: colors.white, border, boxShadow: shadow, padding: '10px 16px', fontWeight: 700, fontSize: 16 }}>{k} {v}</span>
+						{[['📅', '3/6 周六 2–5PM'], ['📍', 'Drill Hall, Multicultural Hub · 26 Therry St, Melbourne VIC 3000'], ['🎓', '三校 · 80% 群体']].map(([k, v]) => (
+							<span key={v} style={{ background: colors.dark, color: colors.white, border, borderRadius: radius, boxShadow: shadow, padding: '10px 16px', fontWeight: 700, fontSize: 16 }}>{k} {v}</span>
 						))}
 					</div>
 				</div>
@@ -58,7 +58,7 @@ export function S05_Highlights() {
 					initial={{ opacity: 0, x: -34 }}
 					animate={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.5 }}
-					style={{ position: 'relative', margin: 0, border, boxShadow: shadow, overflow: 'hidden', background: colors.dark, minHeight: 0 }}
+					style={{ position: 'relative', margin: 0, border, borderRadius: radius, boxShadow: shadow, overflow: 'hidden', background: colors.dark, minHeight: 0 }}
 				>
 					<img src={assetPath('illustrations/lucky-draw.png')} alt="新生节抽奖互动插画" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
 					<div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 48%, rgba(16,22,47,.78))' }} />
@@ -89,7 +89,7 @@ export function S06_Merchant() {
 					initial={{ opacity: 0, scale: 0.96 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 0.5 }}
-					style={{ position: 'relative', margin: 0, border, boxShadow: shadow, overflow: 'hidden', background: colors.dark, minHeight: 0 }}
+					style={{ position: 'relative', margin: 0, border, borderRadius: radius, boxShadow: shadow, overflow: 'hidden', background: colors.dark, minHeight: 0 }}
 				>
 					<img src={assetPath('illustrations/sponsor-booth.png')} alt="商家展位互动插画" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
 					<div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 48%, rgba(16,22,47,.82))' }} />
@@ -100,8 +100,8 @@ export function S06_Merchant() {
 				<div style={{ display: 'grid', gap: 14, alignContent: 'center' }}>
 					{funnel.map(([step, title, desc, accent], i) => (
 						<motion.div key={title} initial={{ opacity: 0, x: 28 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.42, delay: 0.08 * i }}
-							style={{ border, background: colors.white, color: colors.black, boxShadow: shadow, padding: '18px 20px', display: 'grid', gridTemplateColumns: '86px 1fr', gap: 18, alignItems: 'center' }}>
-							<div style={{ border, background: accent, height: 74, display: 'grid', placeItems: 'center', fontFamily: fonts.heading, fontWeight: 900, fontSize: 34 }}>{step}</div>
+							style={{ border, borderRadius: radius, background: colors.white, color: colors.black, boxShadow: shadow, padding: '18px 20px', display: 'grid', gridTemplateColumns: '86px 1fr', gap: 18, alignItems: 'center' }}>
+							<div style={{ border, borderRadius: radius, background: accent, height: 74, display: 'grid', placeItems: 'center', fontFamily: fonts.heading, fontWeight: 900, fontSize: 34 }}>{step}</div>
 							<div>
 								<h3 style={{ fontFamily: fonts.heading, fontWeight: 900, fontSize: 27, marginBottom: 6 }}>{title}</h3>
 								<p style={{ fontSize: 17, lineHeight: 1.45, fontWeight: 700, color: '#333' }}>{desc}</p>

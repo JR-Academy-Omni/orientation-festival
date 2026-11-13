@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, type CSSProperties, type ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import { colors, fonts, border, shadow, shadowSm } from '../styles/theme';
+import { colors, fonts, border, shadow, shadowSm, radius } from "../styles/theme";
 
 // 拿 Vite BASE_URL 拼出 public/ 下的资源路径（dev → /xxx，prod → /curriculum/ai-new-jobs-talk/xxx）
 export function assetPath(p: string): string {
@@ -205,4 +205,4 @@ export function Grid({ children, cols = 3, gap = 20, style }: { children: ReactN
 	);
 }
 
-export { colors, fonts, border, shadow, shadowSm };
+export { colors, fonts, border, shadow, shadowSm, radius };

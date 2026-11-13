@@ -1,6 +1,6 @@
 import type { ReactNode, CSSProperties } from 'react';
 import { assetPath } from '../ui';
-import { colors, fonts, border, shadow } from '../ui';
+import { colors, fonts, border, radius, shadow } from '../ui';
 
 // 满铺现场照背景 + 暗渐变叠加（白字）。内容靠底部或居中。
 export default function PhotoSlide({
@@ -23,7 +23,7 @@ export default function PhotoSlide({
 			<div style={{
 				position: 'absolute', right: 78, top: 58, zIndex: 2,
 				display: 'flex', alignItems: 'center', gap: 10,
-				background: colors.white, color: colors.black, border, boxShadow: shadow,
+				background: colors.white, color: colors.black, border, borderRadius: radius, boxShadow: shadow,
 				padding: '10px 16px', fontFamily: fonts.mono, fontSize: 14, fontWeight: 800, letterSpacing: 1.2,
 			}}>
 				<span style={{ width: 10, height: 10, background: colors.red, border: `2px solid ${colors.black}` }} />

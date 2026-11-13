@@ -1,5 +1,5 @@
 import { Page, StatCard, KvTable, Photo, GiantStat, GiantRow, Editorial } from './_layout';
-import { assetPath, colors, border, shadow } from '../ui';
+import { assetPath, colors, border, radius, shadow } from '../ui';
 
 export function S21_About() {
 	const stats = [['50,000+', '小红书粉丝'], ['70,000+', '公众号粉丝'], ['100+', '每年举办活动'], ['4 · 8', '覆盖 4 地区 8 校']] as const;
@@ -42,7 +42,7 @@ export function S23_XhsDesc() {
 export function S24_XhsMatrix() {
 	return (
 		<Page tag="19 · 小红书" title="课代表小红书账号矩阵" accent={colors.red} watermark="XHS" align="top">
-			<div style={{ border, boxShadow: shadow, background: colors.white, padding: 14 }}>
+			<div style={{ border, borderRadius: radius, boxShadow: shadow, background: colors.white, padding: 14 }}>
 				<img
 					src={assetPath('xhs-matrix.png')}
 					alt="课代表系列小红书账号矩阵"

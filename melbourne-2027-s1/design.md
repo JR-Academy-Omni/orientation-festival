@@ -10,6 +10,8 @@ title: 新生节 · 墨尔本 2027 S1
 
 > **2027 S1**：2026-11-03 从 `melbourne-2026-s2` 复制。套餐价格不变；早鸟暂定 2027-01-15 前；往期回顾数据暂沿用旧版，待换成 2026 年 8 月那届真实数据。
 
+> **2026-11-13 活力版视觉**（仅中文版，内容未改）：`src/styles/theme.ts` 换糖果色（珊瑚粉 #FF4F6D / 柠檬黄 #FFD23F / 薄荷绿 #3DDC97 / 天蓝 #4CC9F0 / 紫 #A66CFF，深底改深紫 #2E1A5C）+ `radius=18` 全部黑边盒子圆角；`_layout.tsx` 的 `Page` 加彩纸装饰（按 tag 哈希散布）、标题下手绘波浪线、倾斜胶囊 tag；FeatureCard / StatCard 交替微倾 + 彩色硬阴影。
+
 > **2026-06 重构**：本 deck 从手搓 vanilla HTML 改为基于公司标准讲座工具 **talk-deck**（`jr-omni/talk-deck`，React + Vite + framer-motion）。
 > 旧的 `index.html / styles.css / deck.js` 三件套已废弃删除。
 
@@ -50,8 +52,8 @@ npm run build    # 产物 dist/，纯静态可托管
 | 活动 | 匠人学院 2027 S1 墨尔本三校新生节（第 7 届） |
 | 覆盖高校 | UniMelb · Monash · RMIT |
 | 时间 | 2027 年 3 月 6 日（周六）2:00 PM – 5:00 PM（Drill Hall 场地已确认，2026-11-12） |
-| 场地 | Drill Hall |
-| 地址 | 26 Therry Street, Melbourne |
+| 场地 | Drill Hall, Multicultural Hub |
+| 地址 | 26 Therry St, Melbourne VIC 3000 |
 | 场地来源 | City of Melbourne · Multicultural Hub Drill Hall |
 | 对外 PDF | `../pdf-output/melbourne-2027-s1.pdf` |
 

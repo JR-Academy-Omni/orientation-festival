@@ -1,17 +1,17 @@
 export const colors = {
 	// 品牌基色（与 ai-engineer-bootcamp / xhs-posters 对齐）
-	red: '#ff5757',
-	dark: '#10162f',
-	yellow: '#FFDE59',
-	green: '#7ED957',
-	blue: '#38B6FF',
-	purple: '#CB6CE6',
-	orange: '#FF914D',
-	warmBg: '#fff1e7',
-	darkBg: '#1a1a2e',
+	red: '#FF4F6D',
+	dark: '#2E1A5C',
+	yellow: '#FFD23F',
+	green: '#3DDC97',
+	blue: '#4CC9F0',
+	purple: '#A66CFF',
+	orange: '#FF8C42',
+	warmBg: '#FFF5E6',
+	darkBg: '#2E1A5C',
 	white: '#ffffff',
 	black: '#000000',
-	indigo: '#6366f1',
+	indigo: '#FF4F6D',
 	teal: '#10b981',
 
 	// 三大分类配色（与 ai-new-jobs 页面 CATEGORY_CONFIG 对齐）
@@ -38,3 +38,5 @@ export const fonts = {
 export const border = `3px solid ${colors.black}`;
 export const shadow = `6px 6px 0px ${colors.black}`;
 export const shadowSm = `4px 4px 0px ${colors.black}`;
+// 圆角：新生节活力版统一贴纸感圆角
+export const radius = 18;

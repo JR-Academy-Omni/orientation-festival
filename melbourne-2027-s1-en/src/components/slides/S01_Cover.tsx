@@ -5,7 +5,7 @@ export default function S01_Cover() {
 	const meta = [
 		['DATE', 'Sat, Mar 6, 2027'],
 		['TIME', '2:00 - 5:00 PM'],
-		['VENUE', 'Drill Hall, 26 Therry Street'],
+		['VENUE', 'Drill Hall, Multicultural Hub · 26 Therry St, Melbourne VIC 3000'],
 	] as const;
 
 	return (
