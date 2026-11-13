@@ -97,54 +97,59 @@ export function S17_Highlights() {
 	);
 }
 
-function Quote({ i, text, who }: { i: number; text: string; who: string }) {
-	return (
-		<motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.1 + i * 0.12 }}
-			style={{ border, borderRadius: radius, background: colors.white, boxShadow: shadow, padding: '18px 22px' }}>
-			<p style={{ fontSize: 18, lineHeight: 1.6, color: '#333' }}>「{text}」</p>
-			<p style={{ marginTop: 8, fontWeight: 800, color: colors.red }}>—— {who}</p>
-		</motion.div>
-	);
-}
-
+// 反馈页 · 不署名亮点：只用本 deck 已有事实（往期数据 / 现场亮点 / 原反馈摘录）归纳，不写人名、不用引号
 export function S18_FbAttendee() {
+	const items = [
+		['🎁', '免费礼品拿到手软', '现场发出 5000+ 份展位礼物，新生逛一圈就能领到不少实用福利。', colors.red],
+		['🎡', '抽奖和互动最热闹', '5000+ 张抽奖券、300+ 份奖品，转盘和抽奖环节全场欢呼。', colors.yellow],
+		['💡', '学长学姐当面答疑', '课程、学习、职业规划都能直接问，让新生对大学生活更有底。', colors.blue],
+		['🤝', '认识新朋友', '三校新生在同一个场地互相认识、交流，更快找到归属感。', colors.green],
+	] as const;
 	return (
-		<Page tag="15 · 反馈 · 参与者" title="新生怎么说">
-			<div style={{ display: 'grid', gridTemplateColumns: '0.9fr 1.1fr', gap: 22, flex: 1, minHeight: 0 }}>
+		<Page tag="15 · 反馈 · 参与者" title="新生最喜欢的">
+			<div style={{ display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 24, flex: 1, minHeight: 0 }}>
 				<div style={{ display: 'grid', gridTemplateRows: 'auto 1fr', gap: 16, minHeight: 0 }}>
 					<StatCard i={0} n="98%" label="总体满意度（600 名参与者）" />
 					<Photo i={1} img="past-events/checkin-1.jpg" caption="新生签到现场" />
 				</div>
-				<div style={{ display: 'flex', flexDirection: 'column', gap: 12, justifyContent: 'center' }}>
-					<Quote i={0} text="领到超多免费礼品，还参与了抽奖，学长学姐耐心解答让我对大学生活充满信心！" who="UniMelb 新生 Jarrica" />
-					<Quote i={1} text="活动组织得很好，互动游戏有趣，还赢得了奖品！" who="Monash 新生 Ivan" />
-					<Quote i={2} text="结识了很多新朋友，特别喜欢答疑环节。" who="RMIT 新生 Lucy" />
-				</div>
+				<CardsGrid cols={2} gap={18} style={{ alignContent: 'center' }}>
+					{items.map(([e, t, d, a], i) => <FeatureCard key={t} i={i} emoji={e} title={t} desc={d} accent={a} />)}
+				</CardsGrid>
 			</div>
 		</Page>
 	);
 }
 
 export function S19_FbExhibitor() {
+	const items = [
+		['📈', '获客效率高', '赞助商平均获客 500+，现场接待咨询累计 900+ 次。', colors.blue],
+		['🎯', '人群精准', '到场的都是 UniMelb、Monash、RMIT 新生，正是刚到墨尔本、需求最集中的时候。', colors.yellow],
+		['🧭', '签到引导顺畅', '签到与引导高效，志愿者团队热情专业，帮展位把人流导进来。', colors.green],
+		['🗣️', '内容口碑好', '讲座丰富实用，互动有趣且有教育意义，学长学姐答疑广受好评。', colors.red],
+	] as const;
 	return (
-		<Page tag="16 · 反馈 · 参展商" title="参展商怎么说" bg={colors.dark} tone="dark" accent={colors.blue} watermark="98" align="center">
-			<div style={{ display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 22, alignItems: 'center' }}>
+		<Page tag="16 · 反馈 · 参展商" title="参展商最认可的" bg={colors.dark} tone="dark" accent={colors.blue} watermark="98" align="center">
+			<div style={{ display: 'grid', gridTemplateColumns: '0.6fr 1.4fr', gap: 26, alignItems: 'center' }}>
 				<StatCard i={0} n="98%" label="参展商总体满意度" accent={colors.blue} />
-				<div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-					<div style={{ border, borderRadius: radius, background: colors.white, boxShadow: shadow, padding: '18px 22px', fontSize: 19, lineHeight: 1.6 }}><b>内容反馈：</b>讲座丰富实用，互动有趣且有教育意义，学长学姐答疑广受好评。</div>
-					<div style={{ border, borderRadius: radius, background: colors.white, boxShadow: shadow, padding: '18px 22px', fontSize: 19, lineHeight: 1.6 }}><b>组织反馈：</b>签到与引导高效，志愿者团队热情专业。</div>
-				</div>
+				<CardsGrid cols={2} gap={18}>
+					{items.map(([e, t, d, a], i) => <FeatureCard key={t} i={i + 1} emoji={e} title={t} desc={d} accent={a} />)}
+				</CardsGrid>
 			</div>
 		</Page>
 	);
 }
 
 export function S20_FbVolunteer() {
+	const items = [
+		['🎉', '辛苦都值得', '看到新生开心参与、领到礼品，抽奖时全场欢呼，是志愿者最有成就感的时刻。', colors.yellow],
+		['💬', '帮新生解决问题', '从签到到找展位、答疑，帮刚来的新生安心融入，自己也很开心。', colors.blue],
+		['🤝', '体验团队合作', '签到、引导、答疑、后勤分工配合，真切感受到团队的力量。', colors.red],
+		['👋', '结识新朋友', '和来自不同学校的同学一起办活动，认识了很多新朋友。', colors.purple],
+	] as const;
 	return (
-		<Page tag="17 · 反馈 · 志愿者" title="志愿者怎么说" bg={colors.green} accent={colors.dark} watermark="♥" align="center">
+		<Page tag="17 · 反馈 · 志愿者" title="志愿者的收获" bg={colors.green} accent={colors.dark} watermark="♥" align="center">
 			<CardsGrid cols={2} gap={20}>
-				<Quote i={0} text="看到同学们开心参与、领取礼品，我觉得一切辛苦都值得。每次抽奖的欢呼让我感受到活动的成功。" who="Benny" />
-				<Quote i={1} text="帮助新生解答疑问，看到他们安心快乐我也很开心。这次活动让我认识了很多新朋友，也体验到团队合作的力量。" who="Dora" />
+				{items.map(([e, t, d, a], i) => <FeatureCard key={t} i={i} emoji={e} title={t} desc={d} accent={a} />)}
 			</CardsGrid>
 		</Page>
 	);
