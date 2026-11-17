@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Noto+Sans+SC:wght@500;700;900&family=Space+Mono:wght@700&display=block');
+
+/* 与 2027 S1 活力版 deck 同一套视觉：糖果色 + 黑边圆角贴纸 + 彩色硬阴影 + 彩纸 + 波浪线 */
+:root {
+  --red: #FF4F6D;
+  --yellow: #FFD23F;
+  --green: #3DDC97;
+  --blue: #4CC9F0;
+  --purple: #A66CFF;
+  --orange: #FF8C42;
+  --dark: #2E1A5C;
+  --cream: #FFF5E6;
+  --ink: #000;
+  --bd: 4px solid #000;
+  --r: 26px;
+  --head: "Bricolage Grotesque", "Noto Sans SC", sans-serif;
+  --cn: "Noto Sans SC", "PingFang SC", sans-serif;
+  --mono: "Space Mono", monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1242px; height: 1656px; overflow: hidden; }
+body { font-family: var(--cn); color: var(--ink); -webkit-font-smoothing: antialiased; }
+
+.poster { position: relative; width: 1242px; height: 1656px; overflow: hidden; }
+.dots::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(0,0,0,.13) 2px, transparent 2.6px); background-size: 34px 34px; opacity: .55; }
+.blob { position: absolute; border-radius: 50%; border: var(--bd); }
+
+.logo { position: absolute; top: 56px; left: 64px; height: 76px; z-index: 10; }
+.pill { display: inline-block; border: var(--bd); border-radius: 999px; padding: 10px 26px; font-weight: 800; box-shadow: 5px 5px 0 #000; }
+.pill.mono { font-family: var(--mono); letter-spacing: 2px; font-size: 24px; }
+.tilt-l { transform: rotate(-3deg); }
+.tilt-r { transform: rotate(3deg); }
+
+.h-big { font-family: var(--head); font-weight: 900; line-height: 1; letter-spacing: -3px; }
+.sticker { display: inline-block; background: var(--red); color: #fff; border: var(--bd); border-radius: 34px; box-shadow: 12px 12px 0 #000; padding: 6px 40px 16px; }
+
+.card { background: #fff; border: var(--bd); border-radius: var(--r); padding: 24px 28px; }
+.pop { box-shadow: 8px 8px 0 var(--c, var(--red)), 8px 8px 0 4px #000; }
+.k { font-family: var(--mono); font-size: 20px; font-weight: 700; letter-spacing: 2px; }
+.v { font-weight: 800; font-size: 32px; line-height: 1.3; margin-top: 4px; }
+
+.polaroid { position: absolute; background: #fff; border: var(--bd); border-radius: 14px; padding: 16px 16px 20px; box-shadow: 10px 10px 0 #000; }
+.polaroid img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border: 3px solid #000; border-radius: 8px; }
+.polaroid .tape { position: absolute; top: -20px; left: 50%; margin-left: -66px; width: 132px; height: 38px; background: rgba(255,255,255,.75); border: 2px solid rgba(0,0,0,.25); }
+
+.squiggle { display: block; }
+.confetti { position: absolute; inset: 0; pointer-events: none; z-index: 9; }
+
+.cta { position: absolute; left: 64px; right: 64px; bottom: 56px; display: flex; gap: 22px; align-items: stretch; z-index: 8; }
+.cta .big { background: var(--yellow); border: var(--bd); border-radius: var(--r); box-shadow: 8px 8px 0 #000; padding: 20px 30px; display: flex; flex-direction: column; justify-content: center; }
+.cta .big .t { font-size: 24px; font-weight: 800; }
+.cta .big .n { font-family: var(--head); font-weight: 900; font-size: 68px; line-height: 1; margin-top: 4px; letter-spacing: -2px; }
+.cta .contact { flex: 1; background: var(--dark); color: #fff; border: var(--bd); border-radius: var(--r); box-shadow: 8px 8px 0 #000; padding: 20px 30px; display: flex; flex-direction: column; justify-content: center; }
+.cta .contact .k { color: var(--yellow); font-size: 18px; }
+.cta .contact .p { font-family: var(--head); font-weight: 800; font-size: 44px; margin-top: 6px; }
+.cta .contact .e { font-size: 24px; font-weight: 500; opacity: .85; margin-top: 2px; }

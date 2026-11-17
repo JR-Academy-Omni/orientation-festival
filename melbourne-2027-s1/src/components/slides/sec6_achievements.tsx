@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import PhotoSlide from './_PhotoSlide';
-import { Page, CardsGrid, FeatureCard, StatCard } from './_layout';
+import { Page, CardsGrid, FeatureCard, StatCard, PhotoStrip } from './_layout';
 import { colors, fonts, border, radius, shadow } from '../ui';
 
 export function S30_AchDivider() {
@@ -17,18 +17,21 @@ export function S30_AchDivider() {
 
 export function S31_UniCoop() {
 	return (
-		<Page tag="23 · 大学合作" title="Orientation Week 迎新周合作" accent={colors.blue} watermark="O" align="center">
+		<Page tag="23 · 大学合作" title="Orientation Week 迎新周合作" accent={colors.blue} watermark="O" align="top">
 			<CardsGrid cols={2} gap={22}>
 				<FeatureCard i={0} emoji="🎓" accent={colors.blue} title="迎新周官方合作" desc="每年 2 月与 7 月与各高校官方合作，新生周提供展位：Banner/海报、校园分发传单、发优惠券、礼物发放、扫码加学生/建新生群。单所大学单日人流量超 1w+。" />
 				<FeatureCard i={1} emoji="🤝" accent={colors.green} title="大学社团合作" desc="迎新周是建立学生早期品牌好感度的绝佳时期；通过与各高校社团合作，借社团特色活动精准触达目标学生群体，借校园内部网络增强品牌存在感。" />
 			</CardsGrid>
+			<div style={{ marginTop: 26 }}>
+				<PhotoStrip h={270} imgs={[{ img: 'past-events/jr-booth-coke.jpg', caption: '往期展位 · 品牌物料' }, { img: 'past-events/gift-bags.jpg', caption: '新生礼品派发' }, { img: 'past-events/volunteer-team.jpg', caption: '学生志愿者团队' }]} />
+			</div>
 		</Page>
 	);
 }
 
 export function S32_BrandAct() {
 	return (
-		<Page tag="24 · 品牌活动" title="课代表系列品牌活动" bg={colors.dark} tone="dark" accent={colors.purple} watermark="200" align="center">
+		<Page tag="24 · 品牌活动" title="课代表系列品牌活动" bg={colors.dark} tone="dark" accent={colors.purple} watermark="200" align="top">
 			<div style={{ display: 'grid', gridTemplateColumns: '1.3fr 0.7fr', gap: 22, alignItems: 'center' }}>
 				<div style={{ border, borderRadius: radius, background: colors.white, boxShadow: shadow, padding: '26px 28px' }}>
 					<h3 style={{ fontFamily: fonts.heading, fontWeight: 800, fontSize: 22, marginBottom: 8 }}>品牌活动合作</h3>
@@ -38,19 +41,25 @@ export function S32_BrandAct() {
 				</div>
 				<StatCard i={0} n="200+" label="8 年累计举办活动场次 · 单场平均参与 100+" accent={colors.purple} />
 			</div>
+			<div style={{ marginTop: 24 }}>
+				<PhotoStrip h={320} imgs={[{ img: 'past-events/audience-session.jpg', caption: '线下讲座现场' }, { img: 'past-events/ai-community-crowd.jpg', caption: 'AI 社区线下活动' }, { img: 'past-events/speaker-host.jpg', caption: '主持分享' }]} />
+			</div>
 		</Page>
 	);
 }
 
 export function S33_Enterprise() {
 	return (
-		<Page tag="25 · 企业合作" title="澳洲本地领先企业" watermark="AU" align="center">
+		<Page tag="25 · 企业合作" title="澳洲本地领先企业" watermark="AU" align="top">
 			<CardsGrid cols={2} gap={22}>
 				<div style={{ border, borderRadius: radius, background: colors.dark, boxShadow: shadow, padding: '28px 30px', display: 'flex', alignItems: 'center' }}>
 					<p style={{ fontSize: 21, lineHeight: 1.7, color: colors.white }}>积极与 <b style={{ color: colors.yellow }}>Atlassian、AWS、Canva</b> 等澳洲本地顶级企业深度合作，共同策划职业讲座、Hackathon 等系列活动，利用行业领军企业资源为合作伙伴创造更多价值。</p>
 				</div>
 				<FeatureCard i={1} emoji="🏢" accent={colors.red} title="企业合作形式" desc="冠名赞助企业参观与学习活动 · 冠名赞助企业职业发展讲座 · 冠名赞助企业主办的活动。协同发展 · 提升品牌形象。" />
 			</CardsGrid>
+			<div style={{ marginTop: 26 }}>
+				<PhotoStrip h={250} imgs={[{ img: 'past-events/aws-partner-event.jpg', caption: 'AWS 合作活动' }, { img: 'past-events/aws-venue.jpg', caption: '活动场地 · AWS Sydney' }]} />
+			</div>
 		</Page>
 	);
 }
